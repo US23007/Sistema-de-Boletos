@@ -71,12 +71,52 @@ namespace Clave2_Grupo3_US23007_.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1491254422_calendardateappontmentbookingreservation_82940 {
+            get {
+                object obj = ResourceManager.GetObject("_1491254422_calendardateappontmentbookingreservation_82940", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon account_login_log_in_icon_250759 {
             get {
                 object obj = ResourceManager.GetObject("account_login_log_in_icon_250759", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crew_icon_153959 {
+            get {
+                object obj = ResourceManager.GetObject("crew_icon_153959", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_group_solid_icon_235378 {
+            get {
+                object obj = ResourceManager.GetObject("employee_group_solid_icon_235378", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_solid_icon_235377 {
+            get {
+                object obj = ResourceManager.GetObject("employee_solid_icon_235377", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -106,6 +146,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap eye_icon_icons_com_71204_1_ {
             get {
                 object obj = ResourceManager.GetObject("eye_icon_icons_com_71204_1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap facebook_placeholder_for_locate_places_on_maps_icon_icons_com_57151 {
+            get {
+                object obj = ResourceManager.GetObject("facebook_placeholder_for_locate_places_on_maps_icon_icons_com_57151", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +193,69 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plane_takeoff_13263 {
+            get {
+                object obj = ResourceManager.GetObject("plane_takeoff_13263", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plane_takeoff_3577 {
+            get {
+                object obj = ResourceManager.GetObject("plane_takeoff_3577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap round_account_button_with_user_inside_icon_icons_com_72596 {
             get {
                 object obj = ResourceManager.GetObject("round_account_button_with_user_inside_icon_icons_com_72596", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seat_icon_137217 {
+            get {
+                object obj = ResourceManager.GetObject("seat_icon_137217", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seat_passenger_icon_135220 {
+            get {
+                object obj = ResourceManager.GetObject("seat_passenger_icon_135220", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap text_document_cancel_button_icon_icons_com_71554 {
+            get {
+                object obj = ResourceManager.GetObject("text_document_cancel_button_icon_icons_com_71554", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ticket_tickets_icon_188148 {
+            get {
+                object obj = ResourceManager.GetObject("ticket_tickets_icon_188148", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -157,6 +267,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
             get {
                 object obj = ResourceManager.GetObject("Tickets_43689", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_84308 {
+            get {
+                object obj = ResourceManager.GetObject("user_84308", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

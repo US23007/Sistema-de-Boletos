@@ -25,5 +25,7 @@ namespace Clave2_Grupo3_US23007_
             ingreso.Show();
             this.Hide();
         }
+
+       
     }
 }

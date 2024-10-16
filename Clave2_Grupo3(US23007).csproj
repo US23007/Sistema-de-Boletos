@@ -189,5 +189,44 @@
   <ItemGroup>
     <None Include="Resources\1486564399-close_81512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat35_41709.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane_takeoff_13263.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat_icon_137217.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane_takeoff_3577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_84308.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-placeholder-for-locate-places-on-maps_icon-icons.com_57151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket_tickets_icon_188148.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491254422-calendardateappontmentbookingreservation_82940.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat_passenger_icon_135220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-document-cancel-button_icon-icons.com_71554.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crew_icon_153959.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_group_solid_icon_235378.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_solid_icon_235377.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
