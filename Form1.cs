@@ -15,6 +15,8 @@ namespace Clave2_Grupo3_US23007_
         public Form1()
         {
             InitializeComponent();
+            Conexion conectar = new Conexion();
+            conectar.establecerConexion();
         }
     }
 }
