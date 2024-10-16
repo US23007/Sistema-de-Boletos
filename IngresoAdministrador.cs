@@ -50,7 +50,12 @@ namespace Clave2_Grupo3_US23007_
             else
             {
                 ValidarIngreso usuario = new ValidarIngreso(txtUsuario.Text,txtContraseña.Text,txtcorreo.Text);
-                usuario.IngresoAdministrador();
+                if (usuario.IngresoAdministrador())
+                {
+                    FormPrincipal principal = new FormPrincipal();
+                    principal.Show();
+                    this.Hide();
+                }
             }
         }
 

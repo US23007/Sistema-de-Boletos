@@ -163,6 +163,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_ad_97607 {
+            get {
+                object obj = ResourceManager.GetObject("ic_ad_97607", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key_silhouette_security_tool_interface_symbol_of_password_icon_icons_com_54503 {
             get {
                 object obj = ResourceManager.GetObject("key_silhouette_security_tool_interface_symbol_of_password_icon_icons_com_54503", resourceCulture);

@@ -61,7 +61,7 @@ namespace Clave2_Grupo3_US23007_
             this.facturasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(664, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,7 +78,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.cerrarSesiónToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._1486564399_close_81512;
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
@@ -97,14 +97,14 @@ namespace Clave2_Grupo3_US23007_
             this.asientosToolStripMenuItem});
             this.avionesToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.plane_takeoff_3577;
             this.avionesToolStripMenuItem.Name = "avionesToolStripMenuItem";
-            this.avionesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.avionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.avionesToolStripMenuItem.Text = "Aviones";
             // 
             // asientosToolStripMenuItem
             // 
             this.asientosToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.seat_icon_137217;
             this.asientosToolStripMenuItem.Name = "asientosToolStripMenuItem";
-            this.asientosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.asientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.asientosToolStripMenuItem.Text = "Asientos";
             // 
             // boletosToolStripMenuItem
@@ -120,7 +120,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.tarifasDeBoletosToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.ticket_tickets_icon_188148;
             this.tarifasDeBoletosToolStripMenuItem.Name = "tarifasDeBoletosToolStripMenuItem";
-            this.tarifasDeBoletosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.tarifasDeBoletosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tarifasDeBoletosToolStripMenuItem.Text = "Tarifas de Boletos";
             // 
             // pasajerosToolStripMenuItem
@@ -136,7 +136,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.pasajerosToolStripMenuItem1.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.seat_passenger_icon_135220;
             this.pasajerosToolStripMenuItem1.Name = "pasajerosToolStripMenuItem1";
-            this.pasajerosToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
+            this.pasajerosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.pasajerosToolStripMenuItem1.Text = "Pasajeros";
             // 
             // reservasToolStripMenuItem
@@ -152,7 +152,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.cancelacionesToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.text_document_cancel_button_icon_icons_com_71554;
             this.cancelacionesToolStripMenuItem.Name = "cancelacionesToolStripMenuItem";
-            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cancelacionesToolStripMenuItem.Text = "Cancelaciones";
             // 
             // empleadosToolStripMenuItem
@@ -173,8 +173,9 @@ namespace Clave2_Grupo3_US23007_
             // 
             // facturasToolStripMenuItem
             // 
+            this.facturasToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.ic_ad_97607;
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.facturasToolStripMenuItem.Text = "Facturas";
             // 
             // FormPrincipal
@@ -182,7 +183,7 @@ namespace Clave2_Grupo3_US23007_
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 493);
+            this.ClientSize = new System.Drawing.Size(664, 493);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
