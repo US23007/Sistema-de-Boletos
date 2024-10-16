@@ -8,6 +8,8 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
+
+    //Clase para Validar el Usuario , Contraseña y Correo
     class ValidarIngreso
     {
         private String Nombre_Usuario;
@@ -15,6 +17,7 @@ namespace Clave2_Grupo3_US23007_
         private String Contraseña_Usuario;
 
 
+        //Constructor 
         public ValidarIngreso(string nombre, string contraseña, string correo)
         {
             this.Nombre_Usuario = nombre;
@@ -23,6 +26,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        // Propiedades de Clase
         public String Nombre
         {
             get { return Nombre_Usuario; }
@@ -42,6 +46,8 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+
+        // Método para Verificar la existencia de Usuario ,Contraseña y Correo en la Base de Datos
         public bool IngresoAdministrador()
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";

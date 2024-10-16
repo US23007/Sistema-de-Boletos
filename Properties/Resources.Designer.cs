@@ -63,10 +63,40 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
+        internal static System.Drawing.Icon account_login_log_in_icon_250759 {
+            get {
+                object obj = ResourceManager.GetObject("account_login_log_in_icon_250759", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
         internal static System.Drawing.Icon Error_80_icon_icons_com_57326 {
             get {
                 object obj = ResourceManager.GetObject("Error_80_icon_icons_com_57326", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon error_theapplication_2964 {
+            get {
+                object obj = ResourceManager.GetObject("error_theapplication_2964", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_icon_icons_com_71204_1_ {
+            get {
+                object obj = ResourceManager.GetObject("eye_icon_icons_com_71204_1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -77,6 +107,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
             get {
                 object obj = ResourceManager.GetObject("key_silhouette_security_tool_interface_symbol_of_password_icon_icons_com_54503", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon loadingcircles_102612 {
+            get {
+                object obj = ResourceManager.GetObject("loadingcircles_102612", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

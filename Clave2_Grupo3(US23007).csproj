@@ -156,5 +156,20 @@
   <ItemGroup>
     <None Include="Resources\Error-80_icon-icons.com_57326.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_theapplication_2964.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_icon-icons.com_71204.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_icon-icons.com_71204%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadingcircles_102612.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_login_log_in_icon_250759.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

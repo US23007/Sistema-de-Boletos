@@ -8,6 +8,8 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
+
+    //Clase Conexión nos ayudara a verificar desde ubn inicio si la conexión ala Base de Datos fue exitosa o no 
     class Conexion
     {
         MySqlConnection conex = new MySqlConnection();
