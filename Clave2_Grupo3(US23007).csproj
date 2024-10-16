@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidarIngreso.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mail_email_message_electronic_online_web_icon-icons.com_59986.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error-80_icon-icons.com_57326.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
