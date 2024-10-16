@@ -16,5 +16,7 @@ namespace Clave2_Grupo3_US23007_
         {
             InitializeComponent();
         }
+
+       
     }
 }
