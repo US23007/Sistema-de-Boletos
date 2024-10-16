@@ -61,6 +61,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1486564399_close_81512 {
+            get {
+                object obj = ResourceManager.GetObject("_1486564399_close_81512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon account_login_log_in_icon_250759 {
@@ -137,6 +147,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
             get {
                 object obj = ResourceManager.GetObject("round_account_button_with_user_inside_icon_icons_com_72596", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Tickets_43689 {
+            get {
+                object obj = ResourceManager.GetObject("Tickets_43689", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

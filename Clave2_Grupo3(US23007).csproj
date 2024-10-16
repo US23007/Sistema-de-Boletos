@@ -105,6 +105,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="IngresoAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="ValidarIngreso.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoAdministrador.resx">
       <DependentUpon>IngresoAdministrador.cs</DependentUpon>
@@ -170,6 +179,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\account_login_log_in_icon_250759.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tickets_43689.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486564399-close_81512%281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486564399-close_81512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
