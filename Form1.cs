@@ -10,13 +10,26 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
-    public partial class Form1 : Form
+    public partial class FormCarga : System.Windows.Forms.Form
     {
-        public Form1()
+        public FormCarga()
         {
             InitializeComponent();
-            Conexion conectar = new Conexion();
-            conectar.establecerConexion();
+            timer1.Start();
+        }
+
+        int segundos = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            segundos++;
+            if (segundos > 1)
+            {
+                timer1.Stop();
+                IngresoAdministrador ingreso = new IngresoAdministrador();
+                ingreso.Show();
+                this.Hide();
+            }
+            
         }
     }
 }
