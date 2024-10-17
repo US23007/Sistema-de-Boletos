@@ -35,6 +35,7 @@ namespace Clave2_Grupo3_US23007_
             this.dataHora = new System.Windows.Forms.DateTimePicker();
             this.calendar = new System.Windows.Forms.MonthCalendar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtfecha = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbxDestino = new System.Windows.Forms.ComboBox();
@@ -66,7 +67,7 @@ namespace Clave2_Grupo3_US23007_
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(5, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(854, 292);
+            this.panel1.Size = new System.Drawing.Size(854, 388);
             this.panel1.TabIndex = 0;
             // 
             // groupBox5
@@ -83,7 +84,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox4.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.clock_with_white_face_icon_icons_com_72804;
             this.pictureBox4.Location = new System.Drawing.Point(8, 22);
             this.pictureBox4.Name = "pictureBox4";
@@ -107,9 +108,12 @@ namespace Clave2_Grupo3_US23007_
             this.calendar.Location = new System.Drawing.Point(439, 59);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 1;
+            this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
+            
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtfecha);
             this.groupBox4.Controls.Add(this.pictureBox3);
             this.groupBox4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(474, 10);
@@ -118,6 +122,14 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Fecha de Llegada";
+            // 
+            // txtfecha
+            // 
+            this.txtfecha.Location = new System.Drawing.Point(53, 21);
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.ReadOnly = true;
+            this.txtfecha.Size = new System.Drawing.Size(100, 23);
+            this.txtfecha.TabIndex = 4;
             // 
             // pictureBox3
             // 
@@ -144,17 +156,17 @@ namespace Clave2_Grupo3_US23007_
             // 
             // cbxDestino
             // 
-            this.cbxDestino.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxDestino.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDestino.FormattingEnabled = true;
-            this.cbxDestino.Location = new System.Drawing.Point(-4, 24);
+            this.cbxDestino.Location = new System.Drawing.Point(6, 24);
             this.cbxDestino.Name = "cbxDestino";
-            this.cbxDestino.Size = new System.Drawing.Size(165, 27);
+            this.cbxDestino.Size = new System.Drawing.Size(165, 24);
             this.cbxDestino.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.planelanding_avion_3578;
-            this.pictureBox2.Location = new System.Drawing.Point(242, 30);
+            this.pictureBox2.Location = new System.Drawing.Point(239, 30);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -184,11 +196,11 @@ namespace Clave2_Grupo3_US23007_
             // 
             // cbxOrigen
             // 
-            this.cbxOrigen.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxOrigen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxOrigen.FormattingEnabled = true;
             this.cbxOrigen.Location = new System.Drawing.Point(5, 20);
             this.cbxOrigen.Name = "cbxOrigen";
-            this.cbxOrigen.Size = new System.Drawing.Size(165, 27);
+            this.cbxOrigen.Size = new System.Drawing.Size(165, 24);
             this.cbxOrigen.TabIndex = 1;
             // 
             // groupBox1
@@ -197,7 +209,7 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(7, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(865, 426);
             this.groupBox1.TabIndex = 1;
@@ -218,6 +230,7 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -244,5 +257,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DateTimePicker dataHora;
+        private System.Windows.Forms.TextBox txtfecha;
     }
 }

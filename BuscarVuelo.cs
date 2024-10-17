@@ -15,6 +15,8 @@ namespace Clave2_Grupo3_US23007_
         public BuscarVuelo()
         {
             InitializeComponent();
+            Vuelos vuelos = new Vuelos();
+            vuelos.ObtenrRutas(cbxOrigen,cbxDestino);
             calendar.Visible = false;
             dataHora.Visible = true;
         }
@@ -35,5 +37,11 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        
+
+        private void calendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            txtfecha.Text = e.Start.ToString("yyyy/M/dd");
+        }
     }
 }
