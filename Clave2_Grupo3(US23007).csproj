@@ -231,5 +231,17 @@
   <ItemGroup>
     <None Include="Resources\ic-ad_97607.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_modify_icon_149489.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_modify_icon_149489.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_edit_modify_icon_143729.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_edit_modify_icon_1437291.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

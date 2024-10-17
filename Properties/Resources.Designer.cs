@@ -103,6 +103,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_modify_icon_149489 {
+            get {
+                object obj = ResourceManager.GetObject("edit_modify_icon_149489", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employee_group_solid_icon_235378 {
             get {
                 object obj = ResourceManager.GetObject("employee_group_solid_icon_235378", resourceCulture);
@@ -196,6 +206,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap mail_email_message_electronic_online_web_icon_icons_com_59986 {
             get {
                 object obj = ResourceManager.GetObject("mail_email_message_electronic_online_web_icon_icons_com_59986", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notes_edit_modify_icon_143729 {
+            get {
+                object obj = ResourceManager.GetObject("notes_edit_modify_icon_143729", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
