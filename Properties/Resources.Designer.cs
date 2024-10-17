@@ -93,6 +93,26 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_with_a_clock_time_tools_icon_icons_com_56831 {
+            get {
+                object obj = ResourceManager.GetObject("calendar_with_a_clock_time_tools_icon_icons_com_56831", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clock_with_white_face_icon_icons_com_72804 {
+            get {
+                object obj = ResourceManager.GetObject("clock_with_white_face_icon_icons_com_72804", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap crew_icon_153959 {
             get {
                 object obj = ResourceManager.GetObject("crew_icon_153959", resourceCulture);

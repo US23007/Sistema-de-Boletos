@@ -25,8 +25,8 @@ namespace Clave2_Grupo3_US23007_
             if (segundos > 1)
             {
                 timer1.Stop();
-                IngresoAdministrador ingreso = new IngresoAdministrador();
-                ingreso.Show();
+                BuscarVuelo buscar = new BuscarVuelo();
+                buscar.Show();
                 this.Hide();
             }
             

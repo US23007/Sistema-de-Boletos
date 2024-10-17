@@ -261,5 +261,11 @@
   <ItemGroup>
     <None Include="Resources\planelanding_avion_3578.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-with-a-clock-time-tools_icon-icons.com_56831.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock-with-white-face_icon-icons.com_72804.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
