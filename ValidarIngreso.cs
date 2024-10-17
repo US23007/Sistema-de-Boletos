@@ -47,7 +47,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
-        // Método para Verificar la existencia de Usuario ,Contraseña y Correo en la Base de Datos
+        
         public bool IngresoAdministrador()
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";

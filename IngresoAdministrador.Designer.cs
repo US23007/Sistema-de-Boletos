@@ -81,7 +81,7 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Size = new System.Drawing.Size(306, 426);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Administrador";
+            this.groupBox1.Text = "Usuario";
             // 
             // label5
             // 
@@ -169,11 +169,11 @@ namespace Clave2_Grupo3_US23007_
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(80, 385);
+            this.btnIngresar.Location = new System.Drawing.Point(89, 385);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(145, 35);
+            this.btnIngresar.Size = new System.Drawing.Size(107, 35);
             this.btnIngresar.TabIndex = 18;
-            this.btnIngresar.Text = "Iniciar Sesión";
+            this.btnIngresar.Text = "Continuar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 

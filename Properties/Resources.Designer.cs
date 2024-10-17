@@ -173,6 +173,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fluffy_wing_38311 {
+            get {
+                object obj = ResourceManager.GetObject("fluffy_wing_38311", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_ad_97607 {
             get {
                 object obj = ResourceManager.GetObject("ic_ad_97607", resourceCulture);
@@ -236,6 +246,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap plane_takeoff_3577 {
             get {
                 object obj = ResourceManager.GetObject("plane_takeoff_3577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap planelanding_avion_3578 {
+            get {
+                object obj = ResourceManager.GetObject("planelanding_avion_3578", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
