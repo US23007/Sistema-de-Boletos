@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -46,48 +47,9 @@ namespace Clave2_Grupo3_US23007_
 
 
 
-        public void MostrarLocales(Label id, Label nombre, Label disponible, TextBox direccion, PictureBox dibujo, TextBox texto, Label TipoLocal, Label Iluminacion, Label Sonido, Label Asientos)
+        public void MostrarLocales(Label descripcion, Label horasalida, Label origen, Label duracion, PictureBox dibujo, Label aerlinea, Label precio, Label destino, Label horallegada, Label aerpuertOrigen ,Label aeropuertoDestino)
         {
-
-            string consulta = " ";
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(consulta, objeto.Conectar());
-                cmd.Parameters.AddWithValue("@ID", numero);
-                using (MySqlDataReader leer = cmd.ExecuteReader())
-                {
-                    if (leer.Read())
-                    {
-
-                        id.Text = leer["idLocales"].ToString();
-                        nombre.Text = leer["NombreLocal"].ToString();  // Corregido
-                        disponible.Text = leer["DisponibilidadLocal"].ToString();  // Corregido
-                        direccion.Text = leer["DireccionLocal"].ToString();  // Corregido
-
-                        txtDescripcion.Text = leer["Descripcion"].ToString();  // Corregido
-                        TipoLocal.Text = leer["TipoLocal"].ToString();  // Corregido
-                        Iluminacion.Text = leer["Iluminacion"].ToString();  // Corregido
-                        Sonido.Text = leer["Sonido"].ToString();  // Corregido
-                        Asientos.Text = leer["Asientos"].ToString();  // Corregido
-
-
-                        byte[] imageBytes = (byte[])leer["imgLocal"];
-                        using (MemoryStream ms = new MemoryStream(imageBytes))
-                        {
-                            dibujo.Image = Image.FromStream(ms);
-                        }
-
-                    }
-                    else
-                    {
-                        //MessageBox.Show("No se encontraron datos para el ID proporcionado."); 
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Algo salió mal: " + ex.Message);
-            }
+            
         }
     }
 }

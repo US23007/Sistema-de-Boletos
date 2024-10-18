@@ -59,6 +59,8 @@ namespace Clave2_Grupo3_US23007_
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.lbl_aeropuerto_Origen = new System.Windows.Forms.Label();
+            this.lbl_aeropueto_Destino = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -190,6 +192,8 @@ namespace Clave2_Grupo3_US23007_
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbl_aeropueto_Destino);
+            this.panel1.Controls.Add(this.lbl_aeropuerto_Origen);
             this.panel1.Controls.Add(this.lblPrecio);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lblAerolinea);
@@ -280,7 +284,7 @@ namespace Clave2_Grupo3_US23007_
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(35, 56);
+            this.label3.Location = new System.Drawing.Point(29, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 18);
             this.label3.TabIndex = 7;
@@ -291,7 +295,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Destino.AutoSize = true;
             this.lbl_Destino.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Destino.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Destino.Location = new System.Drawing.Point(678, 89);
+            this.lbl_Destino.Location = new System.Drawing.Point(655, 104);
             this.lbl_Destino.Name = "lbl_Destino";
             this.lbl_Destino.Size = new System.Drawing.Size(17, 18);
             this.lbl_Destino.TabIndex = 6;
@@ -302,7 +306,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Llegada.AutoSize = true;
             this.lbl_Llegada.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Llegada.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Llegada.Location = new System.Drawing.Point(678, 24);
+            this.lbl_Llegada.Location = new System.Drawing.Point(658, 14);
             this.lbl_Llegada.Name = "lbl_Llegada";
             this.lbl_Llegada.Size = new System.Drawing.Size(17, 18);
             this.lbl_Llegada.TabIndex = 5;
@@ -347,7 +351,7 @@ namespace Clave2_Grupo3_US23007_
             this.lblHoraSalida.AutoSize = true;
             this.lblHoraSalida.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoraSalida.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraSalida.Location = new System.Drawing.Point(16, 24);
+            this.lblHoraSalida.Location = new System.Drawing.Point(35, 16);
             this.lblHoraSalida.Name = "lblHoraSalida";
             this.lblHoraSalida.Size = new System.Drawing.Size(17, 18);
             this.lblHoraSalida.TabIndex = 1;
@@ -358,7 +362,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Origen.AutoSize = true;
             this.lbl_Origen.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Origen.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Origen.Location = new System.Drawing.Point(16, 89);
+            this.lbl_Origen.Location = new System.Drawing.Point(35, 109);
             this.lbl_Origen.Name = "lbl_Origen";
             this.lbl_Origen.Size = new System.Drawing.Size(17, 18);
             this.lbl_Origen.TabIndex = 0;
@@ -425,6 +429,28 @@ namespace Clave2_Grupo3_US23007_
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
+            // lbl_aeropuerto_Origen
+            // 
+            this.lbl_aeropuerto_Origen.AutoSize = true;
+            this.lbl_aeropuerto_Origen.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_aeropuerto_Origen.ForeColor = System.Drawing.Color.Black;
+            this.lbl_aeropuerto_Origen.Location = new System.Drawing.Point(35, 77);
+            this.lbl_aeropuerto_Origen.Name = "lbl_aeropuerto_Origen";
+            this.lbl_aeropuerto_Origen.Size = new System.Drawing.Size(17, 18);
+            this.lbl_aeropuerto_Origen.TabIndex = 14;
+            this.lbl_aeropuerto_Origen.Text = "?";
+            // 
+            // lbl_aeropueto_Destino
+            // 
+            this.lbl_aeropueto_Destino.AutoSize = true;
+            this.lbl_aeropueto_Destino.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_aeropueto_Destino.ForeColor = System.Drawing.Color.Black;
+            this.lbl_aeropueto_Destino.Location = new System.Drawing.Point(655, 79);
+            this.lbl_aeropueto_Destino.Name = "lbl_aeropueto_Destino";
+            this.lbl_aeropueto_Destino.Size = new System.Drawing.Size(17, 18);
+            this.lbl_aeropueto_Destino.TabIndex = 15;
+            this.lbl_aeropueto_Destino.Text = "?";
+            // 
             // Informacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,5 +512,7 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Label lbl_aeropueto_Destino;
+        private System.Windows.Forms.Label lbl_aeropuerto_Origen;
     }
 }

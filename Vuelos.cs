@@ -74,7 +74,7 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 conector.Open();
-                string query = "Select  DISTINCT Origen,Destino From vuelos";
+                string query = "Select  DISTINCT Origen,Destino From rutas";
 
                 using (MySqlCommand comando = new MySqlCommand(query, conector))
 
@@ -115,6 +115,7 @@ namespace Clave2_Grupo3_US23007_
                                       "FROM vuelos " +
                                       "INNER JOIN aviones ON vuelos.aviones_ID = aviones.ID " +
                                       "INNER JOIN aerolinea ON aviones.aerolinea_ID = aerolinea.ID " +
+                                      "INNER JOIN rutas ON vuelos.rutas_ID = rutas.ID " +
                                       "WHERE Origen = @origen AND Destino = @destino AND FechaSalida = @fecha AND HoraSalida = @hora";
 
                     using (MySqlCommand comando = new MySqlCommand(consulta, conector))
@@ -147,6 +148,7 @@ namespace Clave2_Grupo3_US23007_
                                                          "FROM vuelos " +
                                                          "INNER JOIN aviones ON vuelos.aviones_ID = aviones.ID " +
                                                          "INNER JOIN aerolinea ON aviones.aerolinea_ID = aerolinea.ID " +
+                                                         "INNER JOIN rutas ON vuelos.rutas_ID = rutas.ID " +
                                                          "WHERE Origen = @ciudadorigen AND Destino = @ciudaddestino";
 
                                 using (MySqlCommand nuevocomando = new MySqlCommand(consultaGeneral, conector))
