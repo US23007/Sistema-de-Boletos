@@ -22,6 +22,7 @@ namespace Clave2_Grupo3_US23007_
             cbxOrigen.Focus();
             tamaño = picBuscar.Size;
             dataHora.Value = DateTime.Now;
+            gbxResultados.Visible = false;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -45,9 +46,20 @@ namespace Clave2_Grupo3_US23007_
 
         private void calendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            txtfecha.Text = e.Start.ToString("yyyy/M/dd");
-            calendar.Visible = false;
-            dataHora.Focus();
+            
+            if(e.Start.Date <= DateTime.Now.Date)
+            {
+                MessageBox.Show("Debe ingresar una fecha mayor a la actual ", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtfecha.Text = " ";
+                return;
+            }
+            else
+            {
+                calendar.Visible = false;
+                dataHora.Focus();
+                txtfecha.Text = e.Start.ToString("yyyy/M/dd");
+            }
+           
             
         }
 
@@ -89,7 +101,7 @@ namespace Clave2_Grupo3_US23007_
             {
                 MessageBox.Show("Ingrese un lugar de Destino", "Ciudad Destino Vacio", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
-            }if(txtfecha.Text == string.Empty)
+            }if(txtfecha.Text == " ")
             {
                 MessageBox.Show("Ingrese una Fecha de salida", "Fecha Salida Vacia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -98,6 +110,17 @@ namespace Clave2_Grupo3_US23007_
             {
                 MessageBox.Show("Ingrese una Hora de salida diferente a la actual", "Hora de Salida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
+            }
+            else
+            {
+                gbxResultados.Visible = true;
+                string origen = cbxOrigen.SelectedItem.ToString();
+                string destino = cbxDestino.SelectedItem.ToString();
+                DateTime fecha = DateTime.Parse(txtfecha.Text);
+                TimeSpan hora = dataHora.Value.TimeOfDay;
+                Vuelos viaje = new Vuelos();
+                viaje.Viaje(origen, destino, fecha, hora);
+                viaje.ObtenerVuelosDisponibles(dgvDatos);
             }
         }
     }
