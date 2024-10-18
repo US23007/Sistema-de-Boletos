@@ -73,6 +73,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1491254405_plusaddmoredetail_82972 {
+            get {
+                object obj = ResourceManager.GetObject("_1491254405_plusaddmoredetail_82972", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1491254422_calendardateappontmentbookingreservation_82940 {
             get {
                 object obj = ResourceManager.GetObject("_1491254422_calendardateappontmentbookingreservation_82940", resourceCulture);
@@ -323,9 +333,9 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap select_area_icon_icons_com_69919 {
+        internal static System.Drawing.Bitmap select_area_icon_icons_com_69919_1_ {
             get {
-                object obj = ResourceManager.GetObject("select_area_icon_icons_com_69919", resourceCulture);
+                object obj = ResourceManager.GetObject("select_area_icon_icons_com_69919_1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

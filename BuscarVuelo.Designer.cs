@@ -30,15 +30,20 @@ namespace Clave2_Grupo3_US23007_
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gbxResultados = new System.Windows.Forms.GroupBox();
+            this.btn_Ver_Mas = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.calendar = new System.Windows.Forms.MonthCalendar();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataHora = new System.Windows.Forms.DateTimePicker();
-            this.calendar = new System.Windows.Forms.MonthCalendar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtfecha = new System.Windows.Forms.TextBox();
             this.picCalendar = new System.Windows.Forms.PictureBox();
@@ -47,12 +52,11 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbxOrigen = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.gbxResultados = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.gbxResultados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -62,10 +66,6 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            this.gbxResultados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,6 +83,106 @@ namespace Clave2_Grupo3_US23007_
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 388);
             this.panel1.TabIndex = 0;
+            // 
+            // gbxResultados
+            // 
+            this.gbxResultados.Controls.Add(this.btn_Ver_Mas);
+            this.gbxResultados.Controls.Add(this.btnSeleccionar);
+            this.gbxResultados.Controls.Add(this.dgvDatos);
+            this.gbxResultados.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxResultados.ForeColor = System.Drawing.Color.Black;
+            this.gbxResultados.Location = new System.Drawing.Point(8, 124);
+            this.gbxResultados.Name = "gbxResultados";
+            this.gbxResultados.Size = new System.Drawing.Size(900, 252);
+            this.gbxResultados.TabIndex = 7;
+            this.gbxResultados.TabStop = false;
+            this.gbxResultados.Text = "Vuelos";
+            // 
+            // btn_Ver_Mas
+            // 
+            this.btn_Ver_Mas.BackColor = System.Drawing.Color.White;
+            this.btn_Ver_Mas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Ver_Mas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ver_Mas.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ver_Mas.ForeColor = System.Drawing.Color.Black;
+            this.btn_Ver_Mas.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._1491254405_plusaddmoredetail_82972;
+            this.btn_Ver_Mas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Ver_Mas.Location = new System.Drawing.Point(217, 209);
+            this.btn_Ver_Mas.Name = "btn_Ver_Mas";
+            this.btn_Ver_Mas.Size = new System.Drawing.Size(114, 37);
+            this.btn_Ver_Mas.TabIndex = 8;
+            this.btn_Ver_Mas.Text = "Ver más";
+            this.btn_Ver_Mas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Ver_Mas.UseVisualStyleBackColor = false;
+            this.btn_Ver_Mas.Click += new System.EventHandler(this.btn_Ver_Mas_Click);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.Black;
+            this.btnSeleccionar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.select_area_icon_icons_com_69919_1_;
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeleccionar.Location = new System.Drawing.Point(561, 209);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(134, 37);
+            this.btnSeleccionar.TabIndex = 7;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDatos.Location = new System.Drawing.Point(6, 33);
+            this.dgvDatos.MultiSelect = false;
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvDatos.Size = new System.Drawing.Size(879, 170);
+            this.dgvDatos.TabIndex = 6;
+            // 
+            // calendar
+            // 
+            this.calendar.Location = new System.Drawing.Point(455, 59);
+            this.calendar.Name = "calendar";
+            this.calendar.TabIndex = 1;
+            this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
+            // 
+            // picBuscar
+            // 
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBuscar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.searcher_magnifyng_glass_search_locate_find_icon_123813_1_;
+            this.picBuscar.Location = new System.Drawing.Point(865, 23);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(26, 31);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBuscar.TabIndex = 5;
+            this.picBuscar.TabStop = false;
+            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
+            this.picBuscar.MouseEnter += new System.EventHandler(this.picBuscar_MouseEnter);
+            this.picBuscar.MouseLeave += new System.EventHandler(this.picBuscar_MouseLeave);
             // 
             // pictureBox2
             // 
@@ -137,13 +237,6 @@ namespace Clave2_Grupo3_US23007_
             this.dataHora.Size = new System.Drawing.Size(102, 27);
             this.dataHora.TabIndex = 3;
             this.dataHora.ValueChanged += new System.EventHandler(this.dataHora_ValueChanged);
-            // 
-            // calendar
-            // 
-            this.calendar.Location = new System.Drawing.Point(455, 59);
-            this.calendar.Name = "calendar";
-            this.calendar.TabIndex = 1;
-            this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
             // 
             // groupBox4
             // 
@@ -234,73 +327,6 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "El Salvador Blue Airlines";
             // 
-            // picBuscar
-            // 
-            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBuscar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.searcher_magnifyng_glass_search_locate_find_icon_123813_1_;
-            this.picBuscar.Location = new System.Drawing.Point(865, 23);
-            this.picBuscar.Name = "picBuscar";
-            this.picBuscar.Size = new System.Drawing.Size(26, 31);
-            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBuscar.TabIndex = 5;
-            this.picBuscar.TabStop = false;
-            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
-            this.picBuscar.MouseEnter += new System.EventHandler(this.picBuscar_MouseEnter);
-            this.picBuscar.MouseLeave += new System.EventHandler(this.picBuscar_MouseLeave);
-            // 
-            // dgvDatos
-            // 
-            this.dgvDatos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvDatos.Location = new System.Drawing.Point(6, 33);
-            this.dgvDatos.MultiSelect = false;
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.ReadOnly = true;
-            this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvDatos.Size = new System.Drawing.Size(879, 170);
-            this.dgvDatos.TabIndex = 6;
-            // 
-            // gbxResultados
-            // 
-            this.gbxResultados.Controls.Add(this.pictureBox3);
-            this.gbxResultados.Controls.Add(this.dgvDatos);
-            this.gbxResultados.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxResultados.ForeColor = System.Drawing.Color.Black;
-            this.gbxResultados.Location = new System.Drawing.Point(8, 124);
-            this.gbxResultados.Name = "gbxResultados";
-            this.gbxResultados.Size = new System.Drawing.Size(900, 252);
-            this.gbxResultados.TabIndex = 7;
-            this.gbxResultados.TabStop = false;
-            this.gbxResultados.Text = "Vuelos";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.searcher_magnifyng_glass_search_locate_find_icon_123813_1_;
-            this.pictureBox3.Location = new System.Drawing.Point(368, 215);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
             // BuscarVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +339,9 @@ namespace Clave2_Grupo3_US23007_
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Boletos";
             this.panel1.ResumeLayout(false);
+            this.gbxResultados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox5.ResumeLayout(false);
@@ -323,10 +352,6 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            this.gbxResultados.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,6 +377,7 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox gbxResultados;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btn_Ver_Mas;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

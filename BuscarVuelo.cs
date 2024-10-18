@@ -16,6 +16,8 @@ namespace Clave2_Grupo3_US23007_
         public BuscarVuelo()
         {
             InitializeComponent();
+            Conexion conexion = new Conexion();
+            conexion.establecerConexion();
             Vuelos vuelos = new Vuelos();
             vuelos.ObtenrRutas(cbxOrigen,cbxDestino);
             calendar.Visible = false;
@@ -121,6 +123,48 @@ namespace Clave2_Grupo3_US23007_
                 Vuelos viaje = new Vuelos();
                 viaje.Viaje(origen, destino, fecha, hora);
                 viaje.ObtenerVuelosDisponibles(dgvDatos);
+            }
+        }
+
+        private void btn_Ver_Mas_Click(object sender, EventArgs e)
+        {
+            if(dgvDatos.SelectedRows.Count > 0)
+            { 
+                foreach(DataGridViewRow fila in dgvDatos.SelectedRows)
+                {
+                    Vuelos vuelos = new Vuelos();
+                    vuelos.IdVuelo = int.Parse(fila.Cells["ID"].Value.ToString());
+                    Console.WriteLine(vuelos.IdVuelo);
+                    MessageBox.Show("Cargando Información.....", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay ninguna fila seleccionada.","Seleccionar una Fila",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                return;
+            }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvDatos.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow fila in dgvDatos.SelectedRows)
+                {
+                    Vuelos vuelos = new Vuelos();
+                    vuelos.IdVuelo = int.Parse(fila.Cells["ID"].Value.ToString());
+                    Console.WriteLine(vuelos.IdVuelo);
+                    MessageBox.Show("Seleccion Completada", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Para continuar debe de Iniciar Sesion o Registrarse", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    IngresoAdministrador ingreso = new IngresoAdministrador();
+                    ingreso.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay ninguna fila seleccionada.", "Seleccionar una Fila", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
             }
         }
     }

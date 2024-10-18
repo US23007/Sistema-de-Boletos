@@ -137,8 +137,8 @@ namespace Clave2_Grupo3_US23007_
                             {
                                 reader.Close();
                                 MessageBox.Show("No hay resultados en la Busqueda", "Resultados No encontrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                MessageBox.Show("Mostrando coincidencias para Ciudad de Origen:\n" + OrigenVuelo +
-                                                "\nCiudad de Destino: " + DestinoVuelo,
+                                MessageBox.Show("Mostrando coincidencias para Ciudad de Origen:" + OrigenVuelo +
+                                                "-- Ciudad de Destino: " + DestinoVuelo,
                                                 "Resultados No Encontrados",
                                                 MessageBoxButtons.OK,
                                                 MessageBoxIcon.Information);

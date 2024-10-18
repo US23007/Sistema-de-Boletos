@@ -24,8 +24,6 @@ namespace Clave2_Grupo3_US23007_
         public IngresoAdministrador()
         {
             InitializeComponent();
-            Conexion conexion = new Conexion();
-            conexion.establecerConexion();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
