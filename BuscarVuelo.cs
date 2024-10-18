@@ -19,9 +19,9 @@ namespace Clave2_Grupo3_US23007_
             Vuelos vuelos = new Vuelos();
             vuelos.ObtenrRutas(cbxOrigen,cbxDestino);
             calendar.Visible = false;
-            dataHora.Visible = true;
             cbxOrigen.Focus();
             tamaño = picBuscar.Size;
+            dataHora.Value = DateTime.Now;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace Clave2_Grupo3_US23007_
         
             if (cbxOrigen.SelectedIndex == -1)
             {
-                MessageBox.Show("Ingrese un lugar de origen", "Ciudad Origen Vacio", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Ingrese un lugar de Origen", "Ciudad Origen Vacio", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
             if (cbxDestino.SelectedIndex ==-1)
@@ -91,12 +91,12 @@ namespace Clave2_Grupo3_US23007_
                 return;
             }if(txtfecha.Text == string.Empty)
             {
-                MessageBox.Show("Ingrese una fecha de salida", "Fecha Salida Vacia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Ingrese una Fecha de salida", "Fecha Salida Vacia", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
-            if (dataHora.Value.Hour == horaActual.Hour && dataHora.Value.Minute == horaActual.Minute)
+            if (dataHora.Value.Hour == horaActual.Hour && dataHora.Value.Minute == horaActual.Minute )
             {
-                MessageBox.Show("Ingrese una hora de salida diferente a la actual", "Hora de Salida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Ingrese una Hora de salida diferente a la actual", "Hora de Salida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
         }
