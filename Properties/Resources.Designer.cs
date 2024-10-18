@@ -323,6 +323,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap select_area_icon_icons_com_69919 {
+            get {
+                object obj = ResourceManager.GetObject("select_area_icon_icons_com_69919", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap text_document_cancel_button_icon_icons_com_71554 {
             get {
                 object obj = ResourceManager.GetObject("text_document_cancel_button_icon_icons_com_71554", resourceCulture);
