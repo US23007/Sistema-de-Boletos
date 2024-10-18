@@ -167,5 +167,11 @@ namespace Clave2_Grupo3_US23007_
                 return;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Imagen imagen = new Imagen();
+            imagen.CargarImagenes();
+        }
     }
 }
