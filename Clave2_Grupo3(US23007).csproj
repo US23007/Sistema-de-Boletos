@@ -268,5 +268,11 @@
   <ItemGroup>
     <None Include="Resources\clock-with-white-face_icon-icons.com_72804.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searcher_magnifyng_glass_search_locate_find_icon_123813.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searcher_magnifyng_glass_search_locate_find_icon_123813%281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

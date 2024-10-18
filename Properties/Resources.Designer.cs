@@ -293,6 +293,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap searcher_magnifyng_glass_search_locate_find_icon_123813_1_ {
+            get {
+                object obj = ResourceManager.GetObject("searcher_magnifyng_glass_search_locate_find_icon_123813_1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap seat_icon_137217 {
             get {
                 object obj = ResourceManager.GetObject("seat_icon_137217", resourceCulture);
