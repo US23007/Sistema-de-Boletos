@@ -37,7 +37,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
        
-        //Metodo que convierte una imagen a un arreglo de Bytes
+        //Metodo que convierte una imagen a un arreglo de Bytes 
         private byte[] ConvertImageToByteArray(string imagePath)
         {
             using (FileStream fs = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
@@ -47,7 +47,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-        public void MostrarInformacion(Label descripcion, Label horasalida, Label origen, Label duracion, PictureBox dibujo,
+        public void MostrarInformacion(TextBox descripcion, Label horasalida, Label origen, Label duracion, PictureBox dibujo,
                            Label aerlinea, Label precio, Label destino, Label horallegada,
                            Label aerpuertOrigen, Label aeropuertoDestino, Label distancia)
         {
@@ -98,27 +98,37 @@ namespace Clave2_Grupo3_US23007_
                             descripcion.Text = leer["Descripcion"].ToString();
                             origen.Text = leer["Origen"].ToString();
                             destino.Text = leer["Destino"].ToString();
-                            horasalida.Text = leer["HoraSalida"].ToString();
-                            horallegada.Text = leer["HoraLlegada"].ToString();
-                            duracion.Text = leer["Duracion"].ToString();
+                            TimeSpan horaSalida = (TimeSpan)leer["HoraSalida"];
+                            horasalida.Text = horaSalida.ToString(@"hh\:mm");
+                            TimeSpan hora = (TimeSpan)leer["HoraLlegada"];
+                            horallegada.Text = hora.ToString(@"hh\:mm");
+                            duracion.Text = string.Format("{0} minutos", leer["Duracion"]);
                             aerpuertOrigen.Text = leer["AeropuertoOrigen"].ToString();
                             aeropuertoDestino.Text = leer["AeropuertoDestino"].ToString();
-                            distancia.Text = leer["Distancia"].ToString();
+                            distancia.Text = string.Format("{0} km", leer["Distancia"]);
                             aerlinea.Text = leer["NombreAerolinea"].ToString();
-                            precio.Text = leer["Precio"].ToString();
+                            precio.Text = string.Format("${0:N2}", leer["Precio"]);
 
-                            if (!leer.IsDBNull(leer.GetOrdinal("Imagen")))
+                            try
                             {
-                                byte[] imageBytes = (byte[])leer["Imagen"];
-                                using (MemoryStream ms = new MemoryStream(imageBytes))
+                                if (!leer.IsDBNull(leer.GetOrdinal("Imagen")))
                                 {
-                                    dibujo.Image = Image.FromStream(ms);
+                                    byte[] imageBytes = (byte[])leer["Imagen"];
+                                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                                    {
+                                        dibujo.Image = Image.FromStream(ms);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("La imagen no está disponible.");
                                 }
                             }
-                            else
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("La imagen no está disponible.");
+                                MessageBox.Show("La imagen no está disponible."+ex.Message);
                             }
+                           
                         }
                         else
                         {

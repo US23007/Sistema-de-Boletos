@@ -16,7 +16,7 @@ namespace Clave2_Grupo3_US23007_
         {
             InitializeComponent();
             Imagen imagen = new Imagen();
-            imagen.MostrarInformacion(lblinformacion,lblHoraSalida,lbl_Origen,lbl_Duracion,picImagen,lblAerolinea,lblPrecio,lbl_Destino,lbl_Llegada,lbl_aeropuerto_Origen,lbl_aeropueto_Destino,lbl_Distancia);
+            imagen.MostrarInformacion(txtDescripcion,horasalida,lblOrigen,duracion,picImagen,lblaerolinea,lblprecio,lbldestino,horallegada,lblaeropuertoorigen,lblaeropuertodestino,lbldistancia);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -33,6 +33,16 @@ namespace Clave2_Grupo3_US23007_
             IngresoAdministrador ingreso = new IngresoAdministrador();
             ingreso.Show();
             this.Hide();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

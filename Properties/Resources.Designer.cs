@@ -103,6 +103,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Airport_43692 {
+            get {
+                object obj = ResourceManager.GetObject("Airport_43692", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_with_a_clock_time_tools_icon_icons_com_56831 {
             get {
                 object obj = ResourceManager.GetObject("calendar_with_a_clock_time_tools_icon_icons_com_56831", resourceCulture);
