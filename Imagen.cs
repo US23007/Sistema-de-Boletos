@@ -10,8 +10,13 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
-    class Imagen :Vuelos
+    class Imagen : Vuelos
     {
+        public Imagen()
+        {
+            
+            
+        }
         public void CargarImagenes()
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
@@ -19,8 +24,8 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 conector.Open();
-                byte[] imageBytes = ConvertImageToByteArray(@"C:/Users/MINEDUCYT/Downloads/Guatemala2.jpeg");
-                string consulta = "UPDATE clave2_grupo3db.vuelos SET Imagen =@imagen WHERE ID = 2";
+                byte[] imageBytes = ConvertImageToByteArray(@"C:/Users/MINEDUCYT/Downloads/Guatemala.jpeg");
+                string consulta = "UPDATE clave2_grupo3db.rutas SET Imagen =@imagen WHERE ID = 1";
                 MySqlCommand cmd = new MySqlCommand(consulta, conector);
                 cmd.Parameters.AddWithValue("@imagen", imageBytes);
                 cmd.ExecuteNonQuery();
@@ -34,6 +39,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+       
         //Metodo que convierte una imagen a un arreglo de Bytes
         private byte[] ConvertImageToByteArray(string imagePath)
         {
@@ -44,12 +50,96 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-
-
-
-        public void MostrarLocales(Label descripcion, Label horasalida, Label origen, Label duracion, PictureBox dibujo, Label aerlinea, Label precio, Label destino, Label horallegada, Label aerpuertOrigen ,Label aeropuertoDestino)
+        public void MostrarInformacion(Label descripcion, Label horasalida, Label origen, Label duracion, PictureBox dibujo,
+                           Label aerlinea, Label precio, Label destino, Label horallegada,
+                           Label aerpuertOrigen, Label aeropuertoDestino, Label distancia)
         {
-            
+            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+            using (MySqlConnection conector = new MySqlConnection(connectionString))
+            {
+                string consulta = @"SELECT 
+                                    rutas.Descripcion, 
+                                    rutas.Origen,
+                                    rutas.Destino,
+                                    vuelos.HoraSalida, 
+                                    vuelos.HoraLlegada, 
+	                                rutas.Duracion, 
+                                    rutas.AeropuertoOrigen,
+                                    rutas.AeropuertoDestino,
+                                    rutas.Distancia,
+                                    aerolinea.Nombre AS NombreAerolinea, 
+                                    GROUP_CONCAT(empleados.NombreCompleto SEPARATOR ', ') AS Tripulacion,
+                                    GROUP_CONCAT(empleados.Cargo SEPARATOR ', ') AS Cargo,
+                                    Precio,
+                                    rutas.Imagen
+                                    FROM vuelos
+                                    INNER JOIN aviones ON vuelos.aviones_ID = aviones.ID
+                                    INNER JOIN aerolinea ON aviones.aerolinea_ID = aerolinea.ID
+                                    INNER JOIN rutas ON vuelos.rutas_ID = rutas.ID
+                                    INNER JOIN tripulacion ON tripulacion.aviones_ID = aviones.ID
+                                    INNER JOIN empleados ON tripulacion.ID = empleados.tripulacion_ID
+                                    WHERE vuelos.ID = @id
+                                    GROUP BY
+                                        vuelos.ID, 
+                                        rutas.Descripcion, 
+                                        vuelos.HoraSalida, 
+                                        vuelos.HoraLlegada, 
+                                        rutas.Duracion, 
+                                        aerolinea.Nombre; ";
+
+                try
+                {
+                    conector.Open();
+                    MySqlCommand cmd = new MySqlCommand(consulta, conector);
+                    Console.WriteLine("codigo" + ID);
+                    cmd.Parameters.AddWithValue("@id",ID);
+
+                    using (MySqlDataReader leer = cmd.ExecuteReader())
+                    {
+                        if (leer.Read())
+                        {
+                            descripcion.Text = leer["Descripcion"].ToString();
+                            origen.Text = leer["Origen"].ToString();
+                            destino.Text = leer["Destino"].ToString();
+                            horasalida.Text = leer["HoraSalida"].ToString();
+                            horallegada.Text = leer["HoraLlegada"].ToString();
+                            duracion.Text = leer["Duracion"].ToString();
+                            aerpuertOrigen.Text = leer["AeropuertoOrigen"].ToString();
+                            aeropuertoDestino.Text = leer["AeropuertoDestino"].ToString();
+                            distancia.Text = leer["Distancia"].ToString();
+                            aerlinea.Text = leer["NombreAerolinea"].ToString();
+                            precio.Text = leer["Precio"].ToString();
+
+                            if (!leer.IsDBNull(leer.GetOrdinal("Imagen")))
+                            {
+                                byte[] imageBytes = (byte[])leer["Imagen"];
+                                using (MemoryStream ms = new MemoryStream(imageBytes))
+                                {
+                                    dibujo.Image = Image.FromStream(ms);
+                                }
+                            }
+                            else
+                            {
+                                dibujo.Image = null; // Manejo en caso de que no haya imagen
+                            }
+
+                            MessageBox.Show("Datos cargados correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron datos.");
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
+
+
+
+
     }
 }

@@ -40,6 +40,8 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_aeropueto_Destino = new System.Windows.Forms.Label();
+            this.lbl_aeropuerto_Origen = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblAerolinea = new System.Windows.Forms.Label();
@@ -59,8 +61,7 @@ namespace Clave2_Grupo3_US23007_
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.lbl_aeropuerto_Origen = new System.Windows.Forms.Label();
-            this.lbl_aeropueto_Destino = new System.Windows.Forms.Label();
+            this.lbl_Distancia = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -192,6 +193,7 @@ namespace Clave2_Grupo3_US23007_
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbl_Distancia);
             this.panel1.Controls.Add(this.lbl_aeropueto_Destino);
             this.panel1.Controls.Add(this.lbl_aeropuerto_Origen);
             this.panel1.Controls.Add(this.lblPrecio);
@@ -210,15 +212,37 @@ namespace Clave2_Grupo3_US23007_
             this.panel1.Controls.Add(this.lbl_Origen);
             this.panel1.Location = new System.Drawing.Point(20, 174);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 168);
+            this.panel1.Size = new System.Drawing.Size(741, 180);
             this.panel1.TabIndex = 3;
+            // 
+            // lbl_aeropueto_Destino
+            // 
+            this.lbl_aeropueto_Destino.AutoSize = true;
+            this.lbl_aeropueto_Destino.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_aeropueto_Destino.ForeColor = System.Drawing.Color.Black;
+            this.lbl_aeropueto_Destino.Location = new System.Drawing.Point(655, 79);
+            this.lbl_aeropueto_Destino.Name = "lbl_aeropueto_Destino";
+            this.lbl_aeropueto_Destino.Size = new System.Drawing.Size(17, 18);
+            this.lbl_aeropueto_Destino.TabIndex = 15;
+            this.lbl_aeropueto_Destino.Text = "?";
+            // 
+            // lbl_aeropuerto_Origen
+            // 
+            this.lbl_aeropuerto_Origen.AutoSize = true;
+            this.lbl_aeropuerto_Origen.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_aeropuerto_Origen.ForeColor = System.Drawing.Color.Black;
+            this.lbl_aeropuerto_Origen.Location = new System.Drawing.Point(35, 77);
+            this.lbl_aeropuerto_Origen.Name = "lbl_aeropuerto_Origen";
+            this.lbl_aeropuerto_Origen.Size = new System.Drawing.Size(17, 18);
+            this.lbl_aeropuerto_Origen.TabIndex = 14;
+            this.lbl_aeropuerto_Origen.Text = "?";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.Color.Black;
-            this.lblPrecio.Location = new System.Drawing.Point(501, 126);
+            this.lblPrecio.Location = new System.Drawing.Point(501, 142);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(32, 29);
             this.lblPrecio.TabIndex = 13;
@@ -229,7 +253,7 @@ namespace Clave2_Grupo3_US23007_
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(440, 136);
+            this.label7.Location = new System.Drawing.Point(440, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 16);
             this.label7.TabIndex = 12;
@@ -240,7 +264,7 @@ namespace Clave2_Grupo3_US23007_
             this.lblAerolinea.AutoSize = true;
             this.lblAerolinea.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAerolinea.ForeColor = System.Drawing.Color.Black;
-            this.lblAerolinea.Location = new System.Drawing.Point(118, 136);
+            this.lblAerolinea.Location = new System.Drawing.Point(118, 152);
             this.lblAerolinea.Name = "lblAerolinea";
             this.lblAerolinea.Size = new System.Drawing.Size(14, 16);
             this.lblAerolinea.TabIndex = 11;
@@ -251,7 +275,7 @@ namespace Clave2_Grupo3_US23007_
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(16, 136);
+            this.label6.Location = new System.Drawing.Point(16, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 16);
             this.label6.TabIndex = 10;
@@ -429,27 +453,16 @@ namespace Clave2_Grupo3_US23007_
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // lbl_aeropuerto_Origen
+            // lbl_Distancia
             // 
-            this.lbl_aeropuerto_Origen.AutoSize = true;
-            this.lbl_aeropuerto_Origen.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_aeropuerto_Origen.ForeColor = System.Drawing.Color.Black;
-            this.lbl_aeropuerto_Origen.Location = new System.Drawing.Point(35, 77);
-            this.lbl_aeropuerto_Origen.Name = "lbl_aeropuerto_Origen";
-            this.lbl_aeropuerto_Origen.Size = new System.Drawing.Size(17, 18);
-            this.lbl_aeropuerto_Origen.TabIndex = 14;
-            this.lbl_aeropuerto_Origen.Text = "?";
-            // 
-            // lbl_aeropueto_Destino
-            // 
-            this.lbl_aeropueto_Destino.AutoSize = true;
-            this.lbl_aeropueto_Destino.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_aeropueto_Destino.ForeColor = System.Drawing.Color.Black;
-            this.lbl_aeropueto_Destino.Location = new System.Drawing.Point(655, 79);
-            this.lbl_aeropueto_Destino.Name = "lbl_aeropueto_Destino";
-            this.lbl_aeropueto_Destino.Size = new System.Drawing.Size(17, 18);
-            this.lbl_aeropueto_Destino.TabIndex = 15;
-            this.lbl_aeropueto_Destino.Text = "?";
+            this.lbl_Distancia.AutoSize = true;
+            this.lbl_Distancia.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Distancia.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Distancia.Location = new System.Drawing.Point(357, 124);
+            this.lbl_Distancia.Name = "lbl_Distancia";
+            this.lbl_Distancia.Size = new System.Drawing.Size(17, 18);
+            this.lbl_Distancia.TabIndex = 16;
+            this.lbl_Distancia.Text = "?";
             // 
             // Informacion
             // 
@@ -514,5 +527,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Label lbl_aeropueto_Destino;
         private System.Windows.Forms.Label lbl_aeropuerto_Origen;
+        private System.Windows.Forms.Label lbl_Distancia;
     }
 }

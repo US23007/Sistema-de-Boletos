@@ -11,14 +11,14 @@ namespace Clave2_Grupo3_US23007_
 {
     class Vuelos
     {
-        private int ID;
+        protected int ID;
         private String Origen;
         private String Destino;
         private DateTime Fecha_Salida;
         private TimeSpan Hora_Salida;
 
 
-        public void ObtenerVuelo(int id)
+        public void ObtenerVuelos(int id)
         {
             ID = id;
         }

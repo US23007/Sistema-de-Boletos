@@ -132,10 +132,15 @@ namespace Clave2_Grupo3_US23007_
             { 
                 foreach(DataGridViewRow fila in dgvDatos.SelectedRows)
                 {
+                 
+                    int idvuelo = int.Parse(fila.Cells["ID"].Value.ToString());
                     Vuelos vuelos = new Vuelos();
-                    vuelos.IdVuelo = int.Parse(fila.Cells["ID"].Value.ToString());
+                    vuelos.IdVuelo = idvuelo;
                     Console.WriteLine(vuelos.IdVuelo);
                     MessageBox.Show("Cargando Información.....", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Informacion informacion = new Informacion();
+                    informacion.Show();
+                    this.Hide();
                 }
             }
             else
@@ -149,10 +154,11 @@ namespace Clave2_Grupo3_US23007_
         {
             if (dgvDatos.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow fila in dgvDatos.SelectedRows)
+                foreach (DataGridViewRow fila in dgvDatos.SelectedRows) 
                 {
+                    int idvuelo = int.Parse(fila.Cells["ID"].Value.ToString());
                     Vuelos vuelos = new Vuelos();
-                    vuelos.IdVuelo = int.Parse(fila.Cells["ID"].Value.ToString());
+                    vuelos.IdVuelo = idvuelo;
                     Console.WriteLine(vuelos.IdVuelo);
                     MessageBox.Show("Seleccion Completada", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show("Para continuar debe de Iniciar Sesion o Registrarse", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -168,10 +174,5 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Imagen imagen = new Imagen();
-            imagen.CargarImagenes();
-        }
     }
 }
