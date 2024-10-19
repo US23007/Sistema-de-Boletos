@@ -91,6 +91,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _404browser_102160 {
+            get {
+                object obj = ResourceManager.GetObject("_404browser_102160", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon account_login_log_in_icon_250759 {

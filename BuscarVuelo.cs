@@ -136,7 +136,6 @@ namespace Clave2_Grupo3_US23007_
                     int idvuelo = int.Parse(fila.Cells["ID"].Value.ToString());
                     Vuelos vuelos = new Vuelos();
                     vuelos.ObtenerId = idvuelo;
-                    Console.WriteLine("Variable en vuelo:" + vuelos.ObtenerId);
                     MessageBox.Show("Cargando Información.....", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Informacion informacion = new Informacion();
                     informacion.Show();
@@ -172,5 +171,10 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Imagen imagen = new Imagen();
+            imagen.CargarImagenes();
+        }
     }
 }

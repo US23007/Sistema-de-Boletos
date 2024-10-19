@@ -30,6 +30,15 @@ namespace Clave2_Grupo3_US23007_
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbldescripcion = new System.Windows.Forms.Label();
+            this.lblprecio = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblaerolinea = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblaeropuertodestino = new System.Windows.Forms.Label();
+            this.lbldestino = new System.Windows.Forms.Label();
+            this.lblOrigen = new System.Windows.Forms.Label();
+            this.lblaeropuertoorigen = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lbldistancia = new System.Windows.Forms.Label();
@@ -43,7 +52,6 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.duracion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbl_Nombre4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -54,17 +62,10 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picImagen = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.lblaeropuertoorigen = new System.Windows.Forms.Label();
-            this.lblOrigen = new System.Windows.Forms.Label();
-            this.lbldestino = new System.Windows.Forms.Label();
-            this.lblaeropuertodestino = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblaerolinea = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblprecio = new System.Windows.Forms.Label();
+            this.listEmpleados = new System.Windows.Forms.ListView();
+            this.listCargo = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -79,6 +80,8 @@ namespace Clave2_Grupo3_US23007_
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.listEmpleados);
+            this.groupBox1.Controls.Add(this.lbldescripcion);
             this.groupBox1.Controls.Add(this.lblprecio);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.lblaerolinea);
@@ -100,23 +103,120 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.duracion);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.picImagen);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(12, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(779, 597);
+            this.groupBox1.Size = new System.Drawing.Size(779, 601);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion de Vuelo";
             // 
+            // lbldescripcion
+            // 
+            this.lbldescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldescripcion.ForeColor = System.Drawing.Color.Black;
+            this.lbldescripcion.Location = new System.Drawing.Point(16, 45);
+            this.lbldescripcion.Name = "lbldescripcion";
+            this.lbldescripcion.Size = new System.Drawing.Size(507, 143);
+            this.lbldescripcion.TabIndex = 46;
+            this.lbldescripcion.Click += new System.EventHandler(this.lbldescripcion_Click);
+            // 
+            // lblprecio
+            // 
+            this.lblprecio.AutoSize = true;
+            this.lblprecio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprecio.ForeColor = System.Drawing.Color.Black;
+            this.lblprecio.Location = new System.Drawing.Point(508, 438);
+            this.lblprecio.Name = "lblprecio";
+            this.lblprecio.Size = new System.Drawing.Size(19, 19);
+            this.lblprecio.TabIndex = 45;
+            this.lblprecio.Text = "?";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(448, 440);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 16);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Desde";
+            // 
+            // lblaerolinea
+            // 
+            this.lblaerolinea.AutoSize = true;
+            this.lblaerolinea.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblaerolinea.ForeColor = System.Drawing.Color.Black;
+            this.lblaerolinea.Location = new System.Drawing.Point(129, 438);
+            this.lblaerolinea.Name = "lblaerolinea";
+            this.lblaerolinea.Size = new System.Drawing.Size(16, 16);
+            this.lblaerolinea.TabIndex = 43;
+            this.lblaerolinea.Text = "?";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(41, 437);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 16);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Operado por ";
+            // 
+            // lblaeropuertodestino
+            // 
+            this.lblaeropuertodestino.AutoSize = true;
+            this.lblaeropuertodestino.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblaeropuertodestino.ForeColor = System.Drawing.Color.Black;
+            this.lblaeropuertodestino.Location = new System.Drawing.Point(318, 386);
+            this.lblaeropuertodestino.Name = "lblaeropuertodestino";
+            this.lblaeropuertodestino.Size = new System.Drawing.Size(16, 16);
+            this.lblaeropuertodestino.TabIndex = 41;
+            this.lblaeropuertodestino.Text = "?";
+            this.lblaeropuertodestino.Click += new System.EventHandler(this.label7_Click_1);
+            // 
+            // lbldestino
+            // 
+            this.lbldestino.AutoSize = true;
+            this.lbldestino.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldestino.ForeColor = System.Drawing.Color.Black;
+            this.lbldestino.Location = new System.Drawing.Point(87, 386);
+            this.lbldestino.Name = "lbldestino";
+            this.lbldestino.Size = new System.Drawing.Size(15, 16);
+            this.lbldestino.TabIndex = 40;
+            this.lbldestino.Text = "?";
+            // 
+            // lblOrigen
+            // 
+            this.lblOrigen.AutoSize = true;
+            this.lblOrigen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrigen.ForeColor = System.Drawing.Color.Black;
+            this.lblOrigen.Location = new System.Drawing.Point(87, 332);
+            this.lblOrigen.Name = "lblOrigen";
+            this.lblOrigen.Size = new System.Drawing.Size(15, 16);
+            this.lblOrigen.TabIndex = 39;
+            this.lblOrigen.Text = "?";
+            // 
+            // lblaeropuertoorigen
+            // 
+            this.lblaeropuertoorigen.AutoSize = true;
+            this.lblaeropuertoorigen.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblaeropuertoorigen.ForeColor = System.Drawing.Color.Black;
+            this.lblaeropuertoorigen.Location = new System.Drawing.Point(318, 332);
+            this.lblaeropuertoorigen.Name = "lblaeropuertoorigen";
+            this.lblaeropuertoorigen.Size = new System.Drawing.Size(16, 16);
+            this.lblaeropuertoorigen.TabIndex = 37;
+            this.lblaeropuertoorigen.Text = "?";
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.Airport_43692;
-            this.pictureBox7.Location = new System.Drawing.Point(56, 352);
+            this.pictureBox7.Location = new System.Drawing.Point(43, 370);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(32, 32);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -126,7 +226,7 @@ namespace Clave2_Grupo3_US23007_
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.Airport_43692;
-            this.pictureBox6.Location = new System.Drawing.Point(57, 301);
+            this.pictureBox6.Location = new System.Drawing.Point(44, 319);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 32);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -138,7 +238,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbldistancia.AutoSize = true;
             this.lbldistancia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldistancia.ForeColor = System.Drawing.Color.DimGray;
-            this.lbldistancia.Location = new System.Drawing.Point(391, 201);
+            this.lbldistancia.Location = new System.Drawing.Point(364, 223);
             this.lbldistancia.Name = "lbldistancia";
             this.lbldistancia.Size = new System.Drawing.Size(16, 16);
             this.lbldistancia.TabIndex = 33;
@@ -149,7 +249,7 @@ namespace Clave2_Grupo3_US23007_
             this.destino.AutoSize = true;
             this.destino.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.destino.ForeColor = System.Drawing.Color.Black;
-            this.destino.Location = new System.Drawing.Point(675, 255);
+            this.destino.Location = new System.Drawing.Point(662, 279);
             this.destino.Name = "destino";
             this.destino.Size = new System.Drawing.Size(19, 19);
             this.destino.TabIndex = 32;
@@ -161,7 +261,7 @@ namespace Clave2_Grupo3_US23007_
             this.horallegada.AutoSize = true;
             this.horallegada.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horallegada.ForeColor = System.Drawing.Color.Black;
-            this.horallegada.Location = new System.Drawing.Point(674, 196);
+            this.horallegada.Location = new System.Drawing.Point(661, 220);
             this.horallegada.Name = "horallegada";
             this.horallegada.Size = new System.Drawing.Size(19, 19);
             this.horallegada.TabIndex = 31;
@@ -172,7 +272,7 @@ namespace Clave2_Grupo3_US23007_
             this.horasalida.AutoSize = true;
             this.horasalida.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horasalida.ForeColor = System.Drawing.Color.Black;
-            this.horasalida.Location = new System.Drawing.Point(49, 196);
+            this.horasalida.Location = new System.Drawing.Point(36, 220);
             this.horasalida.Name = "horasalida";
             this.horasalida.Size = new System.Drawing.Size(19, 19);
             this.horasalida.TabIndex = 30;
@@ -183,7 +283,7 @@ namespace Clave2_Grupo3_US23007_
             this.origen.AutoSize = true;
             this.origen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.origen.ForeColor = System.Drawing.Color.Black;
-            this.origen.Location = new System.Drawing.Point(53, 255);
+            this.origen.Location = new System.Drawing.Point(40, 279);
             this.origen.Name = "origen";
             this.origen.Size = new System.Drawing.Size(19, 19);
             this.origen.TabIndex = 29;
@@ -194,7 +294,7 @@ namespace Clave2_Grupo3_US23007_
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Georgia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(342, 180);
+            this.label5.Location = new System.Drawing.Point(329, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 18);
             this.label5.TabIndex = 28;
@@ -205,7 +305,7 @@ namespace Clave2_Grupo3_US23007_
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(684, 226);
+            this.label4.Location = new System.Drawing.Point(671, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 18);
             this.label4.TabIndex = 27;
@@ -216,7 +316,7 @@ namespace Clave2_Grupo3_US23007_
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(61, 226);
+            this.label3.Location = new System.Drawing.Point(48, 250);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 18);
             this.label3.TabIndex = 26;
@@ -225,7 +325,7 @@ namespace Clave2_Grupo3_US23007_
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.flying_airplane_icon_icons_com_53991;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 223);
+            this.pictureBox1.Location = new System.Drawing.Point(367, 247);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -237,7 +337,7 @@ namespace Clave2_Grupo3_US23007_
             this.duracion.AutoSize = true;
             this.duracion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.duracion.ForeColor = System.Drawing.Color.DimGray;
-            this.duracion.Location = new System.Drawing.Point(391, 264);
+            this.duracion.Location = new System.Drawing.Point(346, 292);
             this.duracion.Name = "duracion";
             this.duracion.Size = new System.Drawing.Size(16, 16);
             this.duracion.TabIndex = 24;
@@ -248,7 +348,7 @@ namespace Clave2_Grupo3_US23007_
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(64, 226);
+            this.label2.Location = new System.Drawing.Point(51, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(645, 18);
             this.label2.TabIndex = 23;
@@ -256,20 +356,9 @@ namespace Clave2_Grupo3_US23007_
     "----------";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(20, 69);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(436, 92);
-            this.txtDescripcion.TabIndex = 5;
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.listCargo);
             this.groupBox2.Controls.Add(this.lbl_Nombre4);
             this.groupBox2.Controls.Add(this.pictureBox5);
             this.groupBox2.Controls.Add(this.lbl_Nombre3);
@@ -278,9 +367,9 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox2.Controls.Add(this.lbl_Nombre1);
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(19, 451);
+            this.groupBox2.Location = new System.Drawing.Point(32, 292);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(741, 165);
+            this.groupBox2.Size = new System.Drawing.Size(741, 137);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "A Cargo De :";
@@ -371,23 +460,13 @@ namespace Clave2_Grupo3_US23007_
             // 
             // picImagen
             // 
-            this.picImagen.Location = new System.Drawing.Point(464, 26);
+            this.picImagen.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._404browser_102160;
+            this.picImagen.Location = new System.Drawing.Point(594, 45);
             this.picImagen.Name = "picImagen";
-            this.picImagen.Size = new System.Drawing.Size(297, 135);
-            this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImagen.Size = new System.Drawing.Size(166, 143);
+            this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagen.TabIndex = 2;
             this.picImagen.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(16, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Descripción :";
             // 
             // btnRegresar
             // 
@@ -395,7 +474,7 @@ namespace Clave2_Grupo3_US23007_
             this.btnRegresar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.ic_back_97586;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(201, 617);
+            this.btnRegresar.Location = new System.Drawing.Point(201, 619);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(91, 37);
             this.btnRegresar.TabIndex = 1;
@@ -411,7 +490,7 @@ namespace Clave2_Grupo3_US23007_
             this.btnSeleccionar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.select_area_icon_icons_com_69919_1_;
             this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionar.Location = new System.Drawing.Point(539, 610);
+            this.btnSeleccionar.Location = new System.Drawing.Point(539, 614);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(135, 44);
             this.btnSeleccionar.TabIndex = 2;
@@ -420,94 +499,35 @@ namespace Clave2_Grupo3_US23007_
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // lblaeropuertoorigen
+            // listEmpleados
             // 
-            this.lblaeropuertoorigen.AutoSize = true;
-            this.lblaeropuertoorigen.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblaeropuertoorigen.ForeColor = System.Drawing.Color.Black;
-            this.lblaeropuertoorigen.Location = new System.Drawing.Point(331, 314);
-            this.lblaeropuertoorigen.Name = "lblaeropuertoorigen";
-            this.lblaeropuertoorigen.Size = new System.Drawing.Size(16, 16);
-            this.lblaeropuertoorigen.TabIndex = 37;
-            this.lblaeropuertoorigen.Text = "?";
+            this.listEmpleados.BackColor = System.Drawing.Color.White;
+            this.listEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listEmpleados.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listEmpleados.ForeColor = System.Drawing.Color.Black;
+            this.listEmpleados.GridLines = true;
+            this.listEmpleados.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listEmpleados.HideSelection = false;
+            this.listEmpleados.LabelEdit = true;
+            this.listEmpleados.Location = new System.Drawing.Point(32, 470);
+            this.listEmpleados.MultiSelect = false;
+            this.listEmpleados.Name = "listEmpleados";
+            this.listEmpleados.Scrollable = false;
+            this.listEmpleados.Size = new System.Drawing.Size(248, 97);
+            this.listEmpleados.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listEmpleados.TabIndex = 47;
+            this.listEmpleados.UseCompatibleStateImageBehavior = false;
+            this.listEmpleados.View = System.Windows.Forms.View.Tile;
             // 
-            // lblOrigen
+            // listCargo
             // 
-            this.lblOrigen.AutoSize = true;
-            this.lblOrigen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrigen.ForeColor = System.Drawing.Color.Black;
-            this.lblOrigen.Location = new System.Drawing.Point(100, 314);
-            this.lblOrigen.Name = "lblOrigen";
-            this.lblOrigen.Size = new System.Drawing.Size(15, 16);
-            this.lblOrigen.TabIndex = 39;
-            this.lblOrigen.Text = "?";
-            // 
-            // lbldestino
-            // 
-            this.lbldestino.AutoSize = true;
-            this.lbldestino.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldestino.ForeColor = System.Drawing.Color.Black;
-            this.lbldestino.Location = new System.Drawing.Point(100, 368);
-            this.lbldestino.Name = "lbldestino";
-            this.lbldestino.Size = new System.Drawing.Size(15, 16);
-            this.lbldestino.TabIndex = 40;
-            this.lbldestino.Text = "?";
-            // 
-            // lblaeropuertodestino
-            // 
-            this.lblaeropuertodestino.AutoSize = true;
-            this.lblaeropuertodestino.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblaeropuertodestino.ForeColor = System.Drawing.Color.Black;
-            this.lblaeropuertodestino.Location = new System.Drawing.Point(331, 368);
-            this.lblaeropuertodestino.Name = "lblaeropuertodestino";
-            this.lblaeropuertodestino.Size = new System.Drawing.Size(16, 16);
-            this.lblaeropuertodestino.TabIndex = 41;
-            this.lblaeropuertodestino.Text = "?";
-            this.lblaeropuertodestino.Click += new System.EventHandler(this.label7_Click_1);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(54, 419);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 16);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Operado por ";
-            // 
-            // lblaerolinea
-            // 
-            this.lblaerolinea.AutoSize = true;
-            this.lblaerolinea.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblaerolinea.ForeColor = System.Drawing.Color.Black;
-            this.lblaerolinea.Location = new System.Drawing.Point(142, 420);
-            this.lblaerolinea.Name = "lblaerolinea";
-            this.lblaerolinea.Size = new System.Drawing.Size(16, 16);
-            this.lblaerolinea.TabIndex = 43;
-            this.lblaerolinea.Text = "?";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(461, 422);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 16);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "Desde";
-            // 
-            // lblprecio
-            // 
-            this.lblprecio.AutoSize = true;
-            this.lblprecio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprecio.ForeColor = System.Drawing.Color.Black;
-            this.lblprecio.Location = new System.Drawing.Point(521, 420);
-            this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(19, 19);
-            this.lblprecio.TabIndex = 45;
-            this.lblprecio.Text = "?";
+            this.listCargo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listCargo.HideSelection = false;
+            this.listCargo.Location = new System.Drawing.Point(346, 27);
+            this.listCargo.Name = "listCargo";
+            this.listCargo.Size = new System.Drawing.Size(302, 97);
+            this.listCargo.TabIndex = 48;
+            this.listCargo.UseCompatibleStateImageBehavior = false;
             // 
             // Informacion
             // 
@@ -542,7 +562,6 @@ namespace Clave2_Grupo3_US23007_
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox picImagen;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbl_Nombre4;
@@ -554,7 +573,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label destino;
         private System.Windows.Forms.Label horallegada;
         private System.Windows.Forms.Label horasalida;
@@ -576,5 +594,8 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label lblaeropuertoorigen;
         private System.Windows.Forms.Label lblprecio;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbldescripcion;
+        private System.Windows.Forms.ListView listEmpleados;
+        private System.Windows.Forms.ListView listCargo;
     }
 }

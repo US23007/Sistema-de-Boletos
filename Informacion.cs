@@ -16,7 +16,7 @@ namespace Clave2_Grupo3_US23007_
         {
             InitializeComponent();
             Imagen imagen = new Imagen();
-            imagen.MostrarInformacion(txtDescripcion,horasalida,lblOrigen,duracion,picImagen,lblaerolinea,lblprecio,lbldestino,horallegada,lblaeropuertoorigen,lblaeropuertodestino,lbldistancia);
+            imagen.MostrarInformacion(lbldescripcion,origen,destino,horasalida,lblOrigen,duracion,picImagen,lblaerolinea,lblprecio,lbldestino,horallegada,lblaeropuertoorigen,lblaeropuertodestino,lbldistancia,listEmpleados,listCargo);
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -41,6 +41,11 @@ namespace Clave2_Grupo3_US23007_
         }
 
         private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbldescripcion_Click(object sender, EventArgs e)
         {
 
         }
