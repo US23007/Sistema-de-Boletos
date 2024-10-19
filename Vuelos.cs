@@ -11,23 +11,20 @@ namespace Clave2_Grupo3_US23007_
 {
     class Vuelos
     {
-        protected int ID;
+        private static int ID { get; set;}
         private String Origen;
         private String Destino;
         private DateTime Fecha_Salida;
         private TimeSpan Hora_Salida;
 
 
-        public void ObtenerVuelos(int id)
+
+        public int ObtenerId
         {
-            ID = id;
+            get { return ID;}
+            set { ID = value;}
         }
 
-        public int IdVuelo
-        {
-            get { return ID; }
-            set { ID = value; }
-        }
 
         public void Viaje(string origen, string destino,DateTime fecha,TimeSpan hora)
         {

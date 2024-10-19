@@ -12,11 +12,8 @@ namespace Clave2_Grupo3_US23007_
 {
     class Imagen : Vuelos
     {
-        public Imagen()
-        {
-            
-            
-        }
+       
+       
         public void CargarImagenes()
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
@@ -68,8 +65,7 @@ namespace Clave2_Grupo3_US23007_
                                     rutas.AeropuertoDestino,
                                     rutas.Distancia,
                                     aerolinea.Nombre AS NombreAerolinea, 
-                                    GROUP_CONCAT(empleados.NombreCompleto SEPARATOR ', ') AS Tripulacion,
-                                    GROUP_CONCAT(empleados.Cargo SEPARATOR ', ') AS Cargo,
+
                                     Precio,
                                     rutas.Imagen
                                     FROM vuelos
@@ -91,8 +87,9 @@ namespace Clave2_Grupo3_US23007_
                 {
                     conector.Open();
                     MySqlCommand cmd = new MySqlCommand(consulta, conector);
-                    Console.WriteLine("codigo" + ID);
-                    cmd.Parameters.AddWithValue("@id",ID);
+                    Console.WriteLine("valor en IdVuelo"+ObtenerId);
+                    Console.WriteLine("valor en ID" + ObtenerId);
+                    cmd.Parameters.AddWithValue("@id", ObtenerId);
 
                     using (MySqlDataReader leer = cmd.ExecuteReader())
                     {
@@ -120,10 +117,8 @@ namespace Clave2_Grupo3_US23007_
                             }
                             else
                             {
-                                dibujo.Image = null; // Manejo en caso de que no haya imagen
+                                MessageBox.Show("La imagen no está disponible.");
                             }
-
-                            MessageBox.Show("Datos cargados correctamente.");
                         }
                         else
                         {
