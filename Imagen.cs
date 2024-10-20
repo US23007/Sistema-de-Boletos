@@ -47,9 +47,10 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-        public void MostrarInformacion(Label descripcion,Label Corigen,Label Cdestino,Label horasalida, Label origen, Label duracion, PictureBox dibujo,
+
+        public bool MostrarInformacion(Label descripcion,Label Corigen,Label Cdestino,Label horasalida, Label origen, Label duracion, PictureBox dibujo,
                            Label aerlinea, Label precio, Label destino, Label horallegada,
-                           Label aerpuertOrigen, Label aeropuertoDestino, Label distancia,ListView Empleados ,ListView Cargo)
+                           Label aerpuertOrigen, Label aeropuertoDestino, Label distancia,Label Empleados)
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
             using (MySqlConnection conector = new MySqlConnection(connectionString))
@@ -67,8 +68,7 @@ namespace Clave2_Grupo3_US23007_
                                     rutas.AeropuertoDestino,
                                     rutas.Distancia,
                                     aerolinea.Nombre AS NombreAerolinea, 
-                                    GROUP_CONCAT(empleados.NombreCompleto SEPARATOR '\n') AS Tripulacion,
-                                    GROUP_CONCAT(empleados.Cargo SEPARATOR ', ') AS Cargo,
+                                    GROUP_CONCAT(CONCAT(empleados.Cargo, ':  ', empleados.NombreCompleto, '  ') SEPARATOR '\n') AS EmpleadosConCargo,
                                     Precio,
                                     rutas.Imagen
                                 FROM vuelos
@@ -91,8 +91,6 @@ namespace Clave2_Grupo3_US23007_
                 {
                     conector.Open();
                     MySqlCommand cmd = new MySqlCommand(consulta, conector);
-                    Console.WriteLine("valor en IdVuelo"+ObtenerId);
-                    Console.WriteLine("valor en ID" + ObtenerId);
                     cmd.Parameters.AddWithValue("@id", ObtenerId);
 
                     using (MySqlDataReader leer = cmd.ExecuteReader())
@@ -114,10 +112,7 @@ namespace Clave2_Grupo3_US23007_
                             distancia.Text = string.Format("{0} km", leer["Distancia"]);
                             aerlinea.Text = leer["NombreAerolinea"].ToString();
                             precio.Text = string.Format("${0:N2}", leer["Precio"]);
-                            ListViewItem empleado = new ListViewItem(leer["Tripulacion"].ToString());
-                            Empleados.Items.Add(empleado);
-                            ListViewItem cargo = new ListViewItem(leer["Cargo"].ToString());
-                            Cargo.Items.Add(cargo);
+                            Empleados.Text = leer["EmpleadosConCargo"].ToString();
 
                             try
                             {
@@ -128,28 +123,36 @@ namespace Clave2_Grupo3_US23007_
                                     {
                                         dibujo.Image = Image.FromStream(ms);
                                     }
+
+                                    return true;
                                 }
                                 else
                                 {
                                     MessageBox.Show("La imagen no está disponible.","Hubo un error al cargar la imagen",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+                                    return true;
                                 }
                             }
                             catch (Exception ex)
                             {
                                 MessageBox.Show("La imagen no está disponible.", "Hubo un error al cargar la imagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return true;
                             }
+                            
                            
                         }
                         else
                         {
                             MessageBox.Show("No se encontraron datos.","Hubo un error al buscar el registro en la base de Datos",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                            
+                            return false;
+
                         }
                     }
                 }
                 catch (MySqlException ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
+                    return false;
                 }
             }
         }

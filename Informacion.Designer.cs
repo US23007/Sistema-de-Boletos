@@ -52,35 +52,20 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.duracion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbl_Nombre4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lbl_Nombre3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lbl_Nombre2 = new System.Windows.Forms.Label();
-            this.lbl_Nombre1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picImagen = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.listEmpleados = new System.Windows.Forms.ListView();
-            this.listCargo = new System.Windows.Forms.ListView();
+            this.lblEmpleados = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listEmpleados);
+            this.groupBox1.Controls.Add(this.lblEmpleados);
             this.groupBox1.Controls.Add(this.lbldescripcion);
             this.groupBox1.Controls.Add(this.lblprecio);
             this.groupBox1.Controls.Add(this.label10);
@@ -103,7 +88,6 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.duracion);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.picImagen);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
@@ -356,108 +340,6 @@ namespace Clave2_Grupo3_US23007_
     "----------";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.listCargo);
-            this.groupBox2.Controls.Add(this.lbl_Nombre4);
-            this.groupBox2.Controls.Add(this.pictureBox5);
-            this.groupBox2.Controls.Add(this.lbl_Nombre3);
-            this.groupBox2.Controls.Add(this.pictureBox4);
-            this.groupBox2.Controls.Add(this.lbl_Nombre2);
-            this.groupBox2.Controls.Add(this.lbl_Nombre1);
-            this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(32, 292);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(741, 137);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "A Cargo De :";
-            // 
-            // lbl_Nombre4
-            // 
-            this.lbl_Nombre4.AutoSize = true;
-            this.lbl_Nombre4.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre4.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nombre4.Location = new System.Drawing.Point(441, 110);
-            this.lbl_Nombre4.Name = "lbl_Nombre4";
-            this.lbl_Nombre4.Size = new System.Drawing.Size(14, 16);
-            this.lbl_Nombre4.TabIndex = 19;
-            this.lbl_Nombre4.Text = "?";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.stewardess_avatar_icon_icons_com_54750;
-            this.pictureBox5.Location = new System.Drawing.Point(391, 87);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(45, 39);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
-            // lbl_Nombre3
-            // 
-            this.lbl_Nombre3.AutoSize = true;
-            this.lbl_Nombre3.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nombre3.Location = new System.Drawing.Point(441, 56);
-            this.lbl_Nombre3.Name = "lbl_Nombre3";
-            this.lbl_Nombre3.Size = new System.Drawing.Size(14, 16);
-            this.lbl_Nombre3.TabIndex = 17;
-            this.lbl_Nombre3.Text = "?";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.stewardess_avatar_icon_icons_com_54750;
-            this.pictureBox4.Location = new System.Drawing.Point(391, 33);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 39);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
-            // lbl_Nombre2
-            // 
-            this.lbl_Nombre2.AutoSize = true;
-            this.lbl_Nombre2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nombre2.Location = new System.Drawing.Point(81, 110);
-            this.lbl_Nombre2.Name = "lbl_Nombre2";
-            this.lbl_Nombre2.Size = new System.Drawing.Size(14, 16);
-            this.lbl_Nombre2.TabIndex = 15;
-            this.lbl_Nombre2.Text = "?";
-            // 
-            // lbl_Nombre1
-            // 
-            this.lbl_Nombre1.AutoSize = true;
-            this.lbl_Nombre1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre1.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nombre1.Location = new System.Drawing.Point(81, 56);
-            this.lbl_Nombre1.Name = "lbl_Nombre1";
-            this.lbl_Nombre1.Size = new System.Drawing.Size(14, 16);
-            this.lbl_Nombre1.TabIndex = 14;
-            this.lbl_Nombre1.Text = "?";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.crew_icon_153959;
-            this.pictureBox3.Location = new System.Drawing.Point(20, 87);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.crew_icon_153959;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 33);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 39);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // picImagen
             // 
             this.picImagen.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._404browser_102160;
@@ -499,35 +381,14 @@ namespace Clave2_Grupo3_US23007_
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // listEmpleados
+            // lblEmpleados
             // 
-            this.listEmpleados.BackColor = System.Drawing.Color.White;
-            this.listEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listEmpleados.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listEmpleados.ForeColor = System.Drawing.Color.Black;
-            this.listEmpleados.GridLines = true;
-            this.listEmpleados.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listEmpleados.HideSelection = false;
-            this.listEmpleados.LabelEdit = true;
-            this.listEmpleados.Location = new System.Drawing.Point(32, 470);
-            this.listEmpleados.MultiSelect = false;
-            this.listEmpleados.Name = "listEmpleados";
-            this.listEmpleados.Scrollable = false;
-            this.listEmpleados.Size = new System.Drawing.Size(248, 97);
-            this.listEmpleados.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listEmpleados.TabIndex = 47;
-            this.listEmpleados.UseCompatibleStateImageBehavior = false;
-            this.listEmpleados.View = System.Windows.Forms.View.Tile;
-            // 
-            // listCargo
-            // 
-            this.listCargo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listCargo.HideSelection = false;
-            this.listCargo.Location = new System.Drawing.Point(346, 27);
-            this.listCargo.Name = "listCargo";
-            this.listCargo.Size = new System.Drawing.Size(302, 97);
-            this.listCargo.TabIndex = 48;
-            this.listCargo.UseCompatibleStateImageBehavior = false;
+            this.lblEmpleados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleados.ForeColor = System.Drawing.Color.Black;
+            this.lblEmpleados.Location = new System.Drawing.Point(37, 489);
+            this.lblEmpleados.Name = "lblEmpleados";
+            this.lblEmpleados.Size = new System.Drawing.Size(375, 98);
+            this.lblEmpleados.TabIndex = 48;
             // 
             // Informacion
             // 
@@ -547,55 +408,38 @@ namespace Clave2_Grupo3_US23007_
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox picImagen;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lbl_Nombre4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label lbl_Nombre3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label lbl_Nombre2;
-        private System.Windows.Forms.Label lbl_Nombre1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.Label destino;
-        private System.Windows.Forms.Label horallegada;
-        private System.Windows.Forms.Label horasalida;
-        private System.Windows.Forms.Label origen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label duracion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbldistancia;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label lblaerolinea;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblaeropuertodestino;
-        private System.Windows.Forms.Label lbldestino;
-        private System.Windows.Forms.Label lblOrigen;
-        private System.Windows.Forms.Label lblaeropuertoorigen;
-        private System.Windows.Forms.Label lblprecio;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbldescripcion;
-        private System.Windows.Forms.ListView listEmpleados;
-        private System.Windows.Forms.ListView listCargo;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Label destino;
+        public System.Windows.Forms.Label horasalida;
+        public System.Windows.Forms.Label origen;
+        public System.Windows.Forms.Label duracion;
+        public System.Windows.Forms.Label lblaerolinea;
+        public System.Windows.Forms.Label lblaeropuertodestino;
+        public System.Windows.Forms.Label lbldestino;
+        public System.Windows.Forms.Label lblOrigen;
+        public System.Windows.Forms.Label lblaeropuertoorigen;
+        public System.Windows.Forms.Label lblprecio;
+        public System.Windows.Forms.Label lbldescripcion;
+        public System.Windows.Forms.Label lblEmpleados;
+        public System.Windows.Forms.PictureBox picImagen;
+        public System.Windows.Forms.Label horallegada;
+        public System.Windows.Forms.Label lbldistancia;
     }
 }

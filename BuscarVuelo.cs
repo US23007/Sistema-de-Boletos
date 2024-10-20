@@ -137,9 +137,21 @@ namespace Clave2_Grupo3_US23007_
                     Vuelos vuelos = new Vuelos();
                     vuelos.ObtenerId = idvuelo;
                     MessageBox.Show("Cargando Información.....", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Informacion informacion = new Informacion();
-                    informacion.Show();
-                    this.Hide();
+                    Imagen imagen = new Imagen();
+                    Informacion info = new Informacion();
+                    if ( imagen.MostrarInformacion (info.lbldescripcion, info.origen, info.destino, info.horasalida, info.lblOrigen, info.duracion, info.picImagen,
+                        info.lblaerolinea, info.lblprecio, info.lbldestino, info.horallegada, info.lblaeropuertoorigen, info.lblaeropuertodestino, info.lbldistancia, info.lblEmpleados))
+                    {
+                        info.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al cargar la informacion ", "Comunicarse con Soporte Tecnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                   
+                    
                 }
             }
             else

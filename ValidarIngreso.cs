@@ -12,11 +12,25 @@ namespace Clave2_Grupo3_US23007_
     //Clase para Validar el Usuario , Contraseña y Correo
     class ValidarIngreso
     {
+        private static String Usuario { get; set; }
+        private static int idUsuario { get; set; }
         private String Nombre_Usuario;
         private String Correo_Usuario;
         private String Contraseña_Usuario;
 
 
+        public String ObtenerUsuario
+        {
+            get { return Usuario;}
+            set { Usuario = value;}
+        }
+
+        public int ObtenerIdUsuario
+        {
+            get { return idUsuario;}
+            set { idUsuario = value;}
+        }
+        
         //Constructor 
         public ValidarIngreso(string nombre, string contraseña, string correo)
         {

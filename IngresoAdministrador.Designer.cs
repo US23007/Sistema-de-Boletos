@@ -47,6 +47,7 @@ namespace Clave2_Grupo3_US23007_
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,6 +60,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbxContraseña);
             this.groupBox1.Controls.Add(this.txtcorreo);
@@ -167,13 +169,13 @@ namespace Clave2_Grupo3_US23007_
             this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnIngresar.FlatAppearance.BorderSize = 2;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btnIngresar.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(89, 385);
+            this.btnIngresar.Location = new System.Drawing.Point(193, 393);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(107, 35);
+            this.btnIngresar.Size = new System.Drawing.Size(107, 28);
             this.btnIngresar.TabIndex = 18;
-            this.btnIngresar.Text = "Continuar";
+            this.btnIngresar.Text = "Iniciar Sesión";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
@@ -247,6 +249,22 @@ namespace Clave2_Grupo3_US23007_
             this.erp.ContainerControl = this;
             this.erp.Icon = ((System.Drawing.Icon)(resources.GetObject("erp.Icon")));
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(6, 392);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 28);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Registarse";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // IngresoAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,5 +307,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.ErrorProvider erp;
         private System.Windows.Forms.CheckBox cbxContraseña;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

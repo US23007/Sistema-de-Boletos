@@ -33,7 +33,6 @@ namespace Clave2_Grupo3_US23007_
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbxResultados = new System.Windows.Forms.GroupBox();
             this.btn_Ver_Mas = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
@@ -71,7 +70,6 @@ namespace Clave2_Grupo3_US23007_
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.gbxResultados);
             this.panel1.Controls.Add(this.calendar);
             this.panel1.Controls.Add(this.picBuscar);
@@ -85,17 +83,6 @@ namespace Clave2_Grupo3_US23007_
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 388);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(133, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "añadir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // gbxResultados
             // 
@@ -120,7 +107,7 @@ namespace Clave2_Grupo3_US23007_
             this.btn_Ver_Mas.ForeColor = System.Drawing.Color.Black;
             this.btn_Ver_Mas.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._1491254405_plusaddmoredetail_82972;
             this.btn_Ver_Mas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Ver_Mas.Location = new System.Drawing.Point(217, 209);
+            this.btn_Ver_Mas.Location = new System.Drawing.Point(255, 209);
             this.btn_Ver_Mas.Name = "btn_Ver_Mas";
             this.btn_Ver_Mas.Size = new System.Drawing.Size(114, 37);
             this.btn_Ver_Mas.TabIndex = 8;
@@ -138,7 +125,7 @@ namespace Clave2_Grupo3_US23007_
             this.btnSeleccionar.ForeColor = System.Drawing.Color.Black;
             this.btnSeleccionar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.select_area_icon_icons_com_69919_1_;
             this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionar.Location = new System.Drawing.Point(561, 209);
+            this.btnSeleccionar.Location = new System.Drawing.Point(598, 209);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(134, 37);
             this.btnSeleccionar.TabIndex = 7;
@@ -392,6 +379,5 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button btn_Ver_Mas;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.Button button1;
     }
 }
