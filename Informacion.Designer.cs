@@ -30,6 +30,7 @@ namespace Clave2_Grupo3_US23007_
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblEmpleados = new System.Windows.Forms.Label();
             this.lbldescripcion = new System.Windows.Forms.Label();
             this.lblprecio = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@ namespace Clave2_Grupo3_US23007_
             this.picImagen = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.lblEmpleados = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -97,6 +97,15 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion de Vuelo";
+            // 
+            // lblEmpleados
+            // 
+            this.lblEmpleados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleados.ForeColor = System.Drawing.Color.Black;
+            this.lblEmpleados.Location = new System.Drawing.Point(37, 489);
+            this.lblEmpleados.Name = "lblEmpleados";
+            this.lblEmpleados.Size = new System.Drawing.Size(375, 98);
+            this.lblEmpleados.TabIndex = 48;
             // 
             // lbldescripcion
             // 
@@ -380,15 +389,6 @@ namespace Clave2_Grupo3_US23007_
             this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // lblEmpleados
-            // 
-            this.lblEmpleados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleados.ForeColor = System.Drawing.Color.Black;
-            this.lblEmpleados.Location = new System.Drawing.Point(37, 489);
-            this.lblEmpleados.Name = "lblEmpleados";
-            this.lblEmpleados.Size = new System.Drawing.Size(375, 98);
-            this.lblEmpleados.TabIndex = 48;
             // 
             // Informacion
             // 

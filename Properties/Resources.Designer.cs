@@ -93,6 +93,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1497619927_jd18_85175 {
+            get {
+                object obj = ResourceManager.GetObject("_1497619927_jd18_85175", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _404browser_102160 {
             get {
                 object obj = ResourceManager.GetObject("_404browser_102160", resourceCulture);
@@ -376,6 +386,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap select_area_icon_icons_com_69919_1_ {
             get {
                 object obj = ResourceManager.GetObject("select_area_icon_icons_com_69919_1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shoppingstorecart_99691 {
+            get {
+                object obj = ResourceManager.GetObject("shoppingstorecart_99691", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

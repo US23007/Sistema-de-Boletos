@@ -252,7 +252,11 @@ namespace Clave2_Grupo3_US23007_
             // 
             // txtfecha
             // 
+            this.txtfecha.BackColor = System.Drawing.Color.White;
+            this.txtfecha.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtfecha.Enabled = false;
             this.txtfecha.Location = new System.Drawing.Point(53, 21);
+            this.txtfecha.Multiline = true;
             this.txtfecha.Name = "txtfecha";
             this.txtfecha.ReadOnly = true;
             this.txtfecha.Size = new System.Drawing.Size(100, 23);
