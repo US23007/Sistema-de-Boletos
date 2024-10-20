@@ -47,12 +47,19 @@ namespace Clave2_Grupo3_US23007_
             }
             else
             {
-                ValidarIngreso usuario = new ValidarIngreso(txtUsuario.Text,txtContraseña.Text,txtcorreo.Text);
-                if (usuario.IngresoAdministrador())
+                ValidarIngreso validar = new ValidarIngreso();
+                validar.Validar(txtUsuario.Text, txtContraseña.Text, txtcorreo.Text);
+                if (validar.IngresoUsuario())
                 {
-                    FormPrincipal principal = new FormPrincipal();
-                    principal.Show();
+                    validar.ObtenerUsuario = txtUsuario.Text;
+                    Console.WriteLine(validar.ObtenerUsuario);
+                    Datos datos = new Datos();
+                    datos.Show();
                     this.Hide();
+                }
+                else
+                {
+                    return;
                 }
             }
         }
@@ -93,11 +100,13 @@ namespace Clave2_Grupo3_US23007_
             {
                 erp.SetError(txtcorreo, "");
                 btnIngresar.Enabled =true;
+                btnRegistrase.Enabled = true;
             }
             else
             {
                 erp.SetError(txtcorreo, "Email NO valido");
                 btnIngresar.Enabled = false;
+                btnRegistrase.Enabled = false;
             }
         }
 
@@ -123,6 +132,24 @@ namespace Clave2_Grupo3_US23007_
             erp.Clear();
             cbxContraseña.Checked = false;
             MessageBox.Show("Datos limpios", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void btnRegistrase_Click(object sender, EventArgs e)
+        {
+            ValidarIngreso validar = new ValidarIngreso();
+            
+            if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text, txtContraseña.Text))
+            {
+                validar.ObtenerUsuario = txtUsuario.Text;
+                Datos datos = new Datos();
+                datos.Show();
+                this.Hide();
+            }
+            else
+            {
+                return;
+            }
+
         }
     }
 }

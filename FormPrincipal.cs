@@ -16,6 +16,8 @@ namespace Clave2_Grupo3_US23007_
         public FormPrincipal()
         {
             InitializeComponent();
+            ValidarIngreso validar = new ValidarIngreso();
+            administradorToolStripMenuItem.Text = validar.ObtenerUsuario;
         }
 
         //Salir de el formulario hacia el Inicio de Sesion

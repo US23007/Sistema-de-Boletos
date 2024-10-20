@@ -16,5 +16,12 @@ namespace Clave2_Grupo3_US23007_
         {
             InitializeComponent();
         }
+
+        private void btnir_Click(object sender, EventArgs e)
+        {
+            FormPrincipal principal = new FormPrincipal();
+            principal.Show();
+            this.Hide();
+        }
     }
 }

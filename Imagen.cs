@@ -135,7 +135,7 @@ namespace Clave2_Grupo3_US23007_
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show("La imagen no está disponible.", "Hubo un error al cargar la imagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("La imagen no está disponible.", "Hubo un error al cargar la imagen"+ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return true;
                             }
                             

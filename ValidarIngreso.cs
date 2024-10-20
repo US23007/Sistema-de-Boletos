@@ -32,7 +32,7 @@ namespace Clave2_Grupo3_US23007_
         }
         
         //Constructor 
-        public ValidarIngreso(string nombre, string contraseña, string correo)
+        public void Validar(string nombre, string contraseña, string correo)
         {
             this.Nombre_Usuario = nombre;
             this.Contraseña_Usuario = contraseña;
@@ -61,7 +61,106 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
-        
+        public bool RegistrarEnDB(string usuario, string correo, string contraseña)
+        {
+            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+            using (MySqlConnection conector = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conector.Open();
+
+                    // Verificar si el usuario o correo ya existe
+                    string query = @"SELECT COUNT(*) FROM usuario WHERE Usuario = @usuario OR Correo = @correo";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conector))
+                    {
+                        cmd.Parameters.AddWithValue("@usuario", usuario);
+                        cmd.Parameters.AddWithValue("@correo", correo);
+
+                        int resultado = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        if (resultado > 0)
+                        {
+                            MessageBox.Show("El Usuario o Correo Electrónico ya existe.",
+                                            "Datos Inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                            return false;
+                        }
+                    }
+
+                    // Registrar el nuevo usuario
+                    string consulta = @"INSERT INTO usuario (Usuario, Contraseña, Correo) 
+                                VALUES (@usuario, @contraseña, @correo)";
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    {
+                        comando.Parameters.AddWithValue("@usuario", usuario);
+                        comando.Parameters.AddWithValue("@contraseña", contraseña);
+                        comando.Parameters.AddWithValue("@correo", correo);
+
+                        int filasAfectadas = comando.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            MessageBox.Show("Usuario registrado exitosamente.",
+                                            "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo registrar el usuario.",
+                                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
+
+        public bool IngresoUsuario()
+        {
+            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+            MySqlConnection conector = new MySqlConnection(connectionString);
+
+            try
+            {
+                conector.Open();
+                string consulta = "SELECT * FROM usuario WHERE Usuario = @nombre AND Contraseña = @contraseña AND Correo = @correo";
+                using (MySqlCommand cmd = new MySqlCommand(consulta, conector))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", Nombre);
+                    cmd.Parameters.AddWithValue("@contraseña", Contraseña);
+                    cmd.Parameters.AddWithValue("@correo", Correo);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            MessageBox.Show("Bienvenido Usuario", "Cuenta Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Credenciales incorrectas. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+
         public bool IngresoAdministrador()
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
