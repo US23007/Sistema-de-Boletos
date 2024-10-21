@@ -92,7 +92,7 @@ namespace Clave2_Grupo3_US23007_
             // picCompra
             // 
             this.picCompra.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.shoppingstorecart_99691;
-            this.picCompra.Location = new System.Drawing.Point(441, 14);
+            this.picCompra.Location = new System.Drawing.Point(436, 20);
             this.picCompra.Name = "picCompra";
             this.picCompra.Size = new System.Drawing.Size(32, 32);
             this.picCompra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
