@@ -53,6 +53,8 @@ namespace Clave2_Grupo3_US23007_
             this.btnContinuar = new System.Windows.Forms.Button();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.tool = new System.Windows.Forms.ToolTip(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbx_Tipo_Pasajero = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCalendario)).BeginInit();
@@ -63,6 +65,8 @@ namespace Clave2_Grupo3_US23007_
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.cbx_Tipo_Pasajero);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.picCompra);
             this.groupBox1.Controls.Add(this.cbxn_Nacionalidad);
             this.groupBox1.Controls.Add(this.cbxEquipaje);
@@ -84,7 +88,7 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(8, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(440, 446);
+            this.groupBox1.Size = new System.Drawing.Size(440, 479);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Adicional";
@@ -105,6 +109,36 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.cbxn_Nacionalidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxn_Nacionalidad.FormattingEnabled = true;
+            this.cbxn_Nacionalidad.Items.AddRange(new object[] {
+            "Afgano",
+            "Alemán",
+            "Argentino",
+            "Australiano",
+            "Belga",
+            "Boliviano",
+            "Brasileño",
+            "Canadiense",
+            "Chileno",
+            "Chino",
+            "Colombiano",
+            "Coreano",
+            "Costarricense",
+            "Cubano",
+            "Danés",
+            "Ecuatoriano",
+            "Egipcio",
+            "Salvadoreño",
+            "Español",
+            "Estadounidense",
+            "Filipino",
+            "Francés",
+            "Griego",
+            "Guatemalteco",
+            "Haitiano",
+            "Hondureño",
+            "Indio",
+            "Indonesio",
+            "Inglés"});
             this.cbxn_Nacionalidad.Location = new System.Drawing.Point(167, 354);
             this.cbxn_Nacionalidad.Name = "cbxn_Nacionalidad";
             this.cbxn_Nacionalidad.Size = new System.Drawing.Size(137, 24);
@@ -115,6 +149,9 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.cbxEquipaje.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEquipaje.FormattingEnabled = true;
+            this.cbxEquipaje.Items.AddRange(new object[] {
+            "De Mano",
+            "De Bodega"});
             this.cbxEquipaje.Location = new System.Drawing.Point(167, 399);
             this.cbxEquipaje.Name = "cbxEquipaje";
             this.cbxEquipaje.Size = new System.Drawing.Size(137, 24);
@@ -192,7 +229,6 @@ namespace Clave2_Grupo3_US23007_
             this.txtpasaporte.TabIndex = 8;
             this.tool.SetToolTip(this.txtpasaporte, "Formato: Una letra seguida de 9 dígitos (Ej: S123456789)\"");
             this.txtpasaporte.TextChanged += new System.EventHandler(this.txtpasaporte_TextChanged);
-          
             this.txtpasaporte.Leave += new System.EventHandler(this.txtpasaporte_Leave);
             // 
             // txtNombre
@@ -281,7 +317,7 @@ namespace Clave2_Grupo3_US23007_
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinuar.ForeColor = System.Drawing.Color.White;
-            this.btnContinuar.Location = new System.Drawing.Point(197, 464);
+            this.btnContinuar.Location = new System.Drawing.Point(197, 497);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(85, 24);
             this.btnContinuar.TabIndex = 1;
@@ -294,12 +330,35 @@ namespace Clave2_Grupo3_US23007_
             this.erp.ContainerControl = this;
             this.erp.Icon = ((System.Drawing.Icon)(resources.GetObject("erp.Icon")));
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(35, 442);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 16);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Tipo de Pasajero";
+            // 
+            // cbx_Tipo_Pasajero
+            // 
+            this.cbx_Tipo_Pasajero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_Tipo_Pasajero.FormattingEnabled = true;
+            this.cbx_Tipo_Pasajero.Items.AddRange(new object[] {
+            "Adulto/a",
+            "Niño/a",
+            "Bebé"});
+            this.cbx_Tipo_Pasajero.Location = new System.Drawing.Point(167, 434);
+            this.cbx_Tipo_Pasajero.Name = "cbx_Tipo_Pasajero";
+            this.cbx_Tipo_Pasajero.Size = new System.Drawing.Size(137, 24);
+            this.cbx_Tipo_Pasajero.TabIndex = 22;
+            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(462, 491);
+            this.ClientSize = new System.Drawing.Size(462, 533);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -336,9 +395,11 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.ErrorProvider erp;
         private System.Windows.Forms.ComboBox cbxEquipaje;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbxAsiento;
         private System.Windows.Forms.ToolTip tool;
         private System.Windows.Forms.ComboBox cbxn_Nacionalidad;
         private System.Windows.Forms.PictureBox picCompra;
+        public System.Windows.Forms.ComboBox cbxAsiento;
+        private System.Windows.Forms.ComboBox cbx_Tipo_Pasajero;
+        private System.Windows.Forms.Label label8;
     }
 }

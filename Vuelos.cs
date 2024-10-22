@@ -11,13 +11,20 @@ namespace Clave2_Grupo3_US23007_
 {
     class Vuelos
     {
-        private static int ID { get; set;}
+        private static int ID { get; set; }
+        private static int Avion { get; set;}
         private String Origen;
         private String Destino;
         private DateTime Fecha_Salida;
         private TimeSpan Hora_Salida;
 
 
+
+        public int ObtenerAvion
+        {
+            get { return Avion; }
+            set { Avion = value; }
+        }
 
         public int ObtenerId
         {
@@ -108,7 +115,7 @@ namespace Clave2_Grupo3_US23007_
                 try
                 {
                     conector.Open();
-                    string consulta = "SELECT vuelos.ID, aerolinea.Nombre, aerolinea.Codigo, Origen, Destino, FechaSalida, FechaLlegada, Duracion, HoraSalida, HoraLlegada, aviones.TipoAvion, Precio " +
+                    string consulta = "SELECT vuelos.ID, aerolinea.Nombre, aerolinea.Codigo, Origen, Destino, FechaSalida, FechaLlegada, Duracion, HoraSalida, HoraLlegada,aviones.ID,aviones.TipoAvion, Precio " +
                                       "FROM vuelos " +
                                       "INNER JOIN aviones ON vuelos.aviones_ID = aviones.ID " +
                                       "INNER JOIN aerolinea ON aviones.aerolinea_ID = aerolinea.ID " +
@@ -141,7 +148,7 @@ namespace Clave2_Grupo3_US23007_
                                                 MessageBoxButtons.OK,
                                                 MessageBoxIcon.Information);
 
-                                string consultaGeneral = "SELECT vuelos.ID, aerolinea.Nombre, aerolinea.Codigo, Origen, Destino, FechaSalida, FechaLlegada, Duracion, HoraSalida, HoraLlegada, aviones.TipoAvion, Precio " +
+                                string consultaGeneral = "SELECT vuelos.ID, aerolinea.Nombre, aerolinea.Codigo, Origen, Destino, FechaSalida, FechaLlegada, Duracion, HoraSalida, HoraLlegada,aviones.ID as 'ID del Avión',aviones.TipoAvion, Precio " +
                                                          "FROM vuelos " +
                                                          "INNER JOIN aviones ON vuelos.aviones_ID = aviones.ID " +
                                                          "INNER JOIN aerolinea ON aviones.aerolinea_ID = aerolinea.ID " +

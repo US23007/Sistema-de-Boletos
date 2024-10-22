@@ -10,7 +10,7 @@ namespace Clave2_Grupo3_US23007_
 {
 
     //Clase para Validar el Usuario , Contraseña y Correo
-    class ValidarIngreso
+    class ValidarIngreso : Vuelos
     {
         private static String Usuario { get; set; }
         private static int idUsuario { get; set; }
@@ -100,6 +100,12 @@ namespace Clave2_Grupo3_US23007_
 
                         if (filasAfectadas > 0)
                         {
+                            string input = "SELECT LAST_INSERT_ID()";
+                            using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conector))
+                            {
+                                ObtenerIdUsuario = Convert.ToInt32(obtenerIDCmd.ExecuteScalar());
+                            }
+                            Console.WriteLine(ObtenerIdUsuario);
                             MessageBox.Show("Usuario registrado exitosamente.",
                                             "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return true;
@@ -129,7 +135,7 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 conector.Open();
-                string consulta = "SELECT * FROM usuario WHERE Usuario = @nombre AND Contraseña = @contraseña AND Correo = @correo";
+                string consulta = "SELECT ID FROM usuario WHERE Usuario = @nombre AND Contraseña = @contraseña AND Correo = @correo";
                 using (MySqlCommand cmd = new MySqlCommand(consulta, conector))
                 {
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
@@ -140,6 +146,8 @@ namespace Clave2_Grupo3_US23007_
                     {
                         if (reader.Read())
                         {
+                            ObtenerIdUsuario = reader.GetInt32("ID");
+                            Console.WriteLine(ObtenerIdUsuario);
                             MessageBox.Show("Bienvenido Usuario", "Cuenta Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return true;
                         }

@@ -48,18 +48,23 @@ namespace Clave2_Grupo3_US23007_
             else
             {
                 ValidarIngreso validar = new ValidarIngreso();
+                Pasajero pasajero = new Pasajero();
+                Datos datos = new Datos();
                 validar.Validar(txtUsuario.Text, txtContraseña.Text, txtcorreo.Text);
-                if (validar.IngresoUsuario())
+
+                if (validar.IngresoUsuario() && pasajero.ObtenerAsientos(datos.cbxAsiento))
                 {
                     validar.ObtenerUsuario = txtUsuario.Text;
                     Console.WriteLine(validar.ObtenerUsuario);
-                    Datos datos = new Datos();
                     datos.Show();
                     this.Hide();
                 }
                 else
                 {
-                    return;
+                    FormCarga carga = new FormCarga();
+                    carga.Show();
+                    this.Hide();
+                    
                 }
             }
         }
@@ -137,17 +142,20 @@ namespace Clave2_Grupo3_US23007_
         private void btnRegistrase_Click(object sender, EventArgs e)
         {
             ValidarIngreso validar = new ValidarIngreso();
-            
-            if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text, txtContraseña.Text))
+            Pasajero pasajero = new Pasajero();
+            Datos datos = new Datos();
+
+            if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text, txtContraseña.Text) && pasajero.ObtenerAsientos(datos.cbxAsiento))
             {
                 validar.ObtenerUsuario = txtUsuario.Text;
-                Datos datos = new Datos();
                 datos.Show();
                 this.Hide();
             }
             else
             {
-                return;
+                FormCarga carga = new FormCarga();
+                carga.Show();
+                this.Hide();
             }
 
         }

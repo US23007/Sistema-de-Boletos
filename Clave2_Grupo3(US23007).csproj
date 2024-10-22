@@ -137,6 +137,7 @@
     <Compile Include="IngresoAdministrador.Designer.cs">
       <DependentUpon>IngresoAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pasajero.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidarIngreso.cs" />

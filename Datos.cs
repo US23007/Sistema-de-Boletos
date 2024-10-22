@@ -18,6 +18,7 @@ namespace Clave2_Grupo3_US23007_
             InitializeComponent();
             pagCalendar.Visible = false;
             txtNombre.Focus();
+            
         }
 
         private void btnir_Click(object sender, EventArgs e)
@@ -48,7 +49,53 @@ namespace Clave2_Grupo3_US23007_
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-
+            DateTime time;
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("Asegúrese de llenar el Nombre Completo del pasajero","Nombre Completo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtpasaporte.Text))
+            {
+                MessageBox.Show("Asegúrese de llenar el número de pasaporte","Pasaporte Vacio", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtfecha.Text))
+            {
+                MessageBox.Show("Asegúrese de llenar la fecha de nacimiento del pasajero","Fecha Vacia",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                return;
+            }
+            if (DateTime.TryParse(txtfecha.Text, out time))
+            {
+                time.ToString("yyyy-MM-dd");
+            }
+            if (cbxAsiento.SelectedIndex == -1 || cbxEquipaje.SelectedIndex == -1 || cbxn_Nacionalidad.SelectedIndex == -1 || cbx_Tipo_Pasajero.SelectedIndex == -1)
+            {
+                MessageBox.Show("Asegúrese de haber seleccionado el asiento , la nacionalidad, el tipo de pasajero o el tipo de equipaje", "Datos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                string nombre = txtNombre.Text;
+                string fecha = txtfecha.Text;
+                string pasaporte = txtpasaporte.Text;
+                int asiento = int.Parse(cbxAsiento.Items.ToString());
+                string telefono = txt_Telefono.Text;
+                string nacionalidad = cbxn_Nacionalidad.SelectedItem.ToString();
+                string equipaje = cbxEquipaje.SelectedItem.ToString();
+                string tipo = cbx_Tipo_Pasajero.SelectedItem.ToString();
+                Pasajero pasajero = new Pasajero();
+                pasajero.NombrePasajero = nombre;
+                pasajero.Ingresar_Pasajero(nombre, time, pasaporte, asiento, telefono, nacionalidad, equipaje, tipo);
+                if (pasajero.RegistrarPasajero())
+                {
+                    FormPrincipal principal = new FormPrincipal();
+                    principal.Show();
+                    this.Hide();
+                }
+               
+            }
+            
         }
 
         private void picCompra_Click(object sender, EventArgs e)

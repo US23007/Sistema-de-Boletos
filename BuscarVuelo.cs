@@ -117,6 +117,7 @@ namespace Clave2_Grupo3_US23007_
                     int idvuelo = int.Parse(fila.Cells["ID"].Value.ToString());
                     Vuelos vuelos = new Vuelos();
                     vuelos.ObtenerId = idvuelo;
+                   
                     MessageBox.Show("Cargando Información.....", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Imagen imagen = new Imagen();
                     Informacion info = new Informacion();
@@ -149,7 +150,10 @@ namespace Clave2_Grupo3_US23007_
                 foreach (DataGridViewRow fila in dgvDatos.SelectedRows) 
                 {
                     int idvuelo = int.Parse(fila.Cells["ID"].Value.ToString());
-                    
+                    int avion = int.Parse(fila.Cells["ID del Avión"].Value.ToString());
+                    Vuelos vuelos = new Vuelos();
+                    vuelos.ObtenerId = idvuelo;
+                    vuelos.ObtenerAvion = avion;
                     MessageBox.Show("Seleccion Completada", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show("Para continuar debe de Iniciar Sesion o Registrarse", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     IngresoAdministrador ingreso = new IngresoAdministrador();
