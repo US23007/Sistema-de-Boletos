@@ -54,8 +54,6 @@ namespace Clave2_Grupo3_US23007_
             this.duracion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.picImagen = new System.Windows.Forms.PictureBox();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -93,7 +91,7 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(12, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(779, 601);
+            this.groupBox1.Size = new System.Drawing.Size(779, 554);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion de Vuelo";
@@ -102,9 +100,9 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.lblEmpleados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpleados.ForeColor = System.Drawing.Color.Black;
-            this.lblEmpleados.Location = new System.Drawing.Point(37, 489);
+            this.lblEmpleados.Location = new System.Drawing.Point(31, 463);
             this.lblEmpleados.Name = "lblEmpleados";
-            this.lblEmpleados.Size = new System.Drawing.Size(375, 98);
+            this.lblEmpleados.Size = new System.Drawing.Size(375, 78);
             this.lblEmpleados.TabIndex = 48;
             // 
             // lbldescripcion
@@ -359,45 +357,12 @@ namespace Clave2_Grupo3_US23007_
             this.picImagen.TabIndex = 2;
             this.picImagen.TabStop = false;
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.ic_back_97586;
-            this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(201, 619);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(91, 37);
-            this.btnRegresar.TabIndex = 1;
-            this.btnRegresar.Text = "Atrás";
-            this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.select_area_icon_icons_com_69919_1_;
-            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionar.Location = new System.Drawing.Point(539, 614);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(135, 44);
-            this.btnSeleccionar.TabIndex = 2;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
             // Informacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(803, 666);
-            this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.btnRegresar);
+            this.ClientSize = new System.Drawing.Size(803, 573);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Informacion";
@@ -414,8 +379,6 @@ namespace Clave2_Grupo3_US23007_
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRegresar;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

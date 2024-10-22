@@ -165,10 +165,10 @@ namespace Clave2_Grupo3_US23007_
             // 
             // calendar
             // 
-            this.calendar.Location = new System.Drawing.Point(455, 59);
+            this.calendar.Location = new System.Drawing.Point(456, 58);
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 1;
-            this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
+            this.calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateSelected);
             // 
             // picBuscar
             // 
@@ -254,7 +254,6 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.txtfecha.BackColor = System.Drawing.Color.White;
             this.txtfecha.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtfecha.Enabled = false;
             this.txtfecha.Location = new System.Drawing.Point(53, 21);
             this.txtfecha.Multiline = true;
             this.txtfecha.Name = "txtfecha";

@@ -44,26 +44,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
-        
-
-        private void calendar_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            
-            if(e.Start.Date <= DateTime.Now.Date)
-            {
-                MessageBox.Show("Debe ingresar una fecha mayor a la actual ", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                txtfecha.Text = " ";
-                return;
-            }
-            else
-            {
-                calendar.Visible = false;
-                dataHora.Focus();
-                txtfecha.Text = e.Start.ToString("yyyy/M/dd");
-            }
-           
-            
-        }
+  
 
         private void cbxOrigen_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -142,8 +123,8 @@ namespace Clave2_Grupo3_US23007_
                     if ( imagen.MostrarInformacion (info.lbldescripcion, info.origen, info.destino, info.horasalida, info.lblOrigen, info.duracion, info.picImagen,
                         info.lblaerolinea, info.lblprecio, info.lbldestino, info.horallegada, info.lblaeropuertoorigen, info.lblaeropuertodestino, info.lbldistancia, info.lblEmpleados))
                     {
-                        info.Show();
-                        this.Hide();
+                        info.ShowDialog();
+                        
                     }
                     else
                     {
@@ -187,6 +168,23 @@ namespace Clave2_Grupo3_US23007_
         {
             Imagen imagen = new Imagen();
             imagen.CargarImagenes();
+        }
+
+        private void calendar_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            if (e.Start.Date <= DateTime.Now.Date)
+            {
+                MessageBox.Show("Debe ingresar una fecha mayor a la actual ", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtfecha.Text = " ";
+                return;
+            }
+            else
+            {
+                calendar.Visible = false;
+                dataHora.Focus();
+                txtfecha.Text = e.Start.ToString("yyyy/M/dd");
+            }
+
         }
     }
 }
