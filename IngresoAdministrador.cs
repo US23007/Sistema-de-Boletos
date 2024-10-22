@@ -153,9 +153,7 @@ namespace Clave2_Grupo3_US23007_
             }
             else
             {
-                FormCarga carga = new FormCarga();
-                carga.Show();
-                this.Hide();
+                return;
             }
 
         }

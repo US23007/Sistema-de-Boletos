@@ -79,15 +79,16 @@ namespace Clave2_Grupo3_US23007_
                 string nombre = txtNombre.Text;
                 string fecha = txtfecha.Text;
                 string pasaporte = txtpasaporte.Text;
-                int asiento = int.Parse(cbxAsiento.Items.ToString());
+                int asiento = int.Parse(cbxAsiento.SelectedItem.ToString());
                 string telefono = txt_Telefono.Text;
                 string nacionalidad = cbxn_Nacionalidad.SelectedItem.ToString();
                 string equipaje = cbxEquipaje.SelectedItem.ToString();
                 string tipo = cbx_Tipo_Pasajero.SelectedItem.ToString();
                 Pasajero pasajero = new Pasajero();
                 pasajero.NombrePasajero = nombre;
+                pasajero.Butaca = asiento;
                 pasajero.Ingresar_Pasajero(nombre, time, pasaporte, asiento, telefono, nacionalidad, equipaje, tipo);
-                if (pasajero.RegistrarPasajero())
+                if (pasajero.RegistrarPasajero() && pasajero.ReservarAsiento())
                 {
                     FormPrincipal principal = new FormPrincipal();
                     principal.Show();

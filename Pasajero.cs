@@ -194,5 +194,53 @@ namespace Clave2_Grupo3_US23007_
                 }
             }
         }
+
+
+        public bool ReservarAsiento()
+        {
+            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+            using (MySqlConnection conector = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conector.Open();
+                    string consulta = @"Update asientos
+                                INNER JOIN aviones ON asientos.aviones_ID = aviones.ID
+                                INNER JOIN vuelos ON vuelos.aviones_ID = aviones.ID
+                                set asientos.Estado ='Reservado'
+                                WHERE vuelos.ID = @id and aviones.ID = @avion and asientos.NumeroAsiento = @asiento";
+
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    {
+                        comando.Parameters.AddWithValue("@id", ObtenerId);
+                        comando.Parameters.AddWithValue("@avion", ObtenerAvion);
+                        comando.Parameters.AddWithValue("@asiento", Butaca);
+
+
+                        int filasAfectadas = comando.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            MessageBox.Show("Asiento Reservado con exito.",
+                                            "Asiento Reservado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo reservar el asiento.",
+                                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
+                                  "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
     }
 }
