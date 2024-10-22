@@ -143,6 +143,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_mark_ok_good_approve_safe_icon_icons_com_59987 {
+            get {
+                object obj = ResourceManager.GetObject("check_mark_ok_good_approve_safe_icon_icons_com_59987", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clock_with_white_face_icon_icons_com_72804 {
             get {
                 object obj = ResourceManager.GetObject("clock_with_white_face_icon_icons_com_72804", resourceCulture);
@@ -376,6 +386,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap seat_passenger_icon_135220 {
             get {
                 object obj = ResourceManager.GetObject("seat_passenger_icon_135220", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seat35_41709_1_ {
+            get {
+                object obj = ResourceManager.GetObject("seat35_41709_1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

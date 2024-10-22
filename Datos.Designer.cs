@@ -32,11 +32,16 @@ namespace Clave2_Grupo3_US23007_
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Datos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAsientosDisponibles = new System.Windows.Forms.Label();
+            this.lblCantidadAsientos = new System.Windows.Forms.Label();
+            this.pagCalendar = new System.Windows.Forms.MonthCalendar();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cbx_Tipo_Pasajero = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.picCompra = new System.Windows.Forms.PictureBox();
             this.cbxn_Nacionalidad = new System.Windows.Forms.ComboBox();
             this.cbxEquipaje = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pagCalendar = new System.Windows.Forms.MonthCalendar();
             this.txtfecha = new System.Windows.Forms.TextBox();
             this.picCalendario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,28 +55,32 @@ namespace Clave2_Grupo3_US23007_
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxAsiento = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.tool = new System.Windows.Forms.ToolTip(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbx_Tipo_Pasajero = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCalendario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erp)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.lblAsientosDisponibles);
+            this.groupBox1.Controls.Add(this.lblCantidadAsientos);
+            this.groupBox1.Controls.Add(this.pagCalendar);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.cbx_Tipo_Pasajero);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.picCompra);
             this.groupBox1.Controls.Add(this.cbxn_Nacionalidad);
             this.groupBox1.Controls.Add(this.cbxEquipaje);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.pagCalendar);
             this.groupBox1.Controls.Add(this.txtfecha);
             this.groupBox1.Controls.Add(this.picCalendario);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -85,13 +94,80 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbxAsiento);
+            this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(8, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(440, 479);
+            this.groupBox1.Size = new System.Drawing.Size(456, 479);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Adicional";
+            // 
+            // lblAsientosDisponibles
+            // 
+            this.lblAsientosDisponibles.AutoSize = true;
+            this.lblAsientosDisponibles.Enabled = false;
+            this.lblAsientosDisponibles.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsientosDisponibles.Location = new System.Drawing.Point(431, 278);
+            this.lblAsientosDisponibles.Name = "lblAsientosDisponibles";
+            this.lblAsientosDisponibles.Size = new System.Drawing.Size(15, 16);
+            this.lblAsientosDisponibles.TabIndex = 26;
+            this.lblAsientosDisponibles.Text = "?";
+            this.tool.SetToolTip(this.lblAsientosDisponibles, "Cantidad de Asientos Disponibles");
+            // 
+            // lblCantidadAsientos
+            // 
+            this.lblCantidadAsientos.AutoSize = true;
+            this.lblCantidadAsientos.Enabled = false;
+            this.lblCantidadAsientos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadAsientos.Location = new System.Drawing.Point(361, 279);
+            this.lblCantidadAsientos.Name = "lblCantidadAsientos";
+            this.lblCantidadAsientos.Size = new System.Drawing.Size(15, 16);
+            this.lblCantidadAsientos.TabIndex = 25;
+            this.lblCantidadAsientos.Text = "?";
+            this.tool.SetToolTip(this.lblCantidadAsientos, "Cantidad de Asientos");
+            // 
+            // pagCalendar
+            // 
+            this.pagCalendar.Location = new System.Drawing.Point(177, 180);
+            this.pagCalendar.Name = "pagCalendar";
+            this.pagCalendar.TabIndex = 13;
+            this.pagCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.pagCalendar_DateSelected);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.seat_icon_137217;
+            this.pictureBox2.Location = new System.Drawing.Point(330, 271);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            this.tool.SetToolTip(this.pictureBox2, "Asientos");
+            // 
+            // cbx_Tipo_Pasajero
+            // 
+            this.cbx_Tipo_Pasajero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_Tipo_Pasajero.FormattingEnabled = true;
+            this.cbx_Tipo_Pasajero.Items.AddRange(new object[] {
+            "Adulto/a",
+            "Niño/a",
+            "Bebé"});
+            this.cbx_Tipo_Pasajero.Location = new System.Drawing.Point(167, 434);
+            this.cbx_Tipo_Pasajero.Name = "cbx_Tipo_Pasajero";
+            this.cbx_Tipo_Pasajero.Size = new System.Drawing.Size(137, 24);
+            this.cbx_Tipo_Pasajero.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(35, 442);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 16);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Tipo de Pasajero";
             // 
             // picCompra
             // 
@@ -166,13 +242,6 @@ namespace Clave2_Grupo3_US23007_
             this.label7.Size = new System.Drawing.Size(112, 16);
             this.label7.TabIndex = 17;
             this.label7.Text = "Tipo de Equipaje";
-            // 
-            // pagCalendar
-            // 
-            this.pagCalendar.Location = new System.Drawing.Point(173, 180);
-            this.pagCalendar.Name = "pagCalendar";
-            this.pagCalendar.TabIndex = 13;
-            this.pagCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.pagCalendar_DateSelected);
             // 
             // txtfecha
             // 
@@ -311,6 +380,18 @@ namespace Clave2_Grupo3_US23007_
             this.cbxAsiento.TabIndex = 16;
             this.cbxAsiento.SelectedIndexChanged += new System.EventHandler(this.cbxAsiento_SelectedIndexChanged);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.check_mark_ok_good_approve_safe_icon_icons_com_59987;
+            this.pictureBox3.Location = new System.Drawing.Point(399, 271);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            this.tool.SetToolTip(this.pictureBox3, "Disponible");
+            // 
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.Black;
@@ -330,35 +411,12 @@ namespace Clave2_Grupo3_US23007_
             this.erp.ContainerControl = this;
             this.erp.Icon = ((System.Drawing.Icon)(resources.GetObject("erp.Icon")));
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(35, 442);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 16);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Tipo de Pasajero";
-            // 
-            // cbx_Tipo_Pasajero
-            // 
-            this.cbx_Tipo_Pasajero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_Tipo_Pasajero.FormattingEnabled = true;
-            this.cbx_Tipo_Pasajero.Items.AddRange(new object[] {
-            "Adulto/a",
-            "Niño/a",
-            "Bebé"});
-            this.cbx_Tipo_Pasajero.Location = new System.Drawing.Point(167, 434);
-            this.cbx_Tipo_Pasajero.Name = "cbx_Tipo_Pasajero";
-            this.cbx_Tipo_Pasajero.Size = new System.Drawing.Size(137, 24);
-            this.cbx_Tipo_Pasajero.TabIndex = 22;
-            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(462, 533);
+            this.ClientSize = new System.Drawing.Size(469, 533);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -367,9 +425,11 @@ namespace Clave2_Grupo3_US23007_
             this.Text = "Datos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCalendario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erp)).EndInit();
             this.ResumeLayout(false);
 
@@ -401,5 +461,9 @@ namespace Clave2_Grupo3_US23007_
         public System.Windows.Forms.ComboBox cbxAsiento;
         private System.Windows.Forms.ComboBox cbx_Tipo_Pasajero;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblAsientosDisponibles;
+        private System.Windows.Forms.Label lblCantidadAsientos;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

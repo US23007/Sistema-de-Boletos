@@ -18,7 +18,8 @@ namespace Clave2_Grupo3_US23007_
             InitializeComponent();
             pagCalendar.Visible = false;
             txtNombre.Focus();
-            
+            Pasajero pasajero = new Pasajero();
+            pasajero.ObtenerCantidadAsientos(lblCantidadAsientos, lblAsientosDisponibles);
         }
 
         private void btnir_Click(object sender, EventArgs e)

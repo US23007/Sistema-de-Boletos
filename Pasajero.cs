@@ -196,6 +196,61 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
+        public bool ObtenerCantidadAsientos(Label cantidad,Label asientos)
+        {
+            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+            using (MySqlConnection conector = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conector.Open();
+                    string consulta = @"SELECT 
+                                        COUNT(*) AS 'Cantidad de Asientos',
+                                        SUM(CASE WHEN asientos.Estado = 'Disponible' THEN 1 ELSE 0 END) AS 'Asientos Disponibles'
+                                        FROM asientos
+                                        INNER JOIN aviones ON asientos.aviones_ID = aviones.ID
+                                        INNER JOIN vuelos ON vuelos.aviones_ID = aviones.ID
+                                        WHERE vuelos.ID = @id AND aviones.ID = @avionID;
+";
+
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    {
+                        comando.Parameters.AddWithValue("@id", ObtenerId);
+                        comando.Parameters.AddWithValue("@avionID", ObtenerAvion);
+
+                        using (MySqlDataReader reader = comando.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+
+                                int cantidadAsientos = reader.GetInt32(0);
+                                int asientosDisponibles = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
+                                cantidad.Text = cantidadAsientos.ToString();
+                                asientos.Text = asientosDisponibles.ToString();
+
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos.",
+                                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return false;
+                            }
+
+
+
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
+                                  "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
+
         public bool ReservarAsiento()
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";

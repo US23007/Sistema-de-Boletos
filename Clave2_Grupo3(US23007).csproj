@@ -328,5 +328,11 @@
   <ItemGroup>
     <None Include="Resources\shoppingstorecart_99691.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat35_41709%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_mark_ok_good_approve_safe_icon-icons.com_59987.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
