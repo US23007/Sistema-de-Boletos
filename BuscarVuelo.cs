@@ -190,5 +190,10 @@ namespace Clave2_Grupo3_US23007_
             }
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

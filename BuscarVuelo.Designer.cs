@@ -329,6 +329,7 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "El Salvador Blue Airlines";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // BuscarVuelo
             // 

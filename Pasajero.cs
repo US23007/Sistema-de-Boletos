@@ -188,7 +188,7 @@ namespace Clave2_Grupo3_US23007_
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
+                    MessageBox.Show("Error en registrar pasajero al conectar con la base de datos: " + ex.Message,
                                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
@@ -244,7 +244,7 @@ namespace Clave2_Grupo3_US23007_
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
+                    MessageBox.Show("Error en obtener cantidad asiento al conectar con la base de datos: " + ex.Message,
                                   "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
@@ -291,7 +291,7 @@ namespace Clave2_Grupo3_US23007_
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
+                    MessageBox.Show("Error en reservar asiento al conectar con la base de datos: " + ex.Message,
                                   "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
