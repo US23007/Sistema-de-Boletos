@@ -53,6 +53,7 @@ namespace Clave2_Grupo3_US23007_
             this.cbxOrigen = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gbxResultados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -70,6 +71,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.gbxResultados);
             this.panel1.Controls.Add(this.calendar);
             this.panel1.Controls.Add(this.picBuscar);
@@ -331,6 +333,17 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Text = "El Salvador Blue Airlines";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(157, 87);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "reservas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // BuscarVuelo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,5 +396,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Button btn_Ver_Mas;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Button button1;
     }
 }

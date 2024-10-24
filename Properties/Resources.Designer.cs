@@ -133,6 +133,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banknotespaymentmoney_billetesdebanco_pag_3773 {
+            get {
+                object obj = ResourceManager.GetObject("banknotespaymentmoney_billetesdebanco_pag_3773", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_with_a_clock_time_tools_icon_icons_com_56831 {
             get {
                 object obj = ResourceManager.GetObject("calendar_with_a_clock_time_tools_icon_icons_com_56831", resourceCulture);
@@ -423,6 +433,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sign_question_icon_34359 {
+            get {
+                object obj = ResourceManager.GetObject("sign_question_icon_34359", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stewardess_avatar_icon_icons_com_54750 {
             get {
                 object obj = ResourceManager.GetObject("stewardess_avatar_icon_icons_com_54750", resourceCulture);
@@ -466,6 +486,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap user_84308 {
             get {
                 object obj = ResourceManager.GetObject("user_84308", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warning_signal_icon_238405 {
+            get {
+                object obj = ResourceManager.GetObject("warning_signal_icon_238405", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -343,5 +343,14 @@
   <ItemGroup>
     <None Include="Resources\check_mark_ok_good_approve_safe_icon-icons.com_59987.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_signal_icon_238405.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-question-icon_34359.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banknotespaymentmoney_billetesdebanco_pag_3773.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

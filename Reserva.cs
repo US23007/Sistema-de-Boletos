@@ -15,6 +15,30 @@ namespace Clave2_Grupo3_US23007_
         public Reserva()
         {
             InitializeComponent();
+            panelTarjeta.Visible = false; 
+            panelEfectivo.Visible = false;
+            panelBancaria.Visible = false;
+        }
+
+        private void cbx_Pago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbx_Pago.SelectedIndex == 0)
+            {
+                panelTarjeta.Visible = true;
+                panelEfectivo.Visible = false;
+                panelBancaria.Visible = false;
+            }if(cbx_Pago.SelectedIndex == 1)
+            {
+                panelTarjeta.Visible = false;
+                panelEfectivo.Visible = true;
+                panelBancaria.Visible = false;
+            }
+            if (cbx_Pago.SelectedIndex == 2)
+            {
+                panelTarjeta.Visible = false;
+                panelEfectivo.Visible = false;
+                panelBancaria.Visible = true;
+            }
         }
     }
 }

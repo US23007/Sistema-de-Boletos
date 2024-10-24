@@ -241,4 +241,13 @@
   <data name="seat35_41709_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\seat35_41709(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="banknotespaymentmoney_billetesdebanco_pag_3773" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banknotespaymentmoney_billetesdebanco_pag_3773.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sign_question_icon_34359" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-question-icon_34359.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warning_signal_icon_238405" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning_signal_icon_238405.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

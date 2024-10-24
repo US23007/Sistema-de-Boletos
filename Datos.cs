@@ -91,8 +91,8 @@ namespace Clave2_Grupo3_US23007_
                 pasajero.Ingresar_Pasajero(nombre, time, pasaporte, asiento, telefono, nacionalidad, equipaje, tipo);
                 if (pasajero.RegistrarPasajero() && pasajero.ReservarAsiento())
                 {
-                    FormPrincipal principal = new FormPrincipal();
-                    principal.Show();
+                    Reserva reserva = new Reserva();
+                    reserva.Show();
                     this.Hide();
                 }
                
@@ -146,7 +146,7 @@ namespace Clave2_Grupo3_US23007_
         {
             if (e.Start.Date >= DateTime.Now.Date)
             {
-                MessageBox.Show("Debe ingresar una fecha mayor a la actual ", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Debe ingresar una fecha menor a la actual ", "Fecha incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txtfecha.Text = " ";
                 return;
             }
