@@ -370,5 +370,26 @@
   <ItemGroup>
     <None Include="Resources\business-color_money-13_icon-icons.com_53448.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_code_payment_method_icon_142715.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chivo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chivo%281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bancoagicola%282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\davi%282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\davi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\davivienda.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

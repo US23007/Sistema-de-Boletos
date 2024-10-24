@@ -133,6 +133,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bancoagicola_2_ {
+            get {
+                object obj = ResourceManager.GetObject("bancoagicola_2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap banknotespaymentmoney_billetesdebanco_pag_3773 {
             get {
                 object obj = ResourceManager.GetObject("banknotespaymentmoney_billetesdebanco_pag_3773", resourceCulture);
@@ -183,6 +193,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chivo_1_ {
+            get {
+                object obj = ResourceManager.GetObject("chivo_1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clock_with_white_face_icon_icons_com_72804 {
             get {
                 object obj = ResourceManager.GetObject("clock_with_white_face_icon_icons_com_72804", resourceCulture);
@@ -196,6 +216,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap crew_icon_153959 {
             get {
                 object obj = ResourceManager.GetObject("crew_icon_153959", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap davivienda {
+            get {
+                object obj = ResourceManager.GetObject("davivienda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -446,6 +476,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap seat35_41709_1_ {
             get {
                 object obj = ResourceManager.GetObject("seat35_41709_1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap security_code_payment_method_icon_142715 {
+            get {
+                object obj = ResourceManager.GetObject("security_code_payment_method_icon_142715", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

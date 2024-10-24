@@ -63,7 +63,6 @@ namespace Clave2_Grupo3_US23007_
             this.label26 = new System.Windows.Forms.Label();
             this.lbl_Asiento = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.lbl_Avion = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.lbl_Puerta = new System.Windows.Forms.Label();
@@ -81,33 +80,56 @@ namespace Clave2_Grupo3_US23007_
             this.label44 = new System.Windows.Forms.Label();
             this.picPoliticas = new System.Windows.Forms.PictureBox();
             this.tool = new System.Windows.Forms.ToolTip(this.components);
-            this.label45 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.panelTarjeta = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panelEfectivo = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelBancaria = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.cbxVisa = new System.Windows.Forms.CheckBox();
             this.cbxMaster = new System.Windows.Forms.CheckBox();
             this.cbxBitcoin = new System.Windows.Forms.CheckBox();
-            this.cbxEfectivo = new System.Windows.Forms.CheckBox();
+            this.cbxChivo = new System.Windows.Forms.CheckBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.panelVisa = new System.Windows.Forms.Panel();
+            this.btnVisa = new System.Windows.Forms.Button();
+            this.txt_CVC_Visa = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txt_Número_Visa = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_Fecha_Visa = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtNombre_Visa = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panelEfectivo = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panelBitcoin = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panelMastecard = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.erp = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.lbl_Avion = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoliticas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelTarjeta.SuspendLayout();
+            this.panelVisa.SuspendLayout();
             this.panelEfectivo.SuspendLayout();
-            this.panelBancaria.SuspendLayout();
+            this.panelBitcoin.SuspendLayout();
+            this.panelMastecard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.user_84308;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +139,7 @@ namespace Clave2_Grupo3_US23007_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 78);
+            this.label1.Location = new System.Drawing.Point(8, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(787, 13);
             this.label1.TabIndex = 1;
@@ -128,7 +150,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 68);
+            this.label2.Location = new System.Drawing.Point(46, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 2;
@@ -139,7 +161,7 @@ namespace Clave2_Grupo3_US23007_
             this.label3.AutoEllipsis = true;
             this.label3.BackColor = System.Drawing.Color.LightGray;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 91);
+            this.label3.Location = new System.Drawing.Point(11, 70);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(4);
             this.label3.Size = new System.Drawing.Size(298, 26);
@@ -152,7 +174,7 @@ namespace Clave2_Grupo3_US23007_
             this.label4.AutoEllipsis = true;
             this.label4.BackColor = System.Drawing.Color.LightGray;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(459, 91);
+            this.label4.Location = new System.Drawing.Point(458, 70);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(4);
             this.label4.Size = new System.Drawing.Size(149, 26);
@@ -165,7 +187,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Nombre.AutoEllipsis = true;
             this.lbl_Nombre.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Nombre.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre.Location = new System.Drawing.Point(12, 117);
+            this.lbl_Nombre.Location = new System.Drawing.Point(11, 96);
             this.lbl_Nombre.Name = "lbl_Nombre";
             this.lbl_Nombre.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Nombre.Size = new System.Drawing.Size(298, 26);
@@ -178,7 +200,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Reserva.AutoEllipsis = true;
             this.lbl_Reserva.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Reserva.Location = new System.Drawing.Point(459, 117);
+            this.lbl_Reserva.Location = new System.Drawing.Point(458, 96);
             this.lbl_Reserva.Name = "lbl_Reserva";
             this.lbl_Reserva.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Reserva.Size = new System.Drawing.Size(149, 26);
@@ -191,7 +213,7 @@ namespace Clave2_Grupo3_US23007_
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(243, 29);
+            this.label5.Location = new System.Drawing.Point(242, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(341, 32);
             this.label5.TabIndex = 7;
@@ -202,7 +224,7 @@ namespace Clave2_Grupo3_US23007_
             this.label6.AutoEllipsis = true;
             this.label6.BackColor = System.Drawing.Color.LightGray;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(332, 91);
+            this.label6.Location = new System.Drawing.Point(331, 70);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(4);
             this.label6.Size = new System.Drawing.Size(105, 26);
@@ -215,7 +237,7 @@ namespace Clave2_Grupo3_US23007_
             this.lblPasaporte.AutoEllipsis = true;
             this.lblPasaporte.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblPasaporte.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasaporte.Location = new System.Drawing.Point(332, 117);
+            this.lblPasaporte.Location = new System.Drawing.Point(331, 96);
             this.lblPasaporte.Name = "lblPasaporte";
             this.lblPasaporte.Padding = new System.Windows.Forms.Padding(4);
             this.lblPasaporte.Size = new System.Drawing.Size(105, 26);
@@ -228,7 +250,7 @@ namespace Clave2_Grupo3_US23007_
             this.label9.AutoEllipsis = true;
             this.label9.BackColor = System.Drawing.Color.LightGray;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(643, 91);
+            this.label9.Location = new System.Drawing.Point(642, 70);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(4);
             this.label9.Size = new System.Drawing.Size(132, 26);
@@ -241,7 +263,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Fecha_Reserva.AutoEllipsis = true;
             this.lbl_Fecha_Reserva.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Fecha_Reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fecha_Reserva.Location = new System.Drawing.Point(643, 117);
+            this.lbl_Fecha_Reserva.Location = new System.Drawing.Point(642, 96);
             this.lbl_Fecha_Reserva.Name = "lbl_Fecha_Reserva";
             this.lbl_Fecha_Reserva.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Fecha_Reserva.Size = new System.Drawing.Size(132, 26);
@@ -254,7 +276,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Hora_Salida.AutoEllipsis = true;
             this.lbl_Hora_Salida.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Hora_Salida.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Hora_Salida.Location = new System.Drawing.Point(114, 354);
+            this.lbl_Hora_Salida.Location = new System.Drawing.Point(113, 333);
             this.lbl_Hora_Salida.Name = "lbl_Hora_Salida";
             this.lbl_Hora_Salida.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Hora_Salida.Size = new System.Drawing.Size(128, 26);
@@ -267,7 +289,7 @@ namespace Clave2_Grupo3_US23007_
             this.label11.AutoEllipsis = true;
             this.label11.BackColor = System.Drawing.Color.LightGray;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(114, 328);
+            this.label11.Location = new System.Drawing.Point(113, 307);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(4);
             this.label11.Size = new System.Drawing.Size(128, 26);
@@ -280,7 +302,7 @@ namespace Clave2_Grupo3_US23007_
             this.label13.AutoEllipsis = true;
             this.label13.BackColor = System.Drawing.Color.LightGray;
             this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(260, 264);
+            this.label13.Location = new System.Drawing.Point(259, 243);
             this.label13.Name = "label13";
             this.label13.Padding = new System.Windows.Forms.Padding(4);
             this.label13.Size = new System.Drawing.Size(232, 26);
@@ -293,7 +315,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Salida.AutoEllipsis = true;
             this.lbl_Salida.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Salida.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Salida.Location = new System.Drawing.Point(509, 290);
+            this.lbl_Salida.Location = new System.Drawing.Point(508, 269);
             this.lbl_Salida.Name = "lbl_Salida";
             this.lbl_Salida.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Salida.Size = new System.Drawing.Size(124, 26);
@@ -306,7 +328,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Numero_Vuelo.AutoEllipsis = true;
             this.lbl_Numero_Vuelo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Numero_Vuelo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Numero_Vuelo.Location = new System.Drawing.Point(114, 290);
+            this.lbl_Numero_Vuelo.Location = new System.Drawing.Point(113, 269);
             this.lbl_Numero_Vuelo.Name = "lbl_Numero_Vuelo";
             this.lbl_Numero_Vuelo.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Numero_Vuelo.Size = new System.Drawing.Size(128, 26);
@@ -319,7 +341,7 @@ namespace Clave2_Grupo3_US23007_
             this.label16.AutoEllipsis = true;
             this.label16.BackColor = System.Drawing.Color.LightGray;
             this.label16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(509, 264);
+            this.label16.Location = new System.Drawing.Point(508, 243);
             this.label16.Name = "label16";
             this.label16.Padding = new System.Windows.Forms.Padding(4);
             this.label16.Size = new System.Drawing.Size(124, 26);
@@ -332,7 +354,7 @@ namespace Clave2_Grupo3_US23007_
             this.label17.AutoEllipsis = true;
             this.label17.BackColor = System.Drawing.Color.LightGray;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(114, 264);
+            this.label17.Location = new System.Drawing.Point(113, 243);
             this.label17.Name = "label17";
             this.label17.Padding = new System.Windows.Forms.Padding(4);
             this.label17.Size = new System.Drawing.Size(128, 26);
@@ -344,7 +366,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(49, 241);
+            this.label18.Location = new System.Drawing.Point(48, 220);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(45, 16);
             this.label18.TabIndex = 15;
@@ -353,7 +375,7 @@ namespace Clave2_Grupo3_US23007_
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.plane_takeoff_13263;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 227);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 206);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -363,7 +385,7 @@ namespace Clave2_Grupo3_US23007_
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(11, 251);
+            this.label19.Location = new System.Drawing.Point(10, 230);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(787, 13);
             this.label19.TabIndex = 14;
@@ -375,7 +397,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Origen.AutoEllipsis = true;
             this.lbl_Origen.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Origen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Origen.Location = new System.Drawing.Point(260, 290);
+            this.lbl_Origen.Location = new System.Drawing.Point(259, 269);
             this.lbl_Origen.Name = "lbl_Origen";
             this.lbl_Origen.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Origen.Size = new System.Drawing.Size(120, 26);
@@ -388,7 +410,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Destino.AutoEllipsis = true;
             this.lbl_Destino.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Destino.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Destino.Location = new System.Drawing.Point(371, 290);
+            this.lbl_Destino.Location = new System.Drawing.Point(370, 269);
             this.lbl_Destino.Name = "lbl_Destino";
             this.lbl_Destino.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Destino.Size = new System.Drawing.Size(121, 26);
@@ -401,7 +423,7 @@ namespace Clave2_Grupo3_US23007_
             this.label21.AutoEllipsis = true;
             this.label21.BackColor = System.Drawing.Color.LightGray;
             this.label21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(14, 264);
+            this.label21.Location = new System.Drawing.Point(13, 243);
             this.label21.Name = "label21";
             this.label21.Padding = new System.Windows.Forms.Padding(4);
             this.label21.Size = new System.Drawing.Size(82, 26);
@@ -414,7 +436,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Aerolinea.AutoEllipsis = true;
             this.lbl_Aerolinea.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Aerolinea.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Aerolinea.Location = new System.Drawing.Point(14, 290);
+            this.lbl_Aerolinea.Location = new System.Drawing.Point(13, 269);
             this.lbl_Aerolinea.Name = "lbl_Aerolinea";
             this.lbl_Aerolinea.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Aerolinea.Size = new System.Drawing.Size(82, 26);
@@ -427,7 +449,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Llegada.AutoEllipsis = true;
             this.lbl_Llegada.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Llegada.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Llegada.Location = new System.Drawing.Point(660, 290);
+            this.lbl_Llegada.Location = new System.Drawing.Point(659, 269);
             this.lbl_Llegada.Name = "lbl_Llegada";
             this.lbl_Llegada.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Llegada.Size = new System.Drawing.Size(133, 26);
@@ -440,7 +462,7 @@ namespace Clave2_Grupo3_US23007_
             this.label24.AutoEllipsis = true;
             this.label24.BackColor = System.Drawing.Color.LightGray;
             this.label24.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(660, 264);
+            this.label24.Location = new System.Drawing.Point(659, 243);
             this.label24.Name = "label24";
             this.label24.Padding = new System.Windows.Forms.Padding(4);
             this.label24.Size = new System.Drawing.Size(133, 26);
@@ -453,7 +475,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Hora_Llegada.AutoEllipsis = true;
             this.lbl_Hora_Llegada.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Hora_Llegada.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Hora_Llegada.Location = new System.Drawing.Point(260, 354);
+            this.lbl_Hora_Llegada.Location = new System.Drawing.Point(259, 333);
             this.lbl_Hora_Llegada.Name = "lbl_Hora_Llegada";
             this.lbl_Hora_Llegada.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Hora_Llegada.Size = new System.Drawing.Size(126, 26);
@@ -466,7 +488,7 @@ namespace Clave2_Grupo3_US23007_
             this.label26.AutoEllipsis = true;
             this.label26.BackColor = System.Drawing.Color.LightGray;
             this.label26.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(260, 328);
+            this.label26.Location = new System.Drawing.Point(259, 307);
             this.label26.Name = "label26";
             this.label26.Padding = new System.Windows.Forms.Padding(4);
             this.label26.Size = new System.Drawing.Size(126, 26);
@@ -479,7 +501,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Asiento.AutoEllipsis = true;
             this.lbl_Asiento.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Asiento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Asiento.Location = new System.Drawing.Point(407, 354);
+            this.lbl_Asiento.Location = new System.Drawing.Point(406, 333);
             this.lbl_Asiento.Name = "lbl_Asiento";
             this.lbl_Asiento.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Asiento.Size = new System.Drawing.Size(126, 26);
@@ -492,7 +514,7 @@ namespace Clave2_Grupo3_US23007_
             this.label28.AutoEllipsis = true;
             this.label28.BackColor = System.Drawing.Color.LightGray;
             this.label28.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(407, 328);
+            this.label28.Location = new System.Drawing.Point(406, 307);
             this.label28.Name = "label28";
             this.label28.Padding = new System.Windows.Forms.Padding(4);
             this.label28.Size = new System.Drawing.Size(126, 26);
@@ -500,25 +522,12 @@ namespace Clave2_Grupo3_US23007_
             this.label28.Text = "Asiento";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_Avion
-            // 
-            this.lbl_Avion.AutoEllipsis = true;
-            this.lbl_Avion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_Avion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Avion.Location = new System.Drawing.Point(11, 354);
-            this.lbl_Avion.Name = "lbl_Avion";
-            this.lbl_Avion.Padding = new System.Windows.Forms.Padding(4);
-            this.lbl_Avion.Size = new System.Drawing.Size(85, 26);
-            this.lbl_Avion.TabIndex = 35;
-            this.lbl_Avion.Text = "1";
-            this.lbl_Avion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label30
             // 
             this.label30.AutoEllipsis = true;
             this.label30.BackColor = System.Drawing.Color.LightGray;
             this.label30.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(11, 328);
+            this.label30.Location = new System.Drawing.Point(10, 307);
             this.label30.Name = "label30";
             this.label30.Padding = new System.Windows.Forms.Padding(4);
             this.label30.Size = new System.Drawing.Size(85, 26);
@@ -531,7 +540,7 @@ namespace Clave2_Grupo3_US23007_
             this.label31.AutoEllipsis = true;
             this.label31.BackColor = System.Drawing.Color.LightGray;
             this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(556, 328);
+            this.label31.Location = new System.Drawing.Point(555, 307);
             this.label31.Name = "label31";
             this.label31.Padding = new System.Windows.Forms.Padding(4);
             this.label31.Size = new System.Drawing.Size(126, 26);
@@ -544,7 +553,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Puerta.AutoEllipsis = true;
             this.lbl_Puerta.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Puerta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Puerta.Location = new System.Drawing.Point(556, 354);
+            this.lbl_Puerta.Location = new System.Drawing.Point(555, 333);
             this.lbl_Puerta.Name = "lbl_Puerta";
             this.lbl_Puerta.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Puerta.Size = new System.Drawing.Size(126, 26);
@@ -557,7 +566,7 @@ namespace Clave2_Grupo3_US23007_
             this.label33.AutoEllipsis = true;
             this.label33.BackColor = System.Drawing.Color.LightGray;
             this.label33.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(699, 328);
+            this.label33.Location = new System.Drawing.Point(698, 307);
             this.label33.Name = "label33";
             this.label33.Padding = new System.Windows.Forms.Padding(4);
             this.label33.Size = new System.Drawing.Size(94, 26);
@@ -570,7 +579,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Precio.AutoEllipsis = true;
             this.lbl_Precio.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Precio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Precio.Location = new System.Drawing.Point(699, 354);
+            this.lbl_Precio.Location = new System.Drawing.Point(698, 333);
             this.lbl_Precio.Name = "lbl_Precio";
             this.lbl_Precio.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Precio.Size = new System.Drawing.Size(94, 26);
@@ -583,7 +592,7 @@ namespace Clave2_Grupo3_US23007_
             this.label35.AutoEllipsis = true;
             this.label35.BackColor = System.Drawing.Color.LightGray;
             this.label35.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(643, 161);
+            this.label35.Location = new System.Drawing.Point(642, 140);
             this.label35.Name = "label35";
             this.label35.Padding = new System.Windows.Forms.Padding(4);
             this.label35.Size = new System.Drawing.Size(131, 26);
@@ -596,7 +605,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Equipaje.AutoEllipsis = true;
             this.lbl_Equipaje.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Equipaje.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Equipaje.Location = new System.Drawing.Point(643, 187);
+            this.lbl_Equipaje.Location = new System.Drawing.Point(642, 166);
             this.lbl_Equipaje.Name = "lbl_Equipaje";
             this.lbl_Equipaje.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Equipaje.Size = new System.Drawing.Size(131, 26);
@@ -609,7 +618,7 @@ namespace Clave2_Grupo3_US23007_
             this.label37.AutoEllipsis = true;
             this.label37.BackColor = System.Drawing.Color.LightGray;
             this.label37.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(14, 161);
+            this.label37.Location = new System.Drawing.Point(13, 140);
             this.label37.Name = "label37";
             this.label37.Padding = new System.Windows.Forms.Padding(4);
             this.label37.Size = new System.Drawing.Size(82, 26);
@@ -622,7 +631,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Telefono.AutoEllipsis = true;
             this.lbl_Telefono.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Telefono.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Telefono.Location = new System.Drawing.Point(14, 187);
+            this.lbl_Telefono.Location = new System.Drawing.Point(13, 166);
             this.lbl_Telefono.Name = "lbl_Telefono";
             this.lbl_Telefono.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Telefono.Size = new System.Drawing.Size(82, 26);
@@ -635,7 +644,7 @@ namespace Clave2_Grupo3_US23007_
             this.label39.AutoEllipsis = true;
             this.label39.BackColor = System.Drawing.Color.LightGray;
             this.label39.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(316, 161);
+            this.label39.Location = new System.Drawing.Point(315, 140);
             this.label39.Name = "label39";
             this.label39.Padding = new System.Windows.Forms.Padding(4);
             this.label39.Size = new System.Drawing.Size(131, 26);
@@ -648,7 +657,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Nacionalidad.AutoEllipsis = true;
             this.lbl_Nacionalidad.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Nacionalidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nacionalidad.Location = new System.Drawing.Point(316, 187);
+            this.lbl_Nacionalidad.Location = new System.Drawing.Point(315, 166);
             this.lbl_Nacionalidad.Name = "lbl_Nacionalidad";
             this.lbl_Nacionalidad.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Nacionalidad.Size = new System.Drawing.Size(131, 26);
@@ -661,7 +670,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Nacimiento.AutoEllipsis = true;
             this.lbl_Nacimiento.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Nacimiento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nacimiento.Location = new System.Drawing.Point(133, 187);
+            this.lbl_Nacimiento.Location = new System.Drawing.Point(132, 166);
             this.lbl_Nacimiento.Name = "lbl_Nacimiento";
             this.lbl_Nacimiento.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Nacimiento.Size = new System.Drawing.Size(154, 26);
@@ -674,7 +683,7 @@ namespace Clave2_Grupo3_US23007_
             this.label42.AutoEllipsis = true;
             this.label42.BackColor = System.Drawing.Color.LightGray;
             this.label42.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(133, 161);
+            this.label42.Location = new System.Drawing.Point(132, 140);
             this.label42.Name = "label42";
             this.label42.Padding = new System.Windows.Forms.Padding(4);
             this.label42.Size = new System.Drawing.Size(154, 26);
@@ -687,7 +696,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Pasajero.AutoEllipsis = true;
             this.lbl_Pasajero.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Pasajero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Pasajero.Location = new System.Drawing.Point(477, 187);
+            this.lbl_Pasajero.Location = new System.Drawing.Point(476, 166);
             this.lbl_Pasajero.Name = "lbl_Pasajero";
             this.lbl_Pasajero.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Pasajero.Size = new System.Drawing.Size(131, 26);
@@ -700,7 +709,7 @@ namespace Clave2_Grupo3_US23007_
             this.label44.AutoEllipsis = true;
             this.label44.BackColor = System.Drawing.Color.LightGray;
             this.label44.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(477, 161);
+            this.label44.Location = new System.Drawing.Point(476, 140);
             this.label44.Name = "label44";
             this.label44.Padding = new System.Windows.Forms.Padding(4);
             this.label44.Size = new System.Drawing.Size(131, 26);
@@ -712,7 +721,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.picPoliticas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPoliticas.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.sign_question_icon_34359;
-            this.picPoliticas.Location = new System.Drawing.Point(767, 12);
+            this.picPoliticas.Location = new System.Drawing.Point(766, 8);
             this.picPoliticas.Name = "picPoliticas";
             this.picPoliticas.Size = new System.Drawing.Size(26, 23);
             this.picPoliticas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -720,20 +729,64 @@ namespace Clave2_Grupo3_US23007_
             this.picPoliticas.TabStop = false;
             this.tool.SetToolTip(this.picPoliticas, "Politicas y Condiciones ");
             // 
+            // cbxVisa
+            // 
+            this.cbxVisa.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.if_visa_2593666_86609;
+            this.cbxVisa.Location = new System.Drawing.Point(186, 521);
+            this.cbxVisa.Name = "cbxVisa";
+            this.cbxVisa.Size = new System.Drawing.Size(92, 34);
+            this.cbxVisa.TabIndex = 60;
+            this.tool.SetToolTip(this.cbxVisa, "Visa");
+            this.cbxVisa.UseVisualStyleBackColor = true;
+            this.cbxVisa.CheckedChanged += new System.EventHandler(this.cbxVisa_CheckedChanged);
+            // 
+            // cbxMaster
+            // 
+            this.cbxMaster.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.Mastercard_icon_icons_com_60554;
+            this.cbxMaster.Location = new System.Drawing.Point(294, 521);
+            this.cbxMaster.Name = "cbxMaster";
+            this.cbxMaster.Size = new System.Drawing.Size(92, 34);
+            this.cbxMaster.TabIndex = 61;
+            this.tool.SetToolTip(this.cbxMaster, "MasterCard");
+            this.cbxMaster.UseVisualStyleBackColor = true;
+            this.cbxMaster.CheckedChanged += new System.EventHandler(this.cbxMaster_CheckedChanged);
+            // 
+            // cbxBitcoin
+            // 
+            this.cbxBitcoin.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.bancoagicola_2_;
+            this.cbxBitcoin.Location = new System.Drawing.Point(408, 521);
+            this.cbxBitcoin.Name = "cbxBitcoin";
+            this.cbxBitcoin.Size = new System.Drawing.Size(164, 34);
+            this.cbxBitcoin.TabIndex = 62;
+            this.tool.SetToolTip(this.cbxBitcoin, "Bitcoin");
+            this.cbxBitcoin.UseVisualStyleBackColor = true;
+            this.cbxBitcoin.CheckedChanged += new System.EventHandler(this.cbxBitcoin_CheckedChanged);
+            // 
+            // cbxChivo
+            // 
+            this.cbxChivo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cbxChivo.Location = new System.Drawing.Point(587, 521);
+            this.cbxChivo.Name = "cbxChivo";
+            this.cbxChivo.Size = new System.Drawing.Size(77, 34);
+            this.cbxChivo.TabIndex = 63;
+            this.tool.SetToolTip(this.cbxChivo, "Chivo Wallet");
+            this.cbxChivo.UseVisualStyleBackColor = true;
+            this.cbxChivo.CheckedChanged += new System.EventHandler(this.cbxEfectivo_CheckedChanged);
+            // 
             // label45
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(51, 403);
+            this.label45.Location = new System.Drawing.Point(50, 382);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(112, 16);
+            this.label45.Size = new System.Drawing.Size(141, 16);
             this.label45.TabIndex = 53;
-            this.label45.Text = "Método de Pago";
+            this.label45.Text = "Información de Pago";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.banknotespaymentmoney_billetesdebanco_pag_3773;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 389);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 368);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -743,36 +796,142 @@ namespace Clave2_Grupo3_US23007_
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(9, 413);
+            this.label46.Location = new System.Drawing.Point(8, 392);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(787, 13);
             this.label46.TabIndex = 52;
             this.label46.Text = resources.GetString("label46.Text");
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelTarjeta
+            // panelVisa
             // 
-            this.panelTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panelTarjeta.Controls.Add(this.label7);
-            this.panelTarjeta.Location = new System.Drawing.Point(263, 513);
-            this.panelTarjeta.Name = "panelTarjeta";
-            this.panelTarjeta.Size = new System.Drawing.Size(305, 159);
-            this.panelTarjeta.TabIndex = 56;
+            this.panelVisa.BackColor = System.Drawing.Color.White;
+            this.panelVisa.Controls.Add(this.btnVisa);
+            this.panelVisa.Controls.Add(this.txt_CVC_Visa);
+            this.panelVisa.Controls.Add(this.label20);
+            this.panelVisa.Controls.Add(this.txt_Número_Visa);
+            this.panelVisa.Controls.Add(this.label15);
+            this.panelVisa.Controls.Add(this.txt_Fecha_Visa);
+            this.panelVisa.Controls.Add(this.label14);
+            this.panelVisa.Controls.Add(this.txtNombre_Visa);
+            this.panelVisa.Controls.Add(this.label7);
+            this.panelVisa.Location = new System.Drawing.Point(158, 561);
+            this.panelVisa.Name = "panelVisa";
+            this.panelVisa.Size = new System.Drawing.Size(532, 183);
+            this.panelVisa.TabIndex = 56;
+            // 
+            // btnVisa
+            // 
+            this.btnVisa.BackColor = System.Drawing.Color.Black;
+            this.btnVisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisa.ForeColor = System.Drawing.Color.White;
+            this.btnVisa.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnVisa.Location = new System.Drawing.Point(240, 146);
+            this.btnVisa.Name = "btnVisa";
+            this.btnVisa.Padding = new System.Windows.Forms.Padding(2);
+            this.btnVisa.Size = new System.Drawing.Size(90, 33);
+            this.btnVisa.TabIndex = 71;
+            this.btnVisa.Text = "Confirmar ";
+            this.btnVisa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVisa.UseVisualStyleBackColor = false;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
+            // 
+            // txt_CVC_Visa
+            // 
+            this.txt_CVC_Visa.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CVC_Visa.Location = new System.Drawing.Point(354, 108);
+            this.txt_CVC_Visa.Multiline = true;
+            this.txt_CVC_Visa.Name = "txt_CVC_Visa";
+            this.txt_CVC_Visa.Size = new System.Drawing.Size(122, 20);
+            this.txt_CVC_Visa.TabIndex = 70;
+            this.txt_CVC_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_CVC_Visa.TextChanged += new System.EventHandler(this.txt_CVC_Visa_TextChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.LightGray;
+            this.label20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(354, 92);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 16);
+            this.label20.TabIndex = 69;
+            this.label20.Text = "Codigo CVC";
+            // 
+            // txt_Número_Visa
+            // 
+            this.txt_Número_Visa.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Número_Visa, 3);
+            this.txt_Número_Visa.Location = new System.Drawing.Point(9, 106);
+            this.txt_Número_Visa.Multiline = true;
+            this.txt_Número_Visa.Name = "txt_Número_Visa";
+            this.txt_Número_Visa.Size = new System.Drawing.Size(270, 20);
+            this.txt_Número_Visa.TabIndex = 68;
+            this.txt_Número_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Número_Visa.TextChanged += new System.EventHandler(this.txt_Número_Visa_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.LightGray;
+            this.label15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(10, 90);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(145, 16);
+            this.label15.TabIndex = 67;
+            this.label15.Text = "Números de la tarjeta";
+            // 
+            // txt_Fecha_Visa
+            // 
+            this.txt_Fecha_Visa.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Fecha_Visa.Location = new System.Drawing.Point(352, 36);
+            this.txt_Fecha_Visa.Multiline = true;
+            this.txt_Fecha_Visa.Name = "txt_Fecha_Visa";
+            this.txt_Fecha_Visa.Size = new System.Drawing.Size(141, 20);
+            this.txt_Fecha_Visa.TabIndex = 66;
+            this.txt_Fecha_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Fecha_Visa.TextChanged += new System.EventHandler(this.txt_Fecha_Visa_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.LightGray;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(352, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(139, 16);
+            this.label14.TabIndex = 65;
+            this.label14.Text = "Fecha de Expiración";
+            // 
+            // txtNombre_Visa
+            // 
+            this.txtNombre_Visa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombre_Visa.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre_Visa.Location = new System.Drawing.Point(9, 34);
+            this.txtNombre_Visa.Multiline = true;
+            this.txtNombre_Visa.Name = "txtNombre_Visa";
+            this.txtNombre_Visa.Size = new System.Drawing.Size(270, 20);
+            this.txtNombre_Visa.TabIndex = 64;
+            this.txtNombre_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 39);
+            this.label7.BackColor = System.Drawing.Color.LightGray;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(9, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Tarjetaa";
+            this.label7.Size = new System.Drawing.Size(131, 16);
+            this.label7.TabIndex = 64;
+            this.label7.Text = "Nombre del Titular ";
             // 
             // panelEfectivo
             // 
             this.panelEfectivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panelEfectivo.Controls.Add(this.label8);
-            this.panelEfectivo.Location = new System.Drawing.Point(263, 513);
+            this.panelEfectivo.Controls.Add(this.panelBitcoin);
+            this.panelEfectivo.Location = new System.Drawing.Point(50, 676);
             this.panelEfectivo.Name = "panelEfectivo";
             this.panelEfectivo.Size = new System.Drawing.Size(305, 159);
             this.panelEfectivo.TabIndex = 57;
@@ -786,82 +945,190 @@ namespace Clave2_Grupo3_US23007_
             this.label8.TabIndex = 0;
             this.label8.Text = "Efectivo";
             // 
-            // panelBancaria
+            // panelBitcoin
             // 
-            this.panelBancaria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelBancaria.Controls.Add(this.label10);
-            this.panelBancaria.Location = new System.Drawing.Point(263, 513);
-            this.panelBancaria.Name = "panelBancaria";
-            this.panelBancaria.Size = new System.Drawing.Size(305, 159);
-            this.panelBancaria.TabIndex = 58;
+            this.panelBitcoin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelBitcoin.Controls.Add(this.label12);
+            this.panelBitcoin.Controls.Add(this.panelMastecard);
+            this.panelBitcoin.Location = new System.Drawing.Point(14, 0);
+            this.panelBitcoin.Name = "panelBitcoin";
+            this.panelBitcoin.Size = new System.Drawing.Size(305, 159);
+            this.panelBitcoin.TabIndex = 58;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(11, 39);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Bitcoin";
+            // 
+            // panelMastecard
+            // 
+            this.panelMastecard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelMastecard.Controls.Add(this.label10);
+            this.panelMastecard.Location = new System.Drawing.Point(17, 0);
+            this.panelMastecard.Name = "panelMastecard";
+            this.panelMastecard.Size = new System.Drawing.Size(305, 166);
+            this.panelMastecard.TabIndex = 58;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(11, 39);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.Size = new System.Drawing.Size(60, 13);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Bancaria";
+            this.label10.Text = "Mastercard";
             // 
-            // toolStrip1
+            // erp
             // 
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 59;
-            this.toolStrip1.Text = "toolStrip1";
+            this.erp.ContainerControl = this;
+            this.erp.Icon = ((System.Drawing.Icon)(resources.GetObject("erp.Icon")));
             // 
-            // cbxVisa
+            // label22
             // 
-            this.cbxVisa.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.if_visa_2593666_86609;
-            this.cbxVisa.Location = new System.Drawing.Point(182, 438);
-            this.cbxVisa.Name = "cbxVisa";
-            this.cbxVisa.Size = new System.Drawing.Size(92, 34);
-            this.cbxVisa.TabIndex = 60;
-            this.cbxVisa.UseVisualStyleBackColor = true;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(50, 490);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(112, 16);
+            this.label22.TabIndex = 66;
+            this.label22.Text = "Método de Pago";
             // 
-            // cbxMaster
+            // pictureBox4
             // 
-            this.cbxMaster.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.Mastercard_icon_icons_com_60554;
-            this.cbxMaster.Location = new System.Drawing.Point(306, 438);
-            this.cbxMaster.Name = "cbxMaster";
-            this.cbxMaster.Size = new System.Drawing.Size(92, 34);
-            this.cbxMaster.TabIndex = 61;
-            this.cbxMaster.UseVisualStyleBackColor = true;
+            this.pictureBox4.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.security_code_payment_method_icon_142715;
+            this.pictureBox4.Location = new System.Drawing.Point(13, 488);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 64;
+            this.pictureBox4.TabStop = false;
             // 
-            // cbxBitcoin
+            // label23
             // 
-            this.cbxBitcoin.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.bitcoin_logo_icon_167806_2_;
-            this.cbxBitcoin.Location = new System.Drawing.Point(428, 438);
-            this.cbxBitcoin.Name = "cbxBitcoin";
-            this.cbxBitcoin.Size = new System.Drawing.Size(92, 34);
-            this.cbxBitcoin.TabIndex = 62;
-            this.cbxBitcoin.UseVisualStyleBackColor = true;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(8, 503);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(787, 13);
+            this.label23.TabIndex = 65;
+            this.label23.Text = resources.GetString("label23.Text");
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cbxEfectivo
+            // label25
             // 
-            this.cbxEfectivo.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.banknotespaymentmoney_billetesdebanco_pag_3773;
-            this.cbxEfectivo.Location = new System.Drawing.Point(559, 438);
-            this.cbxEfectivo.Name = "cbxEfectivo";
-            this.cbxEfectivo.Size = new System.Drawing.Size(92, 34);
-            this.cbxEfectivo.TabIndex = 63;
-            this.cbxEfectivo.UseVisualStyleBackColor = true;
+            this.label25.AutoEllipsis = true;
+            this.label25.BackColor = System.Drawing.Color.LightGray;
+            this.label25.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(75, 424);
+            this.label25.Name = "label25";
+            this.label25.Padding = new System.Windows.Forms.Padding(4);
+            this.label25.Size = new System.Drawing.Size(145, 26);
+            this.label25.TabIndex = 67;
+            this.label25.Text = "Precio del Vuelo";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Avion
+            // 
+            this.lbl_Avion.AutoEllipsis = true;
+            this.lbl_Avion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Avion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Avion.Location = new System.Drawing.Point(10, 333);
+            this.lbl_Avion.Name = "lbl_Avion";
+            this.lbl_Avion.Padding = new System.Windows.Forms.Padding(4);
+            this.lbl_Avion.Size = new System.Drawing.Size(85, 26);
+            this.lbl_Avion.TabIndex = 35;
+            this.lbl_Avion.Text = "1";
+            this.lbl_Avion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.AutoEllipsis = true;
+            this.label27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label27.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(75, 450);
+            this.label27.Name = "label27";
+            this.label27.Padding = new System.Windows.Forms.Padding(4);
+            this.label27.Size = new System.Drawing.Size(145, 26);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "$250";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label29
+            // 
+            this.label29.AutoEllipsis = true;
+            this.label29.BackColor = System.Drawing.Color.LightGray;
+            this.label29.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(277, 424);
+            this.label29.Name = "label29";
+            this.label29.Padding = new System.Windows.Forms.Padding(4);
+            this.label29.Size = new System.Drawing.Size(131, 26);
+            this.label29.TabIndex = 69;
+            this.label29.Text = "Tipo de Equipaje";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.AutoEllipsis = true;
+            this.label32.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(277, 450);
+            this.label32.Name = "label32";
+            this.label32.Padding = new System.Windows.Forms.Padding(4);
+            this.label32.Size = new System.Drawing.Size(131, 26);
+            this.label32.TabIndex = 70;
+            this.label32.Text = "De mano";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoEllipsis = true;
+            this.label34.BackColor = System.Drawing.Color.LightGray;
+            this.label34.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(487, 424);
+            this.label34.Name = "label34";
+            this.label34.Padding = new System.Windows.Forms.Padding(4);
+            this.label34.Size = new System.Drawing.Size(286, 26);
+            this.label34.TabIndex = 71;
+            this.label34.Text = "Total a Pagar con Impuesto de Equipaje";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            this.label36.AutoEllipsis = true;
+            this.label36.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label36.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(487, 450);
+            this.label36.Name = "label36";
+            this.label36.Padding = new System.Windows.Forms.Padding(4);
+            this.label36.Size = new System.Drawing.Size(286, 26);
+            this.label36.TabIndex = 72;
+            this.label36.Text = "$326";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 684);
-            this.Controls.Add(this.cbxEfectivo);
+            this.ClientSize = new System.Drawing.Size(800, 770);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.cbxChivo);
+            this.Controls.Add(this.panelVisa);
             this.Controls.Add(this.cbxBitcoin);
             this.Controls.Add(this.cbxMaster);
             this.Controls.Add(this.cbxVisa);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.panelBancaria);
             this.Controls.Add(this.panelEfectivo);
-            this.Controls.Add(this.panelTarjeta);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label46);
@@ -916,17 +1183,22 @@ namespace Clave2_Grupo3_US23007_
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Reserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserva";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoliticas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelTarjeta.ResumeLayout(false);
-            this.panelTarjeta.PerformLayout();
+            this.panelVisa.ResumeLayout(false);
+            this.panelVisa.PerformLayout();
             this.panelEfectivo.ResumeLayout(false);
             this.panelEfectivo.PerformLayout();
-            this.panelBancaria.ResumeLayout(false);
-            this.panelBancaria.PerformLayout();
+            this.panelBitcoin.ResumeLayout(false);
+            this.panelBitcoin.PerformLayout();
+            this.panelMastecard.ResumeLayout(false);
+            this.panelMastecard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -966,7 +1238,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label lbl_Asiento;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label lbl_Avion;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label lbl_Puerta;
@@ -987,16 +1258,36 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Panel panelTarjeta;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panelVisa;
         private System.Windows.Forms.Panel panelEfectivo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panelBancaria;
+        private System.Windows.Forms.Panel panelMastecard;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.CheckBox cbxVisa;
         private System.Windows.Forms.CheckBox cbxMaster;
         private System.Windows.Forms.CheckBox cbxBitcoin;
-        private System.Windows.Forms.CheckBox cbxEfectivo;
+        private System.Windows.Forms.CheckBox cbxChivo;
+        private System.Windows.Forms.Panel panelBitcoin;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnVisa;
+        private System.Windows.Forms.TextBox txt_CVC_Visa;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txt_Número_Visa;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txt_Fecha_Visa;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ErrorProvider erp;
+        private System.Windows.Forms.TextBox txtNombre_Visa;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lbl_Avion;
     }
 }
