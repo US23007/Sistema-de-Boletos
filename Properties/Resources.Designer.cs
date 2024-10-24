@@ -143,6 +143,26 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bitcoin_logo_icon_167806_2_ {
+            get {
+                object obj = ResourceManager.GetObject("bitcoin_logo_icon_167806_2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap business_color_money_13_icon_icons_com_53448 {
+            get {
+                object obj = ResourceManager.GetObject("business_color_money_13_icon_icons_com_53448", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_with_a_clock_time_tools_icon_icons_com_56831 {
             get {
                 object obj = ResourceManager.GetObject("calendar_with_a_clock_time_tools_icon_icons_com_56831", resourceCulture);
@@ -293,6 +313,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_visa_2593666_86609 {
+            get {
+                object obj = ResourceManager.GetObject("if_visa_2593666_86609", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap key_silhouette_security_tool_interface_symbol_of_password_icon_icons_com_54503 {
             get {
                 object obj = ResourceManager.GetObject("key_silhouette_security_tool_interface_symbol_of_password_icon_icons_com_54503", resourceCulture);
@@ -316,6 +346,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap mail_email_message_electronic_online_web_icon_icons_com_59986 {
             get {
                 object obj = ResourceManager.GetObject("mail_email_message_electronic_online_web_icon_icons_com_59986", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mastercard_icon_icons_com_60554 {
+            get {
+                object obj = ResourceManager.GetObject("Mastercard_icon_icons_com_60554", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

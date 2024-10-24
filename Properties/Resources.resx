@@ -244,6 +244,18 @@
   <data name="banknotespaymentmoney_billetesdebanco_pag_3773" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banknotespaymentmoney_billetesdebanco_pag_3773.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bitcoin_logo_icon_167806_2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bitcoin_logo_icon_167806(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="business_color_money_13_icon_icons_com_53448" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business-color_money-13_icon-icons.com_53448.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_visa_2593666_86609" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if-visa-2593666_86609.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mastercard_icon_icons_com_60554" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mastercard_icon-icons.com_60554.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sign_question_icon_34359" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign-question-icon_34359.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

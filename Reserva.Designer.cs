@@ -84,8 +84,6 @@ namespace Clave2_Grupo3_US23007_
             this.label45 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.cbx_Pago = new System.Windows.Forms.ComboBox();
             this.panelTarjeta = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panelEfectivo = new System.Windows.Forms.Panel();
@@ -93,6 +91,10 @@ namespace Clave2_Grupo3_US23007_
             this.panelBancaria = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.cbxVisa = new System.Windows.Forms.CheckBox();
+            this.cbxMaster = new System.Windows.Forms.CheckBox();
+            this.cbxBitcoin = new System.Windows.Forms.CheckBox();
+            this.cbxEfectivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoliticas)).BeginInit();
@@ -748,34 +750,11 @@ namespace Clave2_Grupo3_US23007_
             this.label46.Text = resources.GetString("label46.Text");
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(182, 443);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(197, 16);
-            this.label47.TabIndex = 54;
-            this.label47.Text = "Seleccione el Método de Pago : ";
-            // 
-            // cbx_Pago
-            // 
-            this.cbx_Pago.FormattingEnabled = true;
-            this.cbx_Pago.Items.AddRange(new object[] {
-            "Tarjeta de Credito/Debito",
-            "Pago en Efectivo",
-            "Transferencia Bancaria"});
-            this.cbx_Pago.Location = new System.Drawing.Point(394, 438);
-            this.cbx_Pago.Name = "cbx_Pago";
-            this.cbx_Pago.Size = new System.Drawing.Size(174, 21);
-            this.cbx_Pago.TabIndex = 55;
-            this.cbx_Pago.SelectedIndexChanged += new System.EventHandler(this.cbx_Pago_SelectedIndexChanged);
-            // 
             // panelTarjeta
             // 
             this.panelTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panelTarjeta.Controls.Add(this.label7);
-            this.panelTarjeta.Location = new System.Drawing.Point(263, 478);
+            this.panelTarjeta.Location = new System.Drawing.Point(263, 513);
             this.panelTarjeta.Name = "panelTarjeta";
             this.panelTarjeta.Size = new System.Drawing.Size(305, 159);
             this.panelTarjeta.TabIndex = 56;
@@ -793,7 +772,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.panelEfectivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panelEfectivo.Controls.Add(this.label8);
-            this.panelEfectivo.Location = new System.Drawing.Point(263, 478);
+            this.panelEfectivo.Location = new System.Drawing.Point(263, 513);
             this.panelEfectivo.Name = "panelEfectivo";
             this.panelEfectivo.Size = new System.Drawing.Size(305, 159);
             this.panelEfectivo.TabIndex = 57;
@@ -811,7 +790,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.panelBancaria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panelBancaria.Controls.Add(this.label10);
-            this.panelBancaria.Location = new System.Drawing.Point(263, 478);
+            this.panelBancaria.Location = new System.Drawing.Point(263, 513);
             this.panelBancaria.Name = "panelBancaria";
             this.panelBancaria.Size = new System.Drawing.Size(305, 159);
             this.panelBancaria.TabIndex = 58;
@@ -833,18 +812,56 @@ namespace Clave2_Grupo3_US23007_
             this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // cbxVisa
+            // 
+            this.cbxVisa.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.if_visa_2593666_86609;
+            this.cbxVisa.Location = new System.Drawing.Point(182, 438);
+            this.cbxVisa.Name = "cbxVisa";
+            this.cbxVisa.Size = new System.Drawing.Size(92, 34);
+            this.cbxVisa.TabIndex = 60;
+            this.cbxVisa.UseVisualStyleBackColor = true;
+            // 
+            // cbxMaster
+            // 
+            this.cbxMaster.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.Mastercard_icon_icons_com_60554;
+            this.cbxMaster.Location = new System.Drawing.Point(306, 438);
+            this.cbxMaster.Name = "cbxMaster";
+            this.cbxMaster.Size = new System.Drawing.Size(92, 34);
+            this.cbxMaster.TabIndex = 61;
+            this.cbxMaster.UseVisualStyleBackColor = true;
+            // 
+            // cbxBitcoin
+            // 
+            this.cbxBitcoin.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.bitcoin_logo_icon_167806_2_;
+            this.cbxBitcoin.Location = new System.Drawing.Point(428, 438);
+            this.cbxBitcoin.Name = "cbxBitcoin";
+            this.cbxBitcoin.Size = new System.Drawing.Size(92, 34);
+            this.cbxBitcoin.TabIndex = 62;
+            this.cbxBitcoin.UseVisualStyleBackColor = true;
+            // 
+            // cbxEfectivo
+            // 
+            this.cbxEfectivo.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.banknotespaymentmoney_billetesdebanco_pag_3773;
+            this.cbxEfectivo.Location = new System.Drawing.Point(559, 438);
+            this.cbxEfectivo.Name = "cbxEfectivo";
+            this.cbxEfectivo.Size = new System.Drawing.Size(92, 34);
+            this.cbxEfectivo.TabIndex = 63;
+            this.cbxEfectivo.UseVisualStyleBackColor = true;
+            // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 649);
+            this.ClientSize = new System.Drawing.Size(800, 684);
+            this.Controls.Add(this.cbxEfectivo);
+            this.Controls.Add(this.cbxBitcoin);
+            this.Controls.Add(this.cbxMaster);
+            this.Controls.Add(this.cbxVisa);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelBancaria);
             this.Controls.Add(this.panelEfectivo);
             this.Controls.Add(this.panelTarjeta);
-            this.Controls.Add(this.cbx_Pago);
-            this.Controls.Add(this.label47);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label46);
@@ -970,8 +987,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.ComboBox cbx_Pago;
         private System.Windows.Forms.Panel panelTarjeta;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelEfectivo;
@@ -979,5 +994,9 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Panel panelBancaria;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.CheckBox cbxVisa;
+        private System.Windows.Forms.CheckBox cbxMaster;
+        private System.Windows.Forms.CheckBox cbxBitcoin;
+        private System.Windows.Forms.CheckBox cbxEfectivo;
     }
 }

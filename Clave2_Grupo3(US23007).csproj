@@ -352,5 +352,23 @@
   <ItemGroup>
     <None Include="Resources\banknotespaymentmoney_billetesdebanco_pag_3773.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitcoin_logo_icon_167806.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mastercard_icon-icons.com_60554.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if-visa-2593666_86609.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitcoin_logo_icon_167806%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitcoin_logo_icon_167806%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-color_money-13_icon-icons.com_53448.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
