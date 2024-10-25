@@ -155,7 +155,7 @@ namespace Clave2_Grupo3_US23007_
                     vuelos.ObtenerId = idvuelo;
                     vuelos.ObtenerAvion = avion;
                     MessageBox.Show("Seleccion Completada", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MessageBox.Show("Para continuar debe de Iniciar Sesion o Registrarse", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    MessageBox.Show("Para continuar debe de llenar algunos datos del Pasajero", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     IngresoAdministrador ingreso = new IngresoAdministrador();
                     ingreso.Show();
                     this.Hide();

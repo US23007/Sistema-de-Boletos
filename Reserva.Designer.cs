@@ -35,14 +35,10 @@ namespace Clave2_Grupo3_US23007_
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbl_Nombre = new System.Windows.Forms.Label();
-            this.lbl_Reserva = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblPasaporte = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbl_Fecha_Reserva = new System.Windows.Forms.Label();
             this.lbl_Hora_Salida = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -84,21 +80,23 @@ namespace Clave2_Grupo3_US23007_
             this.cbxMaster = new System.Windows.Forms.CheckBox();
             this.cbxBanco = new System.Windows.Forms.CheckBox();
             this.cbxAmerican = new System.Windows.Forms.CheckBox();
+            this.txt_CVC_Visa = new System.Windows.Forms.TextBox();
+            this.txt_Número_Visa = new System.Windows.Forms.TextBox();
+            this.txt_Numeros_Master = new System.Windows.Forms.TextBox();
+            this.txt_Cuenta_Banco = new System.Windows.Forms.TextBox();
+            this.txt_Numeros_American = new System.Windows.Forms.TextBox();
+            this.txt_Codigo_Master = new System.Windows.Forms.TextBox();
+            this.txt_Codigo_American = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label46 = new System.Windows.Forms.Label();
             this.panelVisa = new System.Windows.Forms.Panel();
             this.btnVisa = new System.Windows.Forms.Button();
-            this.txt_CVC_Visa = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txt_Número_Visa = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtNombre_Visa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_Numeros_Master = new System.Windows.Forms.TextBox();
-            this.txt_Cuenta_Banco = new System.Windows.Forms.TextBox();
-            this.txt_Numeros_American = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -111,7 +109,6 @@ namespace Clave2_Grupo3_US23007_
             this.label36 = new System.Windows.Forms.Label();
             this.panelMasterCard = new System.Windows.Forms.Panel();
             this.btn_Master = new System.Windows.Forms.Button();
-            this.txt_Codigo_Master = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_Nombre_Master = new System.Windows.Forms.TextBox();
@@ -123,7 +120,6 @@ namespace Clave2_Grupo3_US23007_
             this.label47 = new System.Windows.Forms.Label();
             this.panelAmerican = new System.Windows.Forms.Panel();
             this.btn_American = new System.Windows.Forms.Button();
-            this.txt_Codigo_American = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.txt_Nombre_American = new System.Windows.Forms.TextBox();
@@ -185,19 +181,6 @@ namespace Clave2_Grupo3_US23007_
             this.label3.Text = "Nombre y Apellido";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
-            // 
-            this.label4.AutoEllipsis = true;
-            this.label4.BackColor = System.Drawing.Color.LightGray;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(458, 70);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(4);
-            this.label4.Size = new System.Drawing.Size(149, 26);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Número de Reserva";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lbl_Nombre
             // 
             this.lbl_Nombre.AutoEllipsis = true;
@@ -210,19 +193,6 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Nombre.TabIndex = 5;
             this.lbl_Nombre.Text = "Samuel  De Jesús Umaña Sorto";
             this.lbl_Nombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_Reserva
-            // 
-            this.lbl_Reserva.AutoEllipsis = true;
-            this.lbl_Reserva.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_Reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Reserva.Location = new System.Drawing.Point(458, 96);
-            this.lbl_Reserva.Name = "lbl_Reserva";
-            this.lbl_Reserva.Padding = new System.Windows.Forms.Padding(4);
-            this.lbl_Reserva.Size = new System.Drawing.Size(149, 26);
-            this.lbl_Reserva.TabIndex = 6;
-            this.lbl_Reserva.Text = "1";
-            this.lbl_Reserva.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -260,32 +230,6 @@ namespace Clave2_Grupo3_US23007_
             this.lblPasaporte.TabIndex = 9;
             this.lblPasaporte.Text = "S123456789";
             this.lblPasaporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoEllipsis = true;
-            this.label9.BackColor = System.Drawing.Color.LightGray;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(642, 70);
-            this.label9.Name = "label9";
-            this.label9.Padding = new System.Windows.Forms.Padding(4);
-            this.label9.Size = new System.Drawing.Size(132, 26);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Fecha de Reserva";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_Fecha_Reserva
-            // 
-            this.lbl_Fecha_Reserva.AutoEllipsis = true;
-            this.lbl_Fecha_Reserva.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_Fecha_Reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fecha_Reserva.Location = new System.Drawing.Point(642, 96);
-            this.lbl_Fecha_Reserva.Name = "lbl_Fecha_Reserva";
-            this.lbl_Fecha_Reserva.Padding = new System.Windows.Forms.Padding(4);
-            this.lbl_Fecha_Reserva.Size = new System.Drawing.Size(132, 26);
-            this.lbl_Fecha_Reserva.TabIndex = 12;
-            this.lbl_Fecha_Reserva.Text = "22/10/2024";
-            this.lbl_Fecha_Reserva.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Hora_Salida
             // 
@@ -608,7 +552,7 @@ namespace Clave2_Grupo3_US23007_
             this.label35.AutoEllipsis = true;
             this.label35.BackColor = System.Drawing.Color.LightGray;
             this.label35.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(642, 140);
+            this.label35.Location = new System.Drawing.Point(348, 140);
             this.label35.Name = "label35";
             this.label35.Padding = new System.Windows.Forms.Padding(4);
             this.label35.Size = new System.Drawing.Size(131, 26);
@@ -621,7 +565,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Equipaje.AutoEllipsis = true;
             this.lbl_Equipaje.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Equipaje.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Equipaje.Location = new System.Drawing.Point(642, 166);
+            this.lbl_Equipaje.Location = new System.Drawing.Point(348, 166);
             this.lbl_Equipaje.Name = "lbl_Equipaje";
             this.lbl_Equipaje.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Equipaje.Size = new System.Drawing.Size(131, 26);
@@ -634,7 +578,7 @@ namespace Clave2_Grupo3_US23007_
             this.label37.AutoEllipsis = true;
             this.label37.BackColor = System.Drawing.Color.LightGray;
             this.label37.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(13, 140);
+            this.label37.Location = new System.Drawing.Point(476, 70);
             this.label37.Name = "label37";
             this.label37.Padding = new System.Windows.Forms.Padding(4);
             this.label37.Size = new System.Drawing.Size(82, 26);
@@ -647,7 +591,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Telefono.AutoEllipsis = true;
             this.lbl_Telefono.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Telefono.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Telefono.Location = new System.Drawing.Point(13, 166);
+            this.lbl_Telefono.Location = new System.Drawing.Point(476, 96);
             this.lbl_Telefono.Name = "lbl_Telefono";
             this.lbl_Telefono.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Telefono.Size = new System.Drawing.Size(82, 26);
@@ -660,7 +604,7 @@ namespace Clave2_Grupo3_US23007_
             this.label39.AutoEllipsis = true;
             this.label39.BackColor = System.Drawing.Color.LightGray;
             this.label39.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(315, 140);
+            this.label39.Location = new System.Drawing.Point(13, 140);
             this.label39.Name = "label39";
             this.label39.Padding = new System.Windows.Forms.Padding(4);
             this.label39.Size = new System.Drawing.Size(131, 26);
@@ -673,7 +617,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Nacionalidad.AutoEllipsis = true;
             this.lbl_Nacionalidad.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Nacionalidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nacionalidad.Location = new System.Drawing.Point(315, 166);
+            this.lbl_Nacionalidad.Location = new System.Drawing.Point(13, 166);
             this.lbl_Nacionalidad.Name = "lbl_Nacionalidad";
             this.lbl_Nacionalidad.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Nacionalidad.Size = new System.Drawing.Size(131, 26);
@@ -686,7 +630,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Nacimiento.AutoEllipsis = true;
             this.lbl_Nacimiento.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Nacimiento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nacimiento.Location = new System.Drawing.Point(132, 166);
+            this.lbl_Nacimiento.Location = new System.Drawing.Point(608, 96);
             this.lbl_Nacimiento.Name = "lbl_Nacimiento";
             this.lbl_Nacimiento.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Nacimiento.Size = new System.Drawing.Size(154, 26);
@@ -699,7 +643,7 @@ namespace Clave2_Grupo3_US23007_
             this.label42.AutoEllipsis = true;
             this.label42.BackColor = System.Drawing.Color.LightGray;
             this.label42.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(132, 140);
+            this.label42.Location = new System.Drawing.Point(608, 70);
             this.label42.Name = "label42";
             this.label42.Padding = new System.Windows.Forms.Padding(4);
             this.label42.Size = new System.Drawing.Size(154, 26);
@@ -712,7 +656,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Pasajero.AutoEllipsis = true;
             this.lbl_Pasajero.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_Pasajero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Pasajero.Location = new System.Drawing.Point(476, 166);
+            this.lbl_Pasajero.Location = new System.Drawing.Point(182, 166);
             this.lbl_Pasajero.Name = "lbl_Pasajero";
             this.lbl_Pasajero.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Pasajero.Size = new System.Drawing.Size(131, 26);
@@ -725,7 +669,7 @@ namespace Clave2_Grupo3_US23007_
             this.label44.AutoEllipsis = true;
             this.label44.BackColor = System.Drawing.Color.LightGray;
             this.label44.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(476, 140);
+            this.label44.Location = new System.Drawing.Point(182, 140);
             this.label44.Name = "label44";
             this.label44.Padding = new System.Windows.Forms.Padding(4);
             this.label44.Size = new System.Drawing.Size(131, 26);
@@ -789,6 +733,94 @@ namespace Clave2_Grupo3_US23007_
             this.cbxAmerican.UseVisualStyleBackColor = true;
             this.cbxAmerican.CheckedChanged += new System.EventHandler(this.cbxEfectivo_CheckedChanged);
             // 
+            // txt_CVC_Visa
+            // 
+            this.txt_CVC_Visa.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CVC_Visa.Location = new System.Drawing.Point(354, 108);
+            this.txt_CVC_Visa.Multiline = true;
+            this.txt_CVC_Visa.Name = "txt_CVC_Visa";
+            this.txt_CVC_Visa.Size = new System.Drawing.Size(122, 20);
+            this.txt_CVC_Visa.TabIndex = 70;
+            this.txt_CVC_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tool.SetToolTip(this.txt_CVC_Visa, "3 dígitos ");
+            this.txt_CVC_Visa.TextChanged += new System.EventHandler(this.txt_CVC_Visa_TextChanged);
+            // 
+            // txt_Número_Visa
+            // 
+            this.txt_Número_Visa.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Número_Visa, 3);
+            this.txt_Número_Visa.Location = new System.Drawing.Point(25, 107);
+            this.txt_Número_Visa.Multiline = true;
+            this.txt_Número_Visa.Name = "txt_Número_Visa";
+            this.txt_Número_Visa.Size = new System.Drawing.Size(270, 20);
+            this.txt_Número_Visa.TabIndex = 68;
+            this.txt_Número_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tool.SetToolTip(this.txt_Número_Visa, "16 dígitos");
+            this.txt_Número_Visa.TextChanged += new System.EventHandler(this.txt_Número_Visa_TextChanged);
+            // 
+            // txt_Numeros_Master
+            // 
+            this.txt_Numeros_Master.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Numeros_Master, 3);
+            this.txt_Numeros_Master.Location = new System.Drawing.Point(25, 106);
+            this.txt_Numeros_Master.Multiline = true;
+            this.txt_Numeros_Master.Name = "txt_Numeros_Master";
+            this.txt_Numeros_Master.Size = new System.Drawing.Size(270, 20);
+            this.txt_Numeros_Master.TabIndex = 68;
+            this.txt_Numeros_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tool.SetToolTip(this.txt_Numeros_Master, "16 dígitos");
+            this.txt_Numeros_Master.TextChanged += new System.EventHandler(this.txt_Numeros_Master_TextChanged);
+            // 
+            // txt_Cuenta_Banco
+            // 
+            this.txt_Cuenta_Banco.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Cuenta_Banco, 3);
+            this.txt_Cuenta_Banco.Location = new System.Drawing.Point(150, 106);
+            this.txt_Cuenta_Banco.Multiline = true;
+            this.txt_Cuenta_Banco.Name = "txt_Cuenta_Banco";
+            this.txt_Cuenta_Banco.Size = new System.Drawing.Size(270, 20);
+            this.txt_Cuenta_Banco.TabIndex = 68;
+            this.txt_Cuenta_Banco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tool.SetToolTip(this.txt_Cuenta_Banco, "10 a 14 dígitos");
+            this.txt_Cuenta_Banco.TextChanged += new System.EventHandler(this.txt_Cuenta_Banco_TextChanged);
+            // 
+            // txt_Numeros_American
+            // 
+            this.txt_Numeros_American.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Numeros_American, 3);
+            this.txt_Numeros_American.Location = new System.Drawing.Point(25, 108);
+            this.txt_Numeros_American.Multiline = true;
+            this.txt_Numeros_American.Name = "txt_Numeros_American";
+            this.txt_Numeros_American.Size = new System.Drawing.Size(270, 20);
+            this.txt_Numeros_American.TabIndex = 68;
+            this.txt_Numeros_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tool.SetToolTip(this.txt_Numeros_American, "15 dígitos");
+            this.txt_Numeros_American.TextChanged += new System.EventHandler(this.txt_Numeros_American_TextChanged);
+            // 
+            // txt_Codigo_Master
+            // 
+            this.txt_Codigo_Master.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Codigo_Master.Location = new System.Drawing.Point(354, 108);
+            this.txt_Codigo_Master.Multiline = true;
+            this.txt_Codigo_Master.Name = "txt_Codigo_Master";
+            this.txt_Codigo_Master.Size = new System.Drawing.Size(122, 20);
+            this.txt_Codigo_Master.TabIndex = 70;
+            this.txt_Codigo_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tool.SetToolTip(this.txt_Codigo_Master, "3 dígitos ");
+            this.txt_Codigo_Master.TextChanged += new System.EventHandler(this.txt_Codigo_Master_TextChanged);
+            // 
+            // txt_Codigo_American
+            // 
+            this.txt_Codigo_American.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Codigo_American.Location = new System.Drawing.Point(354, 108);
+            this.txt_Codigo_American.Multiline = true;
+            this.txt_Codigo_American.Name = "txt_Codigo_American";
+            this.txt_Codigo_American.Size = new System.Drawing.Size(122, 20);
+            this.txt_Codigo_American.TabIndex = 70;
+            this.txt_Codigo_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tool.SetToolTip(this.txt_Codigo_American, "4 dígitos ");
+            this.txt_Codigo_American.TextChanged += new System.EventHandler(this.txt_Codigo_American_TextChanged);
+            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -851,18 +883,6 @@ namespace Clave2_Grupo3_US23007_
             this.btnVisa.UseVisualStyleBackColor = false;
             this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
-            // txt_CVC_Visa
-            // 
-            this.txt_CVC_Visa.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CVC_Visa.Location = new System.Drawing.Point(354, 108);
-            this.txt_CVC_Visa.Multiline = true;
-            this.txt_CVC_Visa.Name = "txt_CVC_Visa";
-            this.txt_CVC_Visa.Size = new System.Drawing.Size(122, 20);
-            this.txt_CVC_Visa.TabIndex = 70;
-            this.txt_CVC_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tool.SetToolTip(this.txt_CVC_Visa, "3 dígitos ");
-            this.txt_CVC_Visa.TextChanged += new System.EventHandler(this.txt_CVC_Visa_TextChanged);
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -873,19 +893,6 @@ namespace Clave2_Grupo3_US23007_
             this.label20.Size = new System.Drawing.Size(84, 16);
             this.label20.TabIndex = 69;
             this.label20.Text = "Codigo CVC";
-            // 
-            // txt_Número_Visa
-            // 
-            this.txt_Número_Visa.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erp.SetIconPadding(this.txt_Número_Visa, 3);
-            this.txt_Número_Visa.Location = new System.Drawing.Point(25, 107);
-            this.txt_Número_Visa.Multiline = true;
-            this.txt_Número_Visa.Name = "txt_Número_Visa";
-            this.txt_Número_Visa.Size = new System.Drawing.Size(270, 20);
-            this.txt_Número_Visa.TabIndex = 68;
-            this.txt_Número_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tool.SetToolTip(this.txt_Número_Visa, "16 dígitos");
-            this.txt_Número_Visa.TextChanged += new System.EventHandler(this.txt_Número_Visa_TextChanged);
             // 
             // label15
             // 
@@ -925,45 +932,6 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.erp.ContainerControl = this;
             this.erp.Icon = ((System.Drawing.Icon)(resources.GetObject("erp.Icon")));
-            // 
-            // txt_Numeros_Master
-            // 
-            this.txt_Numeros_Master.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erp.SetIconPadding(this.txt_Numeros_Master, 3);
-            this.txt_Numeros_Master.Location = new System.Drawing.Point(25, 106);
-            this.txt_Numeros_Master.Multiline = true;
-            this.txt_Numeros_Master.Name = "txt_Numeros_Master";
-            this.txt_Numeros_Master.Size = new System.Drawing.Size(270, 20);
-            this.txt_Numeros_Master.TabIndex = 68;
-            this.txt_Numeros_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tool.SetToolTip(this.txt_Numeros_Master, "16 dígitos");
-            this.txt_Numeros_Master.TextChanged += new System.EventHandler(this.txt_Numeros_Master_TextChanged);
-            // 
-            // txt_Cuenta_Banco
-            // 
-            this.txt_Cuenta_Banco.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erp.SetIconPadding(this.txt_Cuenta_Banco, 3);
-            this.txt_Cuenta_Banco.Location = new System.Drawing.Point(150, 106);
-            this.txt_Cuenta_Banco.Multiline = true;
-            this.txt_Cuenta_Banco.Name = "txt_Cuenta_Banco";
-            this.txt_Cuenta_Banco.Size = new System.Drawing.Size(270, 20);
-            this.txt_Cuenta_Banco.TabIndex = 68;
-            this.txt_Cuenta_Banco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tool.SetToolTip(this.txt_Cuenta_Banco, "10 a 14 dígitos");
-            this.txt_Cuenta_Banco.TextChanged += new System.EventHandler(this.txt_Cuenta_Banco_TextChanged);
-            // 
-            // txt_Numeros_American
-            // 
-            this.txt_Numeros_American.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erp.SetIconPadding(this.txt_Numeros_American, 3);
-            this.txt_Numeros_American.Location = new System.Drawing.Point(25, 108);
-            this.txt_Numeros_American.Multiline = true;
-            this.txt_Numeros_American.Name = "txt_Numeros_American";
-            this.txt_Numeros_American.Size = new System.Drawing.Size(270, 20);
-            this.txt_Numeros_American.TabIndex = 68;
-            this.txt_Numeros_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tool.SetToolTip(this.txt_Numeros_American, "15 dígitos");
-            this.txt_Numeros_American.TextChanged += new System.EventHandler(this.txt_Numeros_American_TextChanged);
             // 
             // label22
             // 
@@ -1118,18 +1086,6 @@ namespace Clave2_Grupo3_US23007_
             this.btn_Master.UseVisualStyleBackColor = false;
             this.btn_Master.Click += new System.EventHandler(this.btn_Master_Click);
             // 
-            // txt_Codigo_Master
-            // 
-            this.txt_Codigo_Master.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Codigo_Master.Location = new System.Drawing.Point(354, 108);
-            this.txt_Codigo_Master.Multiline = true;
-            this.txt_Codigo_Master.Name = "txt_Codigo_Master";
-            this.txt_Codigo_Master.Size = new System.Drawing.Size(122, 20);
-            this.txt_Codigo_Master.TabIndex = 70;
-            this.txt_Codigo_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tool.SetToolTip(this.txt_Codigo_Master, "3 dígitos ");
-            this.txt_Codigo_Master.TextChanged += new System.EventHandler(this.txt_Codigo_Master_TextChanged);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -1271,18 +1227,6 @@ namespace Clave2_Grupo3_US23007_
             this.btn_American.UseVisualStyleBackColor = false;
             this.btn_American.Click += new System.EventHandler(this.btn_American_Click);
             // 
-            // txt_Codigo_American
-            // 
-            this.txt_Codigo_American.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Codigo_American.Location = new System.Drawing.Point(354, 108);
-            this.txt_Codigo_American.Multiline = true;
-            this.txt_Codigo_American.Name = "txt_Codigo_American";
-            this.txt_Codigo_American.Size = new System.Drawing.Size(122, 20);
-            this.txt_Codigo_American.TabIndex = 70;
-            this.txt_Codigo_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tool.SetToolTip(this.txt_Codigo_American, "4 dígitos ");
-            this.txt_Codigo_American.TextChanged += new System.EventHandler(this.txt_Codigo_American_TextChanged);
-            // 
             // label48
             // 
             this.label48.AutoSize = true;
@@ -1401,14 +1345,10 @@ namespace Clave2_Grupo3_US23007_
             this.Controls.Add(this.label18);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.lbl_Fecha_Reserva);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.lblPasaporte);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lbl_Reserva);
             this.Controls.Add(this.lbl_Nombre);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -1443,48 +1383,26 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_Nombre;
-        private System.Windows.Forms.Label lbl_Reserva;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblPasaporte;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lbl_Fecha_Reserva;
-        private System.Windows.Forms.Label lbl_Hora_Salida;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lbl_Salida;
-        private System.Windows.Forms.Label lbl_Numero_Vuelo;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lbl_Origen;
-        private System.Windows.Forms.Label lbl_Destino;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label lbl_Aerolinea;
-        private System.Windows.Forms.Label lbl_Llegada;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label lbl_Hora_Llegada;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label lbl_Asiento;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label lbl_Puerta;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label lbl_Precio;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label lbl_Equipaje;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label lbl_Telefono;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label lbl_Nacionalidad;
-        private System.Windows.Forms.Label lbl_Nacimiento;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label lbl_Pasajero;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.PictureBox picPoliticas;
         private System.Windows.Forms.ToolTip tool;
@@ -1513,7 +1431,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label lbl_Avion;
         private System.Windows.Forms.Panel panelBancoAgricola;
         private System.Windows.Forms.Panel panelAmerican;
         private System.Windows.Forms.Button btn_American;
@@ -1537,5 +1454,24 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.TextBox txt_Nombre_Master;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.GroupBox gbMetodo;
+        public System.Windows.Forms.Label lbl_Nombre;
+        public System.Windows.Forms.Label lblPasaporte;
+        public System.Windows.Forms.Label lbl_Hora_Salida;
+        public System.Windows.Forms.Label lbl_Salida;
+        public System.Windows.Forms.Label lbl_Numero_Vuelo;
+        public System.Windows.Forms.Label lbl_Origen;
+        public System.Windows.Forms.Label lbl_Destino;
+        public System.Windows.Forms.Label lbl_Aerolinea;
+        public System.Windows.Forms.Label lbl_Llegada;
+        public System.Windows.Forms.Label lbl_Hora_Llegada;
+        public System.Windows.Forms.Label lbl_Asiento;
+        public System.Windows.Forms.Label lbl_Puerta;
+        public System.Windows.Forms.Label lbl_Precio;
+        public System.Windows.Forms.Label lbl_Equipaje;
+        public System.Windows.Forms.Label lbl_Telefono;
+        public System.Windows.Forms.Label lbl_Nacionalidad;
+        public System.Windows.Forms.Label lbl_Nacimiento;
+        public System.Windows.Forms.Label lbl_Pasajero;
+        public System.Windows.Forms.Label lbl_Avion;
     }
 }

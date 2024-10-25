@@ -153,6 +153,7 @@
     <Compile Include="Reserva.Designer.cs">
       <DependentUpon>Reserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reservaciones.cs" />
     <Compile Include="ValidarIngreso.cs" />
     <Compile Include="Vuelos.cs" />
     <EmbeddedResource Include="Admin.resx">

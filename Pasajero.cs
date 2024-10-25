@@ -14,6 +14,7 @@ namespace Clave2_Grupo3_US23007_
         private DateTime Fecha_Nacimiento;
         private String Numero_Pasaporte;
         private int Asiento;
+        private static int Sitio { get; set; }
         private string Telefono;
         private String Nacionalidad;
         private String Tipo_Equipaje;
@@ -59,6 +60,11 @@ namespace Clave2_Grupo3_US23007_
             set { Asiento= value; }
         }
 
+        public int ObtenerSitio
+        {
+            get { return Sitio;}
+            set { Sitio = value;}
+        }
         public string Celular
         {
             get { return Telefono; }
