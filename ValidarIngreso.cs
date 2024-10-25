@@ -169,44 +169,8 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
-        public bool IngresoAdministrador()
-        {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            MySqlConnection conector = new MySqlConnection(connectionString);
-
-            try
-            {
-                conector.Open();
-                string consulta = "SELECT * FROM administrador WHERE administrador.ID = 1 AND Usuario = @nombre AND Contraseña = @contraseña AND Correo = @correo";
-                using (MySqlCommand cmd = new MySqlCommand(consulta, conector))
-                {
-                    cmd.Parameters.AddWithValue("@nombre", Nombre);
-                    cmd.Parameters.AddWithValue("@contraseña", Contraseña);
-                    cmd.Parameters.AddWithValue("@correo", Correo);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            MessageBox.Show("Bienvenido Administrador", "Cuenta Administrador", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Credenciales incorrectas. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return false;
-                        }
-
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-        }
+       
+        
     }
              
 }

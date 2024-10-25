@@ -61,11 +61,7 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-
-                    BuscarVuelo vuelo = new BuscarVuelo();
-                    vuelo.Show();
-                    this.Hide();
-                    
+                    return;
                 }
             }
         }
