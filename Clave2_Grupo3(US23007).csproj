@@ -391,5 +391,14 @@
   <ItemGroup>
     <None Include="Resources\davivienda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\american-express-inverted_82085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\american-express_81996%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\american-express_81996%283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

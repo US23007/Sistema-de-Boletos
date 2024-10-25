@@ -97,12 +97,6 @@ namespace Clave2_Grupo3_US23007_
             this.label14 = new System.Windows.Forms.Label();
             this.txtNombre_Visa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.panelEfectivo = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelBitcoin = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panelMastecard = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -114,16 +108,44 @@ namespace Clave2_Grupo3_US23007_
             this.label32 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
+            this.panelMasterCard = new System.Windows.Forms.Panel();
+            this.btn_Master = new System.Windows.Forms.Button();
+            this.txt_Codigo_Master = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_Numeros_Master = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_Fecha_Master = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_Nombre_Master = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panelBancoAgricola = new System.Windows.Forms.Panel();
+            this.btnAgricola = new System.Windows.Forms.Button();
+            this.txt_Cuenta_Banco = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txt_Nombre_Banco = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.panelAmerican = new System.Windows.Forms.Panel();
+            this.btn_American = new System.Windows.Forms.Button();
+            this.txt_Codigo_American = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.txt_Numeros_American = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txt_Fecha_American = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txt_Nombre_American = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.gbMetodo = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoliticas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelVisa.SuspendLayout();
-            this.panelEfectivo.SuspendLayout();
-            this.panelBitcoin.SuspendLayout();
-            this.panelMastecard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panelMasterCard.SuspendLayout();
+            this.panelBancoAgricola.SuspendLayout();
+            this.panelAmerican.SuspendLayout();
+            this.gbMetodo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -213,7 +235,7 @@ namespace Clave2_Grupo3_US23007_
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(242, 8);
+            this.label5.Location = new System.Drawing.Point(242, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(341, 32);
             this.label5.TabIndex = 7;
@@ -732,7 +754,7 @@ namespace Clave2_Grupo3_US23007_
             // cbxVisa
             // 
             this.cbxVisa.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.if_visa_2593666_86609;
-            this.cbxVisa.Location = new System.Drawing.Point(186, 521);
+            this.cbxVisa.Location = new System.Drawing.Point(176, 521);
             this.cbxVisa.Name = "cbxVisa";
             this.cbxVisa.Size = new System.Drawing.Size(92, 34);
             this.cbxVisa.TabIndex = 60;
@@ -743,7 +765,7 @@ namespace Clave2_Grupo3_US23007_
             // cbxMaster
             // 
             this.cbxMaster.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.Mastercard_icon_icons_com_60554;
-            this.cbxMaster.Location = new System.Drawing.Point(294, 521);
+            this.cbxMaster.Location = new System.Drawing.Point(284, 521);
             this.cbxMaster.Name = "cbxMaster";
             this.cbxMaster.Size = new System.Drawing.Size(92, 34);
             this.cbxMaster.TabIndex = 61;
@@ -754,7 +776,7 @@ namespace Clave2_Grupo3_US23007_
             // cbxBitcoin
             // 
             this.cbxBitcoin.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.bancoagicola_2_;
-            this.cbxBitcoin.Location = new System.Drawing.Point(408, 521);
+            this.cbxBitcoin.Location = new System.Drawing.Point(398, 521);
             this.cbxBitcoin.Name = "cbxBitcoin";
             this.cbxBitcoin.Size = new System.Drawing.Size(164, 34);
             this.cbxBitcoin.TabIndex = 62;
@@ -764,10 +786,10 @@ namespace Clave2_Grupo3_US23007_
             // 
             // cbxChivo
             // 
-            this.cbxChivo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cbxChivo.Location = new System.Drawing.Point(587, 521);
+            this.cbxChivo.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.american_express_81996_3_;
+            this.cbxChivo.Location = new System.Drawing.Point(577, 521);
             this.cbxChivo.Name = "cbxChivo";
-            this.cbxChivo.Size = new System.Drawing.Size(77, 34);
+            this.cbxChivo.Size = new System.Drawing.Size(94, 34);
             this.cbxChivo.TabIndex = 63;
             this.tool.SetToolTip(this.cbxChivo, "Chivo Wallet");
             this.cbxChivo.UseVisualStyleBackColor = true;
@@ -815,7 +837,7 @@ namespace Clave2_Grupo3_US23007_
             this.panelVisa.Controls.Add(this.label14);
             this.panelVisa.Controls.Add(this.txtNombre_Visa);
             this.panelVisa.Controls.Add(this.label7);
-            this.panelVisa.Location = new System.Drawing.Point(158, 561);
+            this.panelVisa.Location = new System.Drawing.Point(16, 19);
             this.panelVisa.Name = "panelVisa";
             this.panelVisa.Size = new System.Drawing.Size(532, 183);
             this.panelVisa.TabIndex = 56;
@@ -925,62 +947,6 @@ namespace Clave2_Grupo3_US23007_
             this.label7.Size = new System.Drawing.Size(131, 16);
             this.label7.TabIndex = 64;
             this.label7.Text = "Nombre del Titular ";
-            // 
-            // panelEfectivo
-            // 
-            this.panelEfectivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelEfectivo.Controls.Add(this.label8);
-            this.panelEfectivo.Controls.Add(this.panelBitcoin);
-            this.panelEfectivo.Location = new System.Drawing.Point(50, 676);
-            this.panelEfectivo.Name = "panelEfectivo";
-            this.panelEfectivo.Size = new System.Drawing.Size(305, 159);
-            this.panelEfectivo.TabIndex = 57;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 39);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Efectivo";
-            // 
-            // panelBitcoin
-            // 
-            this.panelBitcoin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelBitcoin.Controls.Add(this.label12);
-            this.panelBitcoin.Controls.Add(this.panelMastecard);
-            this.panelBitcoin.Location = new System.Drawing.Point(14, 0);
-            this.panelBitcoin.Name = "panelBitcoin";
-            this.panelBitcoin.Size = new System.Drawing.Size(305, 159);
-            this.panelBitcoin.TabIndex = 58;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(11, 39);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Bitcoin";
-            // 
-            // panelMastecard
-            // 
-            this.panelMastecard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelMastecard.Controls.Add(this.label10);
-            this.panelMastecard.Location = new System.Drawing.Point(17, 0);
-            this.panelMastecard.Name = "panelMastecard";
-            this.panelMastecard.Size = new System.Drawing.Size(305, 166);
-            this.panelMastecard.TabIndex = 58;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 39);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Mastercard";
             // 
             // erp
             // 
@@ -1108,12 +1074,338 @@ namespace Clave2_Grupo3_US23007_
             this.label36.Text = "$326";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelMasterCard
+            // 
+            this.panelMasterCard.BackColor = System.Drawing.Color.White;
+            this.panelMasterCard.Controls.Add(this.btn_Master);
+            this.panelMasterCard.Controls.Add(this.txt_Codigo_Master);
+            this.panelMasterCard.Controls.Add(this.label8);
+            this.panelMasterCard.Controls.Add(this.txt_Numeros_Master);
+            this.panelMasterCard.Controls.Add(this.label10);
+            this.panelMasterCard.Controls.Add(this.txt_Fecha_Master);
+            this.panelMasterCard.Controls.Add(this.label12);
+            this.panelMasterCard.Controls.Add(this.txt_Nombre_Master);
+            this.panelMasterCard.Controls.Add(this.label38);
+            this.panelMasterCard.Location = new System.Drawing.Point(16, 19);
+            this.panelMasterCard.Name = "panelMasterCard";
+            this.panelMasterCard.Size = new System.Drawing.Size(532, 183);
+            this.panelMasterCard.TabIndex = 72;
+            // 
+            // btn_Master
+            // 
+            this.btn_Master.BackColor = System.Drawing.Color.Black;
+            this.btn_Master.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Master.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Master.ForeColor = System.Drawing.Color.White;
+            this.btn_Master.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_Master.Location = new System.Drawing.Point(240, 146);
+            this.btn_Master.Name = "btn_Master";
+            this.btn_Master.Padding = new System.Windows.Forms.Padding(2);
+            this.btn_Master.Size = new System.Drawing.Size(90, 33);
+            this.btn_Master.TabIndex = 71;
+            this.btn_Master.Text = "Confirmar ";
+            this.btn_Master.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Master.UseVisualStyleBackColor = false;
+            this.btn_Master.Click += new System.EventHandler(this.btn_Master_Click);
+            // 
+            // txt_Codigo_Master
+            // 
+            this.txt_Codigo_Master.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Codigo_Master.Location = new System.Drawing.Point(354, 108);
+            this.txt_Codigo_Master.Multiline = true;
+            this.txt_Codigo_Master.Name = "txt_Codigo_Master";
+            this.txt_Codigo_Master.Size = new System.Drawing.Size(122, 20);
+            this.txt_Codigo_Master.TabIndex = 70;
+            this.txt_Codigo_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.LightGray;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(354, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 16);
+            this.label8.TabIndex = 69;
+            this.label8.Text = "Codigo CVC";
+            // 
+            // txt_Numeros_Master
+            // 
+            this.txt_Numeros_Master.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Numeros_Master, 3);
+            this.txt_Numeros_Master.Location = new System.Drawing.Point(9, 106);
+            this.txt_Numeros_Master.Multiline = true;
+            this.txt_Numeros_Master.Name = "txt_Numeros_Master";
+            this.txt_Numeros_Master.Size = new System.Drawing.Size(270, 20);
+            this.txt_Numeros_Master.TabIndex = 68;
+            this.txt_Numeros_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.LightGray;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(10, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(145, 16);
+            this.label10.TabIndex = 67;
+            this.label10.Text = "Números de la tarjeta";
+            // 
+            // txt_Fecha_Master
+            // 
+            this.txt_Fecha_Master.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Fecha_Master.Location = new System.Drawing.Point(352, 36);
+            this.txt_Fecha_Master.Multiline = true;
+            this.txt_Fecha_Master.Name = "txt_Fecha_Master";
+            this.txt_Fecha_Master.Size = new System.Drawing.Size(141, 20);
+            this.txt_Fecha_Master.TabIndex = 66;
+            this.txt_Fecha_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.LightGray;
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(352, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(139, 16);
+            this.label12.TabIndex = 65;
+            this.label12.Text = "Fecha de Expiración";
+            // 
+            // txt_Nombre_Master
+            // 
+            this.txt_Nombre_Master.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Nombre_Master.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre_Master.Location = new System.Drawing.Point(9, 34);
+            this.txt_Nombre_Master.Multiline = true;
+            this.txt_Nombre_Master.Name = "txt_Nombre_Master";
+            this.txt_Nombre_Master.Size = new System.Drawing.Size(270, 20);
+            this.txt_Nombre_Master.TabIndex = 64;
+            this.txt_Nombre_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.LightGray;
+            this.label38.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(9, 18);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(131, 16);
+            this.label38.TabIndex = 64;
+            this.label38.Text = "Nombre del Titular ";
+            // 
+            // panelBancoAgricola
+            // 
+            this.panelBancoAgricola.BackColor = System.Drawing.Color.White;
+            this.panelBancoAgricola.Controls.Add(this.btnAgricola);
+            this.panelBancoAgricola.Controls.Add(this.txt_Cuenta_Banco);
+            this.panelBancoAgricola.Controls.Add(this.label41);
+            this.panelBancoAgricola.Controls.Add(this.txt_Nombre_Banco);
+            this.panelBancoAgricola.Controls.Add(this.label47);
+            this.panelBancoAgricola.Location = new System.Drawing.Point(16, 19);
+            this.panelBancoAgricola.Name = "panelBancoAgricola";
+            this.panelBancoAgricola.Size = new System.Drawing.Size(532, 183);
+            this.panelBancoAgricola.TabIndex = 73;
+            // 
+            // btnAgricola
+            // 
+            this.btnAgricola.BackColor = System.Drawing.Color.Black;
+            this.btnAgricola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgricola.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgricola.ForeColor = System.Drawing.Color.White;
+            this.btnAgricola.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnAgricola.Location = new System.Drawing.Point(240, 146);
+            this.btnAgricola.Name = "btnAgricola";
+            this.btnAgricola.Padding = new System.Windows.Forms.Padding(2);
+            this.btnAgricola.Size = new System.Drawing.Size(90, 33);
+            this.btnAgricola.TabIndex = 71;
+            this.btnAgricola.Text = "Confirmar ";
+            this.btnAgricola.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgricola.UseVisualStyleBackColor = false;
+            // 
+            // txt_Cuenta_Banco
+            // 
+            this.txt_Cuenta_Banco.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Cuenta_Banco, 3);
+            this.txt_Cuenta_Banco.Location = new System.Drawing.Point(150, 106);
+            this.txt_Cuenta_Banco.Multiline = true;
+            this.txt_Cuenta_Banco.Name = "txt_Cuenta_Banco";
+            this.txt_Cuenta_Banco.Size = new System.Drawing.Size(270, 20);
+            this.txt_Cuenta_Banco.TabIndex = 68;
+            this.txt_Cuenta_Banco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.LightGray;
+            this.label41.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(150, 91);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(197, 16);
+            this.label41.TabIndex = 67;
+            this.label41.Text = "Números de Cuenta de Banco";
+            // 
+            // txt_Nombre_Banco
+            // 
+            this.txt_Nombre_Banco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Nombre_Banco.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre_Banco.Location = new System.Drawing.Point(150, 51);
+            this.txt_Nombre_Banco.Multiline = true;
+            this.txt_Nombre_Banco.Name = "txt_Nombre_Banco";
+            this.txt_Nombre_Banco.Size = new System.Drawing.Size(270, 20);
+            this.txt_Nombre_Banco.TabIndex = 64;
+            this.txt_Nombre_Banco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.LightGray;
+            this.label47.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(150, 35);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(131, 16);
+            this.label47.TabIndex = 64;
+            this.label47.Text = "Nombre del Titular ";
+            // 
+            // panelAmerican
+            // 
+            this.panelAmerican.BackColor = System.Drawing.Color.White;
+            this.panelAmerican.Controls.Add(this.btn_American);
+            this.panelAmerican.Controls.Add(this.txt_Codigo_American);
+            this.panelAmerican.Controls.Add(this.label48);
+            this.panelAmerican.Controls.Add(this.txt_Numeros_American);
+            this.panelAmerican.Controls.Add(this.label49);
+            this.panelAmerican.Controls.Add(this.txt_Fecha_American);
+            this.panelAmerican.Controls.Add(this.label50);
+            this.panelAmerican.Controls.Add(this.txt_Nombre_American);
+            this.panelAmerican.Controls.Add(this.label51);
+            this.panelAmerican.Location = new System.Drawing.Point(16, 19);
+            this.panelAmerican.Name = "panelAmerican";
+            this.panelAmerican.Size = new System.Drawing.Size(532, 183);
+            this.panelAmerican.TabIndex = 74;
+            // 
+            // btn_American
+            // 
+            this.btn_American.BackColor = System.Drawing.Color.Black;
+            this.btn_American.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_American.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_American.ForeColor = System.Drawing.Color.White;
+            this.btn_American.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_American.Location = new System.Drawing.Point(240, 146);
+            this.btn_American.Name = "btn_American";
+            this.btn_American.Padding = new System.Windows.Forms.Padding(2);
+            this.btn_American.Size = new System.Drawing.Size(90, 33);
+            this.btn_American.TabIndex = 71;
+            this.btn_American.Text = "Confirmar ";
+            this.btn_American.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_American.UseVisualStyleBackColor = false;
+            // 
+            // txt_Codigo_American
+            // 
+            this.txt_Codigo_American.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Codigo_American.Location = new System.Drawing.Point(354, 108);
+            this.txt_Codigo_American.Multiline = true;
+            this.txt_Codigo_American.Name = "txt_Codigo_American";
+            this.txt_Codigo_American.Size = new System.Drawing.Size(122, 20);
+            this.txt_Codigo_American.TabIndex = 70;
+            this.txt_Codigo_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.LightGray;
+            this.label48.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(354, 92);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(84, 16);
+            this.label48.TabIndex = 69;
+            this.label48.Text = "Codigo CVC";
+            // 
+            // txt_Numeros_American
+            // 
+            this.txt_Numeros_American.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erp.SetIconPadding(this.txt_Numeros_American, 3);
+            this.txt_Numeros_American.Location = new System.Drawing.Point(9, 106);
+            this.txt_Numeros_American.Multiline = true;
+            this.txt_Numeros_American.Name = "txt_Numeros_American";
+            this.txt_Numeros_American.Size = new System.Drawing.Size(270, 20);
+            this.txt_Numeros_American.TabIndex = 68;
+            this.txt_Numeros_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.LightGray;
+            this.label49.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(10, 90);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(145, 16);
+            this.label49.TabIndex = 67;
+            this.label49.Text = "Números de la tarjeta";
+            // 
+            // txt_Fecha_American
+            // 
+            this.txt_Fecha_American.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Fecha_American.Location = new System.Drawing.Point(352, 36);
+            this.txt_Fecha_American.Multiline = true;
+            this.txt_Fecha_American.Name = "txt_Fecha_American";
+            this.txt_Fecha_American.Size = new System.Drawing.Size(141, 20);
+            this.txt_Fecha_American.TabIndex = 66;
+            this.txt_Fecha_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.LightGray;
+            this.label50.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(352, 20);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(139, 16);
+            this.label50.TabIndex = 65;
+            this.label50.Text = "Fecha de Expiración";
+            // 
+            // txt_Nombre_American
+            // 
+            this.txt_Nombre_American.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_Nombre_American.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre_American.Location = new System.Drawing.Point(9, 34);
+            this.txt_Nombre_American.Multiline = true;
+            this.txt_Nombre_American.Name = "txt_Nombre_American";
+            this.txt_Nombre_American.Size = new System.Drawing.Size(270, 20);
+            this.txt_Nombre_American.TabIndex = 64;
+            this.txt_Nombre_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.LightGray;
+            this.label51.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(9, 18);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(131, 16);
+            this.label51.TabIndex = 64;
+            this.label51.Text = "Nombre del Titular ";
+            // 
+            // gbMetodo
+            // 
+            this.gbMetodo.Controls.Add(this.panelMasterCard);
+            this.gbMetodo.Controls.Add(this.panelAmerican);
+            this.gbMetodo.Controls.Add(this.panelBancoAgricola);
+            this.gbMetodo.Controls.Add(this.panelVisa);
+            this.gbMetodo.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbMetodo.Location = new System.Drawing.Point(135, 552);
+            this.gbMetodo.Name = "gbMetodo";
+            this.gbMetodo.Size = new System.Drawing.Size(561, 213);
+            this.gbMetodo.TabIndex = 75;
+            this.gbMetodo.TabStop = false;
+            // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 770);
+            this.ClientSize = new System.Drawing.Size(800, 773);
+            this.Controls.Add(this.gbMetodo);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label32);
@@ -1124,11 +1416,9 @@ namespace Clave2_Grupo3_US23007_
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.cbxChivo);
-            this.Controls.Add(this.panelVisa);
             this.Controls.Add(this.cbxBitcoin);
             this.Controls.Add(this.cbxMaster);
             this.Controls.Add(this.cbxVisa);
-            this.Controls.Add(this.panelEfectivo);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label46);
@@ -1191,14 +1481,15 @@ namespace Clave2_Grupo3_US23007_
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelVisa.ResumeLayout(false);
             this.panelVisa.PerformLayout();
-            this.panelEfectivo.ResumeLayout(false);
-            this.panelEfectivo.PerformLayout();
-            this.panelBitcoin.ResumeLayout(false);
-            this.panelBitcoin.PerformLayout();
-            this.panelMastecard.ResumeLayout(false);
-            this.panelMastecard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panelMasterCard.ResumeLayout(false);
+            this.panelMasterCard.PerformLayout();
+            this.panelBancoAgricola.ResumeLayout(false);
+            this.panelBancoAgricola.PerformLayout();
+            this.panelAmerican.ResumeLayout(false);
+            this.panelAmerican.PerformLayout();
+            this.gbMetodo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1259,16 +1550,10 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Panel panelVisa;
-        private System.Windows.Forms.Panel panelEfectivo;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panelMastecard;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox cbxVisa;
         private System.Windows.Forms.CheckBox cbxMaster;
         private System.Windows.Forms.CheckBox cbxBitcoin;
         private System.Windows.Forms.CheckBox cbxChivo;
-        private System.Windows.Forms.Panel panelBitcoin;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnVisa;
         private System.Windows.Forms.TextBox txt_CVC_Visa;
         private System.Windows.Forms.Label label20;
@@ -1289,5 +1574,32 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lbl_Avion;
+        private System.Windows.Forms.Panel panelBancoAgricola;
+        private System.Windows.Forms.Panel panelAmerican;
+        private System.Windows.Forms.Button btn_American;
+        private System.Windows.Forms.TextBox txt_Codigo_American;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox txt_Numeros_American;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox txt_Fecha_American;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txt_Nombre_American;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button btnAgricola;
+        private System.Windows.Forms.TextBox txt_Cuenta_Banco;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox txt_Nombre_Banco;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Panel panelMasterCard;
+        private System.Windows.Forms.Button btn_Master;
+        private System.Windows.Forms.TextBox txt_Codigo_Master;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_Numeros_Master;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_Fecha_Master;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_Nombre_Master;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.GroupBox gbMetodo;
     }
 }

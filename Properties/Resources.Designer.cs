@@ -133,6 +133,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap american_express_81996_3_ {
+            get {
+                object obj = ResourceManager.GetObject("american_express_81996_3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bancoagicola_2_ {
             get {
                 object obj = ResourceManager.GetObject("bancoagicola_2_", resourceCulture);

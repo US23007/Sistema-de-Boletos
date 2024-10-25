@@ -17,9 +17,9 @@ namespace Clave2_Grupo3_US23007_
         {
             InitializeComponent();
             panelVisa.Visible = false; 
-            panelEfectivo.Visible = false;
-            panelMastecard.Visible = false;
-            panelBitcoin.Visible = false;
+            panelAmerican.Visible = false;
+            panelMasterCard.Visible = false;
+            panelBancoAgricola.Visible = false;
         }
 
         private void cbxVisa_CheckedChanged(object sender, EventArgs e)
@@ -29,10 +29,12 @@ namespace Clave2_Grupo3_US23007_
 
                 Desmarcar(cbxVisa);
                 panelVisa.Visible = true;
+                gbMetodo.Text = "Visa";
             }
             else
             {
                 panelVisa.Visible = false;
+                gbMetodo.Text = " ";
             }
             
         }
@@ -42,12 +44,14 @@ namespace Clave2_Grupo3_US23007_
             if (cbxMaster.Checked)
             {
                 Desmarcar(cbxMaster);
-                panelMastecard.Visible = true;
 
+                panelMasterCard.Visible = true;
+                gbMetodo.Text = "MasterCard";
             }
             else
             {
-                panelMastecard.Visible = false;
+                panelMasterCard.Visible = false;
+                gbMetodo.Text = " ";
             }
             
         }
@@ -57,12 +61,14 @@ namespace Clave2_Grupo3_US23007_
             if (cbxBitcoin.Checked)
             {
                 Desmarcar(cbxBitcoin);
-                panelBitcoin.Visible = true;
+                panelBancoAgricola.Visible = true;
+                gbMetodo.Text = "Banco Agricola";
 
             }
             else
             {
-                panelBitcoin.Visible = false;
+                panelBancoAgricola.Visible = false;
+                gbMetodo.Text = " ";
             }
 
         }
@@ -72,12 +78,14 @@ namespace Clave2_Grupo3_US23007_
             if (cbxChivo.Checked)
             {
                 Desmarcar(cbxChivo);
-                panelEfectivo.Visible = true;
+                panelAmerican.Visible = true;
+                gbMetodo.Text = "American Express";
 
             }
             else
             {
-                panelEfectivo.Visible = false;
+                panelAmerican.Visible = false;
+                gbMetodo.Text = " ";
             }
 
         }
@@ -176,6 +184,41 @@ namespace Clave2_Grupo3_US23007_
             {
                 erp.SetError(txt_CVC_Visa, "Código CVC NO valido");
                 btnVisa.Enabled = false;
+            }
+        }
+
+        private void btn_Master_Click(object sender, EventArgs e)
+        {
+            if (cbxMaster.Checked)
+            {
+                if (string.IsNullOrEmpty(txt_Nombre_Master.Text) || string.IsNullOrWhiteSpace(txt_Nombre_Master.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Titular", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Nombre_Master.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_Fecha_Master.Text) || string.IsNullOrWhiteSpace(txt_Fecha_Master.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Fecha de Vencimiento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Fecha_Master.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_Numeros_Master.Text) || string.IsNullOrWhiteSpace(txt_Numeros_Master.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Número de Tarjeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Numeros_Master.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_Codigo_Master.Text) || string.IsNullOrWhiteSpace(txt_Codigo_Master.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Codigo CV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Codigo_Master.Focus();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
             }
         }
     }
