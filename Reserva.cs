@@ -30,6 +30,7 @@ namespace Clave2_Grupo3_US23007_
                 Desmarcar(cbxVisa);
                 panelVisa.Visible = true;
                 gbMetodo.Text = "Visa";
+                LimpiarTodo();
             }
             else
             {
@@ -47,6 +48,7 @@ namespace Clave2_Grupo3_US23007_
 
                 panelMasterCard.Visible = true;
                 gbMetodo.Text = "MasterCard";
+                LimpiarTodo();
             }
             else
             {
@@ -58,12 +60,12 @@ namespace Clave2_Grupo3_US23007_
 
         private void cbxBitcoin_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxBitcoin.Checked)
+            if (cbxBanco.Checked)
             {
-                Desmarcar(cbxBitcoin);
+                Desmarcar(cbxBanco);
                 panelBancoAgricola.Visible = true;
                 gbMetodo.Text = "Banco Agricola";
-
+                LimpiarTodo();
             }
             else
             {
@@ -75,12 +77,12 @@ namespace Clave2_Grupo3_US23007_
 
         private void cbxEfectivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxChivo.Checked)
+            if (cbxAmerican.Checked)
             {
-                Desmarcar(cbxChivo);
+                Desmarcar(cbxAmerican);
                 panelAmerican.Visible = true;
                 gbMetodo.Text = "American Express";
-
+                LimpiarTodo();
             }
             else
             {
@@ -95,8 +97,8 @@ namespace Clave2_Grupo3_US23007_
         {
             if (seleccionado != cbxVisa) cbxVisa.Checked = false;
             if (seleccionado != cbxMaster) cbxMaster.Checked = false;
-            if (seleccionado != cbxBitcoin) cbxBitcoin.Checked = false;
-            if (seleccionado != cbxChivo) cbxChivo.Checked = false;
+            if (seleccionado != cbxBanco) cbxBanco.Checked = false;
+            if (seleccionado != cbxAmerican) cbxAmerican.Checked = false;
         }
 
         private void btnVisa_Click(object sender, EventArgs e)
@@ -107,12 +109,6 @@ namespace Clave2_Grupo3_US23007_
                 {
                     MessageBox.Show("Rellenar Campos", "Titular", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtNombre_Visa.Focus();
-                    return;
-                }
-                if (string.IsNullOrEmpty(txt_Fecha_Visa.Text) || string.IsNullOrWhiteSpace(txt_Fecha_Visa.Text))
-                {
-                    MessageBox.Show("Rellenar Campos", "Fecha de Vencimiento", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_Fecha_Visa.Focus();
                     return;
                 }
                 if (string.IsNullOrEmpty(txt_Número_Visa.Text) || string.IsNullOrWhiteSpace(txt_Número_Visa.Text))
@@ -135,7 +131,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
       
-
+        // Validaciones para Tarjeta Visa
         private void txt_Número_Visa_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^4[0-9]{12}(?:[0-9]{3})?$";
@@ -153,22 +149,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-        private void txt_Fecha_Visa_TextChanged(object sender, EventArgs e)
-        {
-            string patron = @"^(0[1-9]|1[0-2])\/?([0-9]{2})$";
-            Regex validaEmail = new Regex(patron);
-            if (validaEmail.IsMatch(txt_Fecha_Visa.Text))
-            {
-                erp.SetError(txt_Fecha_Visa, "");
-                btnVisa.Enabled = true;
-
-            }
-            else
-            {
-                erp.SetError(txt_Fecha_Visa, "Fecha NO valida");
-                btnVisa.Enabled = false;
-            }
-        }
+       
 
         private void txt_CVC_Visa_TextChanged(object sender, EventArgs e)
         {
@@ -187,6 +168,8 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        // Botón Confirmar Mastercard
         private void btn_Master_Click(object sender, EventArgs e)
         {
             if (cbxMaster.Checked)
@@ -195,12 +178,6 @@ namespace Clave2_Grupo3_US23007_
                 {
                     MessageBox.Show("Rellenar Campos", "Titular", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_Nombre_Master.Focus();
-                    return;
-                }
-                if (string.IsNullOrEmpty(txt_Fecha_Master.Text) || string.IsNullOrWhiteSpace(txt_Fecha_Master.Text))
-                {
-                    MessageBox.Show("Rellenar Campos", "Fecha de Vencimiento", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_Fecha_Master.Focus();
                     return;
                 }
                 if (string.IsNullOrEmpty(txt_Numeros_Master.Text) || string.IsNullOrWhiteSpace(txt_Numeros_Master.Text))
@@ -219,6 +196,247 @@ namespace Clave2_Grupo3_US23007_
                 {
                     MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
+            }
+        }
+
+
+        // Botón Confirmar American EXpress
+        private void btn_American_Click(object sender, EventArgs e)
+        {
+            if (cbxAmerican.Checked)
+            {
+                if (string.IsNullOrEmpty(txt_Nombre_American.Text) || string.IsNullOrWhiteSpace(txt_Nombre_American.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Titular", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Nombre_American.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_Numeros_American.Text) || string.IsNullOrWhiteSpace(txt_Numeros_American.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Número de Tarjeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Numeros_American.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_Codigo_American.Text) || string.IsNullOrWhiteSpace(txt_Codigo_American.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Codigo CV", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Codigo_American.Focus();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+        }
+
+
+
+        //Botón Confirmar Banco Agricola
+        private void btnAgricola_Click(object sender, EventArgs e)
+        {
+            if (cbxBanco.Checked)
+            {
+                if (string.IsNullOrEmpty(txt_Nombre_Banco.Text) || string.IsNullOrWhiteSpace(txt_Nombre_Banco.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Titular", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Nombre_Banco.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_Cuenta_Banco.Text) || string.IsNullOrWhiteSpace(txt_Cuenta_Banco.Text))
+                {
+                    MessageBox.Show("Rellenar Campos", "Número de Tarjeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Cuenta_Banco.Focus();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+        }
+
+
+        public void LimpiarTodo()
+        {
+            txtNombre_Visa.Text = string.Empty;
+            txt_Nombre_Banco.Text = string.Empty;
+            txt_Nombre_American.Text = string.Empty;
+            txt_Nombre_Master.Text = string.Empty;
+
+
+            txt_Número_Visa.Text = string.Empty;
+            txt_Cuenta_Banco.Text = string.Empty;
+            txt_Numeros_American.Text = string.Empty;
+            txt_Numeros_Master.Text = string.Empty;
+
+            txt_CVC_Visa.Text = string.Empty;
+            txt_Codigo_Master.Text = string.Empty;
+            txt_Codigo_American.Text = string.Empty;
+        }
+
+
+
+        // Validaciones para tarjeta MasterCard
+   
+
+        private void txt_Numeros_Master_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^5[1-5][0-9]{14}$|^2[2-7][0-9]{14}$";
+            Regex validar = new Regex(patron);
+            if (validar.IsMatch(txt_Numeros_Master.Text))
+            {
+                erp.SetError(txt_Numeros_Master, "");
+                btn_Master.Enabled = true;
+
+            }
+            else
+            {
+                erp.SetError(txt_Numeros_Master, "Tarjeta MasterCard NO valida");
+                btn_Master.Enabled = false;
+            }
+        }
+
+        private void txt_Codigo_Master_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^[0-9]{3,4}$";
+            Regex validaEmail = new Regex(patron);
+            if (validaEmail.IsMatch(txt_Codigo_Master.Text))
+            {
+                erp.SetError(txt_Codigo_Master, "");
+                btn_Master.Enabled = true;
+
+            }
+            else
+            {
+                erp.SetError(txt_Codigo_Master, "Código CVC NO valido");
+                btn_Master.Enabled = false;
+            }
+        }
+
+
+        // Validaciones Tarjeta American Express
+  
+
+        private void txt_Codigo_American_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^[0-9]{3,4}$";
+            Regex validaEmail = new Regex(patron);
+            if (validaEmail.IsMatch(txt_Codigo_American.Text))
+            {
+                erp.SetError(txt_Codigo_American, "");
+                btn_American.Enabled = true;
+
+            }
+            else
+            {
+                erp.SetError(txt_Codigo_American, "Código CVC NO valido");
+                btn_American.Enabled = false;
+            }
+        }
+
+        private void txt_Numeros_American_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^3[47][0-9]{13}$";
+            Regex validar = new Regex(patron);
+            if (validar.IsMatch(txt_Numeros_American.Text))
+            {
+                erp.SetError(txt_Numeros_American, "");
+                btn_American.Enabled = true;
+
+            }
+            else
+            {
+                erp.SetError(txt_Numeros_American, "Tarjeta American Express NO valida");
+                btn_American.Enabled = false;
+            }
+        }
+
+        private void txt_Cuenta_Banco_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^\d{10,12}$";
+            Regex validar = new Regex(patron);
+            if (validar.IsMatch(txt_Cuenta_Banco.Text))
+            {
+                erp.SetError(txt_Cuenta_Banco, "");
+                btnAgricola.Enabled = true;
+
+            }
+            else
+            {
+                erp.SetError(txt_Cuenta_Banco, "Cuenta de Banco Agricola NO valida");
+                btnAgricola.Enabled = false;
+                
+            }
+        }
+
+        private void txtNombre_Visa_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^[a-zA-Z\s]*$";
+            Regex regex = new Regex(patron);
+
+            if (regex.IsMatch(txtNombre_Visa.Text))
+            {
+                erp.SetError(txtNombre_Visa, ""); // Sin errores
+                btnVisa.Enabled = true;
+            }
+            else
+            {
+                erp.SetError(txtNombre_Visa, "Solo se permiten letras");
+                btnVisa.Enabled = false;
+            }
+        }
+
+        private void txt_Nombre_Master_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^[a-zA-Z\s]*$";
+            Regex regex = new Regex(patron);
+
+            if (regex.IsMatch(txt_Nombre_Master.Text))
+            {
+                erp.SetError(txt_Nombre_Master, ""); // Sin errores
+                btn_Master.Enabled = true;
+            }
+            else
+            {
+                erp.SetError(txt_Nombre_Master, "Solo se permiten letras");
+                btn_Master.Enabled = false;
+            }
+        }
+
+        private void txt_Nombre_American_TextChanged(object sender, EventArgs e)
+        {
+
+            string patron = @"^[a-zA-Z\s]*$";
+            Regex regex = new Regex(patron);
+
+            if (regex.IsMatch(txt_Nombre_American.Text))
+            {
+                erp.SetError(txt_Nombre_American, ""); // Sin errores
+                btn_American.Enabled = true;
+            }
+            else
+            {
+                erp.SetError(txt_Nombre_American, "Solo se permiten letras");
+                btn_American.Enabled = false;
+            }
+        }
+
+        private void txt_Nombre_Banco_TextChanged(object sender, EventArgs e)
+        {
+
+            string patron = @"^[a-zA-Z\s]*$";
+            Regex regex = new Regex(patron);
+
+            if (regex.IsMatch(txt_Nombre_Banco.Text))
+            {
+                erp.SetError(txt_Nombre_Banco, ""); // Sin errores
+                btnAgricola.Enabled = true;
+            }
+            else
+            {
+                erp.SetError(txt_Nombre_Banco, "Solo se permiten letras");
+                btnAgricola.Enabled = false;
             }
         }
     }
