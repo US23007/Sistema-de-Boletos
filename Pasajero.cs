@@ -15,13 +15,18 @@ namespace Clave2_Grupo3_US23007_
         private String Numero_Pasaporte;
         private int Asiento;
         private static int Sitio { get; set; }
+        private static String Maleta { get; set;}
         private string Telefono;
         private String Nacionalidad;
         private String Tipo_Equipaje;
         private String Tipo_Pasajero;
         private static int idPasajero { get; set; }
         
-       
+       public int Passenger
+        {
+            get { return idPasajero;}
+            set { idPasajero = value;}
+        }
 
 
         public void Ingresar_Pasajero(string nombre,DateTime fecha,string pasaporte,int asiento,string telefono, string nacionalidad,string tipo_equipaje,string tipo_pasajero)
@@ -58,6 +63,12 @@ namespace Clave2_Grupo3_US23007_
         {
             get { return Asiento; }
             set { Asiento= value; }
+        }
+
+        public String TipoMaletas
+        {
+            get { return  Maleta;}
+            set { Maleta = value;}
         }
 
         public int ObtenerSitio
@@ -179,6 +190,13 @@ namespace Clave2_Grupo3_US23007_
 
                             if (filasAfectadas > 0)
                             {
+                                string input = "SELECT LAST_INSERT_ID()";
+                                using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conector))
+                                {
+                                    Passenger = Convert.ToInt32(obtenerIDCmd.ExecuteScalar());
+                                    Console.WriteLine("identificador pasajero:"+Passenger);
+
+                                }
                                 MessageBox.Show("Pasajero registrado exitosamente.",
                                                 "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 return true;

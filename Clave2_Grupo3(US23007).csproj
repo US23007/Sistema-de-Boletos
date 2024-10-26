@@ -144,6 +144,7 @@
     <Compile Include="IngresoAdministrador.Designer.cs">
       <DependentUpon>IngresoAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="MontosAdicionales.cs" />
     <Compile Include="Pagos.cs">
       <SubType>Form</SubType>
     </Compile>

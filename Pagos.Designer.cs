@@ -62,11 +62,11 @@ namespace Clave2_Grupo3_US23007_
             this.label10 = new System.Windows.Forms.Label();
             this.txt_Nombre_Master = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.lbl_Monto = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.lbl_Equipaje = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lbl_Precio_Vuelo = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -474,18 +474,18 @@ namespace Clave2_Grupo3_US23007_
             this.label38.TabIndex = 64;
             this.label38.Text = "Nombre del Titular ";
             // 
-            // label36
+            // lbl_Monto
             // 
-            this.label36.AutoEllipsis = true;
-            this.label36.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label36.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(487, 98);
-            this.label36.Name = "label36";
-            this.label36.Padding = new System.Windows.Forms.Padding(4);
-            this.label36.Size = new System.Drawing.Size(286, 26);
-            this.label36.TabIndex = 91;
-            this.label36.Text = "$326";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Monto.AutoEllipsis = true;
+            this.lbl_Monto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Monto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Monto.Location = new System.Drawing.Point(487, 98);
+            this.lbl_Monto.Name = "lbl_Monto";
+            this.lbl_Monto.Padding = new System.Windows.Forms.Padding(4);
+            this.lbl_Monto.Size = new System.Drawing.Size(286, 26);
+            this.lbl_Monto.TabIndex = 91;
+            this.lbl_Monto.Text = "$326";
+            this.lbl_Monto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label34
             // 
@@ -500,18 +500,18 @@ namespace Clave2_Grupo3_US23007_
             this.label34.Text = "Total a Pagar con Impuesto de Equipaje";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label32
+            // lbl_Equipaje
             // 
-            this.label32.AutoEllipsis = true;
-            this.label32.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(277, 98);
-            this.label32.Name = "label32";
-            this.label32.Padding = new System.Windows.Forms.Padding(4);
-            this.label32.Size = new System.Drawing.Size(131, 26);
-            this.label32.TabIndex = 89;
-            this.label32.Text = "De mano";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Equipaje.AutoEllipsis = true;
+            this.lbl_Equipaje.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Equipaje.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Equipaje.Location = new System.Drawing.Point(277, 98);
+            this.lbl_Equipaje.Name = "lbl_Equipaje";
+            this.lbl_Equipaje.Padding = new System.Windows.Forms.Padding(4);
+            this.lbl_Equipaje.Size = new System.Drawing.Size(131, 26);
+            this.lbl_Equipaje.TabIndex = 89;
+            this.lbl_Equipaje.Text = "De mano";
+            this.lbl_Equipaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label29
             // 
@@ -526,18 +526,18 @@ namespace Clave2_Grupo3_US23007_
             this.label29.Text = "Tipo de Equipaje";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label27
+            // lbl_Precio_Vuelo
             // 
-            this.label27.AutoEllipsis = true;
-            this.label27.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label27.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(75, 98);
-            this.label27.Name = "label27";
-            this.label27.Padding = new System.Windows.Forms.Padding(4);
-            this.label27.Size = new System.Drawing.Size(145, 26);
-            this.label27.TabIndex = 87;
-            this.label27.Text = "$250";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Precio_Vuelo.AutoEllipsis = true;
+            this.lbl_Precio_Vuelo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_Precio_Vuelo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Precio_Vuelo.Location = new System.Drawing.Point(75, 98);
+            this.lbl_Precio_Vuelo.Name = "lbl_Precio_Vuelo";
+            this.lbl_Precio_Vuelo.Padding = new System.Windows.Forms.Padding(4);
+            this.lbl_Precio_Vuelo.Size = new System.Drawing.Size(145, 26);
+            this.lbl_Precio_Vuelo.TabIndex = 87;
+            this.lbl_Precio_Vuelo.Text = "$250";
+            this.lbl_Precio_Vuelo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label25
             // 
@@ -663,11 +663,11 @@ namespace Clave2_Grupo3_US23007_
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbMetodo);
-            this.Controls.Add(this.label36);
+            this.Controls.Add(this.lbl_Monto);
             this.Controls.Add(this.label34);
-            this.Controls.Add(this.label32);
+            this.Controls.Add(this.lbl_Equipaje);
             this.Controls.Add(this.label29);
-            this.Controls.Add(this.label27);
+            this.Controls.Add(this.lbl_Precio_Vuelo);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.pictureBox4);
@@ -733,11 +733,8 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_Nombre_Master;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -750,5 +747,8 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.ErrorProvider erp;
+        public System.Windows.Forms.Label lbl_Monto;
+        public System.Windows.Forms.Label lbl_Equipaje;
+        public System.Windows.Forms.Label lbl_Precio_Vuelo;
     }
 }

@@ -72,7 +72,6 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.lblAsientosDisponibles);
-            this.groupBox1.Controls.Add(this.lblCantidadAsientos);
             this.groupBox1.Controls.Add(this.pagCalendar);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.cbx_Tipo_Pasajero);
@@ -95,6 +94,7 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbxAsiento);
             this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Controls.Add(this.lblCantidadAsientos);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(8, 12);
             this.groupBox1.Name = "groupBox1";

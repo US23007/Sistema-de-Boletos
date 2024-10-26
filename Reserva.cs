@@ -21,7 +21,18 @@ namespace Clave2_Grupo3_US23007_
 
         private void btnConfimar_Click(object sender, EventArgs e)
         {
-
+            Reservaciones reservaciones = new Reservaciones();
+            MontosAdicionales monto = new MontosAdicionales();
+            Pagos pagos = new Pagos();
+            if (reservaciones.ReservarEnDB())
+            {
+                if (monto.AgregarMontos())
+                {
+                    pagos.Show();
+                    this.Hide();
+                }
+                
+            }
         }
     }
 }

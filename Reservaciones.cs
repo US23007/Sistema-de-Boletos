@@ -11,6 +11,18 @@ namespace Clave2_Grupo3_US23007_
 {
     class Reservaciones : Pasajero
     {
+        private static int idAsiento { get; set;}
+        private static int idReserva { get; set; }
+        public int ObtenerAsientoID
+        {
+            get { return idAsiento; }
+            set { idAsiento = value; }
+        }
+        public int ObtenerReserva
+        {
+            get { return idReserva; }
+            set { idReserva = value; }
+        }
 
         public bool MostrarInformacionPasajero(Label nombre,Label Pasaporte,Label Telefono,Label Nacimiento,Label Nacionalidad,Label Pasajero,Label Equipaje,Label Asiento)
         {
@@ -39,12 +51,11 @@ namespace Clave2_Grupo3_US23007_
                                 nombre.Text = reader["NombreCompleto"].ToString();
                                 Pasaporte.Text = reader["Pasaporte"].ToString();
                                 Telefono.Text = reader["Telefono"].ToString();
-                                Nacimiento.Text = reader["Fechanacimiento"].ToString();
+                                Nacimiento.Text = Convert.ToDateTime(reader["Fechanacimiento"]).ToString("MM/yy/dd");
                                 Nacionalidad.Text = reader["Nacionalidad"].ToString();
                                 Pasajero.Text = reader["TipoPasajero"].ToString();
                                 Equipaje.Text = reader["TipoEquipaje"].ToString();
                                 Asiento.Text = reader["PreferenciaAsiento"].ToString();
-
                                 MessageBox.Show("Todo bien en Pasajero Datos");
                                 Console.WriteLine(nombre);
                                 Console.WriteLine(Pasaporte);
@@ -82,7 +93,7 @@ namespace Clave2_Grupo3_US23007_
                 try
                 {
                     conector.Open();
-
+                    
                     string consulta = @"Select aerolinea.Nombre, vuelos.ID, rutas.CodigoOrigen, rutas.CodigoDestino, vuelos.FechaSalida,
                                  vuelos.FechaLlegada, Modelo, HoraSalida, HoraLlegada, vuelos.Puerta, vuelos.Precio
                                  from aviones 
@@ -110,13 +121,13 @@ namespace Clave2_Grupo3_US23007_
                                 Numero_Vuelo.Text = reader["ID"].ToString();
                                 Origen.Text = reader["CodigoOrigen"].ToString();
                                 Destino.Text = reader["CodigoDestino"].ToString();
-                                Salida.Text = reader["FechaSalida"].ToString();
-                                Llegada.Text = reader["FechaLlegada"].ToString();
+                                Salida.Text = Convert.ToDateTime(reader["FechaSalida"]).ToString("MM/yy/dd");
+                                Llegada.Text = Convert.ToDateTime(reader["FechaLlegada"]).ToString("MM/yy/dd");
                                 Avion.Text = reader["Modelo"].ToString();
                                 Hora_Salida.Text = reader["HoraSalida"].ToString();
                                 Hora_Llegada.Text = reader["HoraLlegada"].ToString();
                                 Puerta.Text = reader["Puerta"].ToString();
-                                Precio.Text = reader["Precio"].ToString();
+                                Precio.Text = string.Format("${0:N2}", reader["Precio"]);
 
 
                                 MessageBox.Show("Todo bien en Detalles");
@@ -146,5 +157,82 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        public bool ReservarEnDB()
+        {
+            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+
+            using (MySqlConnection conector = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conector.Open();
+
+                    string consultaAsiento = @"Select asientos.ID from asientos 
+                                                INNER JOIN  aviones on asientos.aviones_ID = aviones.ID
+                                                where NumeroAsiento = @numero and aviones.ID = @avion";
+
+                    using (MySqlCommand comandoAsiento = new MySqlCommand(consultaAsiento, conector))
+                    {
+                        comandoAsiento.Parameters.AddWithValue("@numero", ObtenerSitio);
+                        comandoAsiento.Parameters.AddWithValue("@avion", ObtenerAvion);
+                        object resultado = comandoAsiento.ExecuteScalar();
+
+                        if (resultado != null)
+                        {
+                            ObtenerAsientoID = Convert.ToInt32(resultado);
+                            Console.WriteLine(ObtenerAsientoID);
+                        }
+                        else
+                        {
+                            MessageBox.Show("El número de asiento no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                    string consulta = @"INSERT INTO reserva(Estado,Fecha,pasajero_ID,asientos_ID,vuelos_ID)
+                                        VALUES(@estado, @fecha,@pasajero,@asientos,@vuelos)";
+
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    {
+                        comando.Parameters.AddWithValue("@estado", "Pendiente");
+                        comando.Parameters.AddWithValue("@fecha", DateTime.Now);
+                        comando.Parameters.AddWithValue("@pasajero", ObtenerIdUsuario);
+                        comando.Parameters.AddWithValue("@asientos", ObtenerAsientoID);
+                        comando.Parameters.AddWithValue("@vuelos", ObtenerId);
+
+                        int filasAfectadas = comando.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            string input = "SELECT LAST_INSERT_ID()";
+                            using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conector))
+                            {
+                                ObtenerReserva = Convert.ToInt32(obtenerIDCmd.ExecuteScalar());
+
+                            }
+
+                            MessageBox.Show("Reserva Ingresada exitosamente.",
+                                            "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo registrar el usuario.",
+                                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show($"Error en la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+            }
+        }
     }
 }
