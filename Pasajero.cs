@@ -275,7 +275,7 @@ namespace Clave2_Grupo3_US23007_
                     {
                         comando.Parameters.AddWithValue("@id", ObtenerId);
                         comando.Parameters.AddWithValue("@avion", ObtenerAvion);
-                        comando.Parameters.AddWithValue("@asiento", Butaca);
+                        comando.Parameters.AddWithValue("@asiento", ObtenerSitio);
 
 
                         int filasAfectadas = comando.ExecuteNonQuery();

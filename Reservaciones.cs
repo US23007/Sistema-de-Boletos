@@ -44,6 +44,8 @@ namespace Clave2_Grupo3_US23007_
                                 pasajero.Text = reader["TipoPasajero"].ToString();
                                 Tipo.Text = reader["TipoEquipaje"].ToString();
                                 asiento.Text = reader["PreferenciaAsiento"].ToString();
+
+                                MessageBox.Show("Todo bien en Pasajero Datos");
                             }
                             else
                             {
@@ -87,6 +89,8 @@ namespace Clave2_Grupo3_US23007_
                                 HLlegada.Text = reader2["HoraLlegada"].ToString();
                                 Puerta.Text = reader2["Puerta"].ToString();
                                 Precio.Text = reader2["Precio"].ToString();
+
+                                MessageBox.Show("Todo bien en Vuelo Datos");
                             }
                             else
                             {

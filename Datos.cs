@@ -94,9 +94,7 @@ namespace Clave2_Grupo3_US23007_
                 pasajero.Butaca = asiento;
 
                 pasajero.Ingresar_Pasajero(nombre, time, pasaporte, asiento, telefono, nacionalidad, equipaje, tipo);
-                if (pasajero.RegistrarPasajero() && pasajero.ReservarAsiento() && reservaciones.MostrarInformacion(reserva.lbl_Nombre, reserva.lblPasaporte, reserva.lbl_Telefono, reserva.lbl_Nacimiento, reserva.lbl_Nacionalidad, reserva.lbl_Pasajero,
-                        reserva.lbl_Equipaje, reserva.lbl_Asiento, reserva.lbl_Aerolinea, reserva.lbl_Numero_Vuelo, reserva.lbl_Origen, reserva.lbl_Destino,
-                        reserva.lbl_Salida, reserva.lbl_Llegada, reserva.lbl_Avion, reserva.lbl_Hora_Salida, reserva.lbl_Hora_Llegada, reserva.lbl_Puerta, reserva.lbl_Precio))
+                if (pasajero.RegistrarPasajero() && pasajero.ReservarAsiento())
                 {
                    
                         reserva.Show();
