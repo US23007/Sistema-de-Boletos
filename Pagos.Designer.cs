@@ -29,6 +29,7 @@ namespace Clave2_Grupo3_US23007_
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pagos));
             this.gbMetodo = new System.Windows.Forms.GroupBox();
             this.panelAmerican = new System.Windows.Forms.Panel();
@@ -77,6 +78,7 @@ namespace Clave2_Grupo3_US23007_
             this.label45 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label46 = new System.Windows.Forms.Label();
+            this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbMetodo.SuspendLayout();
             this.panelAmerican.SuspendLayout();
             this.panelBancoAgricola.SuspendLayout();
@@ -84,6 +86,7 @@ namespace Clave2_Grupo3_US23007_
             this.panelMasterCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erp)).BeginInit();
             this.SuspendLayout();
             // 
             // gbMetodo
@@ -129,6 +132,7 @@ namespace Clave2_Grupo3_US23007_
             this.btn_American.Text = "Confirmar ";
             this.btn_American.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_American.UseVisualStyleBackColor = false;
+            this.btn_American.Click += new System.EventHandler(this.btn_American_Click);
             // 
             // txt_Codigo_American
             // 
@@ -139,6 +143,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Codigo_American.Size = new System.Drawing.Size(122, 20);
             this.txt_Codigo_American.TabIndex = 70;
             this.txt_Codigo_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Codigo_American.TextChanged += new System.EventHandler(this.txt_Codigo_American_TextChanged);
             // 
             // label48
             // 
@@ -160,6 +165,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Numeros_American.Size = new System.Drawing.Size(270, 20);
             this.txt_Numeros_American.TabIndex = 68;
             this.txt_Numeros_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Numeros_American.TextChanged += new System.EventHandler(this.txt_Numeros_American_TextChanged);
             // 
             // label49
             // 
@@ -182,6 +188,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Nombre_American.Size = new System.Drawing.Size(467, 20);
             this.txt_Nombre_American.TabIndex = 64;
             this.txt_Nombre_American.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Nombre_American.TextChanged += new System.EventHandler(this.txt_Nombre_American_TextChanged);
             // 
             // label51
             // 
@@ -222,6 +229,7 @@ namespace Clave2_Grupo3_US23007_
             this.btnAgricola.Text = "Confirmar ";
             this.btnAgricola.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgricola.UseVisualStyleBackColor = false;
+            this.btnAgricola.Click += new System.EventHandler(this.btnAgricola_Click);
             // 
             // txt_Cuenta_Banco
             // 
@@ -232,6 +240,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Cuenta_Banco.Size = new System.Drawing.Size(270, 20);
             this.txt_Cuenta_Banco.TabIndex = 68;
             this.txt_Cuenta_Banco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Cuenta_Banco.TextChanged += new System.EventHandler(this.txt_Cuenta_Banco_TextChanged);
             // 
             // label41
             // 
@@ -254,6 +263,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Nombre_Banco.Size = new System.Drawing.Size(270, 20);
             this.txt_Nombre_Banco.TabIndex = 64;
             this.txt_Nombre_Banco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Nombre_Banco.TextChanged += new System.EventHandler(this.txt_Nombre_Banco_TextChanged);
             // 
             // label47
             // 
@@ -296,6 +306,7 @@ namespace Clave2_Grupo3_US23007_
             this.btnVisa.Text = "Confirmar ";
             this.btnVisa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVisa.UseVisualStyleBackColor = false;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
             // txt_CVC_Visa
             // 
@@ -306,6 +317,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_CVC_Visa.Size = new System.Drawing.Size(122, 20);
             this.txt_CVC_Visa.TabIndex = 70;
             this.txt_CVC_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_CVC_Visa.TextChanged += new System.EventHandler(this.txt_CVC_Visa_TextChanged);
             // 
             // label20
             // 
@@ -327,6 +339,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Número_Visa.Size = new System.Drawing.Size(270, 20);
             this.txt_Número_Visa.TabIndex = 68;
             this.txt_Número_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Número_Visa.TextChanged += new System.EventHandler(this.txt_Número_Visa_TextChanged);
             // 
             // label15
             // 
@@ -349,6 +362,7 @@ namespace Clave2_Grupo3_US23007_
             this.txtNombre_Visa.Size = new System.Drawing.Size(467, 20);
             this.txtNombre_Visa.TabIndex = 64;
             this.txtNombre_Visa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombre_Visa.TextChanged += new System.EventHandler(this.txtNombre_Visa_TextChanged);
             // 
             // label7
             // 
@@ -391,6 +405,7 @@ namespace Clave2_Grupo3_US23007_
             this.btn_Master.Text = "Confirmar ";
             this.btn_Master.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Master.UseVisualStyleBackColor = false;
+            this.btn_Master.Click += new System.EventHandler(this.btn_Master_Click);
             // 
             // txt_Codigo_Master
             // 
@@ -401,6 +416,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Codigo_Master.Size = new System.Drawing.Size(122, 20);
             this.txt_Codigo_Master.TabIndex = 70;
             this.txt_Codigo_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Codigo_Master.TextChanged += new System.EventHandler(this.txt_Codigo_Master_TextChanged);
             // 
             // label8
             // 
@@ -422,6 +438,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Numeros_Master.Size = new System.Drawing.Size(270, 20);
             this.txt_Numeros_Master.TabIndex = 68;
             this.txt_Numeros_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Numeros_Master.TextChanged += new System.EventHandler(this.txt_Numeros_Master_TextChanged);
             // 
             // label10
             // 
@@ -444,6 +461,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Nombre_Master.Size = new System.Drawing.Size(449, 20);
             this.txt_Nombre_Master.TabIndex = 64;
             this.txt_Nombre_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Nombre_Master.TextChanged += new System.EventHandler(this.txt_Nombre_Master_TextChanged);
             // 
             // label38
             // 
@@ -572,6 +590,7 @@ namespace Clave2_Grupo3_US23007_
             this.cbxAmerican.Size = new System.Drawing.Size(94, 34);
             this.cbxAmerican.TabIndex = 82;
             this.cbxAmerican.UseVisualStyleBackColor = true;
+            this.cbxAmerican.CheckedChanged += new System.EventHandler(this.cbxAmerican_CheckedChanged);
             // 
             // cbxBanco
             // 
@@ -581,6 +600,7 @@ namespace Clave2_Grupo3_US23007_
             this.cbxBanco.Size = new System.Drawing.Size(164, 34);
             this.cbxBanco.TabIndex = 81;
             this.cbxBanco.UseVisualStyleBackColor = true;
+            this.cbxBanco.CheckedChanged += new System.EventHandler(this.cbxBanco_CheckedChanged);
             // 
             // cbxMaster
             // 
@@ -590,6 +610,7 @@ namespace Clave2_Grupo3_US23007_
             this.cbxMaster.Size = new System.Drawing.Size(92, 34);
             this.cbxMaster.TabIndex = 80;
             this.cbxMaster.UseVisualStyleBackColor = true;
+            this.cbxMaster.CheckedChanged += new System.EventHandler(this.cbxMaster_CheckedChanged);
             // 
             // cbxVisa
             // 
@@ -599,6 +620,7 @@ namespace Clave2_Grupo3_US23007_
             this.cbxVisa.Size = new System.Drawing.Size(92, 34);
             this.cbxVisa.TabIndex = 79;
             this.cbxVisa.UseVisualStyleBackColor = true;
+            this.cbxVisa.CheckedChanged += new System.EventHandler(this.cbxVisa_CheckedChanged);
             // 
             // label45
             // 
@@ -630,10 +652,15 @@ namespace Clave2_Grupo3_US23007_
             this.label46.Text = resources.GetString("label46.Text");
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // erp
+            // 
+            this.erp.ContainerControl = this;
+            // 
             // Pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbMetodo);
             this.Controls.Add(this.label36);
@@ -667,6 +694,7 @@ namespace Clave2_Grupo3_US23007_
             this.panelMasterCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -721,5 +749,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.ErrorProvider erp;
     }
 }

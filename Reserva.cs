@@ -19,6 +19,9 @@ namespace Clave2_Grupo3_US23007_
            
         }
 
+        private void btnConfimar_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

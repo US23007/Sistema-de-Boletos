@@ -78,7 +78,7 @@ namespace Clave2_Grupo3_US23007_
             this.tool = new System.Windows.Forms.ToolTip(this.components);
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbl_Avion = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfimar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoliticas)).BeginInit();
@@ -654,18 +654,19 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Avion.Text = "?";
             this.lbl_Avion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnConfimar
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(394, 379);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 32);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "Continuar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConfimar.BackColor = System.Drawing.Color.Black;
+            this.btnConfimar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfimar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfimar.ForeColor = System.Drawing.Color.White;
+            this.btnConfimar.Location = new System.Drawing.Point(394, 379);
+            this.btnConfimar.Name = "btnConfimar";
+            this.btnConfimar.Size = new System.Drawing.Size(85, 32);
+            this.btnConfimar.TabIndex = 51;
+            this.btnConfimar.Text = "Continuar";
+            this.btnConfimar.UseVisualStyleBackColor = false;
+            this.btnConfimar.Click += new System.EventHandler(this.btnConfimar_Click);
             // 
             // Reserva
             // 
@@ -673,7 +674,7 @@ namespace Clave2_Grupo3_US23007_
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 423);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConfimar);
             this.Controls.Add(this.picPoliticas);
             this.Controls.Add(this.lbl_Pasajero);
             this.Controls.Add(this.label44);
@@ -781,6 +782,6 @@ namespace Clave2_Grupo3_US23007_
         public System.Windows.Forms.Label lbl_Nacimiento;
         public System.Windows.Forms.Label lbl_Pasajero;
         public System.Windows.Forms.Label lbl_Avion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfimar;
     }
 }
