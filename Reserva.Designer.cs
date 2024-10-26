@@ -528,7 +528,7 @@ namespace Clave2_Grupo3_US23007_
             this.label37.Location = new System.Drawing.Point(476, 70);
             this.label37.Name = "label37";
             this.label37.Padding = new System.Windows.Forms.Padding(4);
-            this.label37.Size = new System.Drawing.Size(82, 26);
+            this.label37.Size = new System.Drawing.Size(92, 26);
             this.label37.TabIndex = 42;
             this.label37.Text = "Telefono";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -541,7 +541,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Telefono.Location = new System.Drawing.Point(476, 96);
             this.lbl_Telefono.Name = "lbl_Telefono";
             this.lbl_Telefono.Padding = new System.Windows.Forms.Padding(4);
-            this.lbl_Telefono.Size = new System.Drawing.Size(82, 26);
+            this.lbl_Telefono.Size = new System.Drawing.Size(92, 26);
             this.lbl_Telefono.TabIndex = 43;
             this.lbl_Telefono.Text = "?";
             this.lbl_Telefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -660,7 +660,7 @@ namespace Clave2_Grupo3_US23007_
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(373, 379);
+            this.button1.Location = new System.Drawing.Point(394, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 32);
             this.button1.TabIndex = 51;
@@ -722,7 +722,7 @@ namespace Clave2_Grupo3_US23007_
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Reserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "?";
+            this.Text = "Reservas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoliticas)).EndInit();

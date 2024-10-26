@@ -198,9 +198,7 @@ namespace Clave2_Grupo3_US23007_
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Reserva resrvas = new Reserva();
-            resrvas.Show();
-            this.Hide();
+            
         }
     }
 }
