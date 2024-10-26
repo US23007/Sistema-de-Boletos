@@ -20,6 +20,8 @@ namespace Clave2_Grupo3_US23007_
             panelAmerican.Visible = false;
             panelMasterCard.Visible = false;
             panelBancoAgricola.Visible = false;
+            MontosAdicionales montos = new MontosAdicionales();
+            montos.MostrarMontosAdicionales(lbl_Precio_Vuelo, lbl_Equipaje, lbl_Monto);
         }
 
         private void txt_Nombre_Banco_TextChanged(object sender, EventArgs e)

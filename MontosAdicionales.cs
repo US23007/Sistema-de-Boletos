@@ -11,14 +11,8 @@ namespace Clave2_Grupo3_US23007_
     class MontosAdicionales : Reservaciones
     {
 
-        private static decimal MontoVuelo{get; set;}
         private static decimal MontoConCargos { get; set; }
 
-        public Decimal PagoVuelo
-        {
-            get { return MontoVuelo;}
-            set { MontoVuelo = value; }
-        }
 
         public Decimal PagoTotal
         {
@@ -28,63 +22,24 @@ namespace Clave2_Grupo3_US23007_
 
         public bool AgregarMontos()
         {
+            
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            decimal montoBase = 0;
             using (MySqlConnection conector = new MySqlConnection(connectionString))
             {
               
-                try
-                    {
-                        conector.Open();
-                        string consultaPrecio = @"SELECT vuelos.Precio 
-                                                    FROM vuelos  
-                                                    JOIN reserva  ON vuelos.ID = reserva.vuelos_ID
-                                                    JOIN pasajero on reserva.pasajero_ID = pasajero.ID
-                                                    WHERE reserva.vuelos_ID = @reserva and pasajero.ID = @pasajero";
-                            using (MySqlCommand comandoPrecio = new MySqlCommand(consultaPrecio, conector))
-                            {
-                                comandoPrecio.Parameters.AddWithValue("@reserva", ObtenerReserva);
-                                comandoPrecio.Parameters.AddWithValue("@pasajero", Passenger);
-
-                                object resultado = comandoPrecio.ExecuteScalar();
-
-
-                                if (resultado != null) 
-                                    {
-                                        montoBase = Convert.ToDecimal(resultado); 
-                                        MontoVuelo = montoBase;
-                                        return true;
-                                    }
-                                else
-                                {
-                                    MessageBox.Show("No se encontró el precio para la reserva y pasajero especificados.",
-                                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    return false;
-                                }
-                    }
-                }
-                catch (MySqlException ex)
+                if(TipoMaletas == "De Mano")
                 {
-                    MessageBox.Show($"Error al obtener el precio: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
+                    MontoConCargos = ObtenerMonto + ObtenerMonto * 0.10m;
+                    MessageBox.Show("Se cobrará un 10% adicional al monto del vuelo por equipaje de mano","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+
+
                 }
-            }
-
-            decimal montoTotal = montoBase; 
-
-            if (TipoMaletas == "De Mano")
-            {
-                montoTotal += montoBase * 0.10m;
-                MontoConCargos = montoTotal;
-            }
-            else if (TipoMaletas == "De Bodega")
-            {
-                montoTotal += montoBase * 0.20m; 
-            }
-
-
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
+                else if(TipoMaletas == "De Bodega")
+                {
+                    MontoConCargos = ObtenerMonto + ObtenerMonto * 0.20m;
+                    MessageBox.Show("Se cobrará un 20% adicional al monto del vuelo por equipaje de Bodega", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                Console.WriteLine("Monto Total" + MontoConCargos);
                 try
                 {
                     conector.Open();
@@ -100,7 +55,8 @@ namespace Clave2_Grupo3_US23007_
 
                         int filasAfectadas = comandoInsert.ExecuteNonQuery();
 
-                        return filasAfectadas > 0; 
+                        return filasAfectadas > 0;
+                        Console.WriteLine(MontoConCargos);
                     }
                 }
                 catch (MySqlException ex)
@@ -109,6 +65,14 @@ namespace Clave2_Grupo3_US23007_
                     return false; 
                 }
             }
+        }
+
+        public void MostrarMontosAdicionales(Label precioVuelo,Label Equipaje,Label total)
+        {
+            precioVuelo.Text = string.Format("${0:N2}", ObtenerMonto);
+            Equipaje.Text = TipoMaletas;
+            total.Text = MontoConCargos.ToString();
+            Console.WriteLine("Monto Cargo DEspeus",MontoConCargos.ToString());
         }
 
         

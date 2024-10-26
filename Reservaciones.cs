@@ -13,6 +13,8 @@ namespace Clave2_Grupo3_US23007_
     {
         private static int idAsiento { get; set;}
         private static int idReserva { get; set; }
+
+        private static decimal MontoVuelo {get; set;}
         public int ObtenerAsientoID
         {
             get { return idAsiento; }
@@ -22,6 +24,12 @@ namespace Clave2_Grupo3_US23007_
         {
             get { return idReserva; }
             set { idReserva = value; }
+        }
+
+        public decimal ObtenerMonto
+        {
+            get { return MontoVuelo;}
+            set { MontoVuelo = value;}
         }
 
         public bool MostrarInformacionPasajero(Label nombre,Label Pasaporte,Label Telefono,Label Nacimiento,Label Nacionalidad,Label Pasajero,Label Equipaje,Label Asiento)
@@ -56,7 +64,7 @@ namespace Clave2_Grupo3_US23007_
                                 Pasajero.Text = reader["TipoPasajero"].ToString();
                                 Equipaje.Text = reader["TipoEquipaje"].ToString();
                                 Asiento.Text = reader["PreferenciaAsiento"].ToString();
-                                MessageBox.Show("Todo bien en Pasajero Datos");
+                              
                                 Console.WriteLine(nombre);
                                 Console.WriteLine(Pasaporte);
                                 Console.WriteLine(Telefono);
@@ -128,9 +136,9 @@ namespace Clave2_Grupo3_US23007_
                                 Hora_Llegada.Text = reader["HoraLlegada"].ToString();
                                 Puerta.Text = reader["Puerta"].ToString();
                                 Precio.Text = string.Format("${0:N2}", reader["Precio"]);
+                                ObtenerMonto = Convert.ToDecimal(reader["Precio"]);
 
-
-                                MessageBox.Show("Todo bien en Detalles");
+                                
                                 Console.WriteLine(Aerolinea);
                                 Console.WriteLine(Numero_Vuelo);
                                 Console.WriteLine(Origen);
@@ -139,6 +147,8 @@ namespace Clave2_Grupo3_US23007_
                                 Console.WriteLine(Llegada);
                                 Console.WriteLine(Avion);
                                 Console.WriteLine(Hora_Llegada);
+                                Console.WriteLine("Soy precio" + Precio);
+                                Console.WriteLine("Monto de Vuelo" + ObtenerMonto);
                                 return true;
                             }
                             else

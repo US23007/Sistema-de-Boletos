@@ -484,7 +484,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Monto.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Monto.Size = new System.Drawing.Size(286, 26);
             this.lbl_Monto.TabIndex = 91;
-            this.lbl_Monto.Text = "$326";
+            this.lbl_Monto.Text = "?";
             this.lbl_Monto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label34
@@ -510,7 +510,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Equipaje.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Equipaje.Size = new System.Drawing.Size(131, 26);
             this.lbl_Equipaje.TabIndex = 89;
-            this.lbl_Equipaje.Text = "De mano";
+            this.lbl_Equipaje.Text = "?";
             this.lbl_Equipaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label29
@@ -536,7 +536,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_Precio_Vuelo.Padding = new System.Windows.Forms.Padding(4);
             this.lbl_Precio_Vuelo.Size = new System.Drawing.Size(145, 26);
             this.lbl_Precio_Vuelo.TabIndex = 87;
-            this.lbl_Precio_Vuelo.Text = "$250";
+            this.lbl_Precio_Vuelo.Text = "?";
             this.lbl_Precio_Vuelo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label25
