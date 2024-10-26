@@ -35,11 +35,6 @@ namespace Clave2_Grupo3_US23007_
                 return;
 
             }
-            else if (string.IsNullOrEmpty(txtContraseña.Text))
-            {
-                erp.SetError(txtContraseña, "Campo vacio");
-                
-            }
             else if (string.IsNullOrEmpty(txtcorreo.Text))
             {
                 erp.SetError(txtcorreo, "Campo vacio");
@@ -50,7 +45,7 @@ namespace Clave2_Grupo3_US23007_
                 ValidarIngreso validar = new ValidarIngreso();
                 Pasajero pasajero = new Pasajero();
                 Datos datos = new Datos();
-                validar.Validar(txtUsuario.Text, txtContraseña.Text, txtcorreo.Text);
+                validar.Validar(txtUsuario.Text, txtcorreo.Text);
 
                 if (validar.IngresoUsuario() && pasajero.ObtenerAsientos(datos.cbxAsiento))
                 {
@@ -72,13 +67,13 @@ namespace Clave2_Grupo3_US23007_
             if (char.IsLetter(e.KeyChar)|| char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
-                btnIngresar.Enabled = true;
+                btnContinuar.Enabled = true;
             }
             else
             {
                 e.Handled = true;
                 erp.SetError(txtUsuario, "Ingresar solo letras");
-                btnIngresar.Enabled = false;
+                btnContinuar.Enabled = false;
             }
         }
 
@@ -87,52 +82,13 @@ namespace Clave2_Grupo3_US23007_
             erp.SetError(txtUsuario, "");
         }
 
-        //Validaciones de Contraseña
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-            erp.SetError(txtContraseña, "");
-        }
-
-        //Validacion de Correo Electronico (Método Visto en Guias)
-        private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string patronEmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-            Regex validaEmail = new Regex(patronEmail);
-            if (validaEmail.IsMatch(txtcorreo.Text))
-            {
-                erp.SetError(txtcorreo, "");
-                btnIngresar.Enabled =true;
-                btnRegistrase.Enabled = true;
-            }
-            else
-            {
-                erp.SetError(txtcorreo, "Email NO valido");
-                btnIngresar.Enabled = false;
-                btnRegistrase.Enabled = false;
-            }
-        }
-
-        //Funcionalidad para Mostrar la Contraseña
-        private void cbxContraseña_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbxContraseña.Checked == true)
-            {
-                txtContraseña.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                txtContraseña.UseSystemPasswordChar = false;
-            }
-        }
-
+  
         //Limpiar los campos y demás componentes
         private void label5_Click(object sender, EventArgs e)
         {
-            txtUsuario.Text = string.Empty;
-            txtContraseña.Text = string.Empty;
+            txtUsuario.Text = string.Empty; 
             txtcorreo.Text = string.Empty;
             erp.Clear();
-            cbxContraseña.Checked = false;
             MessageBox.Show("Datos limpios", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
@@ -142,7 +98,7 @@ namespace Clave2_Grupo3_US23007_
             Pasajero pasajero = new Pasajero();
             Datos datos = new Datos();
 
-            if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text, txtContraseña.Text) && pasajero.ObtenerAsientos(datos.cbxAsiento))
+            if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text) && pasajero.ObtenerAsientos(datos.cbxAsiento))
             {
                 validar.ObtenerUsuario = txtUsuario.Text;
                 datos.Show();

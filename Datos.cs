@@ -92,11 +92,10 @@ namespace Clave2_Grupo3_US23007_
                 pasajero.NombrePasajero = nombre;
                 pasajero.ObtenerSitio = asiento;
                 pasajero.Butaca = asiento;
-
                 pasajero.Ingresar_Pasajero(nombre, time, pasaporte, asiento, telefono, nacionalidad, equipaje, tipo);
-                if (pasajero.RegistrarPasajero() && pasajero.ReservarAsiento())
+                if (pasajero.RegistrarPasajero() && pasajero.ReservarAsiento() && reservaciones.MostrarInformacionPasajero())
                 {
-                   
+                
                         reserva.Show();
                         this.Hide();
                     

@@ -32,12 +32,10 @@ namespace Clave2_Grupo3_US23007_
         }
         
         //Constructor 
-        public void Validar(string nombre, string contraseña, string correo)
+        public void Validar(string nombre,  string correo)
         {
             this.Nombre_Usuario = nombre;
-            this.Contraseña_Usuario = contraseña;
             this.Correo_Usuario = correo;
-
         }
 
         // Propiedades de Clase
@@ -61,7 +59,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
-        public bool RegistrarEnDB(string usuario, string correo, string contraseña)
+        public bool RegistrarEnDB(string usuario, string correo)
         {
             string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
             using (MySqlConnection conector = new MySqlConnection(connectionString))
@@ -88,12 +86,11 @@ namespace Clave2_Grupo3_US23007_
                     }
 
                     // Registrar el nuevo usuario
-                    string consulta = @"INSERT INTO usuario (Usuario, Contraseña, Correo) 
-                                VALUES (@usuario, @contraseña, @correo)";
+                    string consulta = @"INSERT INTO usuario (Usuario, Correo) 
+                                VALUES (@usuario, @correo)";
                     using (MySqlCommand comando = new MySqlCommand(consulta, conector))
                     {
                         comando.Parameters.AddWithValue("@usuario", usuario);
-                        comando.Parameters.AddWithValue("@contraseña", contraseña);
                         comando.Parameters.AddWithValue("@correo", correo);
 
                         int filasAfectadas = comando.ExecuteNonQuery();
@@ -104,9 +101,10 @@ namespace Clave2_Grupo3_US23007_
                             using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conector))
                             {
                                 ObtenerIdUsuario = Convert.ToInt32(obtenerIDCmd.ExecuteScalar());
+
                             }
                             Console.WriteLine(ObtenerIdUsuario);
-                            MessageBox.Show("Usuario registrado exitosamente.",
+                            MessageBox.Show("Usuario Ingresado exitosamente.",
                                             "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return true;
                         }
