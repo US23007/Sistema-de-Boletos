@@ -13,7 +13,7 @@ namespace Clave2_Grupo3_US23007_
 
         private static decimal MontoConCargos { get; set; }
 
-
+        public static decimal Total { get; set; }
         public Decimal PagoTotal
         {
             get { return MontoConCargos; }
@@ -31,15 +31,18 @@ namespace Clave2_Grupo3_US23007_
                 {
                     MontoConCargos = ObtenerMonto + ObtenerMonto * 0.10m;
                     MessageBox.Show("Se cobrará un 10% adicional al monto del vuelo por equipaje de mano","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-
+                    Console.WriteLine("Monto Total" + MontoConCargos);
+                    Total = MontoConCargos;
 
                 }
                 else if(TipoMaletas == "De Bodega")
                 {
                     MontoConCargos = ObtenerMonto + ObtenerMonto * 0.20m;
                     MessageBox.Show("Se cobrará un 20% adicional al monto del vuelo por equipaje de Bodega", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    Console.WriteLine("Monto Total" + MontoConCargos);
+                    Total = MontoConCargos;
                 }
-                Console.WriteLine("Monto Total" + MontoConCargos);
+                
                 try
                 {
                     conector.Open();
@@ -71,8 +74,9 @@ namespace Clave2_Grupo3_US23007_
         {
             precioVuelo.Text = string.Format("${0:N2}", ObtenerMonto);
             Equipaje.Text = TipoMaletas;
-            total.Text = MontoConCargos.ToString();
-            Console.WriteLine("Monto Cargo DEspeus",MontoConCargos.ToString());
+            total.Text = string.Format("${0:N2}",Total);
+            Console.WriteLine("Soy Total" + Total);
+
         }
 
         

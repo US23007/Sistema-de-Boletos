@@ -339,6 +339,7 @@ namespace Clave2_Grupo3_US23007_
             txt_CVC_Visa.Text = string.Empty;
             txt_Codigo_Master.Text = string.Empty;
             txt_Codigo_American.Text = string.Empty;
+            erp.Clear();
         }
 
         public void Desmarcar(CheckBox seleccionado)
