@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +23,9 @@ namespace Clave2_Grupo3_US23007_
 
         public bool AgregarMontos()
         {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
             
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
               
                 if(TipoMaletas == "De Mano")
                 {
@@ -45,12 +45,12 @@ namespace Clave2_Grupo3_US23007_
                 
                 try
                 {
-                    conector.Open();
+                   
 
                     string consultaInsert = @"INSERT INTO pagos (Estado, reserva_ID, Monto, Fecha) 
                                       VALUES (@estado, @reservaId, @monto, NOW())";
 
-                    using (MySqlCommand comandoInsert = new MySqlCommand(consultaInsert, conector))
+                    using (MySqlCommand comandoInsert = new MySqlCommand(consultaInsert, conn))
                     {
                         comandoInsert.Parameters.AddWithValue("@estado", "Pendiente");
                         comandoInsert.Parameters.AddWithValue("@reservaId", ObtenerReserva);
@@ -67,20 +67,28 @@ namespace Clave2_Grupo3_US23007_
                     MessageBox.Show($"Error al insertar el pago: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false; 
                 }
-            }
+                    finally
+                    {
+                        if (conn != null && conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
+                }
+
         }
 
         public bool MostrarMontosAdicionales(Label precioVuelo,Label Equipaje,Label total)
         {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
             precioVuelo.Text = string.Format("${0:N2}", ObtenerMonto);
             Equipaje.Text = TipoMaletas;
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+           
             string monto = @"Select Monto from pagos where pagos.reserva_ID = @reserva";
-            using (MySqlConnection conector = new MySqlConnection(connectionString)){
-
+            
                 try{
-                    conector.Open();
-                    using (MySqlCommand comandoInsert = new MySqlCommand(monto, conector))
+                 
+                    using (MySqlCommand comandoInsert = new MySqlCommand(monto, conn))
                     {
                         comandoInsert.Parameters.AddWithValue("@reserva", ObtenerReserva);
                         using (MySqlDataReader reader = comandoInsert.ExecuteReader())
@@ -104,58 +112,72 @@ namespace Clave2_Grupo3_US23007_
                     MessageBox.Show($"Error al insertar el pago: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-
-            }
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
 
         }
 
 
         public bool ActualizarEstados() {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
 
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
+            
             string actualizarReserva = "UPDATE reserva SET Estado = 'Completada' WHERE ID = @reserva;";
             string actualizarPago = @"UPDATE pagos
                                        INNER JOIN reserva ON reserva.ID = pagos.reserva_ID
                                        SET pagos.Estado = 'Completado'
                                        WHERE reserva.ID = @reservaId;";
 
-            using (MySqlConnection conexion = new MySqlConnection(connectionString))
+            using (MySqlTransaction transaccion = conn.BeginTransaction())
             {
-                conexion.Open();
-                using (MySqlTransaction transaccion = conexion.BeginTransaction())
+                try
                 {
-                    try
+                    // Actualizar el estado de la reserva.
+                    using (MySqlCommand cmdReserva = new MySqlCommand(actualizarReserva, conn, transaccion))
                     {
-                        // Actualizar el estado de la reserva.
-                        using (MySqlCommand cmdReserva = new MySqlCommand(actualizarReserva, conexion, transaccion))
-                        {
-                            cmdReserva.Parameters.AddWithValue("@reserva", ObtenerReserva);
-                            cmdReserva.ExecuteNonQuery();
-                        }
-
-                        // Actualizar el estado del pago.
-                        using (MySqlCommand cmdPago = new MySqlCommand(actualizarPago, conexion, transaccion))
-                        {
-                            cmdPago.Parameters.AddWithValue("@reservaId", ObtenerReserva);
-                            cmdPago.ExecuteNonQuery();
-                        }
-
-                        // Confirmar los cambios si ambas actualizaciones son exitosas.
-                        transaccion.Commit();
-                        MessageBox.Show("Estados actualizados correctamente.", "Proceso Completado",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return true;
+                        cmdReserva.Parameters.AddWithValue("@reserva", ObtenerReserva);
+                        cmdReserva.ExecuteNonQuery();
                     }
-                    catch (MySqlException ex)
+
+                    // Actualizar el estado del pago.
+                    using (MySqlCommand cmdPago = new MySqlCommand(actualizarPago, conn, transaccion))
                     {
-                        // Revertir cambios en caso de error.
-                        transaccion.Rollback();
-                        MessageBox.Show($"Error al actualizar los estados: {ex.Message}", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
+                        cmdPago.Parameters.AddWithValue("@reservaId", ObtenerReserva);
+                        cmdPago.ExecuteNonQuery();
+                    }
+
+                    // Confirmar los cambios si ambas actualizaciones son exitosas.
+                    transaccion.Commit();
+                    MessageBox.Show("Estados actualizados correctamente.", "Proceso Completado",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                catch (MySqlException ex)
+                {
+                    // Revertir cambios en caso de error.
+                    transaccion.Rollback();
+                    MessageBox.Show($"Error al actualizar los estados: {ex.Message}", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
                     }
                 }
             }
+            
+
+            
 
         }
     }

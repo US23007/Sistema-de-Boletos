@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -34,20 +35,19 @@ namespace Clave2_Grupo3_US23007_
 
         public bool MostrarInformacionPasajero(Label nombre,Label Pasaporte,Label Telefono,Label Nacimiento,Label Nacionalidad,Label Pasajero,Label Equipaje,Label Asiento)
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+            
                 try
                 {
-                    conector.Open();
-
+                    
                     // Primera consulta para el pasajero
                     string consulta = @"Select NombreCompleto, Pasaporte, Telefono, Fechanacimiento, Nacionalidad, TipoPasajero, TipoEquipaje, PreferenciaAsiento 
                                  from pasajero 
                                  INNER JOIN usuario on pasajero.usuario_ID = usuario.ID 
                                  where pasajero.usuario_ID = @idUser";
 
-                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conn))
                     {
                         comando.Parameters.AddWithValue("@idUser", ObtenerIdUsuario);
                         Console.WriteLine("Id User :" + ObtenerIdUsuario);
@@ -88,19 +88,24 @@ namespace Clave2_Grupo3_US23007_
                     MessageBox.Show($"Error en la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-            }
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            
         }
 
 
         public bool ObtenerDetallesVuelo(Label Aerolinea, Label Numero_Vuelo, Label Origen, Label Destino, Label Salida, Label Llegada, Label Avion, Label Hora_Salida, Label Hora_Llegada, Label Puerta, Label Precio)
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+            
                 try
                 {
-                    conector.Open();
                     
                     string consulta = @"Select aerolinea.Nombre, vuelos.ID, rutas.CodigoOrigen, rutas.CodigoDestino, vuelos.FechaSalida,
                                  vuelos.FechaLlegada, Modelo, HoraSalida, HoraLlegada, vuelos.Puerta, vuelos.Precio
@@ -111,7 +116,7 @@ namespace Clave2_Grupo3_US23007_
                                  INNER JOIN asientos on aviones.ID = asientos.aviones_ID
                                  where vuelos.ID = @vuelos and aviones.ID = @aviones and asientos.NumeroAsiento = @asiento";
 
-                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conn))
                     {
                         comando.Parameters.AddWithValue("@vuelos", ObtenerId);
                         comando.Parameters.AddWithValue("@aviones", ObtenerAvion);
@@ -164,25 +169,31 @@ namespace Clave2_Grupo3_US23007_
                     MessageBox.Show($"Error en la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-            }
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            
         }
 
 
         public bool ReservarEnDB()
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+            
                 try
                 {
-                    conector.Open();
+                 
 
                     string consultaAsiento = @"Select asientos.ID from asientos 
                                                 INNER JOIN  aviones on asientos.aviones_ID = aviones.ID
                                                 where NumeroAsiento = @numero and aviones.ID = @avion";
 
-                    using (MySqlCommand comandoAsiento = new MySqlCommand(consultaAsiento, conector))
+                    using (MySqlCommand comandoAsiento = new MySqlCommand(consultaAsiento, conn))
                     {
                         comandoAsiento.Parameters.AddWithValue("@numero", ObtenerSitio);
                         comandoAsiento.Parameters.AddWithValue("@avion", ObtenerAvion);
@@ -203,11 +214,15 @@ namespace Clave2_Grupo3_US23007_
                     string consulta = @"INSERT INTO reserva(Estado,Fecha,pasajero_ID,asientos_ID,vuelos_ID)
                                         VALUES(@estado, @fecha,@pasajero,@asientos,@vuelos)";
 
-                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conn))
                     {
+                        Console.WriteLine("Soy id Usuario"+ObtenerIdUsuario);
+                        Console.WriteLine("Soy id Pasajro"+Passenger);
+                        Console.WriteLine("Soy id asiento"+ObtenerAsientoID);
+                        Console.WriteLine("Soy id Vuelo"+ObtenerId);
                         comando.Parameters.AddWithValue("@estado", "Pendiente");
                         comando.Parameters.AddWithValue("@fecha", DateTime.Now);
-                        comando.Parameters.AddWithValue("@pasajero", ObtenerIdUsuario);
+                        comando.Parameters.AddWithValue("@pasajero", Passenger);
                         comando.Parameters.AddWithValue("@asientos", ObtenerAsientoID);
                         comando.Parameters.AddWithValue("@vuelos", ObtenerId);
 
@@ -216,7 +231,7 @@ namespace Clave2_Grupo3_US23007_
                         if (filasAfectadas > 0)
                         {
                             string input = "SELECT LAST_INSERT_ID()";
-                            using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conector))
+                            using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conn))
                             {
                                 ObtenerReserva = Convert.ToInt32(obtenerIDCmd.ExecuteScalar());
 
@@ -238,11 +253,18 @@ namespace Clave2_Grupo3_US23007_
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show($"Error en la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Error en la base de datos en reserva db no nindo el error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
 
-            }
         }
+        
     }
 }
