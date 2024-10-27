@@ -34,13 +34,11 @@ namespace Clave2_Grupo3_US23007_
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.avionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Contenedor = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -73,42 +71,18 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.cerrarSesiónToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._1486564399_close_81512;
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // boletosToolStripMenuItem
             // 
-            this.boletosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.avionToolStripMenuItem});
-            this.boletosToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.facebook_placeholder_for_locate_places_on_maps_icon_icons_com_57151;
+            this.boletosToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.plane_takeoff_13263;
             this.boletosToolStripMenuItem.Name = "boletosToolStripMenuItem";
-            this.boletosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.boletosToolStripMenuItem.Text = "Vuelos";
+            this.boletosToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.boletosToolStripMenuItem.Text = "Aerolineas";
+            this.boletosToolStripMenuItem.ToolTipText = "Información sobre Aerolineas,Vuelos,Aviones,Asientos";
             this.boletosToolStripMenuItem.Click += new System.EventHandler(this.boletosToolStripMenuItem_Click);
-            // 
-            // avionToolStripMenuItem
-            // 
-            this.avionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asientoToolStripMenuItem});
-            this.avionToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.plane_takeoff_13263;
-            this.avionToolStripMenuItem.Name = "avionToolStripMenuItem";
-            this.avionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.avionToolStripMenuItem.Text = "Avion";
-            // 
-            // asientoToolStripMenuItem
-            // 
-            this.asientoToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.seat_passenger_icon_135220;
-            this.asientoToolStripMenuItem.Name = "asientoToolStripMenuItem";
-            this.asientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.asientoToolStripMenuItem.Text = "Asiento";
-            // 
-            // ticketToolStripMenuItem
-            // 
-            this.ticketToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.group_profile_users_icon_icons_com_73540;
-            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(180, 20);
-            this.ticketToolStripMenuItem.Text = "Administración de Usuarios";
             // 
             // reservasToolStripMenuItem
             // 
@@ -140,6 +114,13 @@ namespace Clave2_Grupo3_US23007_
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.facturasToolStripMenuItem.Text = "Pagos";
+            // 
+            // ticketToolStripMenuItem
+            // 
+            this.ticketToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.group_profile_users_icon_icons_com_73540;
+            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(180, 20);
+            this.ticketToolStripMenuItem.Text = "Administración de Usuarios";
             // 
             // Contenedor
             // 
@@ -180,8 +161,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem avionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem asientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
         private System.Windows.Forms.Panel Contenedor;
     }

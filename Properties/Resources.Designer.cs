@@ -133,6 +133,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap airplane_fly_travel_icon_icons_com_51074 {
+            get {
+                object obj = ResourceManager.GetObject("airplane_fly_travel_icon_icons_com_51074", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Airport_43692 {
             get {
                 object obj = ResourceManager.GetObject("Airport_43692", resourceCulture);
@@ -336,6 +346,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap flying_airplane_icon_icons_com_53991 {
             get {
                 object obj = ResourceManager.GetObject("flying_airplane_icon_icons_com_53991", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gate_digital_airline_icon_215792 {
+            get {
+                object obj = ResourceManager.GetObject("gate_digital_airline_icon_215792", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

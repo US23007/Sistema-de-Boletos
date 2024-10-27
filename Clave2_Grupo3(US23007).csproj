@@ -131,6 +131,18 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSistema.Designer.cs">
+      <DependentUpon>FormSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuarios.Designer.cs">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imagen.cs" />
     <Compile Include="Informacion.cs">
       <SubType>Form</SubType>
@@ -161,6 +173,7 @@
       <DependentUpon>Reserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Reservaciones.cs" />
+    <Compile Include="Sistema.cs" />
     <Compile Include="ValidarIngreso.cs" />
     <Compile Include="Vuelos.cs" />
     <EmbeddedResource Include="Admin.resx">
@@ -177,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSistema.resx">
+      <DependentUpon>FormSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuarios.resx">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion.resx">
       <DependentUpon>Informacion.cs</DependentUpon>
@@ -426,6 +445,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group-profile-users_icon-icons.com_73540.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gate_digital_airline_icon_215792.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airplane_fly_travel_icon-icons.com_51074.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

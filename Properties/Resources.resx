@@ -175,9 +175,6 @@
   <data name="account_login_log_in_icon_250759" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_login_log_in_icon_250759.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_1486564399_close_81512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1486564399-close_81512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="employee_group_solid_icon_235378" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee_group_solid_icon_235378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -282,5 +279,14 @@
   </data>
   <data name="group_profile_users_icon_icons_com_73540" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group-profile-users_icon-icons.com_73540.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="airplane_fly_travel_icon_icons_com_51074" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\airplane_fly_travel_icon-icons.com_51074.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gate_digital_airline_icon_215792" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gate_digital_airline_icon_215792.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1486564399_close_81512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486564399-close_81512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
