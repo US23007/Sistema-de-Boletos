@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,16 +62,14 @@ namespace Clave2_Grupo3_US23007_
 
         public bool RegistrarEnDB(string usuario, string correo)
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+            
                 try
-                {
-                    conector.Open();
-
+                {                  
                     // Verificar si el usuario o correo ya existe
                     string query = @"SELECT COUNT(*) FROM usuario WHERE Usuario = @usuario OR Correo = @correo";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conector))
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@usuario", usuario);
                         cmd.Parameters.AddWithValue("@correo", correo);
@@ -88,7 +87,7 @@ namespace Clave2_Grupo3_US23007_
                     // Registrar el nuevo usuario
                     string consulta = @"INSERT INTO usuario (Usuario, Correo) 
                                 VALUES (@usuario, @correo)";
-                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conn))
                     {
                         comando.Parameters.AddWithValue("@usuario", usuario);
                         comando.Parameters.AddWithValue("@correo", correo);
@@ -98,7 +97,7 @@ namespace Clave2_Grupo3_US23007_
                         if (filasAfectadas > 0)
                         {
                             string input = "SELECT LAST_INSERT_ID()";
-                            using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conector))
+                            using (MySqlCommand obtenerIDCmd = new MySqlCommand(input, conn))
                             {
                                 ObtenerIdUsuario = Convert.ToInt32(obtenerIDCmd.ExecuteScalar());
 
@@ -122,19 +121,24 @@ namespace Clave2_Grupo3_US23007_
                                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-            }
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            
         }
 
         public bool IngresoUsuario()
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            MySqlConnection conector = new MySqlConnection(connectionString);
-
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
             try
             {
-                conector.Open();
                 string consulta = "SELECT ID FROM usuario WHERE Usuario = @nombre AND Contraseña = @contraseña AND Correo = @correo";
-                using (MySqlCommand cmd = new MySqlCommand(consulta, conector))
+                using (MySqlCommand cmd = new MySqlCommand(consulta, conn))
                 {
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
                     cmd.Parameters.AddWithValue("@contraseña", Contraseña);
@@ -163,6 +167,13 @@ namespace Clave2_Grupo3_US23007_
                 MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+            finally
+            {
+                if (conn != null && conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
             }
         }
 

@@ -41,35 +41,33 @@ namespace Clave2_Grupo3_US23007_
 
         public bool IngresoAdministrador()
         {
-            string connectionString = "Server=localhost;Port=3306;Database=clave2_grupo3db;Uid=root;Pwd=12345;";
-
+           
             try
             {
-                using (MySqlConnection conector = new MySqlConnection(connectionString))
+                Conexion conexion = new Conexion();
+                 string consulta = "SELECT * FROM administrador WHERE Usuario = @nombre AND Contraseña = @contraseña";
+
+                using (MySqlCommand cmd = new MySqlCommand(consulta, conexion.Conectar()))
                 {
-                    conector.Open();
-                    string consulta = "SELECT * FROM administrador WHERE Usuario = @nombre AND Contraseña = @contraseña";
+                    cmd.Parameters.AddWithValue("@nombre", Nombre);
+                    cmd.Parameters.AddWithValue("@contraseña", Contraseña);
 
-                    using (MySqlCommand cmd = new MySqlCommand(consulta, conector))
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@nombre", Nombre);
-                        cmd.Parameters.AddWithValue("@contraseña", Contraseña);
-
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        if (reader.Read())
                         {
-                            if (reader.Read())
-                            {
-                                return true;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Credenciales incorrectas. Intente nuevamente.", "Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return false;
-                            }
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Credenciales incorrectas. Intente nuevamente.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
                         }
                     }
                 }
+                    
+                
             }
             catch (MySqlException ex)
             {

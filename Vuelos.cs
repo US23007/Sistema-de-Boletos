@@ -72,15 +72,14 @@ namespace Clave2_Grupo3_US23007_
 
         public void ObtenrRutas(ComboBox origen,ComboBox destino)
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            MySqlConnection conector = new MySqlConnection(connectionString);
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
 
             try
             {
-                conector.Open();
                 string query = "Select  DISTINCT Origen,Destino From rutas";
 
-                using (MySqlCommand comando = new MySqlCommand(query, conector))
+                using (MySqlCommand comando = new MySqlCommand(query, conn))
 
                 {
                     MySqlDataReader reader = comando.ExecuteReader();
@@ -93,7 +92,6 @@ namespace Clave2_Grupo3_US23007_
 
                     reader.Close();
                     //Microsoft.VisualBasic.Interaction.MsgBox("Datos Cargados");
-                    conector.Close();
                 }
             }
             catch (MySqlException ex)
@@ -102,27 +100,27 @@ namespace Clave2_Grupo3_US23007_
             }
             finally
             {
-                conector.Close();
+                conn.Close();
             }
         }
 
 
         public void ObtenerVuelosDisponibles(DataGridView informacion)
         {
-            string connectionString = "Server=localhost;Port=3306;Database=clave2_grupo3db;Uid=root;Pwd=12345;";
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    conector.Open();
-                    string consulta = "SELECT vuelos.ID, aerolinea.Nombre, aerolinea.Codigo, Origen, Destino, FechaSalida, FechaLlegada, Duracion, HoraSalida, HoraLlegada,aviones.ID,aviones.TipoAvion, Precio " +
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+
+            try {
+                    
+
+                string consulta = "SELECT vuelos.ID, aerolinea.Nombre, aerolinea.Codigo, Origen, Destino, FechaSalida, FechaLlegada, Duracion, HoraSalida, HoraLlegada,aviones.ID,aviones.TipoAvion, Precio " +
                                       "FROM vuelos " +
                                       "INNER JOIN aviones ON vuelos.aviones_ID = aviones.ID " +
                                       "INNER JOIN aerolinea ON aviones.aerolinea_ID = aerolinea.ID " +
                                       "INNER JOIN rutas ON vuelos.rutas_ID = rutas.ID " +
                                       "WHERE Origen = @origen AND Destino = @destino AND FechaSalida = @fecha AND HoraSalida = @hora";
 
-                    using (MySqlCommand comando = new MySqlCommand(consulta, conector))
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conn))
                     {
                         comando.Parameters.AddWithValue("@origen", OrigenVuelo);
                         comando.Parameters.AddWithValue("@destino", DestinoVuelo);
@@ -155,7 +153,7 @@ namespace Clave2_Grupo3_US23007_
                                                          "INNER JOIN rutas ON vuelos.rutas_ID = rutas.ID " +
                                                          "WHERE Origen = @ciudadorigen AND Destino = @ciudaddestino";
 
-                                using (MySqlCommand nuevocomando = new MySqlCommand(consultaGeneral, conector))
+                                using (MySqlCommand nuevocomando = new MySqlCommand(consultaGeneral, conn))
                                 {
                                     nuevocomando.Parameters.AddWithValue("@ciudadorigen", OrigenVuelo);
                                     nuevocomando.Parameters.AddWithValue("@ciudaddestino", DestinoVuelo);
@@ -182,7 +180,14 @@ namespace Clave2_Grupo3_US23007_
                 {
                     MessageBox.Show("Hubo un problema al conectar a la base de datos. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+              
         }
 
     }

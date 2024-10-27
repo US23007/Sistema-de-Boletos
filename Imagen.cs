@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,14 +17,14 @@ namespace Clave2_Grupo3_US23007_
        
         public void CargarImagenes()
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            MySqlConnection conector = new MySqlConnection(connectionString);
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+            
             try
             {
-                conector.Open();
                 byte[] imageBytes = ConvertImageToByteArray(@"C:/Users/su487/Downloads/GUA.jpg");
                 string consulta = "UPDATE clave2_grupo3db.rutas SET Imagen =@imagen WHERE ID = 1";
-                MySqlCommand cmd = new MySqlCommand(consulta, conector);
+                MySqlCommand cmd = new MySqlCommand(consulta, conn);
                 cmd.Parameters.AddWithValue("@imagen", imageBytes);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Datos ingresados");
@@ -52,9 +53,9 @@ namespace Clave2_Grupo3_US23007_
                            Label aerlinea, Label precio, Label destino, Label horallegada,
                            Label aerpuertOrigen, Label aeropuertoDestino, Label distancia,Label Empleados)
         {
-            string connectionString = "Server=localhost;Port=3306;Database='clave2_grupo3db';Uid=root;Pwd=12345;";
-            using (MySqlConnection conector = new MySqlConnection(connectionString))
-            {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+           
                 string consulta = @"SELECT 
                                     rutas.Descripcion, 
                                     rutas.Origen,
@@ -89,8 +90,8 @@ namespace Clave2_Grupo3_US23007_
 
                 try
                 {
-                    conector.Open();
-                    MySqlCommand cmd = new MySqlCommand(consulta, conector);
+                    
+                    MySqlCommand cmd = new MySqlCommand(consulta, conn);
                     cmd.Parameters.AddWithValue("@id", ObtenerId);
 
                     using (MySqlDataReader leer = cmd.ExecuteReader())
@@ -154,7 +155,14 @@ namespace Clave2_Grupo3_US23007_
                     MessageBox.Show("Error: " + ex.Message);
                     return false;
                 }
-            }
+                finally
+                {
+                    if (conn != null && conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            
         }
 
 
