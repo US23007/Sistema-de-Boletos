@@ -185,5 +185,22 @@ namespace Clave2_Grupo3_US23007_
                 btnContinuar.Enabled = false;
             }
         }
+
+        private void txt_Telefono_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^\d{3}\s\d{8}$";
+            Regex validaPasaporte = new Regex(patron);
+
+            if (validaPasaporte.IsMatch(txt_Telefono.Text))
+            {
+                erp.SetError(txt_Telefono, "");
+                btnContinuar.Enabled = true;
+            }
+            else
+            {
+                erp.SetError(txt_Telefono, "El número de teléfono no es válido.");
+                btnContinuar.Enabled = false;
+            }
+        }
     }
 }

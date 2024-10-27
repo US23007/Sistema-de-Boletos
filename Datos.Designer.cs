@@ -33,7 +33,6 @@ namespace Clave2_Grupo3_US23007_
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Datos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAsientosDisponibles = new System.Windows.Forms.Label();
-            this.lblCantidadAsientos = new System.Windows.Forms.Label();
             this.pagCalendar = new System.Windows.Forms.MonthCalendar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbx_Tipo_Pasajero = new System.Windows.Forms.ComboBox();
@@ -56,6 +55,7 @@ namespace Clave2_Grupo3_US23007_
             this.label1 = new System.Windows.Forms.Label();
             this.cbxAsiento = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblCantidadAsientos = new System.Windows.Forms.Label();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.tool = new System.Windows.Forms.ToolTip(this.components);
@@ -114,18 +114,6 @@ namespace Clave2_Grupo3_US23007_
             this.lblAsientosDisponibles.TabIndex = 26;
             this.lblAsientosDisponibles.Text = "?";
             this.tool.SetToolTip(this.lblAsientosDisponibles, "Cantidad de Asientos Disponibles");
-            // 
-            // lblCantidadAsientos
-            // 
-            this.lblCantidadAsientos.AutoSize = true;
-            this.lblCantidadAsientos.Enabled = false;
-            this.lblCantidadAsientos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadAsientos.Location = new System.Drawing.Point(361, 279);
-            this.lblCantidadAsientos.Name = "lblCantidadAsientos";
-            this.lblCantidadAsientos.Size = new System.Drawing.Size(15, 16);
-            this.lblCantidadAsientos.TabIndex = 25;
-            this.lblCantidadAsientos.Text = "?";
-            this.tool.SetToolTip(this.lblCantidadAsientos, "Cantidad de Asientos");
             // 
             // pagCalendar
             // 
@@ -286,6 +274,8 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(137, 20);
             this.txt_Telefono.TabIndex = 10;
+            this.tool.SetToolTip(this.txt_Telefono, "Formato Código Télefono : ###  ########");
+            this.txt_Telefono.TextChanged += new System.EventHandler(this.txt_Telefono_TextChanged);
             this.txt_Telefono.Leave += new System.EventHandler(this.txt_Telefono_Leave);
             // 
             // txtpasaporte
@@ -391,6 +381,18 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
             this.tool.SetToolTip(this.pictureBox3, "Disponible");
+            // 
+            // lblCantidadAsientos
+            // 
+            this.lblCantidadAsientos.AutoSize = true;
+            this.lblCantidadAsientos.Enabled = false;
+            this.lblCantidadAsientos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadAsientos.Location = new System.Drawing.Point(361, 279);
+            this.lblCantidadAsientos.Name = "lblCantidadAsientos";
+            this.lblCantidadAsientos.Size = new System.Drawing.Size(15, 16);
+            this.lblCantidadAsientos.TabIndex = 25;
+            this.lblCantidadAsientos.Text = "?";
+            this.tool.SetToolTip(this.lblCantidadAsientos, "Cantidad de Asientos");
             // 
             // btnContinuar
             // 

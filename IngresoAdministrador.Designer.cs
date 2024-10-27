@@ -112,7 +112,7 @@ namespace Clave2_Grupo3_US23007_
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(206, 27);
             this.txtcorreo.TabIndex = 24;
-            
+            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged);
             // 
             // label4
             // 

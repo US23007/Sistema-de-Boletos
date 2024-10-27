@@ -26,7 +26,7 @@ namespace Clave2_Grupo3_US23007_
             Pagos pagos = new Pagos();
             if (reservaciones.ReservarEnDB())
             {
-                if (monto.AgregarMontos())
+                if (monto.AgregarMontos() && monto.MostrarMontosAdicionales(pagos.lbl_Precio_Vuelo,pagos.lbl_Equipaje,pagos.lbl_Monto))
                 {
                     pagos.Show();
                     this.Hide();

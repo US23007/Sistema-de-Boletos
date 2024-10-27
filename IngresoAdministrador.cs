@@ -94,19 +94,49 @@ namespace Clave2_Grupo3_US23007_
 
         private void btnRegistrase_Click(object sender, EventArgs e)
         {
-            ValidarIngreso validar = new ValidarIngreso();
-            Pasajero pasajero = new Pasajero();
-            Datos datos = new Datos();
-
-            if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text) && pasajero.ObtenerAsientos(datos.cbxAsiento))
+            if (string.IsNullOrEmpty(txtUsuario.Text))
             {
-                validar.ObtenerUsuario = txtUsuario.Text;
-                datos.Show();
-                this.Hide();
+                erp.SetError(txtUsuario, "Campo Vacio");
+                return;
+
+            }
+            if (string.IsNullOrEmpty(txtcorreo.Text))
+            {
+                erp.SetError(txtcorreo, "Campo vacio");
             }
             else
             {
-                return;
+                ValidarIngreso validar = new ValidarIngreso();
+                Pasajero pasajero = new Pasajero();
+                Datos datos = new Datos();
+
+                if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text) && pasajero.ObtenerAsientos(datos.cbxAsiento))
+                {
+                    validar.ObtenerUsuario = txtUsuario.Text;
+                    datos.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+        }
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
+        {
+            string patronEmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            Regex validaEmail = new Regex(patronEmail);
+            if (validaEmail.IsMatch(txtcorreo.Text))
+            {
+                erp.SetError(txtcorreo, "");
+                btnContinuar.Enabled = true;
+            }
+            else
+            {
+                erp.SetError(txtcorreo, "Correo NO valido");
+                btnContinuar.Enabled = false ;
             }
 
         }

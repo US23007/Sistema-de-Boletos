@@ -20,8 +20,7 @@ namespace Clave2_Grupo3_US23007_
             panelAmerican.Visible = false;
             panelMasterCard.Visible = false;
             panelBancoAgricola.Visible = false;
-            MontosAdicionales montos = new MontosAdicionales();
-            montos.MostrarMontosAdicionales(lbl_Precio_Vuelo, lbl_Equipaje, lbl_Monto);
+            
         }
 
         private void txt_Nombre_Banco_TextChanged(object sender, EventArgs e)
@@ -77,7 +76,17 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MontosAdicionales monto = new MontosAdicionales();
+                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (monto.ActualizarEstados())
+                    {
+                        MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormPrincipal principal = new FormPrincipal();
+                        principal.Show();
+                        this.Hide();
+                    }
+
                 }
             }
         }
@@ -157,7 +166,16 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MontosAdicionales monto = new MontosAdicionales();
+                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (monto.ActualizarEstados())
+                    {
+                        MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormPrincipal principal = new FormPrincipal();
+                        principal.Show();
+                        this.Hide();
+                    }
                 }
             }
         }
@@ -238,7 +256,16 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MontosAdicionales monto = new MontosAdicionales();
+                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (monto.ActualizarEstados())
+                    {
+                        MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormPrincipal principal = new FormPrincipal();
+                        principal.Show();
+                        this.Hide();
+                    }
                 }
             }
         }
@@ -318,7 +345,16 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MontosAdicionales monto = new MontosAdicionales();
+                    MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (monto.ActualizarEstados())
+                    {
+                        MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FormPrincipal principal = new FormPrincipal();
+                        principal.Show();
+                        this.Hide();
+                    }
                 }
             }
         }
