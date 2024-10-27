@@ -123,6 +123,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap admin_lock_padlock_icon_205893 {
+            get {
+                object obj = ResourceManager.GetObject("admin_lock_padlock_icon_205893", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Airport_43692 {
             get {
                 object obj = ResourceManager.GetObject("Airport_43692", resourceCulture);
@@ -326,6 +336,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap flying_airplane_icon_icons_com_53991 {
             get {
                 object obj = ResourceManager.GetObject("flying_airplane_icon_icons_com_53991", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap group_profile_users_icon_icons_com_73540 {
+            get {
+                object obj = ResourceManager.GetObject("group_profile_users_icon_icons_com_73540", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

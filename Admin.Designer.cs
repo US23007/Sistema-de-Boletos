@@ -135,7 +135,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.round_account_button_with_user_inside_icon_icons_com_72596;
+            this.pictureBox1.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.admin_lock_padlock_icon_205893;
             this.pictureBox1.Location = new System.Drawing.Point(16, 74);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 27);

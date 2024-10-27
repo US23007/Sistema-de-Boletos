@@ -421,5 +421,11 @@
   <ItemGroup>
     <None Include="Resources\american-express_81996%283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_lock_padlock_icon_205893.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-profile-users_icon-icons.com_73540.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

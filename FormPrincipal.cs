@@ -28,6 +28,23 @@ namespace Clave2_Grupo3_US23007_
             this.Hide();
         }
 
-       
+
+        private void AbrirFormulario(object form)
+        {
+            if (this.Contenedor.Controls.Count > 0)
+                this.Contenedor.Controls.RemoveAt(0);
+            Form fh = form as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Contenedor.Controls.Add(fh);
+            this.Contenedor.Tag = fh;
+            fh.Show();
+
+        }
+
+        private void boletosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new BuscarVuelo());
+        }
     }
 }
