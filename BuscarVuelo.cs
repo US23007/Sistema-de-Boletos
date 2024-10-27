@@ -17,7 +17,7 @@ namespace Clave2_Grupo3_US23007_
         {
             InitializeComponent();
             Conexion conexion = new Conexion();
-            conexion.establecerConexion();
+            conexion.Conectar();
             Vuelos vuelos = new Vuelos();
             vuelos.ObtenrRutas(cbxOrigen,cbxDestino);
             calendar.Visible = false;
@@ -198,7 +198,13 @@ namespace Clave2_Grupo3_US23007_
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+            Sistema sistema = new Sistema();
+            FormSistema form = new FormSistema();
+            if (sistema.Aerolineas(form.dgvAerolineas))
+            {
+                form.Show();
+                this.Hide();
+            }
         }
     }
 }

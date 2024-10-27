@@ -255,7 +255,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvAerolineas;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
@@ -268,5 +267,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvAsientos;
+        public System.Windows.Forms.DataGridView dgvAerolineas;
     }
 }
