@@ -235,6 +235,48 @@ namespace Clave2_Grupo3_US23007_
 
 
         }
+
+
+        public bool Usuario(DataGridView usuario)
+        {
+
+            try
+            {
+                Conexion conexion = new Conexion();
+                string consulta = @"Select usuario.ID as 'Usuario',usuario.Correo,pasajero.ID as 'Pasajero',pasajero.NombreCompleto as 'Nombre Completo',
+                                    Fechanacimiento as 'Fecha de Nacimiento' , Telefono as 'Teléfono' , Pasaporte , Nacionalidad,TipoPasajero as 'Tipo de Pasajero',PreferenciaAsiento as 'Asiento'
+                                    from pasajero
+                                    inner join usuario on pasajero.usuario_ID = usuario.ID";
+
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
+
+                            usuario.DataSource = dt;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Algo salio mal y no se pudo cargar los  Usuarios/Pasajeros", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+        }
     }
 
     
