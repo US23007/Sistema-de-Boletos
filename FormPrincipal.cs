@@ -44,7 +44,22 @@ namespace Clave2_Grupo3_US23007_
 
         private void boletosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new BuscarVuelo());
+            Sistema sistema = new Sistema();
+            FormSistema form = new FormSistema();
+            if (sistema.Aerolineas(form.dgvAerolineas) && sistema.Empleados(form.dgvempleados) && sistema.aviones(form.dgvAviones) && sistema.asientos(form.dgvAsientos))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void vuelosYRutasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sistema sistema = new Sistema();
+            FormVuelosRutas rutas = new FormVuelosRutas();
+            if (sistema.vuelos(rutas.dgvvuelos) && sistema.Rutas(rutas.dgvrutas))
+            {
+                rutas.ShowDialog();
+            }
         }
     }
 }

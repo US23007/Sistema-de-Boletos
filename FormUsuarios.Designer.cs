@@ -61,7 +61,7 @@ namespace Clave2_Grupo3_US23007_
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(2, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(862, 13);
+            this.label1.Size = new System.Drawing.Size(937, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,7 +71,7 @@ namespace Clave2_Grupo3_US23007_
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(874, 518);
+            this.ClientSize = new System.Drawing.Size(944, 574);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

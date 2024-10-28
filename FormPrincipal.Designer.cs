@@ -39,6 +39,7 @@ namespace Clave2_Grupo3_US23007_
             this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vuelosYRutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Contenedor = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,10 +52,11 @@ namespace Clave2_Grupo3_US23007_
             this.boletosToolStripMenuItem,
             this.reservasToolStripMenuItem,
             this.facturasToolStripMenuItem,
-            this.ticketToolStripMenuItem});
+            this.ticketToolStripMenuItem,
+            this.vuelosYRutasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(664, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(710, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +73,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.cerrarSesiónToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._1486564399_close_81512;
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
@@ -79,8 +81,8 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.boletosToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.plane_takeoff_13263;
             this.boletosToolStripMenuItem.Name = "boletosToolStripMenuItem";
-            this.boletosToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.boletosToolStripMenuItem.Text = "Aerolineas";
+            this.boletosToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
+            this.boletosToolStripMenuItem.Text = "Ficha Técnica de Vuelos";
             this.boletosToolStripMenuItem.ToolTipText = "Información sobre Aerolineas,Vuelos,Aviones,Asientos";
             this.boletosToolStripMenuItem.Click += new System.EventHandler(this.boletosToolStripMenuItem_Click);
             // 
@@ -98,14 +100,14 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.modificarToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.notes_edit_modify_icon_143729;
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // cancelarToolStripMenuItem
             // 
             this.cancelarToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.text_document_cancel_button_icon_icons_com_71554;
             this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
-            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.cancelarToolStripMenuItem.Text = "Cancelar";
             // 
             // facturasToolStripMenuItem
@@ -122,12 +124,20 @@ namespace Clave2_Grupo3_US23007_
             this.ticketToolStripMenuItem.Size = new System.Drawing.Size(180, 20);
             this.ticketToolStripMenuItem.Text = "Administración de Usuarios";
             // 
+            // vuelosYRutasToolStripMenuItem
+            // 
+            this.vuelosYRutasToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.facebook_placeholder_for_locate_places_on_maps_icon_icons_com_57151;
+            this.vuelosYRutasToolStripMenuItem.Name = "vuelosYRutasToolStripMenuItem";
+            this.vuelosYRutasToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.vuelosYRutasToolStripMenuItem.Text = "Vuelos y Rutas";
+            this.vuelosYRutasToolStripMenuItem.Click += new System.EventHandler(this.vuelosYRutasToolStripMenuItem_Click);
+            // 
             // Contenedor
             // 
             this.Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Contenedor.Location = new System.Drawing.Point(0, 24);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(664, 469);
+            this.Contenedor.Size = new System.Drawing.Size(710, 469);
             this.Contenedor.TabIndex = 1;
             // 
             // FormPrincipal
@@ -135,7 +145,7 @@ namespace Clave2_Grupo3_US23007_
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(664, 493);
+            this.ClientSize = new System.Drawing.Size(710, 493);
             this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -163,5 +173,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
         private System.Windows.Forms.Panel Contenedor;
+        private System.Windows.Forms.ToolStripMenuItem vuelosYRutasToolStripMenuItem;
     }
 }

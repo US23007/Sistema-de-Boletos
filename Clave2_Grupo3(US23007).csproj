@@ -143,6 +143,12 @@
     <Compile Include="FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVuelosRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVuelosRutas.Designer.cs">
+      <DependentUpon>FormVuelosRutas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imagen.cs" />
     <Compile Include="Informacion.cs">
       <SubType>Form</SubType>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVuelosRutas.resx">
+      <DependentUpon>FormVuelosRutas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion.resx">
       <DependentUpon>Informacion.cs</DependentUpon>
@@ -451,6 +460,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\airplane_fly_travel_icon-icons.com_51074.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin_navigation_map_destination_icon_225369.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
