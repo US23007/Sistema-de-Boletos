@@ -668,7 +668,59 @@ namespace Clave2_Grupo3_US23007_
             }
 
         }
-        
+
+
+        public bool EliminarUsuario(int idusuario)
+        {
+            try
+            {
+                Conexion conexion = new Conexion();
+                MySqlConnection conn = conexion.Conectar();
+
+                //Eliminar Pagos
+                ExecuteQuery(conn,
+                     "DELETE pagos FROM pagos " +
+                     "INNER JOIN reserva ON pagos.reserva_ID = reserva.ID " +
+                     "INNER JOIN pasajero ON reserva.pasajero_ID = pasajero.ID " +
+                     "WHERE pasajero.usuario_ID = @usuarioID", idusuario);
+
+                //Eliminar Reserva
+                ExecuteQuery(conn,
+                "DELETE reserva FROM reserva " +
+                "INNER JOIN pasajero ON reserva.pasajero_ID = pasajero.ID " +
+                "WHERE pasajero.usuario_ID = @usuarioID", idusuario);
+
+                // Eliminar pasajero
+                ExecuteQuery(conn,
+                    "DELETE FROM pasajero WHERE usuario_ID = @usuarioID", idusuario);
+
+                //  Eliminar usuario
+                ExecuteQuery(conn,
+                    "DELETE FROM usuario WHERE ID = @usuarioID", idusuario);
+
+                MessageBox.Show("Usuario eliminado correctamente.", "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                return true;
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Hubo un error al eliminar al usuario: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        private void ExecuteQuery(MySqlConnection conn, string query, int idusuario)
+        {
+            using (MySqlCommand command = new MySqlCommand(query, conn))
+            {
+                command.Parameters.AddWithValue("@usuarioID", idusuario);
+                command.ExecuteNonQuery();
+            }
+        }
+
     }
 
 

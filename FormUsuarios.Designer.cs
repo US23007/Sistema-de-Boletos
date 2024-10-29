@@ -31,14 +31,19 @@ namespace Clave2_Grupo3_US23007_
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPasajero = new System.Windows.Forms.DataGridView();
             this.gbModificar = new System.Windows.Forms.GroupBox();
+            this.lblAviones = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lblVuelos = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cbxAsientos = new System.Windows.Forms.ComboBox();
             this.picCorreo = new System.Windows.Forms.PictureBox();
             this.picReserva = new System.Windows.Forms.PictureBox();
             this.picAsiento = new System.Windows.Forms.PictureBox();
@@ -78,11 +83,7 @@ namespace Clave2_Grupo3_US23007_
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tool = new System.Windows.Forms.ToolTip(this.components);
-            this.cbxAsientos = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblVuelos = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.lblAviones = new System.Windows.Forms.Label();
+            this.btneliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasajero)).BeginInit();
             this.gbModificar.SuspendLayout();
@@ -121,7 +122,7 @@ namespace Clave2_Grupo3_US23007_
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(2, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(937, 13);
+            this.label1.Size = new System.Drawing.Size(964, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,36 +132,36 @@ namespace Clave2_Grupo3_US23007_
             this.dgvPasajero.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPasajero.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPasajero.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPasajero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPasajero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPasajero.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPasajero.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPasajero.Location = new System.Drawing.Point(12, 119);
             this.dgvPasajero.MultiSelect = false;
             this.dgvPasajero.Name = "dgvPasajero";
             this.dgvPasajero.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPasajero.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvPasajero.Size = new System.Drawing.Size(920, 150);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPasajero.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvPasajero.Size = new System.Drawing.Size(945, 150);
             this.dgvPasajero.TabIndex = 25;
             this.dgvPasajero.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPasajero_CellClick);
             // 
@@ -205,12 +206,61 @@ namespace Clave2_Grupo3_US23007_
             this.gbModificar.Controls.Add(this.lbl_Usuario);
             this.gbModificar.Controls.Add(this.label3);
             this.gbModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbModificar.Location = new System.Drawing.Point(12, 288);
+            this.gbModificar.Location = new System.Drawing.Point(12, 281);
             this.gbModificar.Name = "gbModificar";
-            this.gbModificar.Size = new System.Drawing.Size(953, 352);
+            this.gbModificar.Size = new System.Drawing.Size(953, 341);
             this.gbModificar.TabIndex = 26;
             this.gbModificar.TabStop = false;
             this.gbModificar.Text = "Datos ";
+            // 
+            // lblAviones
+            // 
+            this.lblAviones.AutoSize = true;
+            this.lblAviones.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAviones.Location = new System.Drawing.Point(153, 268);
+            this.lblAviones.Name = "lblAviones";
+            this.lblAviones.Size = new System.Drawing.Size(15, 16);
+            this.lblAviones.TabIndex = 41;
+            this.lblAviones.Text = "?";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(29, 269);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(118, 16);
+            this.label18.TabIndex = 40;
+            this.label18.Text = "Número de Avion";
+            // 
+            // lblVuelos
+            // 
+            this.lblVuelos.AutoSize = true;
+            this.lblVuelos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVuelos.Location = new System.Drawing.Point(778, 219);
+            this.lblVuelos.Name = "lblVuelos";
+            this.lblVuelos.Size = new System.Drawing.Size(15, 16);
+            this.lblVuelos.TabIndex = 39;
+            this.lblVuelos.Text = "?";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(641, 219);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(119, 16);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "Número de Vuelo";
+            // 
+            // cbxAsientos
+            // 
+            this.cbxAsientos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAsientos.FormattingEnabled = true;
+            this.cbxAsientos.Location = new System.Drawing.Point(480, 211);
+            this.cbxAsientos.Name = "cbxAsientos";
+            this.cbxAsientos.Size = new System.Drawing.Size(36, 24);
+            this.cbxAsientos.TabIndex = 37;
+            this.tool.SetToolTip(this.cbxAsientos, "Seleccionar Nuevo Asiento");
+            this.cbxAsientos.SelectedIndexChanged += new System.EventHandler(this.cbxAsientos_SelectedIndexChanged);
             // 
             // picCorreo
             // 
@@ -587,7 +637,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.reload_refresh_update_icon_134497;
-            this.pictureBox3.Location = new System.Drawing.Point(904, 90);
+            this.pictureBox3.Location = new System.Drawing.Point(930, 90);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 23);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -596,61 +646,31 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox3.Tag = "Recargar Tabla";
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // cbxAsientos
+            // btneliminar
             // 
-            this.cbxAsientos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAsientos.FormattingEnabled = true;
-            this.cbxAsientos.Location = new System.Drawing.Point(480, 211);
-            this.cbxAsientos.Name = "cbxAsientos";
-            this.cbxAsientos.Size = new System.Drawing.Size(36, 24);
-            this.cbxAsientos.TabIndex = 37;
-            this.tool.SetToolTip(this.cbxAsientos, "Seleccionar Nuevo Asiento");
-            this.cbxAsientos.SelectedIndexChanged += new System.EventHandler(this.cbxAsientos_SelectedIndexChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(641, 219);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 16);
-            this.label17.TabIndex = 38;
-            this.label17.Text = "Número de Vuelo";
-            // 
-            // lblVuelos
-            // 
-            this.lblVuelos.AutoSize = true;
-            this.lblVuelos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVuelos.Location = new System.Drawing.Point(778, 219);
-            this.lblVuelos.Name = "lblVuelos";
-            this.lblVuelos.Size = new System.Drawing.Size(15, 16);
-            this.lblVuelos.TabIndex = 39;
-            this.lblVuelos.Text = "?";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(29, 269);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(118, 16);
-            this.label18.TabIndex = 40;
-            this.label18.Text = "Número de Avion";
-            // 
-            // lblAviones
-            // 
-            this.lblAviones.AutoSize = true;
-            this.lblAviones.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAviones.Location = new System.Drawing.Point(153, 268);
-            this.lblAviones.Name = "lblAviones";
-            this.lblAviones.Size = new System.Drawing.Size(15, 16);
-            this.lblAviones.TabIndex = 41;
-            this.lblAviones.Text = "?";
+            this.btneliminar.BackColor = System.Drawing.Color.White;
+            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btneliminar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
+            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneliminar.Location = new System.Drawing.Point(424, 628);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(160, 36);
+            this.btneliminar.TabIndex = 31;
+            this.btneliminar.Text = "Eliminar Usuario";
+            this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(969, 652);
+            this.ClientSize = new System.Drawing.Size(969, 676);
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pictureBox2);
@@ -732,5 +752,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label lblAviones;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lblVuelos;
+        private System.Windows.Forms.Button btneliminar;
     }
 }

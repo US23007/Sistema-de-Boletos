@@ -254,6 +254,7 @@ namespace Clave2_Grupo3_US23007_
 
                 MessageBox.Show("Correo modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 sistema.Usuario(dgvPasajero);
+                cbxAsientos.Visible = false;
                 Limpiar();
             }
             
@@ -292,6 +293,7 @@ namespace Clave2_Grupo3_US23007_
             {
                 Sistema sistema = new Sistema();
                 int idVuelo = int.Parse(lblVuelos.Text);
+
                 int idAvion = int.Parse(lblAviones.Text);
                 int asientoAntiguo = int.Parse(txt_asiento.Text);
                 int idpasajero = int.Parse(lblPasajero.Text);
@@ -302,6 +304,9 @@ namespace Clave2_Grupo3_US23007_
                     if (sistema.ReservarNuevoAsiento(idVuelo, idAvion, idnuevoAsiento, idpasajero))
                     {
                         MessageBox.Show("Asiento Actualizado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        sistema.Usuario(dgvPasajero);
+                        cbxAsientos.Visible = false;
+                        Limpiar();
                     }
                 }
             }
@@ -309,6 +314,41 @@ namespace Clave2_Grupo3_US23007_
             {
                 cbxAsientos.Visible = false;
                 MessageBox.Show("Cambio de asiento cancelado.","Proceso Cancelado",MessageBoxButtons.OK);
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas Eliminar al Usuario?",
+                                               "Confirmación de Eliminar Usuario",
+                                               MessageBoxButtons.OKCancel,
+                                               MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.OK)
+            {
+               
+                Sistema sistema = new Sistema();
+                int idVuelo = int.Parse(lblVuelos.Text);
+                int idAvion = int.Parse(lblAviones.Text);
+                int idUsuario = int.Parse(lbl_Usuario.Text);
+                int asientoAntiguo = int.Parse(txt_asiento.Text);
+                
+                if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo))
+                {
+                    if (sistema.EliminarUsuario(idUsuario))
+                    {
+                        sistema.Usuario(dgvPasajero);
+                        cbxAsientos.Visible = false;
+                        Limpiar();
+                        MessageBox.Show("Usuario/Pasajero Eliminado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                
+            }
+            else if(resultado == DialogResult.Cancel)
+            {
+                cbxAsientos.Visible = false;
+                MessageBox.Show("Cambio de asiento cancelado.", "Proceso Cancelado", MessageBoxButtons.OK);
             }
         }
     }
