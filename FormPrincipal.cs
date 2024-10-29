@@ -71,5 +71,12 @@ namespace Clave2_Grupo3_US23007_
                 usuarios.ShowDialog();
             }
         }
+
+        private void nuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarVuelo buscar = new BuscarVuelo();
+            buscar.Show();
+            this.Hide();
+        }
     }
 }

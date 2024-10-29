@@ -474,5 +474,8 @@
   <ItemGroup>
     <None Include="Resources\seo-social-web-network-internet_262_icon-icons.com_61518.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add_new_insert_icon_205821.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

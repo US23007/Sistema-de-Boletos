@@ -23,6 +23,7 @@ namespace Clave2_Grupo3_US23007_
             picAsiento.Enabled = false;
             picUsuario.Enabled = false;
             cbxAsientos.Visible = false;
+            btneliminar.Visible = false;
 
         }
 
@@ -37,6 +38,7 @@ namespace Clave2_Grupo3_US23007_
                 picReserva.Enabled = true;
                 picAsiento.Enabled = true;
                 picUsuario.Enabled = true;
+                btneliminar.Visible = true;
                 DataGridViewRow fila = dgvPasajero.Rows[e.RowIndex];
                 lbl_Usuario.Text = fila.Cells["Número de Usuario"].Value.ToString();
                 txt_Nombre_Usuario.Text = fila.Cells["Usuario"].Value.ToString();
@@ -182,6 +184,7 @@ namespace Clave2_Grupo3_US23007_
             picReserva.Enabled = false;
             picAsiento.Enabled = false;
             picUsuario.Enabled = false;
+            btneliminar.Visible = false;
 
         }
 
