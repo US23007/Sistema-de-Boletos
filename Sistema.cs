@@ -243,10 +243,12 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 Conexion conexion = new Conexion();
-                string consulta = @"Select usuario.ID as 'Usuario',usuario.Correo,pasajero.ID as 'Pasajero',pasajero.NombreCompleto as 'Nombre Completo',
-                                    Fechanacimiento as 'Fecha de Nacimiento' , Telefono as 'Teléfono' , Pasaporte , Nacionalidad,TipoPasajero as 'Tipo de Pasajero',PreferenciaAsiento as 'Asiento'
-                                    from pasajero
-                                    inner join usuario on pasajero.usuario_ID = usuario.ID";
+                string consulta = @"Select usuario.ID as 'Número de Usuario',usuario.Usuario,usuario.Correo,pasajero.ID as 'Pasajero',pasajero.NombreCompleto as 'Nombre Completo',
+                                    Fechanacimiento as 'Fecha de Nacimiento' , Telefono as 'Teléfono' , Pasaporte , Nacionalidad,TipoPasajero as 'Tipo de Pasajero',PreferenciaAsiento as 'Asiento',
+                                    reserva.ID as 'Número de Reserva' , reserva.Estado ,reserva.Fecha as 'Fecha de Reservación'
+                                    from usuario
+                                    inner join pasajero  on usuario.ID = pasajero.usuario_ID 
+                                    inner join reserva on pasajero.ID = reserva.ID";
 
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {
@@ -262,7 +264,7 @@ namespace Clave2_Grupo3_US23007_
                         }
                         else
                         {
-                            MessageBox.Show("Algo salio mal y no se pudo cargar los  Usuarios/Pasajeros", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El Usuario No Existe", "Usuario Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }
@@ -277,9 +279,59 @@ namespace Clave2_Grupo3_US23007_
 
 
         }
+
+
+
+        public bool Consultar(DataGridView buscar,TextBox aceptar)
+        {
+            try
+            {
+
+                Conexion conexion = new Conexion();
+                string consulta = @"Select usuario.ID as 'Número de Usuario',usuario.Usuario,usuario.Correo,pasajero.ID as 'Pasajero',pasajero.NombreCompleto as 'Nombre Completo',
+                                    Fechanacimiento as 'Fecha de Nacimiento' , Telefono as 'Teléfono' , Pasaporte , Nacionalidad,TipoPasajero as 'Tipo de Pasajero',PreferenciaAsiento as 'Asiento',
+                                    reserva.ID as 'Número de Reserva' , reserva.Estado ,reserva.Fecha as 'Fecha de Reservación'
+                                    from usuario
+                                    inner join pasajero  on usuario.ID = pasajero.usuario_ID 
+                                    inner join reserva on pasajero.ID = reserva.ID
+                                    WHERE pasajero.NombreCompleto LIKE @nombre;";
+
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    comando.Parameters.AddWithValue("@nombre",aceptar.Text);
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
+
+                            buscar.DataSource = dt;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("El Usuario No Existe", "Usuario Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
     }
+
+
+
+}
 
     
 
-}
+
 

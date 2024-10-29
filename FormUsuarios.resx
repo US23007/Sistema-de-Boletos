@@ -120,4 +120,38 @@
   <data name="label1.Text" xml:space="preserve">
     <value>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
+  <metadata name="erp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="erp.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAA
+        AAAQiu9hJaHv/DCw7vMtqu3zK6br8yqi5/Mkp/DzGJPg8xqS4PMbnefzIJHb8x6M2PMbhtTzGoXT8xFv
+        vvwJWKJoOKjz/3Px+P9N3Pf/Ttv3/0jZ9/9I4f//Ms///xyp1v8cqdb/Ms///zLP//8wv/n/Lrj6/yuy
+        +/8qtP//D2+7/zSm8/ps5vf/Qs/1/0bP9f9BzfP/PNn//xOy7v84DQD/LQQA/xOy7v8sxP//K7Px/yms
+        8P8mpvH/Jav//w9vvf8Ggu5uZs30/07a9v9G0PX/Qs3z/0DS/P8dvO//UTw2/0EuKv8Tsu7/L8D6/yuy
+        8f8prPH/KbD6/x2S4/8GUZp4AAAAACCV7uls5Pf/PM/1/0LN8/9D0/r/Q9P6/xR0nf8WdZ3/MMD7/zDA
+        +/8rtPH/Kazy/yuy/P8MZbPxAAAAAAAAAAAIhOxTSbfy/1Dd9/8+zPP/QN3//0Dd//8pAQD/KQIA/y7K
+        //8uyv//K7Hw/y67/v8bitf/CFmoUgAAAAAAAAAAAAAAAEKf7cVt2/j/N83z/zPY//8z2P//MRkU/ywW
+        EP8tyP//Lcj//y649f8prfP/C2KxwQAAAAAAAAAAAAAAAAAAAABIpu0hf8j1/4Pk+f9S4P//UuD//zYf
+        GP8zGxX/JcT//yXE//8ovfr/En7O/wBWriEAAAAAAAAAAAAAAAAAAAAAAAAAAEWj7J+T3Pb/f+///3/v
+        //9BLir/NCEc/1bb//9W2///V8Ly/zuDw58AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIp+sMZbfv/4nw
+        //+J8P//dl9Z/1E8Nv905f//dOX//1Wk2P9SmdAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADqY
+        5lKD1/3/YMjg/5SCfv+Oe3X/eMzo/17G+f9EjctSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABJo+YHVqjn1n7i/v9tyOf/eMzo/1vY//9NmdbWSZTTBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAESb5DJ0we7/gez//2rm//9fuej/SJXTMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAARZ3hhXvI7/9yxe3/RJTXhQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKn+BqTZ/ceAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAMADAADgBwAA4AcAAPAPAADwDwAA+B8AAPw/
+        AAD+fwAA//8AAA==
+</value>
+  </data>
+  <metadata name="tool.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>87, 17</value>
+  </metadata>
 </root>

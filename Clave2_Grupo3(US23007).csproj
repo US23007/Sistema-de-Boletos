@@ -464,5 +464,8 @@
   <ItemGroup>
     <None Include="Resources\pin_navigation_map_destination_icon_225369.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload_refresh_update_icon_134497.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

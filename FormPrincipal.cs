@@ -61,5 +61,15 @@ namespace Clave2_Grupo3_US23007_
                 rutas.ShowDialog();
             }
         }
+
+        private void administraciónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sistema sistema = new Sistema();
+            FormUsuarios usuarios = new FormUsuarios();
+            if (sistema.Usuario(usuarios.dgvPasajero))
+            {
+                usuarios.ShowDialog();
+            }
+        }
     }
 }

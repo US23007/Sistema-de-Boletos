@@ -198,12 +198,10 @@ namespace Clave2_Grupo3_US23007_
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Sistema sistema = new Sistema();
-            FormUsuarios usuarios = new FormUsuarios();
-            if (sistema.Usuario(usuarios.dgvPasajero))
-            {
-                usuarios.ShowDialog();
-            }
+            FormPrincipal principal = new FormPrincipal();
+            principal.Show();
+            this.Hide();
+
         }
     }
 }
