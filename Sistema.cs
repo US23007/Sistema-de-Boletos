@@ -245,10 +245,13 @@ namespace Clave2_Grupo3_US23007_
                 Conexion conexion = new Conexion();
                 string consulta = @"Select usuario.ID as 'Número de Usuario',usuario.Usuario,usuario.Correo,pasajero.ID as 'Pasajero',pasajero.NombreCompleto as 'Nombre Completo',
                                     Fechanacimiento as 'Fecha de Nacimiento' , Telefono as 'Teléfono' , Pasaporte , Nacionalidad,TipoPasajero as 'Tipo de Pasajero',PreferenciaAsiento as 'Asiento',
+                                    vuelos.ID as 'Número de Vuelo', aviones.ID as 'Número de Avion',
                                     reserva.ID as 'Número de Reserva' , reserva.Estado ,reserva.Fecha as 'Fecha de Reservación'
                                     from usuario
                                     inner join pasajero  on usuario.ID = pasajero.usuario_ID 
-                                    inner join reserva on pasajero.ID = reserva.ID";
+                                    inner join reserva on pasajero.ID = reserva.ID
+                                    inner join vuelos on reserva.vuelos_ID = vuelos.ID
+                                    inner join aviones on vuelos.aviones_ID = aviones.ID";
 
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {
@@ -290,10 +293,13 @@ namespace Clave2_Grupo3_US23007_
                 Conexion conexion = new Conexion();
                 string consulta = @"Select usuario.ID as 'Número de Usuario',usuario.Usuario,usuario.Correo,pasajero.ID as 'Pasajero',pasajero.NombreCompleto as 'Nombre Completo',
                                     Fechanacimiento as 'Fecha de Nacimiento' , Telefono as 'Teléfono' , Pasaporte , Nacionalidad,TipoPasajero as 'Tipo de Pasajero',PreferenciaAsiento as 'Asiento',
+                                    vuelos.ID as 'Número de Vuelo', aviones.ID as 'Número de Avion',
                                     reserva.ID as 'Número de Reserva' , reserva.Estado ,reserva.Fecha as 'Fecha de Reservación'
                                     from usuario
                                     inner join pasajero  on usuario.ID = pasajero.usuario_ID 
                                     inner join reserva on pasajero.ID = reserva.ID
+                                    inner join vuelos on reserva.vuelos_ID = vuelos.ID
+                                    inner join aviones on vuelos.aviones_ID = aviones.ID
                                     WHERE pasajero.NombreCompleto LIKE @nombre;";
 
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
@@ -362,7 +368,309 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+
+        public bool ModificarNombreCompleto(string nuevo, int id)
+        {
+            try
+            {
+                Conexion conexion = new Conexion(); // Asegúrate de tener correctamente implementada tu clase de conexión
+
+                string consulta = "UPDATE pasajero SET NombreCompleto = @nombre WHERE ID = @idpasajero";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    // Agregar parámetros
+                    comando.Parameters.AddWithValue("@nombre", nuevo);
+                    comando.Parameters.AddWithValue("@idpasajero", id);
+
+                    // Ejecutar la consulta
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    {
+                        return true; // La actualización fue exitosa
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el pasajero con el ID especificado.",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Hubo un error al actualizar el pasajerp: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public bool ModificarCorreo(string nuevo, int id)
+        {
+            try
+            {
+                Conexion conexion = new Conexion(); // Asegúrate de tener correctamente implementada tu clase de conexión
+
+                string consulta = "UPDATE usuario SET Correo = @correo WHERE ID = @idUsuario";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    // Agregar parámetros
+                    comando.Parameters.AddWithValue("@correo", nuevo);
+                    comando.Parameters.AddWithValue("@idUsuario", id);
+
+                    // Ejecutar la consulta
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    {
+                        return true; // La actualización fue exitosa
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el correo con el ID especificado.",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Hubo un error al actualizar el correo: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+
+        public bool ModificarAsiento(ComboBox asientos, int idVuelos, int idAviones) {
+
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+            try
+            {
+
+                string query = @"SELECT asientos.NumeroAsiento
+                                        FROM asientos
+                                        INNER JOIN aviones ON asientos.aviones_ID = aviones.ID
+                                        INNER JOIN vuelos ON aviones.ID = vuelos.aviones_ID
+                                        WHERE vuelos.ID = @vuelo AND aviones.ID = @avion AND asientos.Estado = 'Disponible';
+                                        ";
+
+
+                using (MySqlCommand comando = new MySqlCommand(query, conn))
+
+                {
+                    comando.Parameters.AddWithValue("@vuelo", idVuelos);
+                    comando.Parameters.AddWithValue("@avion", idAviones);
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    asientos.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        asientos.Items.Add(reader["NumeroAsiento"].ToString());
+
+                    }
+
+                    reader.Close();
+                }
+
+                if (asientos.Items.Count == 0)
+                {
+                    MessageBox.Show("Hubo un error al cargar los asientos, porfavor reiniciar la aplicación", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Hubo un problema al conectar a la base de Datos.", "Reiniciar" + ex.Message);
+                return false;
+            }
+        }
+
+
+
+
+        public bool ReservarNuevoAsiento(int idvuelo, int idAvion, int nuevoAsiento, int pasajero)
+        {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+
+            try
+            {
+                // Iniciar la transacción
+                using (var transaction = conn.BeginTransaction())
+                {
+                    // Actualizar el estado del asiento
+                    string consulta = @"UPDATE asientos
+                                INNER JOIN aviones ON asientos.aviones_ID = aviones.ID
+                                INNER JOIN vuelos ON vuelos.aviones_ID = aviones.ID
+                                SET asientos.Estado = 'Reservado'
+                                WHERE vuelos.ID = @id AND aviones.ID = @avion AND asientos.NumeroAsiento = @asiento";
+
+                    using (MySqlCommand comando = new MySqlCommand(consulta, conn, transaction))
+                    {
+                        comando.Parameters.AddWithValue("@id", idvuelo);
+                        comando.Parameters.AddWithValue("@avion", idAvion);
+                        comando.Parameters.AddWithValue("@asiento", nuevoAsiento);
+
+                        int filasAfectadas = comando.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            // Obtener el ID del nuevo asiento
+                            string consultaAsiento = @"SELECT asientos.ID FROM asientos 
+                                                INNER JOIN aviones ON asientos.aviones_ID = aviones.ID
+                                                WHERE NumeroAsiento = @numero AND aviones.ID = @avion";
+
+                            using (MySqlCommand comandoAsiento = new MySqlCommand(consultaAsiento, conn, transaction))
+                            {
+                                comandoAsiento.Parameters.AddWithValue("@numero", nuevoAsiento);
+                                comandoAsiento.Parameters.AddWithValue("@avion", idAvion);
+                                object resultado = comandoAsiento.ExecuteScalar();
+
+                                if (resultado != null)
+                                {
+                                    int IdAsiento = Convert.ToInt32(resultado);
+                                    Console.WriteLine(IdAsiento);
+
+                                    // Actualizar la reserva
+                                    string actualizar = @"UPDATE reserva 
+                                                    INNER JOIN vuelos ON reserva.vuelos_ID = vuelos.ID
+                                                    INNER JOIN pasajero ON reserva.pasajero_ID = pasajero.ID
+                                                    SET asientos_ID = @idnuevo
+                                                    WHERE vuelos.ID = @vuelos AND pasajero.ID = @pasajero";
+
+                                    using (MySqlCommand comandoActualizar = new MySqlCommand(actualizar, conn, transaction))
+                                    {
+                                        comandoActualizar.Parameters.AddWithValue("@idnuevo", IdAsiento);
+                                        comandoActualizar.Parameters.AddWithValue("@vuelos", idvuelo);
+                                        comandoActualizar.Parameters.AddWithValue("@pasajero", pasajero);
+
+                                        int filasActualizar = comandoActualizar.ExecuteNonQuery();
+
+                                        if (filasActualizar > 0)
+                                        {
+                                            // Actualizar la preferencia del pasajero
+                                            string updatePreferencia = @"UPDATE pasajero
+                                                                SET PreferenciaAsiento = @butaca
+                                                                WHERE ID = @passager;";
+
+                                            using (MySqlCommand comandoPreferencia = new MySqlCommand(updatePreferencia, conn, transaction))
+                                            {
+                                                comandoPreferencia.Parameters.AddWithValue("@butaca", nuevoAsiento);
+                                                comandoPreferencia.Parameters.AddWithValue("@passager", pasajero);
+
+                                                int filasUpdate = comandoPreferencia.ExecuteNonQuery();
+
+                                                if (filasUpdate > 0)
+                                                {
+                                                    // Confirmar la transacción
+                                                    transaction.Commit();
+                                                    return true;
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("No se pudo actualizar la preferencia del asiento del pasajero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                    return false;
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("El número de asiento no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            return false;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se encontró el asiento con el ID especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar el estado del asiento. Verifique la información en nuevos asientos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Hubo un error al actualizar el asiento: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public bool LiberarAntiguoAsiento(int idvuelo , int idAvion , int asiento)
+        {
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+
+            try
+            {
+
+                string consulta = @"Update asientos
+                                    INNER JOIN aviones ON asientos.aviones_ID = aviones.ID
+                                    INNER JOIN vuelos ON vuelos.aviones_ID = aviones.ID
+                                    set asientos.Estado ='Disponible'
+                                    WHERE vuelos.ID = @id and aviones.ID = @avion and asientos.NumeroAsiento = @asiento";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conn))
+                {
+                    // Agregar parámetros
+                    comando.Parameters.AddWithValue("@id", idvuelo);
+                    comando.Parameters.AddWithValue("@avion", idAvion);
+                    comando.Parameters.AddWithValue("@asiento",asiento);
+
+                    // Ejecutar la consulta
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    {
+                        return true; // La actualización fue exitosa
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el asiento con el ID especificado.",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Hubo un error al actualizar el asiento en antiguo asiento: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+        }
+        
     }
+
 
 
 

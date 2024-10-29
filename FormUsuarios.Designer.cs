@@ -31,9 +31,9 @@ namespace Clave2_Grupo3_US23007_
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,13 +72,17 @@ namespace Clave2_Grupo3_US23007_
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_Usuario = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNombre_Buscar = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tool = new System.Windows.Forms.ToolTip(this.components);
-            this.btn_modificar = new System.Windows.Forms.Button();
+            this.cbxAsientos = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblVuelos = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lblAviones = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasajero)).BeginInit();
             this.gbModificar.SuspendLayout();
@@ -127,41 +131,46 @@ namespace Clave2_Grupo3_US23007_
             this.dgvPasajero.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPasajero.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPasajero.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPasajero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPasajero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPasajero.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPasajero.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPasajero.Location = new System.Drawing.Point(12, 119);
             this.dgvPasajero.MultiSelect = false;
             this.dgvPasajero.Name = "dgvPasajero";
             this.dgvPasajero.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPasajero.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPasajero.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPasajero.Size = new System.Drawing.Size(920, 150);
             this.dgvPasajero.TabIndex = 25;
             this.dgvPasajero.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPasajero_CellClick);
             // 
             // gbModificar
             // 
+            this.gbModificar.Controls.Add(this.lblAviones);
+            this.gbModificar.Controls.Add(this.label18);
+            this.gbModificar.Controls.Add(this.lblVuelos);
+            this.gbModificar.Controls.Add(this.label17);
+            this.gbModificar.Controls.Add(this.cbxAsientos);
             this.gbModificar.Controls.Add(this.picCorreo);
             this.gbModificar.Controls.Add(this.picReserva);
             this.gbModificar.Controls.Add(this.picAsiento);
@@ -198,7 +207,7 @@ namespace Clave2_Grupo3_US23007_
             this.gbModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbModificar.Location = new System.Drawing.Point(12, 288);
             this.gbModificar.Name = "gbModificar";
-            this.gbModificar.Size = new System.Drawing.Size(953, 302);
+            this.gbModificar.Size = new System.Drawing.Size(953, 352);
             this.gbModificar.TabIndex = 26;
             this.gbModificar.TabStop = false;
             this.gbModificar.Text = "Datos ";
@@ -213,12 +222,13 @@ namespace Clave2_Grupo3_US23007_
             this.picCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCorreo.TabIndex = 36;
             this.picCorreo.TabStop = false;
+            this.picCorreo.Click += new System.EventHandler(this.picCorreo_Click);
             // 
             // picReserva
             // 
             this.picReserva.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picReserva.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.pen_edit_pencil_modify_icon_149413;
-            this.picReserva.Location = new System.Drawing.Point(592, 260);
+            this.picReserva.Location = new System.Drawing.Point(329, 306);
             this.picReserva.Name = "picReserva";
             this.picReserva.Size = new System.Drawing.Size(23, 22);
             this.picReserva.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -229,12 +239,13 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.picAsiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAsiento.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.pen_edit_pencil_modify_icon_149413;
-            this.picAsiento.Location = new System.Drawing.Point(469, 211);
+            this.picAsiento.Location = new System.Drawing.Point(522, 211);
             this.picAsiento.Name = "picAsiento";
             this.picAsiento.Size = new System.Drawing.Size(23, 22);
             this.picAsiento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAsiento.TabIndex = 34;
             this.picAsiento.TabStop = false;
+            this.picAsiento.Click += new System.EventHandler(this.picAsiento_Click);
             // 
             // picNombre
             // 
@@ -246,6 +257,7 @@ namespace Clave2_Grupo3_US23007_
             this.picNombre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picNombre.TabIndex = 33;
             this.picNombre.TabStop = false;
+            this.picNombre.Click += new System.EventHandler(this.picNombre_Click);
             // 
             // picUsuario
             // 
@@ -282,7 +294,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.lbl_fecha_reserva.AutoSize = true;
             this.lbl_fecha_reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha_reserva.Location = new System.Drawing.Point(185, 266);
+            this.lbl_fecha_reserva.Location = new System.Drawing.Point(791, 269);
             this.lbl_fecha_reserva.Name = "lbl_fecha_reserva";
             this.lbl_fecha_reserva.Size = new System.Drawing.Size(15, 16);
             this.lbl_fecha_reserva.TabIndex = 25;
@@ -291,7 +303,7 @@ namespace Clave2_Grupo3_US23007_
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(29, 266);
+            this.label15.Location = new System.Drawing.Point(635, 269);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(149, 16);
             this.label15.TabIndex = 24;
@@ -300,7 +312,7 @@ namespace Clave2_Grupo3_US23007_
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(299, 266);
+            this.label14.Location = new System.Drawing.Point(29, 312);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(125, 16);
             this.label14.TabIndex = 23;
@@ -309,8 +321,9 @@ namespace Clave2_Grupo3_US23007_
             // txt_Estado
             // 
             this.txt_Estado.Cursor = System.Windows.Forms.Cursors.No;
+            this.txt_Estado.Enabled = false;
             this.txt_Estado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Estado.Location = new System.Drawing.Point(439, 262);
+            this.txt_Estado.Location = new System.Drawing.Point(176, 308);
             this.txt_Estado.Multiline = true;
             this.txt_Estado.Name = "txt_Estado";
             this.txt_Estado.Size = new System.Drawing.Size(147, 20);
@@ -321,7 +334,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.lbl_reserva.AutoSize = true;
             this.lbl_reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_reserva.Location = new System.Drawing.Point(790, 217);
+            this.lbl_reserva.Location = new System.Drawing.Point(417, 268);
             this.lbl_reserva.Name = "lbl_reserva";
             this.lbl_reserva.Size = new System.Drawing.Size(15, 16);
             this.lbl_reserva.TabIndex = 21;
@@ -330,7 +343,7 @@ namespace Clave2_Grupo3_US23007_
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(641, 217);
+            this.label13.Location = new System.Drawing.Point(273, 269);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(133, 16);
             this.label13.TabIndex = 20;
@@ -502,7 +515,6 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Correo.Size = new System.Drawing.Size(165, 20);
             this.txt_Correo.TabIndex = 3;
             this.txt_Correo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Correo.TextChanged += new System.EventHandler(this.txt_Correo_TextChanged);
             // 
             // label4
             // 
@@ -532,15 +544,15 @@ namespace Clave2_Grupo3_US23007_
             this.label3.TabIndex = 0;
             this.label3.Text = "Número de Usuario";
             // 
-            // txtNombre
+            // txtNombre_Buscar
             // 
-            this.erp.SetIconPadding(this.txtNombre, 5);
-            this.txtNombre.Location = new System.Drawing.Point(313, 59);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(285, 21);
-            this.txtNombre.TabIndex = 27;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.erp.SetIconPadding(this.txtNombre_Buscar, 5);
+            this.txtNombre_Buscar.Location = new System.Drawing.Point(313, 59);
+            this.txtNombre_Buscar.Multiline = true;
+            this.txtNombre_Buscar.Name = "txtNombre_Buscar";
+            this.txtNombre_Buscar.Size = new System.Drawing.Size(285, 21);
+            this.txtNombre_Buscar.TabIndex = 27;
+            this.txtNombre_Buscar.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // pictureBox2
             // 
@@ -584,19 +596,54 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox3.Tag = "Recargar Tabla";
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // btn_modificar
+            // cbxAsientos
             // 
-            this.btn_modificar.BackColor = System.Drawing.Color.Black;
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.ForeColor = System.Drawing.Color.White;
-            this.btn_modificar.Location = new System.Drawing.Point(451, 615);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(88, 25);
-            this.btn_modificar.TabIndex = 31;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = false;
-            this.btn_modificar.Click += new System.EventHandler(this.button1_Click);
+            this.cbxAsientos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAsientos.FormattingEnabled = true;
+            this.cbxAsientos.Location = new System.Drawing.Point(480, 211);
+            this.cbxAsientos.Name = "cbxAsientos";
+            this.cbxAsientos.Size = new System.Drawing.Size(36, 24);
+            this.cbxAsientos.TabIndex = 37;
+            this.tool.SetToolTip(this.cbxAsientos, "Seleccionar Nuevo Asiento");
+            this.cbxAsientos.SelectedIndexChanged += new System.EventHandler(this.cbxAsientos_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(641, 219);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(119, 16);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "Número de Vuelo";
+            // 
+            // lblVuelos
+            // 
+            this.lblVuelos.AutoSize = true;
+            this.lblVuelos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVuelos.Location = new System.Drawing.Point(778, 219);
+            this.lblVuelos.Name = "lblVuelos";
+            this.lblVuelos.Size = new System.Drawing.Size(15, 16);
+            this.lblVuelos.TabIndex = 39;
+            this.lblVuelos.Text = "?";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(29, 269);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(118, 16);
+            this.label18.TabIndex = 40;
+            this.label18.Text = "Número de Avion";
+            // 
+            // lblAviones
+            // 
+            this.lblAviones.AutoSize = true;
+            this.lblAviones.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAviones.Location = new System.Drawing.Point(153, 268);
+            this.lblAviones.Name = "lblAviones";
+            this.lblAviones.Size = new System.Drawing.Size(15, 16);
+            this.lblAviones.TabIndex = 41;
+            this.lblAviones.Text = "?";
             // 
             // FormUsuarios
             // 
@@ -604,11 +651,10 @@ namespace Clave2_Grupo3_US23007_
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(969, 652);
-            this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtNombre_Buscar);
             this.Controls.Add(this.gbModificar);
             this.Controls.Add(this.dgvPasajero);
             this.Controls.Add(this.label2);
@@ -642,7 +688,7 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgvPasajero;
         private System.Windows.Forms.GroupBox gbModificar;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtNombre_Buscar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ErrorProvider erp;
@@ -676,11 +722,15 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.TextBox txt_Nombre_Usuario;
         private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.PictureBox picCorreo;
         private System.Windows.Forms.PictureBox picReserva;
         private System.Windows.Forms.PictureBox picAsiento;
         private System.Windows.Forms.PictureBox picNombre;
         private System.Windows.Forms.PictureBox picUsuario;
+        private System.Windows.Forms.ComboBox cbxAsientos;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblAviones;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblVuelos;
     }
 }
