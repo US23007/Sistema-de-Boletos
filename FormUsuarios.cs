@@ -162,6 +162,48 @@ namespace Clave2_Grupo3_US23007_
                 erp.SetError(txt_asiento, "");
             }
 
+            if (string.IsNullOrWhiteSpace(txt_Estado.Text))
+            {
+                erp.SetError(txt_Estado, "Rellenar los datos");
+                valid = false;
+            }
+            else
+            {
+                erp.SetError(txt_Estado, "");
+            }
+
+        }
+
+        private void txt_Nombre_Completo_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^[a-zA-Z\s]*$";
+            Regex regex = new Regex(patron);
+
+            if (regex.IsMatch(txt_Nombre_Completo.Text))
+            {
+                erp.SetError(txt_Nombre_Completo, ""); // Sin errores
+                btn_modificar.Enabled = true;
+            }
+            else
+            {
+                erp.SetError(txt_Nombre_Completo, "Solo se permiten letras");
+                btn_modificar.Enabled = false;
+            }
+        }
+
+        private void txt_asiento_TextChanged(object sender, EventArgs e)
+        {
+            if (!txt_asiento.Text.Any(char.IsDigit))
+            {
+                txt_asiento.Text = " ";
+                erp.SetError(txt_asiento, "Solo se permiten números");
+                btn_modificar.Enabled = false;
+            }
+            else
+            {
+                erp.SetError(txt_asiento, "");
+                btn_modificar.Enabled = true;
+            }
         }
     }
 }
