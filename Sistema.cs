@@ -282,7 +282,7 @@ namespace Clave2_Grupo3_US23007_
 
 
 
-        public bool Consultar(DataGridView buscar,TextBox aceptar)
+        public bool Consultar(DataGridView buscar, TextBox aceptar)
         {
             try
             {
@@ -298,7 +298,7 @@ namespace Clave2_Grupo3_US23007_
 
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {
-                    comando.Parameters.AddWithValue("@nombre",aceptar.Text);
+                    comando.Parameters.AddWithValue("@nombre", aceptar.Text);
                     using (MySqlDataReader reader = comando.ExecuteReader())
                     {
                         if (reader.HasRows)
@@ -321,6 +321,43 @@ namespace Clave2_Grupo3_US23007_
             catch (MySqlException ex)
             {
                 MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+
+        public bool ModificarUsuario(string nuevo, int id)
+        {
+            try
+            {
+                Conexion conexion = new Conexion(); // Asegúrate de tener correctamente implementada tu clase de conexión
+
+                string consulta = "UPDATE usuario SET Usuario = @usuario WHERE ID = @idUsuario";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    // Agregar parámetros
+                    comando.Parameters.AddWithValue("@usuario", nuevo);
+                    comando.Parameters.AddWithValue("@idUsuario", id);
+
+                    // Ejecutar la consulta
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    {
+                        return true; // La actualización fue exitosa
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el usuario con el ID especificado.",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Hubo un error al actualizar el usuario: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }

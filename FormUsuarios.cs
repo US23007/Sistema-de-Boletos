@@ -116,93 +116,33 @@ namespace Clave2_Grupo3_US23007_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool valid = true; // Indicador para validar si todo está correcto.
-
-            // Validar campo: Nombre de Usuario
-            if (string.IsNullOrWhiteSpace(txt_Nombre_Usuario.Text))
-            {
-                erp.SetError(txt_Nombre_Usuario, "Rellenar los datos");
-                valid = false;
-            }
-            else
-            {
-                erp.SetError(txt_Nombre_Usuario, ""); // Limpiar error.
-            }
-
-            // Validar campo: Correo
-            if (string.IsNullOrWhiteSpace(txt_Correo.Text))
-            {
-                erp.SetError(txt_Correo, "Rellenar los datos");
-                valid = false;
-            }
-            else
-            {
-                erp.SetError(txt_Correo, "");
-            }
-
-            // Validar campo: Nombre Completo
-            if (string.IsNullOrWhiteSpace(txt_Nombre_Completo.Text))
-            {
-                erp.SetError(txt_Nombre_Completo, "Rellenar los datos");
-                valid = false;
-            }
-            else
-            {
-                erp.SetError(txt_Nombre_Completo, "");
-            }
-
-            // Validar campo: Asiento
-            if (string.IsNullOrWhiteSpace(txt_asiento.Text))
-            {
-                erp.SetError(txt_asiento, "Rellenar los datos");
-                valid = false;
-            }
-            else
-            {
-                erp.SetError(txt_asiento, "");
-            }
-
-            if (string.IsNullOrWhiteSpace(txt_Estado.Text))
-            {
-                erp.SetError(txt_Estado, "Rellenar los datos");
-                valid = false;
-            }
-            else
-            {
-                erp.SetError(txt_Estado, "");
-            }
+           
 
         }
 
-        private void txt_Nombre_Completo_TextChanged(object sender, EventArgs e)
-        {
-            string patron = @"^[a-zA-Z\s]*$";
-            Regex regex = new Regex(patron);
 
-            if (regex.IsMatch(txt_Nombre_Completo.Text))
-            {
-                erp.SetError(txt_Nombre_Completo, ""); // Sin errores
-                btn_modificar.Enabled = true;
-            }
-            else
-            {
-                erp.SetError(txt_Nombre_Completo, "Solo se permiten letras");
-                btn_modificar.Enabled = false;
-            }
-        }
 
-        private void txt_asiento_TextChanged(object sender, EventArgs e)
+        private void picUsuario_Click(object sender, EventArgs e)
         {
-            if (!txt_asiento.Text.Any(char.IsDigit))
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nuevo Nombre del Usuario:", "Modificar Usuario", "");
+
+            do
             {
-                txt_asiento.Text = " ";
-                erp.SetError(txt_asiento, "Solo se permiten números");
-                btn_modificar.Enabled = false;
-            }
-            else
-            {
-                erp.SetError(txt_asiento, "");
-                btn_modificar.Enabled = true;
+                if(String.IsNullOrEmpty(input) )
+               
+                if (!input.Any(char.IsLetter))
+                {
+                    MessageBox.Show("Solo se permiten letras", "Dato Nulo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+            } while (!string.IsNullOrEmpty(input) && !string.IsNullOrWhiteSpace(input) && !input.Any(char.IsLetter));
+
+            int id = int.Parse(lbl_Usuario.Text);
+            Sistema sistema = new Sistema();
+            if (sistema.ModificarUsuario(input, id)) {
+
+                MessageBox.Show("Usuario modificado exitosamente","Proceso Completado",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
     }

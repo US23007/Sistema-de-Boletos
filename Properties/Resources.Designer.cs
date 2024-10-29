@@ -453,6 +453,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pen_edit_pencil_modify_icon_149413 {
+            get {
+                object obj = ResourceManager.GetObject("pen_edit_pencil_modify_icon_149413", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pin_navigation_map_destination_icon_225369 {
             get {
                 object obj = ResourceManager.GetObject("pin_navigation_map_destination_icon_225369", resourceCulture);
