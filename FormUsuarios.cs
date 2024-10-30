@@ -19,7 +19,7 @@ namespace Clave2_Grupo3_US23007_
             gbModificar.Visible = false;
             picNombre.Enabled = false;
             picCorreo.Enabled = false;
-            picReserva.Enabled = false;
+           
             picAsiento.Enabled = false;
             picUsuario.Enabled = false;
             cbxAsientos.Visible = false;
@@ -35,7 +35,7 @@ namespace Clave2_Grupo3_US23007_
                 gbModificar.Visible = true;
                 picNombre.Enabled = true;
                 picCorreo.Enabled = true;
-                picReserva.Enabled = true;
+            
                 picAsiento.Enabled = true;
                 picUsuario.Enabled = true;
                 btneliminar.Visible = true;
@@ -55,7 +55,7 @@ namespace Clave2_Grupo3_US23007_
                 lblVuelos.Text = fila.Cells["Número de Vuelo"].Value.ToString();
                 lblAviones.Text = fila.Cells["Número de Avion"].Value.ToString();
                 lbl_reserva.Text = fila.Cells["Número de Reserva"].Value.ToString();
-                txt_Estado.Text = fila.Cells["Estado"].Value.ToString();
+                lbl_Estado_Reserva.Text = fila.Cells["Estado"].Value.ToString();
                 DateTime fechaReserva = (DateTime)fila.Cells["Fecha de Reservación"].Value;
                 lbl_fecha_reserva.Text = fechaReserva.ToString("MM/yy/dd");
             }
@@ -181,7 +181,7 @@ namespace Clave2_Grupo3_US23007_
             dgvPasajero.ClearSelection();
             picNombre.Enabled = false;
             picCorreo.Enabled = false;
-            picReserva.Enabled = false;
+            lbl_Estado_Reserva.Text = string.Empty;
             picAsiento.Enabled = false;
             picUsuario.Enabled = false;
             btneliminar.Visible = false;

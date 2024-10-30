@@ -333,6 +333,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fileinterfacesymboloftextpapersheet_79740 {
+            get {
+                object obj = ResourceManager.GetObject("fileinterfacesymboloftextpapersheet_79740", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fluffy_wing_38311 {
             get {
                 object obj = ResourceManager.GetObject("fluffy_wing_38311", resourceCulture);

@@ -248,10 +248,10 @@ namespace Clave2_Grupo3_US23007_
                                     vuelos.ID as 'Número de Vuelo', aviones.ID as 'Número de Avion',
                                     reserva.ID as 'Número de Reserva' , reserva.Estado ,reserva.Fecha as 'Fecha de Reservación'
                                     from usuario
-                                    inner join pasajero  on usuario.ID = pasajero.usuario_ID 
-                                    inner join reserva on pasajero.ID = reserva.ID
-                                    inner join vuelos on reserva.vuelos_ID = vuelos.ID
-                                    inner join aviones on vuelos.aviones_ID = aviones.ID";
+                                    inner join pasajero ON usuario.ID = pasajero.usuario_ID
+                                    inner join reserva ON pasajero.ID = reserva.pasajero_ID 
+                                    inner join vuelos ON reserva.vuelos_ID = vuelos.ID
+                                    inner join aviones ON vuelos.aviones_ID = aviones.ID";
 
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {

@@ -45,7 +45,6 @@ namespace Clave2_Grupo3_US23007_
             this.label17 = new System.Windows.Forms.Label();
             this.cbxAsientos = new System.Windows.Forms.ComboBox();
             this.picCorreo = new System.Windows.Forms.PictureBox();
-            this.picReserva = new System.Windows.Forms.PictureBox();
             this.picAsiento = new System.Windows.Forms.PictureBox();
             this.picNombre = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
@@ -84,11 +83,11 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tool = new System.Windows.Forms.ToolTip(this.components);
             this.btneliminar = new System.Windows.Forms.Button();
+            this.lbl_Estado_Reserva = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasajero)).BeginInit();
             this.gbModificar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCorreo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAsiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
@@ -167,13 +166,13 @@ namespace Clave2_Grupo3_US23007_
             // 
             // gbModificar
             // 
+            this.gbModificar.Controls.Add(this.lbl_Estado_Reserva);
             this.gbModificar.Controls.Add(this.lblAviones);
             this.gbModificar.Controls.Add(this.label18);
             this.gbModificar.Controls.Add(this.lblVuelos);
             this.gbModificar.Controls.Add(this.label17);
             this.gbModificar.Controls.Add(this.cbxAsientos);
             this.gbModificar.Controls.Add(this.picCorreo);
-            this.gbModificar.Controls.Add(this.picReserva);
             this.gbModificar.Controls.Add(this.picAsiento);
             this.gbModificar.Controls.Add(this.picNombre);
             this.gbModificar.Controls.Add(this.picUsuario);
@@ -274,17 +273,6 @@ namespace Clave2_Grupo3_US23007_
             this.picCorreo.TabStop = false;
             this.picCorreo.Click += new System.EventHandler(this.picCorreo_Click);
             // 
-            // picReserva
-            // 
-            this.picReserva.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picReserva.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.pen_edit_pencil_modify_icon_149413;
-            this.picReserva.Location = new System.Drawing.Point(329, 306);
-            this.picReserva.Name = "picReserva";
-            this.picReserva.Size = new System.Drawing.Size(23, 22);
-            this.picReserva.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picReserva.TabIndex = 35;
-            this.picReserva.TabStop = false;
-            // 
             // picAsiento
             // 
             this.picAsiento.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -373,7 +361,7 @@ namespace Clave2_Grupo3_US23007_
             this.txt_Estado.Cursor = System.Windows.Forms.Cursors.No;
             this.txt_Estado.Enabled = false;
             this.txt_Estado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Estado.Location = new System.Drawing.Point(176, 308);
+            this.txt_Estado.Location = new System.Drawing.Point(316, 308);
             this.txt_Estado.Multiline = true;
             this.txt_Estado.Name = "txt_Estado";
             this.txt_Estado.Size = new System.Drawing.Size(147, 20);
@@ -664,6 +652,16 @@ namespace Clave2_Grupo3_US23007_
             this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
+            // lbl_Estado_Reserva
+            // 
+            this.lbl_Estado_Reserva.AutoSize = true;
+            this.lbl_Estado_Reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Estado_Reserva.Location = new System.Drawing.Point(160, 312);
+            this.lbl_Estado_Reserva.Name = "lbl_Estado_Reserva";
+            this.lbl_Estado_Reserva.Size = new System.Drawing.Size(15, 16);
+            this.lbl_Estado_Reserva.TabIndex = 42;
+            this.lbl_Estado_Reserva.Text = "?";
+            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,7 +687,6 @@ namespace Clave2_Grupo3_US23007_
             this.gbModificar.ResumeLayout(false);
             this.gbModificar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCorreo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAsiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).EndInit();
@@ -743,7 +740,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox picCorreo;
-        private System.Windows.Forms.PictureBox picReserva;
         private System.Windows.Forms.PictureBox picAsiento;
         private System.Windows.Forms.PictureBox picNombre;
         private System.Windows.Forms.PictureBox picUsuario;
@@ -753,5 +749,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lblVuelos;
         private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.Label lbl_Estado_Reserva;
     }
 }

@@ -477,5 +477,11 @@
   <ItemGroup>
     <None Include="Resources\user_add_new_insert_icon_205821.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492617369-7-docs-document-file-data-google-suits_83427.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileinterfacesymboloftextpapersheet_79740.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
