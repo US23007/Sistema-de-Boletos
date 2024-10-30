@@ -297,7 +297,7 @@ namespace Clave2_Grupo3_US23007_
                                     reserva.ID as 'Número de Reserva' , reserva.Estado ,reserva.Fecha as 'Fecha de Reservación'
                                     from usuario
                                     inner join pasajero  on usuario.ID = pasajero.usuario_ID 
-                                    inner join reserva on pasajero.ID = reserva.ID
+                                    inner join reserva on pasajero.ID = reserva.pasajero_ID
                                     inner join vuelos on reserva.vuelos_ID = vuelos.ID
                                     inner join aviones on vuelos.aviones_ID = aviones.ID
                                     WHERE pasajero.NombreCompleto LIKE @nombre;";

@@ -110,7 +110,7 @@ namespace Clave2_Grupo3_US23007_
                     string consulta = @"Select aerolinea.Nombre, vuelos.ID, rutas.CodigoOrigen, rutas.CodigoDestino, vuelos.FechaSalida,
                                  vuelos.FechaLlegada, Modelo, HoraSalida, HoraLlegada, vuelos.Puerta, vuelos.Precio
                                  from aviones 
-                                 INNER join vuelos on aviones.ID = vuelos.ID
+                                 INNER join vuelos on aviones.ID = vuelos.aviones_ID
                                  INNER JOIN aerolinea on aviones.aerolinea_ID = aerolinea.ID
                                  INNER JOIN rutas on vuelos.rutas_ID = rutas.ID
                                  INNER JOIN asientos on aviones.ID = asientos.aviones_ID
@@ -123,7 +123,7 @@ namespace Clave2_Grupo3_US23007_
                         comando.Parameters.AddWithValue("@asiento", ObtenerSitio);
                         Console.WriteLine("Id Vuelo :" + ObtenerId);
                         Console.WriteLine("Id Avion :" + ObtenerAvion);
-                        Console.WriteLine("Id Vuelo :" + ObtenerSitio);
+                        Console.WriteLine("Id Asiento :" + ObtenerSitio);
 
                         using (MySqlDataReader reader = comando.ExecuteReader())
                         {
@@ -158,7 +158,7 @@ namespace Clave2_Grupo3_US23007_
                             }
                             else
                             {
-                                MessageBox.Show("No se encontraron datos del pasajero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("No se encontraron datos del pasajero en obtener detalles de vuelo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return false;
                             }
                         }
@@ -275,7 +275,7 @@ namespace Clave2_Grupo3_US23007_
             {
                 
 
-                string consulta = @"SELECT politicas.Descripcion, politicas.TiempoPermitido 
+                string consulta = @"SELECT politicas.Descripcion, politicas.TiempoPermitidoDias
                                     FROM politicas
                                     INNER JOIN aerolinea ON politicas.Aerolinea_ID = aerolinea.ID
                                     INNER JOIN aviones ON aerolinea.ID = aviones.Aerolinea_ID
@@ -289,7 +289,7 @@ namespace Clave2_Grupo3_US23007_
                         if (reader.Read())
                         {
                             texto.Text = reader["Descripcion"].ToString();
-                            tiempo.Text = string.Format("{0} dias", reader["TiempoPermitido"]);
+                            tiempo.Text = string.Format("{0} dias", reader["TiempoPermitidoDias"]);
                             return true;
                             
                         }
