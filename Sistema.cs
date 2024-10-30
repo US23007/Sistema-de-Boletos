@@ -574,28 +574,28 @@ namespace Clave2_Grupo3_US23007_
                                                 }
                                                 else
                                                 {
-                                                    MessageBox.Show("No se pudo actualizar la preferencia del asiento del pasajero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                    MessageBox.Show("No se pudo actualizar la preferencia del asiento del pasajero en filas update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                                     return false;
                                                 }
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("El número de asiento no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBox.Show("El número de asiento no es válido en filas actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                             return false;
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    MessageBox.Show("No se encontró el asiento con el ID especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("No se encontró el asiento con el ID especificado en comandoAsiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return false;
                                 }
                             }
                         }
                         else
                         {
-                            MessageBox.Show("No se pudo actualizar el estado del asiento. Verifique la información en nuevos asientos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No se pudo actualizar el estado del asiento en filas Afectadas. Verifique la información en nuevos asientos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }
