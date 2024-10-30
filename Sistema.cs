@@ -790,6 +790,41 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        public bool Politicas(DataGridView politicas)
+        {
+            try
+            {
+                Conexion conexion = new Conexion();
+                string consulta = @"SELECT * FROM politicas;";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
+
+                            politicas.DataSource = dt;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Algo salio mal y no se pudo cargar las politicas", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
     }
 
     

@@ -35,6 +35,9 @@ namespace Clave2_Grupo3_US23007_
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,10 +46,16 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dgvPagos = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgvPoliticas = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPoliticas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -187,11 +196,85 @@ namespace Clave2_Grupo3_US23007_
     "--------------------------------";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 484);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(586, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------------------------------------------------" +
+    "--------------------------------";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dgvPoliticas
+            // 
+            this.dgvPoliticas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvPoliticas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvPoliticas.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPoliticas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvPoliticas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPoliticas.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPoliticas.Location = new System.Drawing.Point(16, 499);
+            this.dgvPoliticas.MultiSelect = false;
+            this.dgvPoliticas.Name = "dgvPoliticas";
+            this.dgvPoliticas.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPoliticas.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvPoliticas.Size = new System.Drawing.Size(576, 150);
+            this.dgvPoliticas.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(51, 470);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 16);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Politicas ";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.file_business_sheet_page_agreement_paper_approval_icon_232640;
+            this.pictureBox3.Location = new System.Drawing.Point(16, 457);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
             // FormReservasPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 478);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(604, 667);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dgvPoliticas);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvPagos);
             this.Controls.Add(this.label3);
@@ -204,10 +287,13 @@ namespace Clave2_Grupo3_US23007_
             this.Name = "FormReservasPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservas y Pagos";
+            this.Load += new System.EventHandler(this.FormReservasPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPoliticas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +309,9 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.DataGridView dgvPagos;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.DataGridView dgvPoliticas;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

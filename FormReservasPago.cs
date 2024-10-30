@@ -16,5 +16,10 @@ namespace Clave2_Grupo3_US23007_
         {
             InitializeComponent();
         }
+
+        private void FormReservasPago_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

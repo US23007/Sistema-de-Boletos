@@ -39,7 +39,7 @@ namespace Clave2_Grupo3_US23007_
             this.boletosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vuelosYRutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Contenedor = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@ namespace Clave2_Grupo3_US23007_
             this.boletosToolStripMenuItem,
             this.vuelosYRutasToolStripMenuItem,
             this.reservasToolStripMenuItem,
-            this.facturasToolStripMenuItem});
+            this.cerrarProgramaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(710, 24);
@@ -128,12 +128,13 @@ namespace Clave2_Grupo3_US23007_
             this.reservasToolStripMenuItem.Text = "Ver Reservas y Pagos";
             this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
             // 
-            // facturasToolStripMenuItem
+            // cerrarProgramaToolStripMenuItem
             // 
-            this.facturasToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.ic_ad_97607;
-            this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
-            this.facturasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.facturasToolStripMenuItem.Text = "Pagos";
+            this.cerrarProgramaToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.emblemunreadable_93487;
+            this.cerrarProgramaToolStripMenuItem.Name = "cerrarProgramaToolStripMenuItem";
+            this.cerrarProgramaToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.cerrarProgramaToolStripMenuItem.Text = "Cerrar Programa";
+            this.cerrarProgramaToolStripMenuItem.Click += new System.EventHandler(this.cerrarProgramaToolStripMenuItem_Click);
             // 
             // Contenedor
             // 
@@ -171,11 +172,11 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
         private System.Windows.Forms.Panel Contenedor;
         private System.Windows.Forms.ToolStripMenuItem vuelosYRutasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraciónDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelarOModificarReservaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarProgramaToolStripMenuItem;
     }
 }

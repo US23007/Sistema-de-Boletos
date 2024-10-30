@@ -273,6 +273,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap emblemunreadable_93487 {
+            get {
+                object obj = ResourceManager.GetObject("emblemunreadable_93487", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employee_group_solid_icon_235378 {
             get {
                 object obj = ResourceManager.GetObject("employee_group_solid_icon_235378", resourceCulture);
@@ -326,6 +336,16 @@ namespace Clave2_Grupo3_US23007_.Properties {
         internal static System.Drawing.Bitmap facebook_placeholder_for_locate_places_on_maps_icon_icons_com_57151 {
             get {
                 object obj = ResourceManager.GetObject("facebook_placeholder_for_locate_places_on_maps_icon_icons_com_57151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_business_sheet_page_agreement_paper_approval_icon_232640 {
+            get {
+                object obj = ResourceManager.GetObject("file_business_sheet_page_agreement_paper_approval_icon_232640", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

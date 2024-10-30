@@ -83,10 +83,15 @@ namespace Clave2_Grupo3_US23007_
         {
             Sistema sistema = new Sistema();
             FormReservasPago form = new FormReservasPago();
-            if (sistema.Reservaciones(form.dgvReservas) && sistema.Pagos(form.dgvPagos))
+            if (sistema.Reservaciones(form.dgvReservas) && sistema.Pagos(form.dgvPagos) && sistema.Politicas(form.dgvPoliticas))
             {
                 form.ShowDialog();
             }
+        }
+
+        private void cerrarProgramaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

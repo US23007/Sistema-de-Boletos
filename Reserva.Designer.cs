@@ -660,7 +660,7 @@ namespace Clave2_Grupo3_US23007_
             this.btnConfimar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfimar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfimar.ForeColor = System.Drawing.Color.White;
-            this.btnConfimar.Location = new System.Drawing.Point(394, 379);
+            this.btnConfimar.Location = new System.Drawing.Point(373, 379);
             this.btnConfimar.Name = "btnConfimar";
             this.btnConfimar.Size = new System.Drawing.Size(85, 32);
             this.btnConfimar.TabIndex = 51;
@@ -720,7 +720,7 @@ namespace Clave2_Grupo3_US23007_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservas";

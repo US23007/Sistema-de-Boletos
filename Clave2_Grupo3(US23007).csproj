@@ -492,5 +492,11 @@
   <ItemGroup>
     <None Include="Resources\fileinterfacesymboloftextpapersheet_79740.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_business_sheet_page_agreement_paper_approval_icon_232640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emblemunreadable_93487.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
