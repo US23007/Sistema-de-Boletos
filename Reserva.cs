@@ -34,5 +34,15 @@ namespace Clave2_Grupo3_US23007_
                 
             }
         }
+
+        private void picPoliticas_Click(object sender, EventArgs e)
+        {
+            Reservaciones reservaciones = new Reservaciones();
+            Politicas politicas = new Politicas();
+            if (reservaciones.ObtenerPoliticas(politicas.lbl_Politicas,politicas.lbl_Horas))
+            {
+                politicas.ShowDialog();
+            }
+        }
     }
 }

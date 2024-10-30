@@ -796,7 +796,7 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 Conexion conexion = new Conexion();
-                string consulta = @"SELECT * FROM politicas;";
+                string consulta = @"SELECT Descripcion,TiempoPermitidoDias as 'Dias Limite de Cambios antes del vuelo' FROM politicas;";
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {
                     using (MySqlDataReader reader = comando.ExecuteReader())
@@ -825,6 +825,92 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        public bool Condiciones(int idvuelos,int idaviones)
+        {
+            try
+            {
+                Conexion conexion = new Conexion();
+                string consulta = @"SELECT vuelos.FechaSalida,politicas.TiempoPermitidoDias
+                                    FROM reserva
+                                    INNER JOIN vuelos ON reserva.Vuelos_ID = vuelos.ID
+                                    INNER JOIN aviones ON vuelos.Aviones_ID = aviones.ID
+                                    INNER JOIN aerolinea ON aviones.Aerolinea_ID = aerolinea.ID
+                                    INNER JOIN politicas ON aerolinea.ID = politicas.Aerolinea_ID
+                                    WHERE  aviones.ID = @avion AND vuelos.ID = @vuelo;";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    comando.Parameters.AddWithValue("@avion", idaviones);
+                    comando.Parameters.AddWithValue("@vuelo", idvuelos);
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            DateTime fechaVuelo = Convert.ToDateTime(reader["FechaSalida"]);
+                            int diasPermitidos = Convert.ToInt32(reader["TiempoPermitidoDias"]);
+                            DateTime fechaLimite = fechaVuelo.AddDays(-diasPermitidos);
+
+                            if (DateTime.Now <= fechaLimite)
+                            {
+                                
+                                return true; // Se permiten cambios
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ya no puede hacer Cambios o Cancelar la Reserva el tiempo Disponible para los cambios ha expirado", "Tiempo Vencido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return false; // No se permiten cambios
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Algo salio mal y no se pudo cargar las politicas", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+       public bool CancelarReserva(int idreserva)
+        {
+            try
+            {
+                Conexion conexion = new Conexion();
+                string consulta = @"Update reserva
+                                    set Estado = 'Cancelada'
+                                    where reserva.ID = @idreserva";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    comando.Parameters.AddWithValue("idreserva", idreserva);
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                    
+                        if (filasAfectadas >0)
+                        {
+                            
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Algo salio mal y no se pudo actualizar el Estado de la Reserva", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
     }
 
     

@@ -635,6 +635,7 @@ namespace Clave2_Grupo3_US23007_
             this.picPoliticas.TabIndex = 50;
             this.picPoliticas.TabStop = false;
             this.tool.SetToolTip(this.picPoliticas, "Politicas y Condiciones ");
+            this.picPoliticas.Click += new System.EventHandler(this.picPoliticas_Click);
             // 
             // erp
             // 

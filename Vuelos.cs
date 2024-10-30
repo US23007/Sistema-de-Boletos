@@ -84,12 +84,27 @@ namespace Clave2_Grupo3_US23007_
                 {
                     MySqlDataReader reader = comando.ExecuteReader();
 
+
+                    HashSet<string> origenSet = new HashSet<string>();
+                    HashSet<string> destinoSet = new HashSet<string>();
+
                     while (reader.Read())
                     {
-                        origen.Items.Add(reader["Origen"].ToString());
-                        destino.Items.Add(reader["Destino"].ToString());
+                        origenSet.Add(reader["Origen"].ToString());
+                        destinoSet.Add(reader["Destino"].ToString());
+                    }
+                    origen.Items.Clear();
+                    destino.Items.Clear();
+
+                    foreach (var item in origenSet)
+                    {
+                        origen.Items.Add(item);
                     }
 
+                    foreach (var item in destinoSet)
+                    {
+                        destino.Items.Add(item);
+                    }
                     reader.Close();
                     //Microsoft.VisualBasic.Interaction.MsgBox("Datos Cargados");
                 }

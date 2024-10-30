@@ -34,7 +34,6 @@ namespace Clave2_Grupo3_US23007_
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelarOModificarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vuelosYRutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,8 +71,7 @@ namespace Clave2_Grupo3_US23007_
             // administraciónDeUsuariosToolStripMenuItem
             // 
             this.administraciónDeUsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoUsuarioToolStripMenuItem,
-            this.cancelarOModificarReservaToolStripMenuItem});
+            this.nuevoUsuarioToolStripMenuItem});
             this.administraciónDeUsuariosToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.group_profile_users_icon_icons_com_73540;
             this.administraciónDeUsuariosToolStripMenuItem.Name = "administraciónDeUsuariosToolStripMenuItem";
             this.administraciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
@@ -84,16 +82,9 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.nuevoUsuarioToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.user_add_new_insert_icon_205821;
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
-            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
-            // 
-            // cancelarOModificarReservaToolStripMenuItem
-            // 
-            this.cancelarOModificarReservaToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.edit_modify_icon_149489;
-            this.cancelarOModificarReservaToolStripMenuItem.Name = "cancelarOModificarReservaToolStripMenuItem";
-            this.cancelarOModificarReservaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.cancelarOModificarReservaToolStripMenuItem.Text = "Cancelar o Modificar Reserva";
             // 
             // cerrarSesiónToolStripMenuItem
             // 
@@ -176,7 +167,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.ToolStripMenuItem vuelosYRutasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraciónDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancelarOModificarReservaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarProgramaToolStripMenuItem;
     }
 }

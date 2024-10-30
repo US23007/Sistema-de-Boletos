@@ -266,5 +266,54 @@ namespace Clave2_Grupo3_US23007_
 
         }
         
+        public bool ObtenerPoliticas(Label texto,Label tiempo)
+        {
+           
+            Conexion conexion = new Conexion();
+            MySqlConnection conn = conexion.Conectar();
+            try
+            {
+                
+
+                string consulta = @"SELECT politicas.Descripcion, politicas.TiempoPermitido 
+                                    FROM politicas
+                                    INNER JOIN aerolinea ON politicas.Aerolinea_ID = aerolinea.ID
+                                    INNER JOIN aviones ON aerolinea.ID = aviones.Aerolinea_ID
+                                    WHERE aviones.ID =@avion";
+
+                using (MySqlCommand comando = new MySqlCommand(consulta, conn))
+                {
+                    comando.Parameters.AddWithValue("@avion", ObtenerAvion);
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            texto.Text = reader["Descripcion"].ToString();
+                            tiempo.Text = string.Format("{0} dias", reader["TiempoPermitido"]);
+                            return true;
+                            
+                        }
+                        else
+                        {
+                            return false;
+                            MessageBox.Show("No se pudo mostrar las Politicas de la Aerolinea.",
+                                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Error en la base de datos en reserva db no nindo el error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                if (conn != null && conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+        }
     }
 }

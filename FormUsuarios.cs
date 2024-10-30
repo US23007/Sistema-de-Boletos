@@ -24,6 +24,7 @@ namespace Clave2_Grupo3_US23007_
             picUsuario.Enabled = false;
             cbxAsientos.Visible = false;
             btneliminar.Visible = false;
+            btnCancelar.Visible = false;
 
         }
 
@@ -35,7 +36,7 @@ namespace Clave2_Grupo3_US23007_
                 gbModificar.Visible = true;
                 picNombre.Enabled = true;
                 picCorreo.Enabled = true;
-            
+                btnCancelar.Visible = true;
                 picAsiento.Enabled = true;
                 picUsuario.Enabled = true;
                 btneliminar.Visible = true;
@@ -150,13 +151,20 @@ namespace Clave2_Grupo3_US23007_
             }
 
             int id = int.Parse(lbl_Usuario.Text);
+            int idvuelos = int.Parse(lblVuelos.Text);
+            int idaviones = int.Parse(lblAviones.Text);
             Sistema sistema = new Sistema();
-            if (sistema.ModificarUsuario(input, id)) {
+            if (sistema.Condiciones(idvuelos, idaviones))
+            {
+                if (sistema.ModificarUsuario(input, id))
+                {
 
-                MessageBox.Show("Usuario modificado exitosamente","Proceso Completado",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                sistema.Usuario(dgvPasajero);
-                Limpiar();
+                    MessageBox.Show("Usuario modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sistema.Usuario(dgvPasajero);
+                    Limpiar();
+                }
             }
+            
         }
 
         public void Limpiar()
@@ -176,7 +184,7 @@ namespace Clave2_Grupo3_US23007_
             txt_Nombre_Completo.Text = string.Empty;
             lblAviones.Text = string.Empty;
             lblVuelos.Text = string.Empty;
-            txt_Estado.Text = string.Empty;
+        
             txt_Correo.Text = string.Empty;
             dgvPasajero.ClearSelection();
             picNombre.Enabled = false;
@@ -185,6 +193,7 @@ namespace Clave2_Grupo3_US23007_
             picAsiento.Enabled = false;
             picUsuario.Enabled = false;
             btneliminar.Visible = false;
+            btnCancelar.Visible = false;
 
         }
 
@@ -215,12 +224,17 @@ namespace Clave2_Grupo3_US23007_
 
             int id = int.Parse(lblPasajero.Text);
             Sistema sistema = new Sistema();
-            if (sistema.ModificarNombreCompleto(input,id))
+            int idvuelos = int.Parse(lblVuelos.Text);
+            int idaviones = int.Parse(lblAviones.Text);
+            if (sistema.Condiciones(idvuelos, idaviones))
             {
+                if (sistema.ModificarNombreCompleto(input, id))
+                {
 
-                MessageBox.Show("Pasajero modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                sistema.Usuario(dgvPasajero);
-                Limpiar();
+                    MessageBox.Show("Pasajero modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sistema.Usuario(dgvPasajero);
+                    Limpiar();
+                }
             }
         }
 
@@ -252,13 +266,18 @@ namespace Clave2_Grupo3_US23007_
 
             int id = int.Parse(lbl_Usuario.Text);
             Sistema sistema = new Sistema();
-            if (sistema.ModificarCorreo(input,id))
+            int idvuelos = int.Parse(lblVuelos.Text);
+            int idaviones = int.Parse(lblAviones.Text);
+            if (sistema.Condiciones(idvuelos, idaviones))
             {
+                if (sistema.ModificarCorreo(input, id))
+                {
 
-                MessageBox.Show("Correo modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                sistema.Usuario(dgvPasajero);
-                cbxAsientos.Visible = false;
-                Limpiar();
+                    MessageBox.Show("Correo modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sistema.Usuario(dgvPasajero);
+                    cbxAsientos.Visible = false;
+                    Limpiar();
+                }
             }
             
         }
@@ -274,13 +293,16 @@ namespace Clave2_Grupo3_US23007_
             int idVuelos = int.Parse(lblVuelos.Text);
             int idaViones = int.Parse(lblAviones.Text);
             Sistema sistema = new Sistema();
-            if (sistema.ModificarAsiento(cbxAsientos, idVuelos, idaViones))
+            if (sistema.Condiciones(idVuelos, idaViones))
             {
-                cbxAsientos.Visible = true;
-            }
-            else
-            {
-                cbxAsientos.Visible = false;
+                if (sistema.ModificarAsiento(cbxAsientos, idVuelos, idaViones))
+                {
+                    cbxAsientos.Visible = true;
+                }
+                else
+                {
+                    cbxAsientos.Visible = false;
+                }
             }
         }
 
@@ -302,15 +324,24 @@ namespace Clave2_Grupo3_US23007_
                 int idpasajero = int.Parse(lblPasajero.Text);
                 int idnuevoAsiento = int.Parse(cbxAsientos.SelectedItem.ToString());
 
-                if (sistema.LiberarAntiguoAsiento(idVuelo,idAvion,asientoAntiguo))
+                if (sistema.Condiciones(idVuelo, idAvion))
                 {
-                    if (sistema.ReservarNuevoAsiento(idVuelo, idAvion, idnuevoAsiento, idpasajero))
+                    if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo))
                     {
-                        MessageBox.Show("Asiento Actualizado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        sistema.Usuario(dgvPasajero);
-                        cbxAsientos.Visible = false;
-                        Limpiar();
+                        if (sistema.ReservarNuevoAsiento(idVuelo, idAvion, idnuevoAsiento, idpasajero))
+                        {
+                            MessageBox.Show("Asiento Actualizado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            sistema.Usuario(dgvPasajero);
+                            cbxAsientos.Visible = false;
+                            Limpiar();
+                        }
                     }
+                }
+                else
+                {
+                    sistema.Usuario(dgvPasajero);
+                    cbxAsientos.Visible = false;
+                    Limpiar();
                 }
             }
             else if (resultado == DialogResult.Cancel)
@@ -335,16 +366,25 @@ namespace Clave2_Grupo3_US23007_
                 int idAvion = int.Parse(lblAviones.Text);
                 int idUsuario = int.Parse(lbl_Usuario.Text);
                 int asientoAntiguo = int.Parse(txt_asiento.Text);
-                
-                if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo))
+
+                if (sistema.Condiciones(idVuelo, idAvion))
                 {
-                    if (sistema.EliminarUsuario(idUsuario))
+                    if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo))
                     {
-                        sistema.Usuario(dgvPasajero);
-                        cbxAsientos.Visible = false;
-                        Limpiar();
-                        MessageBox.Show("Usuario/Pasajero Eliminado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (sistema.EliminarUsuario(idUsuario))
+                        {
+                            sistema.Usuario(dgvPasajero);
+                            cbxAsientos.Visible = false;
+                            Limpiar();
+                            MessageBox.Show("Usuario/Pasajero Eliminado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
+                }
+                else
+                {
+                    sistema.Usuario(dgvPasajero);
+                    cbxAsientos.Visible = false;
+                    Limpiar();
                 }
                 
             }
@@ -352,6 +392,51 @@ namespace Clave2_Grupo3_US23007_
             {
                 cbxAsientos.Visible = false;
                 MessageBox.Show("Cambio de asiento cancelado.", "Proceso Cancelado", MessageBoxButtons.OK);
+            }
+        }
+
+        private void gbModificar_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas Cancelar la Reserva?",
+                                              "Confirmación de Cancelar Reserva",
+                                              MessageBoxButtons.OKCancel,
+                                              MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.OK)
+            {
+                Sistema sistema = new Sistema();
+                int idVuelo = int.Parse(lblVuelos.Text);
+                int idAvion = int.Parse(lblAviones.Text);
+                int idreserva = int.Parse(lbl_reserva.Text);
+                int idasiento = int.Parse(txt_asiento.Text);
+                if (sistema.Condiciones(idVuelo, idAvion))
+                {
+                    if (sistema.CancelarReserva(idreserva))
+                    {
+                        if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, idasiento))
+                        {
+                            sistema.Usuario(dgvPasajero);
+                            cbxAsientos.Visible = false;
+                            Limpiar();
+                            MessageBox.Show("La reserva fue Cancelada con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else
+                {
+                    sistema.Usuario(dgvPasajero);
+                    cbxAsientos.Visible = false;
+                    Limpiar();
+                }
+            }
+            else if (resultado == DialogResult.Cancel)
+            {
+                MessageBox.Show("Opcion Abortada por el Usuario", "Proceso Cancelado", MessageBoxButtons.OK);
             }
         }
     }

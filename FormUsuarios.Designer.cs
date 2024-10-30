@@ -31,14 +31,15 @@ namespace Clave2_Grupo3_US23007_
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPasajero = new System.Windows.Forms.DataGridView();
             this.gbModificar = new System.Windows.Forms.GroupBox();
+            this.lbl_Estado_Reserva = new System.Windows.Forms.Label();
             this.lblAviones = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.lblVuelos = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@ namespace Clave2_Grupo3_US23007_
             this.lbl_fecha_reserva = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txt_Estado = new System.Windows.Forms.TextBox();
             this.lbl_reserva = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_asiento = new System.Windows.Forms.TextBox();
@@ -83,7 +83,7 @@ namespace Clave2_Grupo3_US23007_
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tool = new System.Windows.Forms.ToolTip(this.components);
             this.btneliminar = new System.Windows.Forms.Button();
-            this.lbl_Estado_Reserva = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasajero)).BeginInit();
             this.gbModificar.SuspendLayout();
@@ -131,35 +131,35 @@ namespace Clave2_Grupo3_US23007_
             this.dgvPasajero.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPasajero.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPasajero.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPasajero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPasajero.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPasajero.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPasajero.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPasajero.Location = new System.Drawing.Point(12, 119);
             this.dgvPasajero.MultiSelect = false;
             this.dgvPasajero.Name = "dgvPasajero";
             this.dgvPasajero.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPasajero.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPasajero.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPasajero.Size = new System.Drawing.Size(945, 150);
             this.dgvPasajero.TabIndex = 25;
             this.dgvPasajero.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPasajero_CellClick);
@@ -181,7 +181,6 @@ namespace Clave2_Grupo3_US23007_
             this.gbModificar.Controls.Add(this.lbl_fecha_reserva);
             this.gbModificar.Controls.Add(this.label15);
             this.gbModificar.Controls.Add(this.label14);
-            this.gbModificar.Controls.Add(this.txt_Estado);
             this.gbModificar.Controls.Add(this.lbl_reserva);
             this.gbModificar.Controls.Add(this.label13);
             this.gbModificar.Controls.Add(this.txt_asiento);
@@ -205,12 +204,23 @@ namespace Clave2_Grupo3_US23007_
             this.gbModificar.Controls.Add(this.lbl_Usuario);
             this.gbModificar.Controls.Add(this.label3);
             this.gbModificar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbModificar.Location = new System.Drawing.Point(12, 281);
+            this.gbModificar.Location = new System.Drawing.Point(9, 281);
             this.gbModificar.Name = "gbModificar";
             this.gbModificar.Size = new System.Drawing.Size(953, 341);
             this.gbModificar.TabIndex = 26;
             this.gbModificar.TabStop = false;
-            this.gbModificar.Text = "Datos ";
+            this.gbModificar.Text = "Modificaciones ";
+            this.gbModificar.Enter += new System.EventHandler(this.gbModificar_Enter);
+            // 
+            // lbl_Estado_Reserva
+            // 
+            this.lbl_Estado_Reserva.AutoSize = true;
+            this.lbl_Estado_Reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Estado_Reserva.Location = new System.Drawing.Point(160, 312);
+            this.lbl_Estado_Reserva.Name = "lbl_Estado_Reserva";
+            this.lbl_Estado_Reserva.Size = new System.Drawing.Size(15, 16);
+            this.lbl_Estado_Reserva.TabIndex = 42;
+            this.lbl_Estado_Reserva.Text = "?";
             // 
             // lblAviones
             // 
@@ -355,18 +365,6 @@ namespace Clave2_Grupo3_US23007_
             this.label14.Size = new System.Drawing.Size(125, 16);
             this.label14.TabIndex = 23;
             this.label14.Text = "Estado de Reserva";
-            // 
-            // txt_Estado
-            // 
-            this.txt_Estado.Cursor = System.Windows.Forms.Cursors.No;
-            this.txt_Estado.Enabled = false;
-            this.txt_Estado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Estado.Location = new System.Drawing.Point(316, 308);
-            this.txt_Estado.Multiline = true;
-            this.txt_Estado.Name = "txt_Estado";
-            this.txt_Estado.Size = new System.Drawing.Size(147, 20);
-            this.txt_Estado.TabIndex = 22;
-            this.txt_Estado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbl_reserva
             // 
@@ -643,7 +641,7 @@ namespace Clave2_Grupo3_US23007_
             this.btneliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btneliminar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
             this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btneliminar.Location = new System.Drawing.Point(424, 628);
+            this.btneliminar.Location = new System.Drawing.Point(591, 631);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(160, 36);
             this.btneliminar.TabIndex = 31;
@@ -652,15 +650,23 @@ namespace Clave2_Grupo3_US23007_
             this.btneliminar.UseVisualStyleBackColor = false;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
-            // lbl_Estado_Reserva
+            // btnCancelar
             // 
-            this.lbl_Estado_Reserva.AutoSize = true;
-            this.lbl_Estado_Reserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Estado_Reserva.Location = new System.Drawing.Point(160, 312);
-            this.lbl_Estado_Reserva.Name = "lbl_Estado_Reserva";
-            this.lbl_Estado_Reserva.Size = new System.Drawing.Size(15, 16);
-            this.lbl_Estado_Reserva.TabIndex = 42;
-            this.lbl_Estado_Reserva.Text = "?";
+            this.btnCancelar.BackColor = System.Drawing.Color.White;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCancelar.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.emblemunreadable_93487;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(278, 631);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(166, 36);
+            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.Text = "Cancelar Reserva";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FormUsuarios
             // 
@@ -668,6 +674,7 @@ namespace Clave2_Grupo3_US23007_
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(969, 676);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnBuscar);
@@ -720,7 +727,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label lbl_fecha_reserva;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txt_Estado;
         private System.Windows.Forms.Label lbl_reserva;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_asiento;
@@ -750,5 +756,6 @@ namespace Clave2_Grupo3_US23007_
         private System.Windows.Forms.Label lblVuelos;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Label lbl_Estado_Reserva;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
