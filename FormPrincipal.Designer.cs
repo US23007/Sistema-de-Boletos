@@ -34,13 +34,13 @@ namespace Clave2_Grupo3_US23007_
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelarOModificarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vuelosYRutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.cancelarOModificarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,13 @@ namespace Clave2_Grupo3_US23007_
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
+            // cancelarOModificarReservaToolStripMenuItem
+            // 
+            this.cancelarOModificarReservaToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.edit_modify_icon_149489;
+            this.cancelarOModificarReservaToolStripMenuItem.Name = "cancelarOModificarReservaToolStripMenuItem";
+            this.cancelarOModificarReservaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.cancelarOModificarReservaToolStripMenuItem.Text = "Cancelar o Modificar Reserva";
+            // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources._1486564399_close_81512;
@@ -119,6 +126,7 @@ namespace Clave2_Grupo3_US23007_
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
             this.reservasToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
             this.reservasToolStripMenuItem.Text = "Ver Reservas y Pagos";
+            this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
             // 
             // facturasToolStripMenuItem
             // 
@@ -134,13 +142,6 @@ namespace Clave2_Grupo3_US23007_
             this.Contenedor.Name = "Contenedor";
             this.Contenedor.Size = new System.Drawing.Size(710, 469);
             this.Contenedor.TabIndex = 1;
-            // 
-            // cancelarOModificarReservaToolStripMenuItem
-            // 
-            this.cancelarOModificarReservaToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.edit_modify_icon_149489;
-            this.cancelarOModificarReservaToolStripMenuItem.Name = "cancelarOModificarReservaToolStripMenuItem";
-            this.cancelarOModificarReservaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.cancelarOModificarReservaToolStripMenuItem.Text = "Cancelar o Modificar Reserva";
             // 
             // FormPrincipal
             // 

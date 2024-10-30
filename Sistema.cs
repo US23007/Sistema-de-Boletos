@@ -721,9 +721,78 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        public bool Reservaciones(DataGridView reserva)
+        {
+            try
+            {
+                Conexion conexion = new Conexion();
+                string consulta = @"SELECT * FROM reserva;";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
+
+                            reserva.DataSource = dt;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Algo salio mal y no se pudo cargar las reservas", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public bool Pagos(DataGridView pagos)
+        {
+            try
+            {
+                Conexion conexion = new Conexion();
+                string consulta = @"SELECT * FROM pagos;";
+                using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
+                {
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
+
+                            pagos.DataSource = dt;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Algo salio mal y no se pudo cargar las reservas", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+                        }
+                    }
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Algo salio mal y no se pudo cargar los Datos", "Reiniciar Programa" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
     }
 
-
+    
 
 
 }

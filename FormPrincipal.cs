@@ -78,5 +78,15 @@ namespace Clave2_Grupo3_US23007_
             buscar.Show();
             this.Hide();
         }
+
+        private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sistema sistema = new Sistema();
+            FormReservasPago form = new FormReservasPago();
+            if (sistema.Reservaciones(form.dgvReservas) && sistema.Pagos(form.dgvPagos))
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }
