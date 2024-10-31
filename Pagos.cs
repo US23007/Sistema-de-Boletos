@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
+    /// <summary>
+    /// Este Form Pagos servira para mostrar el monto de vuelo , el tipo de equipaje y el monto total ademas de hacer el respectivo pago com diferentes tipos de metodos de pago
+    /// </summary>
     public partial class Pagos : Form
     {
         public Pagos()
@@ -23,6 +26,8 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
+
+        //Validaciones de Nombres Segun la seleccion de Método de Pago
         private void txt_Nombre_Banco_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^[a-zA-Z\s]*$";
@@ -58,8 +63,10 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Botón de BancoAgricola 
         private void btnAgricola_Click(object sender, EventArgs e)
         {
+            //Validaciones 
             if (cbxBanco.Checked)
             {
                 if (string.IsNullOrEmpty(txt_Nombre_Banco.Text) || string.IsNullOrWhiteSpace(txt_Nombre_Banco.Text))
@@ -76,13 +83,13 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MontosAdicionales monto = new MontosAdicionales();
+                    MontosAdicionales monto = new MontosAdicionales(); //// Instancia de la clase  MontoAdicionales 
                     MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (monto.ActualizarEstados())
+                    if (monto.ActualizarEstados()) /// Método para Actualizar el estado de Reserva y Completar el Pago
                     {
                         MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FormPrincipal principal = new FormPrincipal();
+                        FormPrincipal principal = new FormPrincipal(); //Ir al FormPrincipal 
                         principal.Show();
                         this.Hide();
                     }
@@ -91,6 +98,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void txtNombre_Visa_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^[a-zA-Z\s]*$";
@@ -107,7 +115,7 @@ namespace Clave2_Grupo3_US23007_
                 btnVisa.Enabled = false;
             }
         }
-
+        //Validaciones con Regex segun Método de Pago
         private void txt_Número_Visa_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^4[0-9]{12}(?:[0-9]{3})?$";
@@ -124,7 +132,7 @@ namespace Clave2_Grupo3_US23007_
                 btnVisa.Enabled = false;
             }
         }
-
+        //Validaciones con Regex segun Método de Pago
         private void txt_CVC_Visa_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^[0-9]{3,4}$";
@@ -142,8 +150,10 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Botón Visa
         private void btnVisa_Click(object sender, EventArgs e)
         {
+            //Validaciones de Vacios 
             if (cbxVisa.Checked)
             {
                 if (string.IsNullOrEmpty(txtNombre_Visa.Text) || string.IsNullOrWhiteSpace(txtNombre_Visa.Text))
@@ -166,13 +176,13 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MontosAdicionales monto = new MontosAdicionales();
+                    MontosAdicionales monto = new MontosAdicionales(); /// Instancia de la clase  MontoAdicionales 
                     MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (monto.ActualizarEstados())
+                    if (monto.ActualizarEstados())  // Método para Actualizar el estado de Reserva y Completar el Pago
                     {
                         MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FormPrincipal principal = new FormPrincipal();
+                        FormPrincipal principal = new FormPrincipal(); //Ir al FormPrincipal 
                         principal.Show();
                         this.Hide();
                     }
@@ -180,6 +190,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void txt_Nombre_Master_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^[0-9]{3,4}$";
@@ -197,6 +208,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void txt_Numeros_Master_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^5[1-5][0-9]{14}$|^2[2-7][0-9]{14}$";
@@ -214,7 +226,7 @@ namespace Clave2_Grupo3_US23007_
             }
 
         }
-
+        //Validaciones con Regex segun Método de Pago
         private void txt_Codigo_Master_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^[0-9]{3,4}$";
@@ -232,8 +244,10 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Botón MasterCard
         private void btn_Master_Click(object sender, EventArgs e)
         {
+            //Validaciones Vacias 
             if (cbxMaster.Checked)
             {
                 if (string.IsNullOrEmpty(txt_Nombre_Master.Text) || string.IsNullOrWhiteSpace(txt_Nombre_Master.Text))
@@ -256,13 +270,13 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MontosAdicionales monto = new MontosAdicionales();
+                    MontosAdicionales monto = new MontosAdicionales();/// Instancia de la clase  MontoAdicionales 
                     MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (monto.ActualizarEstados())
+                    if (monto.ActualizarEstados()) // Método para Actualizar el estado de Reserva y Completar el Pago
                     {
                         MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FormPrincipal principal = new FormPrincipal();
+                        FormPrincipal principal = new FormPrincipal(); //Ir al FormPrincipal 
                         principal.Show();
                         this.Hide();
                     }
@@ -270,6 +284,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void txt_Nombre_American_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^[a-zA-Z\s]*$";
@@ -286,7 +301,7 @@ namespace Clave2_Grupo3_US23007_
                 btn_American.Enabled = false;
             }
         }
-
+        //Validaciones con Regex segun Método de Pago
         private void txt_Numeros_American_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^3[47][0-9]{13}$";
@@ -304,6 +319,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void txt_Codigo_American_TextChanged(object sender, EventArgs e)
         {
             string patron = @"^[0-9]{3,4}$";
@@ -321,8 +337,10 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Botón American 
         private void btn_American_Click(object sender, EventArgs e)
         {
+            //Validaciones Vacias 
             if (cbxAmerican.Checked)
             {
                 if (string.IsNullOrEmpty(txt_Nombre_American.Text) || string.IsNullOrWhiteSpace(txt_Nombre_American.Text))
@@ -345,13 +363,13 @@ namespace Clave2_Grupo3_US23007_
                 }
                 else
                 {
-                    MontosAdicionales monto = new MontosAdicionales();
+                    MontosAdicionales monto = new MontosAdicionales();/// Instancia de la clase  MontoAdicionales 
                     MessageBox.Show("Procesando Pago..", "Espere", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (monto.ActualizarEstados())
+                    if (monto.ActualizarEstados())// Método para Actualizar el estado de Reserva y Completar el Pago
                     {
                         MessageBox.Show("Reserva y Pago Completado Exitosamente", "Proceso Completado",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FormPrincipal principal = new FormPrincipal();
+                        MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                        FormPrincipal principal = new FormPrincipal();//Ir al FormPrincipal
                         principal.Show();
                         this.Hide();
                     }
@@ -359,6 +377,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Si se cambia de Seleccion de Método de Pago se Limpian Todos los campos y el erp
         public void LimpiarTodo()
         {
             txtNombre_Visa.Text = string.Empty;
@@ -378,6 +397,7 @@ namespace Clave2_Grupo3_US23007_
             erp.Clear();
         }
 
+        //Método para permitir solo seleccionar un Metodo a la vez
         public void Desmarcar(CheckBox seleccionado)
         {
             if (seleccionado != cbxVisa) cbxVisa.Checked = false;
@@ -386,6 +406,7 @@ namespace Clave2_Grupo3_US23007_
             if (seleccionado != cbxAmerican) cbxAmerican.Checked = false;
         }
 
+        //Validaciones con Regex segun Método de Pagov
         private void cbxVisa_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxVisa.Checked)
@@ -403,6 +424,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void cbxMaster_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxMaster.Checked)
@@ -420,6 +442,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void cbxBanco_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxBanco.Checked)
@@ -436,6 +459,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Validaciones con Regex segun Método de Pago
         private void cbxAmerican_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxAmerican.Checked)

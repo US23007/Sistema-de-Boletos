@@ -9,18 +9,20 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
-    class MontosAdicionales : Reservaciones
+    class MontosAdicionales : Reservaciones // MontoAdicional Hereda el ID Reserva  de la Clase Reserva
     {
 
-        private static decimal MontoConCargos { get; set; }
+        private static decimal MontoConCargos { get; set; } //Variable Static para la conservacion de datos durante la ejecucion 
 
-        public static decimal Total { get; set; }
-        public Decimal PagoTotal
+        public static decimal Total { get; set; } //Variable Static para la conservacion de datos durante la ejecucion 
+        public Decimal PagoTotal //Método para obtener el pago total 
         {
             get { return MontoConCargos; }
             set { MontoConCargos = value; }
         }
 
+
+        //Agregar Monto adicional dependiendo de el tipo de Equipaje 
         public bool AgregarMontos()
         {
             Conexion conexion = new Conexion();
@@ -46,7 +48,7 @@ namespace Clave2_Grupo3_US23007_
                 try
                 {
                    
-
+                    //Consulta para ingresar el pago hecho 
                     string consultaInsert = @"INSERT INTO pagos (Estado, reserva_ID, Monto, Fecha) 
                                       VALUES (@estado, @reservaId, @monto, NOW())";
 
@@ -59,7 +61,7 @@ namespace Clave2_Grupo3_US23007_
                         int filasAfectadas = comandoInsert.ExecuteNonQuery();
 
                         return filasAfectadas > 0;
-                        Console.WriteLine(MontoConCargos);
+                        //Console.WriteLine(MontoConCargos); //Comentario Adicional en debugs
                     }
                 }
                 catch (MySqlException ex)
@@ -77,6 +79,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        //Mostrar el precio de Vuelo , Tipo de Equipaje y El monto Total con el porcentaje agregado 
         public bool MostrarMontosAdicionales(Label precioVuelo,Label Equipaje,Label total)
         {
             Conexion conexion = new Conexion();
@@ -122,7 +125,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
-
+        //Método para Cambiar el estado de la reserva como Completada despues de realizar el pago
         public bool ActualizarEstados() {
             Conexion conexion = new Conexion();
             MySqlConnection conn = conexion.Conectar();

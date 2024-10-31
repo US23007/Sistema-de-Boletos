@@ -9,8 +9,9 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
-    class Pasajero : ValidarIngreso
+    class Pasajero : ValidarIngreso  //Hereda de ValidarIngreso el ID Usuario 
     {
+        //Variables a Utilizar
         private String Nombre_Completo;
         private DateTime Fecha_Nacimiento;
         private String Numero_Pasaporte;
@@ -21,16 +22,16 @@ namespace Clave2_Grupo3_US23007_
         private String Nacionalidad;
         private String Tipo_Equipaje;
         private String Tipo_Pasajero;
-        private static int idPasajero { get; set; }
+        private static int idPasajero { get; set; } //Variable Static para conservacion de Datos 
         
-       public int Passenger
+       public int Passenger //Métodos
         {
             get { return idPasajero;}
             set { idPasajero = value;}
         }
 
 
-        public void Ingresar_Pasajero(string nombre,DateTime fecha,string pasaporte,int asiento,string telefono, string nacionalidad,string tipo_equipaje,string tipo_pasajero)
+        public void Ingresar_Pasajero(string nombre,DateTime fecha,string pasaporte,int asiento,string telefono, string nacionalidad,string tipo_equipaje,string tipo_pasajero) //Constructores
         {
             this.Nombre_Completo = nombre;
             this.Fecha_Nacimiento = fecha;
@@ -42,6 +43,8 @@ namespace Clave2_Grupo3_US23007_
             this.Tipo_Pasajero = tipo_pasajero;
         }
 
+        //Métodos
+        
         public String NombrePasajero
         {
             get { return Nombre_Completo; }
@@ -101,6 +104,7 @@ namespace Clave2_Grupo3_US23007_
             set { Tipo_Pasajero = value; }
         }
 
+        //Método para Obtener el Numero de Asientos segun el Vuelo y el Avion  y pasarlos a un Combobox
         public bool ObtenerAsientos(ComboBox asientos)
         {
             Conexion conexion = new Conexion();
@@ -157,6 +161,8 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+
+        //Método para Registrar a un nuevo pasajero 
         public bool RegistrarPasajero()
         {
             Conexion conexion = new Conexion();
@@ -177,6 +183,7 @@ namespace Clave2_Grupo3_US23007_
                             return false;
                         }
 
+                        //Consulta para insetar un nuevo Pasajero
                         string consulta = @"INSERT INTO pasajero (usuario_ID,NombreCompleto, Nacionalidad,TipoEquipaje,Pasaporte,Fechanacimiento,Telefono,TipoPasajero,PreferenciaAsiento) 
                                 VALUES (@user,@nombre,@nacionalidad,@equipaje,@pasaporte,@fecha,@celular,@pasajero,@asiento)";
 
@@ -232,7 +239,7 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
-
+        //Método para Obtener la cantidad de Asientos y los asientos Disponibles 
         public bool ObtenerCantidadAsientos(Label cantidad,Label asientos)
         {
             Conexion conexion = new Conexion();
@@ -294,6 +301,8 @@ namespace Clave2_Grupo3_US23007_
                 }
         }
 
+
+        //Método para Reservar el Asiento Seleccionado por el usuario 
         public bool ReservarAsiento()
         {
             Conexion conexion = new Conexion();
