@@ -62,5 +62,10 @@ namespace Clave2_Grupo3_US23007_
             txtUsuario.Text = string.Empty;
             txtContraseña.Text = string.Empty;
         }
+
+        private void cbxMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = !cbxMostrar.Checked;
+        }
     }
 }
