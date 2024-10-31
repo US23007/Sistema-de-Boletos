@@ -113,7 +113,7 @@ namespace Clave2_Grupo3_US23007_
             this.lbldescripcion.Name = "lbldescripcion";
             this.lbldescripcion.Size = new System.Drawing.Size(507, 143);
             this.lbldescripcion.TabIndex = 46;
-            this.lbldescripcion.Click += new System.EventHandler(this.lbldescripcion_Click);
+      
             // 
             // lblprecio
             // 
@@ -169,7 +169,7 @@ namespace Clave2_Grupo3_US23007_
             this.lblaeropuertodestino.Size = new System.Drawing.Size(16, 16);
             this.lblaeropuertodestino.TabIndex = 41;
             this.lblaeropuertodestino.Text = "?";
-            this.lblaeropuertodestino.Click += new System.EventHandler(this.label7_Click_1);
+          
             // 
             // lbldestino
             // 

@@ -210,7 +210,7 @@ namespace Clave2_Grupo3_US23007_
             this.gbModificar.TabIndex = 26;
             this.gbModificar.TabStop = false;
             this.gbModificar.Text = "Modificaciones ";
-            this.gbModificar.Enter += new System.EventHandler(this.gbModificar_Enter);
+            
             // 
             // lbl_Estado_Reserva
             // 

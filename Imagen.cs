@@ -11,27 +11,30 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
-    class Imagen : Vuelos
+    /// <summary>
+    /// Esta clase servira para mostrar la informacion adicional de el vuelo como tambiar para atraves de el Método CargarImagenes asignar una imagen en la DB
+    /// </summary>
+    class Imagen : Vuelos //Herencia de el ID Vuelo 
     {
        
-       
+       //Método CargarImagenes fue creado con el unico proposito de guardar imagenes en la DB 
         public void CargarImagenes()
         {
-            Conexion conexion = new Conexion();
+            Conexion conexion = new Conexion(); //// Instancia de la clase Conexion 
             MySqlConnection conn = conexion.Conectar();
             
             try
             {
-                byte[] imageBytes = ConvertImageToByteArray(@"C:/Users/su487/Downloads/GUA.jpg");
-                string consulta = "UPDATE clave2_grupo3db.rutas SET Imagen =@imagen WHERE ID = 1";
+                byte[] imageBytes = ConvertImageToByteArray(@"C:/Users/su487/Downloads/GUA.jpg"); //ruta de la imagen que se desea guarda en la DB 
+                string consulta = "UPDATE clave2_grupo3db.rutas SET Imagen =@imagen WHERE ID = 1"; //Consulta con el ID 
                 MySqlCommand cmd = new MySqlCommand(consulta, conn);
                 cmd.Parameters.AddWithValue("@imagen", imageBytes);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Datos ingresados");
+                MessageBox.Show("Datos ingresados"); //Completado 
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("Algo salio mal" + ex);
+                MessageBox.Show("Algo salio mal" + ex); // Error 
             }
 
 
@@ -49,14 +52,15 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
+        //Método para Obtener la informacion adicional de el Vuelo y Asignar los parametros a controladores de el Form Informacion 
         public bool MostrarInformacion(Label descripcion,Label Corigen,Label Cdestino,Label horasalida, Label origen, Label duracion, PictureBox dibujo,
                            Label aerlinea, Label precio, Label destino, Label horallegada,
                            Label aerpuertOrigen, Label aeropuertoDestino, Label distancia,Label Empleados)
         {
-            Conexion conexion = new Conexion();
+            Conexion conexion = new Conexion(); // Instancia de la clase Conexion
             MySqlConnection conn = conexion.Conectar();
            
-                string consulta = @"SELECT 
+                string consulta = @"SELECT  
                                     rutas.Descripcion, 
                                     rutas.Origen,
                                     rutas.Destino,
@@ -96,7 +100,7 @@ namespace Clave2_Grupo3_US23007_
 
                     using (MySqlDataReader leer = cmd.ExecuteReader())
                     {
-                        if (leer.Read())
+                        if (leer.Read()) //Ingresa los datos a los controladores de FormInformacion 
                         {
                             descripcion.Text = leer["Descripcion"].ToString();
                             origen.Text = leer["Origen"].ToString();
@@ -117,7 +121,7 @@ namespace Clave2_Grupo3_US23007_
 
                             try
                             {
-                                if (!leer.IsDBNull(leer.GetOrdinal("Imagen")))
+                                if (!leer.IsDBNull(leer.GetOrdinal("Imagen"))) // Si no encuentra imagen se le asigna una default voy a dejar una sin imagen intencionalmente para ver su funcionalidad 
                                 {
                                     byte[] imageBytes = (byte[])leer["Imagen"];
                                     using (MemoryStream ms = new MemoryStream(imageBytes))

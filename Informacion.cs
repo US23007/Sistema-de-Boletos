@@ -12,41 +12,18 @@ namespace Clave2_Grupo3_US23007_
 {
     public partial class Informacion : Form
     {
+        /// <summary>
+        /// Este Form nos servira para mostrar la informacion de datos adicionales de vuelos , la informacion es previamente cargada de la clase Imagen en el Botón Ver Más de el Form Buscar Vuelos
+        /// </summary>
         public Informacion()
         {
             InitializeComponent();
             
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            BuscarVuelo buscar = new BuscarVuelo();
-            buscar.Show();
-            this.Hide();
-        }
+       
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Seleccion Completada", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show("Para continuar debe de Iniciar Sesion o Registrarse", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            IngresoAdministrador ingreso = new IngresoAdministrador();
-            ingreso.Show();
-            this.Hide();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbldescripcion_Click(object sender, EventArgs e)
-        {
-
-        }
+  
+      
     }
 }

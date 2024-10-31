@@ -92,8 +92,11 @@ namespace Clave2_Grupo3_US23007_
             MessageBox.Show("Datos limpios", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
+
+        // Botón Registrarse 
         private void btnRegistrase_Click(object sender, EventArgs e)
         {
+            //Validacion de Entradas vacias 
             if (string.IsNullOrEmpty(txtUsuario.Text))
             {
                 erp.SetError(txtUsuario, "Campo Vacio");
@@ -106,15 +109,16 @@ namespace Clave2_Grupo3_US23007_
             }
             else
             {
-                ValidarIngreso validar = new ValidarIngreso();
-                Pasajero pasajero = new Pasajero();
-                Datos datos = new Datos();
+                ValidarIngreso validar = new ValidarIngreso(); // Instancia de clase ValidarIngreso 
+                Pasajero pasajero = new Pasajero(); //Instancia de la clase Pasajero
+                Datos datos = new Datos(); //Instancia de Form Datos 
 
-                if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text) && pasajero.ObtenerAsientos(datos.cbxAsiento))
+                if (validar.RegistrarEnDB(txtUsuario.Text, txtcorreo.Text) && pasajero.ObtenerAsientos(datos.cbxAsiento)) //El primer Método es de la clase ValidarIngreso que valida el Usuario y Correo del Usuario Ingresado
+                //El segundo Método es de la pasajero que antes de cargar el Form Datos para llenar informacion verifica los asientos disponibles y los asigna a un combobox en FormDatos 
                 {
                     validar.ObtenerUsuario = txtUsuario.Text;
                     datos.Show();
-                    this.Hide();
+                    this.Hide(); //Proceso Completado
                 }
                 else
                 {
@@ -124,6 +128,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        //Valiaciones atraves de un Regex para el correo 
         private void txtcorreo_TextChanged(object sender, EventArgs e)
         {
             string patronEmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
