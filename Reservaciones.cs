@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
-    class Reservaciones : Pasajero
+    /// <summary>
+    /// Esta Clase nos servira para el manejo de la reserva , y pagos como monto adicional por Equipaje 
+    /// </summary>
+    class Reservaciones : Pasajero  //Reservaciones Hereda de ID Pasajero
     {
-        private static int idAsiento { get; set;}
+        //Variables Static 
+        private static int idAsiento { get; set;} 
         private static int idReserva { get; set; }
 
         private static decimal MontoVuelo {get; set;}
+
+        //Métodos 
         public int ObtenerAsientoID
         {
             get { return idAsiento; }
@@ -33,6 +39,8 @@ namespace Clave2_Grupo3_US23007_
             set { MontoVuelo = value;}
         }
 
+
+        //Método para Mostrar Informacion del Pasajero previamente ingresado y mostrar en el FormReservas 
         public bool MostrarInformacionPasajero(Label nombre,Label Pasaporte,Label Telefono,Label Nacimiento,Label Nacionalidad,Label Pasajero,Label Equipaje,Label Asiento)
         {
             Conexion conexion = new Conexion();
@@ -64,16 +72,16 @@ namespace Clave2_Grupo3_US23007_
                                 Pasajero.Text = reader["TipoPasajero"].ToString();
                                 Equipaje.Text = reader["TipoEquipaje"].ToString();
                                 Asiento.Text = reader["PreferenciaAsiento"].ToString();
-                              
-                                Console.WriteLine(nombre);
-                                Console.WriteLine(Pasaporte);
-                                Console.WriteLine(Telefono);
-                                Console.WriteLine(Nacimiento);
-                                Console.WriteLine(Nacionalidad);
-                                Console.WriteLine(Pasajero);
-                                Console.WriteLine(Equipaje);
-                                Console.WriteLine(Asiento);
-                                return true;
+
+                            //Console.WriteLine(nombre);
+                            //Console.WriteLine(Pasaporte);
+                            //Console.WriteLine(Telefono);
+                            //Console.WriteLine(Nacimiento);
+                            //Console.WriteLine(Nacionalidad);     //Comentarios opcionales en debug
+                            //Console.WriteLine(Pasajero);
+                            //Console.WriteLine(Equipaje);
+                            //Console.WriteLine(Asiento);
+                            return true;
                             }
                             else
                             {
@@ -98,7 +106,7 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
-
+        //Método para Obtener Detalles del Vuelo seleccionado junto a sus parametros y asignarlos al FormReservas y mostrar Informacion Relevante 
         public bool ObtenerDetallesVuelo(Label Aerolinea, Label Numero_Vuelo, Label Origen, Label Destino, Label Salida, Label Llegada, Label Avion, Label Hora_Salida, Label Hora_Llegada, Label Puerta, Label Precio)
         {
             Conexion conexion = new Conexion();
@@ -121,11 +129,11 @@ namespace Clave2_Grupo3_US23007_
                         comando.Parameters.AddWithValue("@vuelos", ObtenerId);
                         comando.Parameters.AddWithValue("@aviones", ObtenerAvion);
                         comando.Parameters.AddWithValue("@asiento", ObtenerSitio);
-                        Console.WriteLine("Id Vuelo :" + ObtenerId);
-                        Console.WriteLine("Id Avion :" + ObtenerAvion);
-                        Console.WriteLine("Id Asiento :" + ObtenerSitio);
+                        //Console.WriteLine("Id Vuelo :" + ObtenerId);
+                        //Console.WriteLine("Id Avion :" + ObtenerAvion); //Comentarios opcionales en debug
+                        //Console.WriteLine("Id Asiento :" + ObtenerSitio);
 
-                        using (MySqlDataReader reader = comando.ExecuteReader())
+                    using (MySqlDataReader reader = comando.ExecuteReader())
                         {
                             if (reader.Read())
                             {
@@ -143,18 +151,18 @@ namespace Clave2_Grupo3_US23007_
                                 Precio.Text = string.Format("${0:N2}", reader["Precio"]);
                                 ObtenerMonto = Convert.ToDecimal(reader["Precio"]);
 
-                                
-                                Console.WriteLine(Aerolinea);
-                                Console.WriteLine(Numero_Vuelo);
-                                Console.WriteLine(Origen);
-                                Console.WriteLine(Destino);
-                                Console.WriteLine(Salida);
-                                Console.WriteLine(Llegada);
-                                Console.WriteLine(Avion);
-                                Console.WriteLine(Hora_Llegada);
-                                Console.WriteLine("Soy precio" + Precio);
-                                Console.WriteLine("Monto de Vuelo" + ObtenerMonto);
-                                return true;
+
+                            //Console.WriteLine(Aerolinea);
+                            //Console.WriteLine(Numero_Vuelo);
+                            //Console.WriteLine(Origen);
+                            //Console.WriteLine(Destino);
+                            //Console.WriteLine(Salida);                    //Comentarios opcionales en debug
+                            //Console.WriteLine(Llegada);
+                            //Console.WriteLine(Avion);
+                            //Console.WriteLine(Hora_Llegada);
+                            //Console.WriteLine("Soy precio" + Precio);
+                            //Console.WriteLine("Monto de Vuelo" + ObtenerMonto);
+                            return true;
                             }
                             else
                             {
@@ -179,7 +187,7 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
-
+        //Método para Reservar Vuelo 
         public bool ReservarEnDB()
         {
             Conexion conexion = new Conexion();
@@ -216,10 +224,10 @@ namespace Clave2_Grupo3_US23007_
 
                     using (MySqlCommand comando = new MySqlCommand(consulta, conn))
                     {
-                        Console.WriteLine("Soy id Usuario"+ObtenerIdUsuario);
-                        Console.WriteLine("Soy id Pasajro"+Passenger);
-                        Console.WriteLine("Soy id asiento"+ObtenerAsientoID);
-                        Console.WriteLine("Soy id Vuelo"+ObtenerId);
+                       // Console.WriteLine("Soy id Usuario"+ObtenerIdUsuario);
+                        //Console.WriteLine("Soy id Pasajro"+Passenger);           //Comentarios opcionales en debug
+                        //Console.WriteLine("Soy id asiento"+ObtenerAsientoID);
+                        //Console.WriteLine("Soy id Vuelo"+ObtenerId);
                         comando.Parameters.AddWithValue("@estado", "Pendiente");
                         comando.Parameters.AddWithValue("@fecha", DateTime.Now);
                         comando.Parameters.AddWithValue("@pasajero", Passenger);
@@ -265,7 +273,9 @@ namespace Clave2_Grupo3_US23007_
                 }
 
         }
-        
+
+
+        //Método para Obtener las politicas y condiciones de Cancelacion y Modificacion
         public bool ObtenerPoliticas(Label texto,Label tiempo)
         {
            

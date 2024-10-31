@@ -9,10 +9,13 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
+    /// <summary>
+    /// Esta Clase nos servira para las ejecuciones de administrar usuarios , Ver Informacion de Aerolineas , aviones , asiento , Tripulacion , Vuelos , rutas , Reservas , Pagos , Politicas etc
+    /// </summary>
     class Sistema
     {
 
-
+        //Método para carga datos de Aerolineas y pasarlo a una Tabla 
         public bool Aerolineas(DataGridView aerolinea)
         {
 
@@ -49,7 +52,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
-
+        //Método para carga datos de Vuelos y pasarlo a una Tabla 
         public bool vuelos(DataGridView vuelos)
         {
 
@@ -87,7 +90,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
-
+        //Método para carga datos de Aviones y pasarlo a una Tabla 
         public bool aviones(DataGridView aviones)
         {
 
@@ -125,6 +128,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        //Método para carga datos de Asientos y pasarlo a una Tabla 
         public bool asientos(DataGridView asientos)
         {
 
@@ -162,6 +166,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        //Método para carga datos de Tripulantes-Empleados y pasarlo a una Tabla 
         public bool Empleados(DataGridView empleados)
         {
 
@@ -199,6 +204,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        //Método para carga datos de Rutas y pasarlo a una Tabla 
         public bool Rutas(DataGridView rutas)
         {
 
@@ -236,7 +242,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
-
+        //Método para carga datos de Usuario-Pasajero y pasarlo a una Tabla 
         public bool Usuario(DataGridView usuario)
         {
 
@@ -284,7 +290,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
-
+        //Método para Consultar un Usuario y pasarlo a una tabla 
         public bool Consultar(DataGridView buscar, TextBox aceptar)
         {
             try
@@ -331,7 +337,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-
+        //Método para Modificar un Usuario 
         public bool ModificarUsuario(string nuevo, int id)
         {
             try
@@ -369,12 +375,12 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
-
+        //Método para Modificar el Nombre Completo del Pasajero
         public bool ModificarNombreCompleto(string nuevo, int id)
         {
             try
             {
-                Conexion conexion = new Conexion(); // Asegúrate de tener correctamente implementada tu clase de conexión
+                Conexion conexion = new Conexion(); 
 
                 string consulta = "UPDATE pasajero SET NombreCompleto = @nombre WHERE ID = @idpasajero";
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
@@ -406,11 +412,13 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        //Método para Modificar el Correo del Pasajero
         public bool ModificarCorreo(string nuevo, int id)
         {
             try
             {
-                Conexion conexion = new Conexion(); // Asegúrate de tener correctamente implementada tu clase de conexión
+                Conexion conexion = new Conexion(); 
 
                 string consulta = "UPDATE usuario SET Correo = @correo WHERE ID = @idUsuario";
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
@@ -442,7 +450,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-
+        //Método para Modificar el ASiento del Pasajero
         public bool ModificarAsiento(ComboBox asientos, int idVuelos, int idAviones) {
 
             Conexion conexion = new Conexion();
@@ -493,7 +501,7 @@ namespace Clave2_Grupo3_US23007_
 
 
 
-
+        //Método para Reserva el nuevo Asiento del Pasajero
         public bool ReservarNuevoAsiento(int idvuelo, int idAvion, int nuevoAsiento, int pasajero)
         {
             Conexion conexion = new Conexion();
@@ -608,7 +616,6 @@ namespace Clave2_Grupo3_US23007_
             }
 
         }
-    
 
 
 
@@ -625,6 +632,7 @@ namespace Clave2_Grupo3_US23007_
 
 
 
+        //Método para hacer Disponible el Antiguo Asiento del Pasajero
         public bool LiberarAntiguoAsiento(int idvuelo , int idAvion , int asiento)
         {
             Conexion conexion = new Conexion();
@@ -669,7 +677,7 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
-
+        //Método para Eliminar al Usuario-Pasajero 
         public bool EliminarUsuario(int idusuario)
         {
             try
@@ -722,6 +730,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
+        //Método mostrar las Reservar y asignarlas a una Tabla 
         public bool Reservaciones(DataGridView reserva)
         {
             try
@@ -756,6 +765,8 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        //Método mostrar los Pagos y asignarlos a una Tabla 
         public bool Pagos(DataGridView pagos)
         {
             try
@@ -790,7 +801,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-
+        //Método mostrar las Politicas y asignarlas a una Tabla 
         public bool Politicas(DataGridView politicas)
         {
             try
@@ -825,7 +836,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-
+        //Método verificar las condiciones de uso de modificaciones y cancelaciones 
         public bool Condiciones(int idvuelos,int idaviones)
         {
             try
@@ -877,7 +888,8 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-       public bool CancelarReserva(int idreserva)
+        //Método para cancelar la Reserva 
+        public bool CancelarReserva(int idreserva)
         {
             try
             {
