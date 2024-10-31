@@ -287,7 +287,7 @@ namespace Clave2_Grupo3_US23007_
             this.Name = "FormReservasPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservas y Pagos";
-            this.Load += new System.EventHandler(this.FormReservasPago_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -12,14 +12,14 @@ namespace Clave2_Grupo3_US23007_
 {
     public partial class FormReservasPago : Form
     {
+        /// <summary>
+        /// Este Form servira para mostrar la informacion de reservas , pagos , politicas 
+        /// </summary>
         public FormReservasPago()
         {
             InitializeComponent();
         }
 
-        private void FormReservasPago_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

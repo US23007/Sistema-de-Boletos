@@ -28,9 +28,10 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+        //Método para Obtener todos los datos del Pasajero 
         private void dgvPasajero_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0)   //Si selecciona una fila los diferentes labels , Texboxs obtendran los parametros establecidos 
             {
                 cbxAsientos.Visible = false;
                 gbModificar.Visible = true;
@@ -64,17 +65,19 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+
+        //Método para Consultar al Usuario-Pasajero
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Sistema sistema = new Sistema();
-            if(string.IsNullOrEmpty(txtNombre_Buscar.Text) || string.IsNullOrWhiteSpace(txtNombre_Buscar.Text))
+            Sistema sistema = new Sistema(); // Instancia de la clase Sistema 
+            if (string.IsNullOrEmpty(txtNombre_Buscar.Text) || string.IsNullOrWhiteSpace(txtNombre_Buscar.Text)) //Validaciones de Vacios 
             {
                 MessageBox.Show("Rellenar Campo", "Nombre Completo Vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
-                if (sistema.Consultar(dgvPasajero, txtNombre_Buscar))
+                if (sistema.Consultar(dgvPasajero, txtNombre_Buscar)) // Instancia de la clase Sistema para Consultar en la DB el Usuario ingresado , la busqueda es atraves de el Nombre de el Pasajero
                 {
                     MessageBox.Show("Usuario Encontrado", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -99,6 +102,8 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+
+        //Método para recargar o refrescar la tabla de Usuarios 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Sistema sistema = new Sistema();
@@ -112,20 +117,9 @@ namespace Clave2_Grupo3_US23007_
 
      
 
-        private void picModificar_Click(object sender, EventArgs e)
-        {
-           
-        
-        }
+   
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
-
-
+        // Modificar el Nombre del Usuario
         private void picUsuario_Click(object sender, EventArgs e)
         {
             bool esValido = false;
@@ -133,15 +127,15 @@ namespace Clave2_Grupo3_US23007_
 
             while (!esValido) {
 
-                 input = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nuevo Nombre del Usuario:", "Modificar Usuario", "");
+                 input = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nuevo Nombre del Usuario:", "Modificar Usuario", ""); // Uso de Visual Basic usado en clases 
 
-                if (string.IsNullOrWhiteSpace(input))
+                if (string.IsNullOrWhiteSpace(input)) // Validacion de Vacios 
                 {
                     MessageBox.Show("Rellenar Datos", "Campo Vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     continue;  // Volver a solicitar el input.
                 }
 
-                if (!input.Any(char.IsLetter))
+                if (!input.Any(char.IsLetter)) // Validacion de caracteres nulos 
                 {
                     MessageBox.Show("Solo se permiten letras", "Dato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     continue;  // Volver a solicitar el input.
@@ -150,16 +144,16 @@ namespace Clave2_Grupo3_US23007_
                 esValido = true;
             }
 
-            int id = int.Parse(lbl_Usuario.Text);
-            int idvuelos = int.Parse(lblVuelos.Text);
-            int idaviones = int.Parse(lblAviones.Text);
-            Sistema sistema = new Sistema();
-            if (sistema.Condiciones(idvuelos, idaviones))
+            int id = int.Parse(lbl_Usuario.Text);  //Variables idusuario
+            int idvuelos = int.Parse(lblVuelos.Text); //Variables idvuelos
+            int idaviones = int.Parse(lblAviones.Text); //Variables idaviones 
+            Sistema sistema = new Sistema(); //Instancia de la clase Sistema 
+            if (sistema.Condiciones(idvuelos, idaviones))  //Método para la validacion de Modificacion segun las politicas y condiciones  de la clase sistema 
             {
-                if (sistema.ModificarUsuario(input, id))
+                if (sistema.ModificarUsuario(input, id)) //Método para la modificacion de el nombre de el usuario 
                 {
 
-                    MessageBox.Show("Usuario modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information); // Proceso Completado
                     sistema.Usuario(dgvPasajero);
                     Limpiar();
                 }
@@ -167,6 +161,7 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
+        //Limpiar Labels y Textboxs
         public void Limpiar()
         {
 
@@ -186,7 +181,7 @@ namespace Clave2_Grupo3_US23007_
             lblVuelos.Text = string.Empty;
         
             txt_Correo.Text = string.Empty;
-            dgvPasajero.ClearSelection();
+            dgvPasajero.ClearSelection(); //Limpiar seleccion en la tabla 
             picNombre.Enabled = false;
             picCorreo.Enabled = false;
             lbl_Estado_Reserva.Text = string.Empty;
@@ -197,11 +192,15 @@ namespace Clave2_Grupo3_US23007_
 
         }
 
+
+
+        // Modificar el Nombre Completo del Pasajero
         private void picNombre_Click(object sender, EventArgs e)
         {
             bool esValido = false;
             string input = " ";
-
+            
+            //Validaciones de vacios y caracteres nulos 
             while (!esValido)
             {
 
@@ -222,13 +221,14 @@ namespace Clave2_Grupo3_US23007_
                 esValido = true;
             }
 
+            // Variables Obtenidas 
             int id = int.Parse(lblPasajero.Text);
-            Sistema sistema = new Sistema();
-            int idvuelos = int.Parse(lblVuelos.Text);
-            int idaviones = int.Parse(lblAviones.Text);
-            if (sistema.Condiciones(idvuelos, idaviones))
+            Sistema sistema = new Sistema(); // Instancia de clase Sistema 
+            int idvuelos = int.Parse(lblVuelos.Text);  // Parametros 
+            int idaviones = int.Parse(lblAviones.Text);  // Parametros 
+            if (sistema.Condiciones(idvuelos, idaviones)) //Método Para vericar politicas y condiciones de Cancelacion y Modificacion 
             {
-                if (sistema.ModificarNombreCompleto(input, id))
+                if (sistema.ModificarNombreCompleto(input, id)) //Modificar Nombre Completo del Pasajero 
                 {
 
                     MessageBox.Show("Pasajero modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -238,11 +238,13 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Modificar Correo 
         private void picCorreo_Click(object sender, EventArgs e)
         {
             bool esValido = false;
             string input = " ";
 
+            // Validaciones 
             while (!esValido)
             {
 
@@ -254,7 +256,7 @@ namespace Clave2_Grupo3_US23007_
                     MessageBox.Show("Rellenar Datos", "Campo Vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     continue;  // Volver a solicitar el input.
                 }
-                if (!EsCorreoValido(input))
+                if (!EsCorreoValido(input)) // Validar atraves de un Regex el Correo 
                 {
                     MessageBox.Show("Correo no válido", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     continue;
@@ -264,13 +266,14 @@ namespace Clave2_Grupo3_US23007_
                 esValido = true;
             }
 
+            // Obtener e Ingresar Parametros 
             int id = int.Parse(lbl_Usuario.Text);
-            Sistema sistema = new Sistema();
+            Sistema sistema = new Sistema(); // Instancia de Clase Sistema 
             int idvuelos = int.Parse(lblVuelos.Text);
             int idaviones = int.Parse(lblAviones.Text);
-            if (sistema.Condiciones(idvuelos, idaviones))
+            if (sistema.Condiciones(idvuelos, idaviones))//Método Para vericar politicas y condiciones de Cancelacion y Modificacion
             {
-                if (sistema.ModificarCorreo(input, id))
+                if (sistema.ModificarCorreo(input, id)) //Modificar el Correo 
                 {
 
                     MessageBox.Show("Correo modificado exitosamente", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -282,20 +285,22 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
+        //Método para Validar Correos 
         private bool EsCorreoValido(string correo)
         {
             string patron = @"^[^@\s]+@[^@\s]+\.[^@\s]+$"; // Patrón básico para correos.
             return System.Text.RegularExpressions.Regex.IsMatch(correo, patron);
         }
 
+        //Comobobox para Obtener loa asientos Disponibles de Vuelos 
         private void picAsiento_Click(object sender, EventArgs e)
         {
             int idVuelos = int.Parse(lblVuelos.Text);
             int idaViones = int.Parse(lblAviones.Text);
             Sistema sistema = new Sistema();
-            if (sistema.Condiciones(idVuelos, idaViones))
+            if (sistema.Condiciones(idVuelos, idaViones)) //Método Para vericar politicas y condiciones de Cancelacion y Modificacion
             {
-                if (sistema.ModificarAsiento(cbxAsientos, idVuelos, idaViones))
+                if (sistema.ModificarAsiento(cbxAsientos, idVuelos, idaViones)) // Método para Modificar el Asiento y ponerlo Disponible 
                 {
                     cbxAsientos.Visible = true;
                 }
@@ -306,17 +311,18 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
+        //Modificar el Asiento  por el nuevo seleccionado 
         private void cbxAsientos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas cambiar el asiento?",
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas cambiar el asiento?", // Pregunta si desea continuar 
                                                "Confirmación de Cambio de Asiento",
                                                MessageBoxButtons.OKCancel,
                                                MessageBoxIcon.Question);
 
 
-            if (resultado == DialogResult.OK)
+            if (resultado == DialogResult.OK) // OK 
             {
-                Sistema sistema = new Sistema();
+                Sistema sistema = new Sistema(); //// Instancia de la clase Sistema 
                 int idVuelo = int.Parse(lblVuelos.Text);
 
                 int idAvion = int.Parse(lblAviones.Text);
@@ -324,41 +330,42 @@ namespace Clave2_Grupo3_US23007_
                 int idpasajero = int.Parse(lblPasajero.Text);
                 int idnuevoAsiento = int.Parse(cbxAsientos.SelectedItem.ToString());
 
-                if (sistema.Condiciones(idVuelo, idAvion))
+                if (sistema.Condiciones(idVuelo, idAvion)) //Método Para vericar politicas y condiciones de Cancelacion y Modificacion
                 {
-                    if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo))
+                    if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo)) // Método para Hacer el Antiguio Asiento Disponible 
                     {
-                        if (sistema.ReservarNuevoAsiento(idVuelo, idAvion, idnuevoAsiento, idpasajero))
+                        if (sistema.ReservarNuevoAsiento(idVuelo, idAvion, idnuevoAsiento, idpasajero)) // Método para Reservar el nuevo asiento,modificar en pasajero el asiento preferido y modificar en reserva el id del asiento del pasajero 
                         {
-                            MessageBox.Show("Asiento Actualizado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            sistema.Usuario(dgvPasajero);
+                            MessageBox.Show("Asiento Actualizado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information); //Proceso Completado 
+                            sistema.Usuario(dgvPasajero); //Recargar Tabla 
                             cbxAsientos.Visible = false;
-                            Limpiar();
+                            Limpiar(); //Limpiar 
                         }
                     }
                 }
                 else
                 {
-                    sistema.Usuario(dgvPasajero);
+                    sistema.Usuario(dgvPasajero); // Proceso Fallido 
                     cbxAsientos.Visible = false;
                     Limpiar();
                 }
             }
-            else if (resultado == DialogResult.Cancel)
+            else if (resultado == DialogResult.Cancel) //Cancel 
             {
                 cbxAsientos.Visible = false;
-                MessageBox.Show("Cambio de asiento cancelado.","Proceso Cancelado",MessageBoxButtons.OK);
+                MessageBox.Show("Cambio de asiento cancelado.","Proceso Cancelado",MessageBoxButtons.OK);  // No pasa nada 
             }
         }
 
+        //Eliminar Usuario 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas Eliminar al Usuario?",
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas Eliminar al Usuario?", //Desea Continuar 
                                                "Confirmación de Eliminar Usuario",
                                                MessageBoxButtons.OKCancel,
                                                MessageBoxIcon.Question);
 
-            if (resultado == DialogResult.OK)
+            if (resultado == DialogResult.OK) //OK 
             {
                
                 Sistema sistema = new Sistema();
@@ -367,42 +374,40 @@ namespace Clave2_Grupo3_US23007_
                 int idUsuario = int.Parse(lbl_Usuario.Text);
                 int asientoAntiguo = int.Parse(txt_asiento.Text);
 
-                if (sistema.Condiciones(idVuelo, idAvion))
+                if (sistema.Condiciones(idVuelo, idAvion)) //Método Para vericar politicas y condiciones de Cancelacion y Modificacion
                 {
-                    if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo))
+                    if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, asientoAntiguo))  // Método para Hacer el Antiguio Asiento Disponible
                     {
-                        if (sistema.EliminarUsuario(idUsuario))
+                        if (sistema.EliminarUsuario(idUsuario)) //Elimina el pago , reserva,asiento,pasajero y usuario de la DB
                         {
                             sistema.Usuario(dgvPasajero);
                             cbxAsientos.Visible = false;
-                            Limpiar();
-                            MessageBox.Show("Usuario/Pasajero Eliminado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Limpiar(); //Limpiar 
+                            MessageBox.Show("Usuario/Pasajero Eliminado con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information); //Proceso Exitoso
                         }
                     }
                 }
                 else
                 {
-                    sistema.Usuario(dgvPasajero);
+                    sistema.Usuario(dgvPasajero); //Fallo
                     cbxAsientos.Visible = false;
                     Limpiar();
                 }
                 
             }
-            else if(resultado == DialogResult.Cancel)
+            else if(resultado == DialogResult.Cancel) //Cancel 
             {
                 cbxAsientos.Visible = false;
-                MessageBox.Show("Cambio de asiento cancelado.", "Proceso Cancelado", MessageBoxButtons.OK);
+                MessageBox.Show("Cambio de asiento cancelado.", "Proceso Cancelado", MessageBoxButtons.OK); // No hace nada
             }
         }
 
-        private void gbModificar_Enter(object sender, EventArgs e)
-        {
+      
 
-        }
-
+        //Cancelar la reserva 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas Cancelar la Reserva?",
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas Cancelar la Reserva?", //Desea Continuar ? 
                                               "Confirmación de Cancelar Reserva",
                                               MessageBoxButtons.OKCancel,
                                               MessageBoxIcon.Question);
@@ -414,29 +419,29 @@ namespace Clave2_Grupo3_US23007_
                 int idAvion = int.Parse(lblAviones.Text);
                 int idreserva = int.Parse(lbl_reserva.Text);
                 int idasiento = int.Parse(txt_asiento.Text);
-                if (sistema.Condiciones(idVuelo, idAvion))
+                if (sistema.Condiciones(idVuelo, idAvion))//Método Para vericar politicas y condiciones de Cancelacion y Modificacion
                 {
-                    if (sistema.CancelarReserva(idreserva))
+                    if (sistema.CancelarReserva(idreserva)) // Método para Cancelar la reserva 
                     {
-                        if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, idasiento))
+                        if (sistema.LiberarAntiguoAsiento(idVuelo, idAvion, idasiento)) // Poner el asiento como Disponible 
                         {
                             sistema.Usuario(dgvPasajero);
                             cbxAsientos.Visible = false;
-                            Limpiar();
-                            MessageBox.Show("La reserva fue Cancelada con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Limpiar(); //Limpiar 
+                            MessageBox.Show("La reserva fue Cancelada con Exito", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information); //Proceso Exitoso
                         }
                     }
                 }
                 else
                 {
                     sistema.Usuario(dgvPasajero);
-                    cbxAsientos.Visible = false;
-                    Limpiar();
+                    cbxAsientos.Visible = false; //Fallo 
+                    Limpiar(); 
                 }
             }
-            else if (resultado == DialogResult.Cancel)
+            else if (resultado == DialogResult.Cancel) //Cancel 
             {
-                MessageBox.Show("Opcion Abortada por el Usuario", "Proceso Cancelado", MessageBoxButtons.OK);
+                MessageBox.Show("Opcion Abortada por el Usuario", "Proceso Cancelado", MessageBoxButtons.OK); // No hace nada
             }
         }
     }
