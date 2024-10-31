@@ -8,20 +8,25 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
+    /// <summary>
+    /// Esta clase servira para la comprobacion de datos entre ael Admin y la Base de Datos 
+    /// </summary>
     class Administrador
     {
-        private static String Usuario { get; set; }
-        private String Nombre_Usuario;
-        private String Contraseña_Usuario;
+        // Variables de Entrada
+        private static String Usuario { get; set; } // Variable static para uso a lo largo de la ejecucion de el programa
+        private String Nombre_Usuario;  // Variable String que recibira el valor del campo Usuario
+        private String Contraseña_Usuario; // Variable String que recibira el valor del campo Contraseña
 
 
-        public void Validar(string nombre, string contraseña)
+        public void Validar(string nombre, string contraseña)  //Constructor 
         {
             this.Nombre_Usuario = nombre;
             this.Contraseña_Usuario = contraseña;
 
         }
-        // Propiedades de Clase
+
+        // Propiedades de Clase 
         public String Nombre
         {
             get { return Nombre_Usuario; }
@@ -39,13 +44,15 @@ namespace Clave2_Grupo3_US23007_
             set { Usuario = value; }
         }
 
+
+        // Método para Consultar si existe el Usuario y Constraseña Ingresados retornado un true si existe y un false en el caso contrario
         public bool IngresoAdministrador()
         {
            
             try
             {
-                Conexion conexion = new Conexion();
-                 string consulta = "SELECT * FROM administrador WHERE Usuario = @nombre AND Contraseña = @contraseña";
+                Conexion conexion = new Conexion();  // Instancia de Clase Conexion 
+                 string consulta = "SELECT * FROM administrador WHERE Usuario = @nombre AND Contraseña = @contraseña";   //Consulta 
 
                 using (MySqlCommand cmd = new MySqlCommand(consulta, conexion.Conectar()))
                 {

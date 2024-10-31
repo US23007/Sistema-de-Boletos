@@ -8,15 +8,17 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
+    /// <summary>
+    /// Clase Conexión es el eje central de nuestro programa ya que todas la consultas , verficaciones utilizan esta clase para comuinicacion entre My SQL y C#
+    /// </summary>
 
-    //Clase Conexión nos ayudara a verificar desde ubn inicio si la conexión ala Base de Datos fue exitosa o no 
     class Conexion
     {
        
-        static string query = "Server = localhost; Port=3306;Database= clave2_grupo3db ;Uid=root;Pwd=12345;";
+        static string query = "Server = localhost; Port=3306;Database= clave2_grupo3db ;Uid=root;Pwd=12345;"; //Cadena de Conexion a la DB
         MySqlConnection conector = new MySqlConnection(query);
 
-        public MySqlConnection Conectar()
+        public MySqlConnection Conectar() // Conectar
         {
             try
             {
