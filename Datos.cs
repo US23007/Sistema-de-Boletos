@@ -130,7 +130,7 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-        // Evento Focis
+        // Eventos Focus
         private void txtNombre_Leave(object sender, EventArgs e)
         {
             txtfecha.Focus();

@@ -67,6 +67,7 @@ namespace Clave2_Grupo3_US23007_
             this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
             this.administradorToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.administradorToolStripMenuItem.Text = "Usuario";
+            
             // 
             // administraciónDeUsuariosToolStripMenuItem
             // 
@@ -82,7 +83,7 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.nuevoUsuarioToolStripMenuItem.Image = global::Clave2_Grupo3_US23007_.Properties.Resources.user_add_new_insert_icon_205821;
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
-            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
