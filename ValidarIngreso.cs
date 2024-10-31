@@ -9,10 +9,13 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
-
-    //Clase para Validar el Usuario , Contraseña y Correo
-    class ValidarIngreso : Vuelos
+/// <summary>
+/// Esta clase servira para la validacion de datos de Usuario como el Nombre de Usuario y Contraseña Ingresados 
+/// </summary>
+    class ValidarIngreso : Vuelos  //ValidarIngreso Hereda de Vuelos el ID Vuelo
     {
+
+        //Variables Static
         private static String Usuario { get; set; }
         private static int idUsuario { get; set; }
         private String Nombre_Usuario;
@@ -20,6 +23,7 @@ namespace Clave2_Grupo3_US23007_
         private String Contraseña_Usuario;
 
 
+        //Métodos 
         public String ObtenerUsuario
         {
             get { return Usuario;}
@@ -60,6 +64,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
+        //Método para Registrar un Usuario-Pasajero en la DB
         public bool RegistrarEnDB(string usuario, string correo)
         {
             Conexion conexion = new Conexion();
@@ -131,6 +136,7 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
+        //Método de Ingreso Usuario (idea Descartada)
         public bool IngresoUsuario()
         {
             Conexion conexion = new Conexion();

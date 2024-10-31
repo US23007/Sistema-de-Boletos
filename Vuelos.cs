@@ -9,8 +9,12 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo3_US23007_
 {
+    /// <summary>
+    /// Esta clase nos servira con el manejo de vuelos , rutas de Origen , Destino , Fecha de Salida , etc
+    /// </summary>
     class Vuelos
     {
+        //Variables de Static
         private static int ID { get; set; }
         private static int Avion { get; set;}
         private String Origen;
@@ -19,7 +23,7 @@ namespace Clave2_Grupo3_US23007_
         private TimeSpan Hora_Salida;
 
 
-
+        //Métodos 
         public int ObtenerAvion
         {
             get { return Avion; }
@@ -33,13 +37,15 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
-        public void Viaje(string origen, string destino,DateTime fecha,TimeSpan hora)
+        public void Viaje(string origen, string destino,DateTime fecha,TimeSpan hora) //Constructor
         {
             Origen = origen;
             Destino = destino;
             Fecha_Salida = fecha;
             Hora_Salida = hora;
         }
+
+        //Métodos de Variables 
         public String OrigenVuelo
         {
             get { return Origen; }
@@ -69,7 +75,7 @@ namespace Clave2_Grupo3_US23007_
 
 
 
-
+        //Mètodo para Obtener la rutas tanto de Origen y Destino y Asignarlas a Comboboxs
         public void ObtenrRutas(ComboBox origen,ComboBox destino)
         {
             Conexion conexion = new Conexion();
@@ -120,6 +126,7 @@ namespace Clave2_Grupo3_US23007_
         }
 
 
+        //Método para Obtener los vuelos con los datos previamente ingresados y asignarlos a una tabla
         public void ObtenerVuelosDisponibles(DataGridView informacion)
         {
             Conexion conexion = new Conexion();
