@@ -32,6 +32,7 @@ namespace Clave2_Grupo3_US23007_
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxMostrar = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace Clave2_Grupo3_US23007_
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.erp = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbxMostrar = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +72,18 @@ namespace Clave2_Grupo3_US23007_
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Administrador";
+            // 
+            // cbxMostrar
+            // 
+            this.cbxMostrar.AutoSize = true;
+            this.cbxMostrar.Checked = true;
+            this.cbxMostrar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxMostrar.Location = new System.Drawing.Point(243, 170);
+            this.cbxMostrar.Name = "cbxMostrar";
+            this.cbxMostrar.Size = new System.Drawing.Size(15, 14);
+            this.cbxMostrar.TabIndex = 27;
+            this.cbxMostrar.UseVisualStyleBackColor = true;
+            this.cbxMostrar.CheckedChanged += new System.EventHandler(this.cbxMostrar_CheckedChanged);
             // 
             // label5
             // 
@@ -179,16 +191,6 @@ namespace Clave2_Grupo3_US23007_
             // 
             this.erp.ContainerControl = this;
             this.erp.Icon = ((System.Drawing.Icon)(resources.GetObject("erp.Icon")));
-            // 
-            // cbxMostrar
-            // 
-            this.cbxMostrar.AutoSize = true;
-            this.cbxMostrar.Location = new System.Drawing.Point(243, 170);
-            this.cbxMostrar.Name = "cbxMostrar";
-            this.cbxMostrar.Size = new System.Drawing.Size(15, 14);
-            this.cbxMostrar.TabIndex = 27;
-            this.cbxMostrar.UseVisualStyleBackColor = true;
-            this.cbxMostrar.CheckedChanged += new System.EventHandler(this.cbxMostrar_CheckedChanged);
             // 
             // Admin
             // 

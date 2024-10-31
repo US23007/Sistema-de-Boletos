@@ -67,7 +67,6 @@ namespace Clave2_Grupo3_US23007_
             this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
             this.administradorToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.administradorToolStripMenuItem.Text = "Usuario";
-            
             // 
             // administraciónDeUsuariosToolStripMenuItem
             // 

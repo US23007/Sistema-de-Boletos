@@ -32,6 +32,7 @@ namespace Clave2_Grupo3_US23007_
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarVuelo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbxResultados = new System.Windows.Forms.GroupBox();
             this.btn_Ver_Mas = new System.Windows.Forms.Button();
@@ -337,6 +338,7 @@ namespace Clave2_Grupo3_US23007_
             this.ClientSize = new System.Drawing.Size(932, 450);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BuscarVuelo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Boletos";

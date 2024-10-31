@@ -29,6 +29,7 @@ namespace Clave2_Grupo3_US23007_
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Informacion));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblEmpleados = new System.Windows.Forms.Label();
             this.lbldescripcion = new System.Windows.Forms.Label();
@@ -113,7 +114,6 @@ namespace Clave2_Grupo3_US23007_
             this.lbldescripcion.Name = "lbldescripcion";
             this.lbldescripcion.Size = new System.Drawing.Size(507, 143);
             this.lbldescripcion.TabIndex = 46;
-      
             // 
             // lblprecio
             // 
@@ -169,7 +169,6 @@ namespace Clave2_Grupo3_US23007_
             this.lblaeropuertodestino.Size = new System.Drawing.Size(16, 16);
             this.lblaeropuertodestino.TabIndex = 41;
             this.lblaeropuertodestino.Text = "?";
-          
             // 
             // lbldestino
             // 
@@ -365,6 +364,7 @@ namespace Clave2_Grupo3_US23007_
             this.ClientSize = new System.Drawing.Size(803, 573);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Informacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informacion Adicional";
