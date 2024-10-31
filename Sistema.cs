@@ -807,7 +807,7 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 Conexion conexion = new Conexion();
-                string consulta = @"SELECT Descripcion,TiempoPermitidoDias as 'Dias Limite de Cambios antes del vuelo' FROM politicas;";
+                string consulta = @"SELECT * FROM politicas";
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {
                     using (MySqlDataReader reader = comando.ExecuteReader())
