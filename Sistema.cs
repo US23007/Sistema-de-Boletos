@@ -751,7 +751,7 @@ namespace Clave2_Grupo3_US23007_
                         }
                         else
                         {
-                            MessageBox.Show("Algo salio mal y no se pudo cargar las reservas", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No existen Resevas", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }
