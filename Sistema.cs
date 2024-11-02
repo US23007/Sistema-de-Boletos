@@ -323,7 +323,7 @@ namespace Clave2_Grupo3_US23007_
                         }
                         else
                         {
-                            MessageBox.Show("El Usuario No Existe", "Usuario Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No hay Usuarios Ingresados en la DB", "Usuarios Desconocidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }
