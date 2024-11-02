@@ -13,6 +13,7 @@ namespace Clave2_Grupo3_US23007_
     /// </summary>
 
     //Proyecto Antes de Hacer Cambios en el Conector 
+    //Creacion de una rama segundaria para cambiar de conector sin afectar a la rama main
     class Conexion
     {
        
