@@ -12,6 +12,7 @@ namespace Clave2_Grupo3_US23007_
     /// Clase Conexión es el eje central de nuestro programa ya que todas la consultas , verficaciones utilizan esta clase para comuinicacion entre My SQL y C#
     /// </summary>
 
+    //Proyecto Antes de Hacer Cambios en el Conector 
     class Conexion
     {
        
