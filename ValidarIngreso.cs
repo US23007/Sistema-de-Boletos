@@ -20,7 +20,7 @@ namespace Clave2_Grupo3_US23007_
         private static int idUsuario { get; set; }
         private String Nombre_Usuario;
         private String Correo_Usuario;
-        private String Contraseña_Usuario;
+        
 
 
         //Métodos 
@@ -50,11 +50,7 @@ namespace Clave2_Grupo3_US23007_
             set { Nombre_Usuario = value; }
         }
 
-        public String Contraseña
-        {
-            get { return Contraseña_Usuario; }
-            set { Contraseña_Usuario = value; }
-        }
+       
 
         public String Correo
         {
@@ -134,58 +130,7 @@ namespace Clave2_Grupo3_US23007_
                     }
                 }
             
-        }
-
-        //Método de Ingreso Usuario (idea Descartada)
-        public bool IngresoUsuario()
-        {
-            Conexion conexion = new Conexion();
-            MySqlConnection conn = conexion.Conectar();
-            try
-            {
-                string consulta = "SELECT ID FROM usuario WHERE Usuario = @nombre AND Contraseña = @contraseña AND Correo = @correo";
-                using (MySqlCommand cmd = new MySqlCommand(consulta, conn))
-                {
-                    cmd.Parameters.AddWithValue("@nombre", Nombre);
-                    cmd.Parameters.AddWithValue("@contraseña", Contraseña);
-                    cmd.Parameters.AddWithValue("@correo", Correo);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            ObtenerIdUsuario = reader.GetInt32("ID");
-                            Console.WriteLine(ObtenerIdUsuario);
-                            MessageBox.Show("Bienvenido Usuario", "Cuenta Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Credenciales incorrectas. Intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return false;
-                        }
-
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            finally
-            {
-                if (conn != null && conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
-            }
-        }
-
-
-       
-        
+        }     
     }
              
 }
