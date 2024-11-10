@@ -211,7 +211,7 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 Conexion conexion = new Conexion();
-                string consulta = @"SELECT * FROM rutas;";
+                string consulta = @"Select ID,Descripcion,Origen,Destino,Duracion,AeropuertoOrigen,AeropuertoDestino,Distancia,CodigoOrigen,CodigoDestino from rutas ;";
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {
                     using (MySqlDataReader reader = comando.ExecuteReader())
