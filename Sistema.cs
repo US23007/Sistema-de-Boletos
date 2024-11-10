@@ -211,7 +211,7 @@ namespace Clave2_Grupo3_US23007_
             try
             {
                 Conexion conexion = new Conexion();
-                string consulta = @"SELECT * FROM rutas;";
+                string consulta = @"Select ID,Descripcion,Origen,Destino,Duracion,AeropuertoOrigen,AeropuertoDestino,Distancia,CodigoOrigen,CodigoDestino from rutas ;";
                 using (MySqlCommand comando = new MySqlCommand(consulta, conexion.Conectar()))
                 {
                     using (MySqlDataReader reader = comando.ExecuteReader())
@@ -323,7 +323,7 @@ namespace Clave2_Grupo3_US23007_
                         }
                         else
                         {
-                            MessageBox.Show("El Usuario No Existe", "Usuario Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No hay Usuarios Ingresados en la DB", "Usuarios Desconocidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }
@@ -751,7 +751,7 @@ namespace Clave2_Grupo3_US23007_
                         }
                         else
                         {
-                            MessageBox.Show("Algo salio mal y no se pudo cargar las reservas", "Reiniciar Programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No existen Resevas", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return false;
                         }
                     }

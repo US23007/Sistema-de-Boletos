@@ -20,7 +20,7 @@ namespace Clave2_Grupo3_US23007_
         private static int idUsuario { get; set; }
         private String Nombre_Usuario;
         private String Correo_Usuario;
-        private String Contraseña_Usuario;
+        
 
 
         //Métodos 
@@ -50,11 +50,7 @@ namespace Clave2_Grupo3_US23007_
             set { Nombre_Usuario = value; }
         }
 
-        public String Contraseña
-        {
-            get { return Contraseña_Usuario; }
-            set { Contraseña_Usuario = value; }
-        }
+       
 
         public String Correo
         {
@@ -136,18 +132,18 @@ namespace Clave2_Grupo3_US23007_
             
         }
 
-        //Método de Ingreso Usuario (idea Descartada)
+        //Método de Ingreso Usuario 
         public bool IngresoUsuario()
         {
             Conexion conexion = new Conexion();
             MySqlConnection conn = conexion.Conectar();
             try
             {
-                string consulta = "SELECT ID FROM usuario WHERE Usuario = @nombre AND Contraseña = @contraseña AND Correo = @correo";
+                string consulta = "SELECT ID FROM usuario WHERE Usuario = @nombre AND Correo = @correo";
                 using (MySqlCommand cmd = new MySqlCommand(consulta, conn))
                 {
                     cmd.Parameters.AddWithValue("@nombre", Nombre);
-                    cmd.Parameters.AddWithValue("@contraseña", Contraseña);
+                    
                     cmd.Parameters.AddWithValue("@correo", Correo);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -183,9 +179,6 @@ namespace Clave2_Grupo3_US23007_
             }
         }
 
-
-       
-        
     }
              
 }

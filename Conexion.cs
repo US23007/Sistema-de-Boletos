@@ -13,10 +13,11 @@ namespace Clave2_Grupo3_US23007_
     /// </summary>
 
     //Proyecto Antes de Hacer Cambios en el Conector 
+    //Creacion de una rama segundaria para cambiar de conector sin afectar a la rama main
     class Conexion
     {
        
-        static string query = "Server = localhost; Port=3306;Database= clave2_grupo3db ;Uid=root;Pwd=12345;"; //Cadena de Conexion a la DB
+        static string query = "Server = localhost; Port=3306;Database= clave2_grupo3db ;Uid=root;Pwd=root;"; //Cadena de Conexion a la DB
         MySqlConnection conector = new MySqlConnection(query);
 
         public MySqlConnection Conectar() // Conectar
@@ -40,5 +41,6 @@ namespace Clave2_Grupo3_US23007_
             conector.Close();
         }
 
+        //Probando cambios en segunda rama 
     }
 }
